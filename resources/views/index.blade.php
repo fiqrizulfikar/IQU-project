@@ -196,7 +196,7 @@
       <div class="container">
 
         <div class="row gy-4">
-        <h1 class="sitename">SD</h1>
+        <h3 class="sitename">SD</h3>
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="features-item">
               <i class="bi bi-eye" style="color: #ffbb2c;"></i>
@@ -224,7 +224,7 @@
               <h3><a href="" class="stretched-link">IPS</a></h3>
             </div>
           </div><!-- End Feature Item -->
-          <h1 class="sitename">SMP</h1>
+          <h3 class="sitename">SMP</h3>
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
             <div class="features-item">
               <i class="bi bi-shuffle" style="color: #47aeff;"></i>
@@ -252,7 +252,7 @@
               <h3><a href="" class="stretched-link">PKN</a></h3>
             </div>
           </div><!-- End Feature Item -->
-          <h1 class="sitename">SMA</h1>
+          <h3 class="sitename">SMA</h2>
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
             <div class="features-item">
               <i class="bi bi-command" style="color: #b2904f;"></i>
@@ -293,7 +293,7 @@
             <i class="bi bi-emoji-smile"></i>
             <div class="stats-item">
               <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
+              <p>Point</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -301,7 +301,7 @@
             <i class="bi bi-journal-richtext"></i>
             <div class="stats-item">
               <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
+              <p>IQ</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -309,7 +309,7 @@
             <i class="bi bi-headset"></i>
             <div class="stats-item">
               <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
+              <p>Ice Breaking</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -317,7 +317,7 @@
             <i class="bi bi-people"></i>
             <div class="stats-item">
               <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hard Workers</p>
+              <p>Pengetahuan</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -332,8 +332,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Details</h2>
-        <div><span>Check Our</span> <span class="description-title">Details</span></div>
+        <h2>Pengetahuan</h2>
+        <div><span>Pengetahuan Adalah Kekuatan - Ayo Belajar, Pahami, dan Kuasai Dunia Bersama Kami!</span> <span class="description-title"></span></div>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -343,15 +343,15 @@
             <img src="assets/img/details-1.png" class="img-fluid" alt="">
           </div>
           <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>Di website Kami Kamu Bisa Belajar Pengetahun! :</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              
             </p>
             <ul>
-              <li><i class="bi bi-check"></i><span> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check"></i> <span>Ullam est qui quos consequatur eos accusamus.</span></li>
+              <li><i class="bi bi-check"></i><span> Umum</span></li>
+              <li><i class="bi bi-check"></i> <span>Teknologi</span></li>
+              <li><i class="bi bi-check"></i> <span>Ekonomi</span></li>
+              <li><i class="bi bi-check"></i> <span>Politik</span></li>
             </ul>
           </div>
         </div><!-- Features Item -->
@@ -361,16 +361,15 @@
             <img src="assets/img/details-2.png" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-            <h3>Corporis temporibus maiores provident</h3>
+            <h3>Mengapa Harus Belajar diwebsite kami?</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              
             </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
+            <ul>
+              <li><i class="bi bi-check"></i><span> Memiliki Fitur Yang Banyak</span></li>
+              <li><i class="bi bi-check"></i> <span>Bisa dibuka Kapan Saja & Dimana saja </span></li>
+              <li><i class="bi bi-check"></i> <span>Harga Terjangkau.</span></li>
+            </ul>
           </div>
         </div><!-- Features Item -->
 
@@ -379,12 +378,11 @@
             <img src="assets/img/details-3.png" class="img-fluid" alt="">
           </div>
           <div class="col-md-7" data-aos="fade-up">
-            <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+            <h3>Test IQ & Ice Breaking</h3>
+            <p>Bukan Hanya Belajar, Tapi Juga Bersenang-Senang! Asah otak Anda dengan permainan, kuis, dan tes IQ yang menantang – karena belajar tak harus membosankan</p>
             <ul>
-              <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad fugiat</span>.</li>
+              <li><i class="bi bi-check"></i> <span>Fitur Ice Breaking</span></li>
+              <li><i class="bi bi-check"></i><span> Test IQ</span></li>
             </ul>
           </div>
         </div><!-- Features Item -->
@@ -394,105 +392,20 @@
             <img src="assets/img/details-4.png" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
+            <h3>Media Social</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            Terus Update & Terhubung Bersama Kami! Ikuti kami di media sosial untuk mendapatkan wawasan terbaru tentang teknologi, ekonomi, politik, dan banyak lagi. Jangan lewatkan konten eksklusif, diskusi seru, dan update harian yang siap memperkaya pengetahuan Anda!
             </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
+            <ul>
+              <li><i class="bi bi-check"></i><span> Instagram</span></li>
+              <li><i class="bi bi-check"></i> <span>facebook </span></li>
+              <li><i class="bi bi-check"></i> <span>Twiter</span></li>
+            </ul>
           </div>
         </div><!-- Features Item -->
 
       </div>
 
-    </section><!-- /Details Section -->
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Gallery</h2>
-        <div><span>Check Our</span> <span class="description-title">Gallery</span></div>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-0">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-1.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-2.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-3.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-4.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-5.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-6.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-7.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-8.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Gallery Section -->
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section dark-background">
@@ -522,14 +435,14 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <h3>ADI</h3>
+                <h4>SMA KELAS 1</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                  <span>Website ini benar-benar membuka wawasan saya tentang berbagai topik! Dari sejarah hingga sains, setiap artikel mudah dipahami dan sangat informatif. Tempat yang sempurna untuk menambah pengetahuan sehari-hari!</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -538,14 +451,14 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <h3>Saroh</h3>
+                <h4>Orang Tua</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                  <span>Sebagai orang tua, saya selalu mencari platform yang bisa membantu anak saya menambah wawasan secara menyenangkan. Website ini memberikan konten yang berkualitas, dan saya melihat anak saya semakin tertarik dengan topik-topik baru setiap hari.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -554,14 +467,14 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <h3>Jeni</h3>
+                <h4>SMP Kelas 2</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                  <span>Website ini memberi saya perspektif yang lebih mendalam tentang isu-isu politik yang sering terlewatkan di media arus utama. Sangat informatif dan relevan untuk siapa pun yang peduli tentang masa depan dunia</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -570,14 +483,14 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
+                <h3>Bu Ida</h3>
+                <h4>Guru SD</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                  <span>Fitur ice breaking dan tes IQ di website ini sangat membantu anak saya untuk belajar dengan cara yang menyenangkan. Ini bukan hanya soal teori, tetapi juga melatih pola pikir kreatif dan logis. Anak saya sangat menikmati setiap tantangannya!</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -586,14 +499,14 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                <h3>Jobi</h3>
+                <h4>SD</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                  <span>Saya ingin anak saya mengikuti perkembangan teknologi dengan cara yang positif. Website ini menawarkan informasi terkini yang mudah dipahami oleh anak saya. Dia menjadi lebih kritis dan memahami teknologi dengan lebih baik</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -612,8 +525,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
-        <div><span>Check Our</span> <span class="description-title">Team</span></div>
+        <h2>Team IQU</h2>
+        <div><span>Cek Tim</span> <span class="description-title">Team</span></div>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -622,10 +535,10 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>Team IQU</h4>
+                <span>Back-end</span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -638,10 +551,10 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
+                <h4>Team IQU</h4>
+                <span>Front-end</span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -654,10 +567,10 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
+                <h4>Team IQU</h4>
+                <span>DataBase</span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -679,8 +592,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-        <div><span>Check Our</span> <span class="description-title">Pricing</span></div>
+        <h2>Harga</h2>
+        <div><span>Check</span> <span class="description-title">Harga</span></div>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -689,58 +602,59 @@
 
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <p class="description">Ullam mollitia quasi nobis soluta in voluptatum et sint palora dex strater</p>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <a href="#" class="cta-btn">Start a free trial</a>
-              <p class="text-center small">No credit card required</p>
+              <h3>Free </h3>
+              <p class="description">Nikmati Konten Gratis yang Kaya Wawasan!</p>
+              <h4><sup>$</sup>0<span> / Bulan</span></h4>
+              <a href="#" class="cta-btn">Gratis- Ayo Mulai </a>
+              <p class="text-center small">Tidak diperlukan kartu kredit</p>
               <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Voluptate id voluptas qui sed aperiam rerum</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Iure nihil dolores recusandae odit voluptatibus</span></li>
+                <li><i class="bi bi-check"></i> <span>Akses ke artikel-artikel pengetahuan umum, teknologi, ekonomi, dan politik</span></li>
+                <li><i class="bi bi-check"></i> <span>Ice breaking games dasar dan tes IQ.</span></li>
+                <li><i class="bi bi-check"></i> <span>Update mingguan di media sosial untuk tetap terinformasi.</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>ini dan itu</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>ini dan itu</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>ini dan itu</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>ini dan itu</span></li>
               </ul>
             </div>
           </div><!-- End Pricing Item -->
 
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="pricing-item featured">
-              <p class="popular">Popular</p>
-              <h3>Business Plan</h3>
-              <p class="description">Ullam mollitia quasi nobis soluta in voluptatum et sint palora dex strater</p>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <a href="#" class="cta-btn">Start a free trial</a>
-              <p class="text-center small">No credit card required</p>
+              <p class="popular">Populer</p>
+              <h3>PREMIUM</h3>
+              <p class="description">Lebih Dalam, Lebih Jelas, Lebih Bermanfaat!</p>
+              <h4><sup>$</sup>29<span> / Bulan</span></h4>
+              <a href="#" class="cta-btn">Mulai uji coba gratis</a>
+              <p class="text-center small">Tidak diperlukan kartu kredit</p>
               <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-                <li><i class="bi bi-check"></i> <span>Voluptate id voluptas qui sed aperiam rerum</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Iure nihil dolores recusandae odit voluptatibus</span></li>
+                <li><i class="bi bi-check"></i> <span>Akses penuh ke semua konten eksklusif dan artikel mendalam</span></li>
+                <li><i class="bi bi-check"></i> <span>Tes IQ lanjutan dan permainan ice breaking yang lebih menantang</span></li>
+                <li><i class="bi bi-check"></i> <span>Akses prioritas ke update artikel teknologi dan ekonomi terbaru</span></li>
+                <li><i class="bi bi-check"></i> <span>Fitur diskusi premium untuk berinteraksi langsung dengan ahli dan komunitas pembelajar</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>ini dan itu</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>ini dan itu</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>ini dan itu</span></li>
               </ul>
             </div>
           </div><!-- End Pricing Item -->
 
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="pricing-item">
-              <h3>Developer Plan</h3>
-              <p class="description">Ullam mollitia quasi nobis soluta in voluptatum et sint palora dex strater</p>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <a href="#" class="cta-btn">Start a free trial</a>
-              <p class="text-center small">No credit card required</p>
+              <h3>Eksklusif</h3>
+              <p class="description">Eksklusif untuk Anda yang Ingin Lebih!</p>
+              <h4><sup>$</sup>49<span> / Bulan</span></h4>
+              <a href="#" class="cta-btn">Mulai Uji Coba Gratis</a>
+              <p class="text-center small">Tidak diperlukan kartu kredit</p>
               <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-                <li><i class="bi bi-check"></i> <span>Voluptate id voluptas qui sed aperiam rerum</span></li>
-                <li><i class="bi bi-check"></i> <span>Iure nihil dolores recusandae odit voluptatibus</span></li>
+                <li><i class="bi bi-check"></i> <span>Webinar dan sesi konsultasi langsung dengan pakar teknologi, ekonomi, dan politik.</span></li>
+                <li><i class="bi bi-check"></i> <span>Akses eksklusif ke konten yang tidak tersedia bagi pengguna biasa atau premium.</span></li>
+                <li><i class="bi bi-check"></i> <span>Tes IQ terpersonalisasi dan laporan lengkap tentang kemampuan kognitif Anda.</span></li>
+                <li><i class="bi bi-check"></i> <span>Ice breaking games khusus yang disesuaikan untuk meningkatkan keterampilan problem-solving dan kreativitas.</span></li>
+                <li><i class="bi bi-check"></i> <span>Konten eksklusif harian di media sosial dengan insight dan pandangan terbaru.</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>ini dan itu</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>ini dan itu</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>ini dan itu</span></li>
               </ul>
             </div>
           </div><!-- End Pricing Item -->
@@ -814,7 +728,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
+        <h2>Contak</h2>
         <div><span>Check Our</span> <span class="description-title">Contact</span></div>
       </div><!-- End Section Title -->
 
@@ -826,24 +740,24 @@
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
-                <h3>Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <h3>Alamat</h3>
+                <p>Semarang,Tembalang,Amposari</p>
               </div>
             </div><!-- End Info Item -->
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
-                <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <h3>Hubungi Kami</h3>
+                <p>085601742751</p>
               </div>
             </div><!-- End Info Item -->
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
-                <h3>Email Us</h3>
-                <p>info@example.com</p>
+                <h3>Email Kami</h3>
+                <p>iqu123@gmail.com</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -895,13 +809,13 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Bootslander</span>
+            <span class="sitename">IQU.com</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>Semarang</p>
+            <p>Tembalang,Amposari</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>085601742751</span></p>
+            <p><strong>Email:</strong> <span>iqu123@gmail.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -912,30 +826,31 @@
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
+          <h4>Tutan Berguna</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Pendidikan</a></li>
+            <li><a href="#">Pengetahuan</a></li>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Media Sosial</a></li>
+            <li><a href="#">About As</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
+          <h4>Layanan Kami</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Pembelajaran Interaktif</a></li>
+            <li><a href="#">Kuis & Tes Pemahaman</a></li>
+            <li><a href="#">Bimbingan Belajar Online</a></li>
+            <li><a href="#">Belajar Terstruktur</a></li>
+            <li><a href="#">Fitur Ice Breaking & Tes IQ</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <h4></h4>
+          <p>Berlangganan di website kami dan dapatkan berita terbaru tentang materi-materi yang unggul dan pengalaman yang baru</p>
           <form action="forms/newsletter.php" method="post" class="php-email-form">
             <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
             <div class="loading">Loading</div>
@@ -948,13 +863,14 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Bootslander</strong> <span>All Rights Reserved</span></p>
+      <link href="assets/img/www.png" rel="icon">
+      <p> <span></span> <strong class="px-1 sitename">IQU.com</strong> <span></span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        
       </div>
     </div>
 
