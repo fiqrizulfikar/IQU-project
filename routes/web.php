@@ -13,3 +13,15 @@ Route::get('/aboutus', function () {
 Route::get('/navbar', function () {
     return view('navbar');
 });
+Route::get('/mediasosial', function () {
+    return view('mediasosial');
+});
+Route::get('/games', function () {
+    return view('games');
+});
+Route::get('/pendidikan', function () {
+    return view('pendidikan');
+});
+Route::get('/pengetahuan', function () {
+    return view('pengetahuan');
+});

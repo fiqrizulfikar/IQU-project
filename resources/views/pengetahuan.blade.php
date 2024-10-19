@@ -25,7 +25,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   
-  <link href="assets/css/aboutas.css" rel="stylesheet">
+  <link href="assets/css/penegtahuan.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Bootslander
