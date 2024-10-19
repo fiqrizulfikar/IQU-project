@@ -24,8 +24,8 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  
+  <link href="assets/css/navbar.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Bootslander
@@ -46,9 +46,8 @@
         <h1 class="sitename">i</i></h1>
         <h1 class="sitename">-Learning</h1>
       </a>
-       
-                <!-- MENU DAN PILIHAN -->
-                <nav id="navmenu" class="navmenu">
+
+      <nav id="navmenu" class="navmenu">
 
 <ul>
   <li><a href="#hero" class="active">Beranda</a></li>
