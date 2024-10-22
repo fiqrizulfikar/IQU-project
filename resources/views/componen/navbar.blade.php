@@ -25,7 +25,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   
-  <link href="assets/css/mediasosial.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Bootslander
@@ -94,8 +94,3 @@
   </li>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
-
-
-
-
-

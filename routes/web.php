@@ -1,27 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LandingControllers;
 
 
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/aboutus', function () {
-    return view('aboutus');
-});
-Route::get('/navbar', function () {
-    return view('navbar');
-});
-Route::get('/mediasosial', function () {
-    return view('mediasosial');
-});
-Route::get('/games', function () {
-    return view('games');
-});
-Route::get('/pendidikan', function () {
-    return view('pendidikan');
-});
-Route::get('/pengetahuan', function () {
-    return view('pengetahuan');
-});
+Route::get('/', [LandingControllers::class, 'index']);
+Route::get('/SekolahDasar', [App\Http\Controllers\LandingControllers::class, 'SekolahDasar']);
+Route::get('/pengetahuan', [App\Http\Controllers\LandingControllers::class, 'pengetahuan']);
+Route::get('/games', [App\Http\Controllers\LandingControllers::class, 'games']);
+Route::get('/mediasosial', [App\Http\Controllers\LandingControllers::class, 'mediasosial']);
+Route::get('/aboutus', [App\Http\Controllers\LandingControllers::class, 'aboutus']);
+Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
