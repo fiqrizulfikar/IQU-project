@@ -113,5 +113,4 @@
 
 </div>
 
-@include('componen.foother') <!-- Fixed the typo -->
 
