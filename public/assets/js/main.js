@@ -183,3 +183,96 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+
+          /**materi SD */
+
+
+          const questions = [
+  {
+      title: "Kuis IPA 1",
+      question: "Apa bagian terkecil dari makhluk hidup?",
+      answers: [
+          { text: "Sel", correct: true },
+          { text: "Jaringan", correct: false },
+          { text: "Organ", correct: false },
+          { text: "Sistem", correct: false }
+      ]
+  },
+  {
+      title: "Kuis IPA 2",
+      question: "Apa yang dimaksud dengan ekosistem?",
+      answers: [
+          { text: "Komunitas makhluk hidup", correct: false },
+          { text: "Interaksi antara makhluk hidup dan lingkungan", correct: true },
+          { text: "Proses fotosintesis", correct: false },
+          { text: "Kumpulan sel", correct: false }
+      ]
+  },
+  {
+    title: "Kuis IPA 3",
+    question: "Apa fungsi utama dari membran sel?",
+    answers: [
+        { text: "Menghasilkan energi", correct: false },
+        { text: "Menghasilkan protein", correct: false },
+        { text: "Menyimpan informasi genetik", correct: false },
+        { text: "Mengatur masuk dan keluarnya zat", correct: true}
+    ]
+},{
+  title: "Kuis IPA 4",
+  question: "Apa yang dimaksud dengan produsen dalam ekosistem??",
+  answers: [
+      { text: "Organisme yang memecah bahan organik", correct: false },
+      { text: "Organisme yang menghasilkan makanan melalui fotosintesis", correct: true },
+      { text: "Organisme yang memakan produsen", correct: false },
+      { text: "Organisme yang tidak dapat hidup tanpa air", correct: false }
+  ]
+},{
+  title: "Kuis IPA 5",
+  question: "Sel mana yang memiliki dinding sel?",
+  answers: [
+      { text: "sel bakteri", correct: true },
+      { text: "sel darah merah", correct: false},
+      { text: "sel otot", correct: false },
+      { text: "sel hewan", correct: false }
+  ]
+},
+  // tempat nambahin pertanyaan lebih banyak di sini
+];
+
+const quizContainer = document.querySelector('.quiz-container');
+
+questions.forEach(q => {
+  const quizItem = document.createElement('div');
+  quizItem.classList.add('quiz-item');
+
+  quizItem.innerHTML = `
+      <h2>${q.title}</h2>
+      <p>${q.question}</p>
+      ${q.answers.map(answer => `
+          <button class="answer-button" data-correct="${answer.correct}">${answer.text}</button>
+      `).join('')}
+  `;
+
+  quizContainer.appendChild(quizItem);
+});
+
+// Menambahkan event listener untuk tombol jawaban
+quizContainer.addEventListener('click', (event) => {
+  if (event.target.classList.contains('answer-button')) {
+      const isCorrect = event.target.dataset.correct === 'true';
+      if (isCorrect) {
+          alert("Jawaban Benar!");
+      } else {
+          alert("Jawaban Salah!");
+      }
+  }
+});
+
+       
+
+
+
+
+
