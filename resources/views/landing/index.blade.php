@@ -91,7 +91,7 @@
     </ul>
     <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
     <li><a href={{ url('/aboutus') }}>About US</a></li>
-    <li><a href={{ url('/Login') }}>Login</a></li>
+    <li><a href={{ url('/login') }}>Login</a></li>
   </li>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
@@ -602,7 +602,7 @@
             <div class="pricing-item">
               <h3>Free </h3>
               <p class="description">Nikmati Konten Gratis yang Kaya Wawasan!</p>
-              <h4><sup>$</sup>0<span> / Bulan</span></h4>
+              <h4><sup></sup>0<span> / Bulan</span></h4>
               <a href="#" class="cta-btn">Gratis- Ayo Mulai </a>
               <p class="text-center small">Tidak diperlukan kartu kredit</p>
               <ul>
@@ -622,7 +622,7 @@
               <p class="popular">Populer</p>
               <h3>PREMIUM</h3>
               <p class="description">Lebih Dalam, Lebih Jelas, Lebih Bermanfaat!</p>
-              <h4><sup>$</sup>29<span> / Bulan</span></h4>
+              <h4><sup></sup>50.000<span> / Bulan</span></h4>
               <a href="#" class="cta-btn">Mulai uji coba gratis</a>
               <p class="text-center small">Tidak diperlukan kartu kredit</p>
               <ul>
@@ -641,7 +641,7 @@
             <div class="pricing-item">
               <h3>Eksklusif</h3>
               <p class="description">Eksklusif untuk Anda yang Ingin Lebih!</p>
-              <h4><sup>$</sup>49<span> / Bulan</span></h4>
+              <h4><sup></sup>100.000<span> / Bulan</span></h4>
               <a href="#" class="cta-btn">Mulai Uji Coba Gratis</a>
               <p class="text-center small">Tidak diperlukan kartu kredit</p>
               <ul>
