@@ -44,7 +44,8 @@ class LandingControllers extends Controller
     {
         return view ('landing.aboutus');
     }
-
+    
+    
 
     /**
      * Show the form for creating a new resource.
