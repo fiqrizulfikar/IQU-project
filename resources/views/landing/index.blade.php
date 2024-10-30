@@ -91,6 +91,7 @@
     </ul>
     <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
     <li><a href={{ url('/aboutus') }}>About US</a></li>
+    <li><a href={{ url('/Login') }}>Login</a></li>
   </li>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>

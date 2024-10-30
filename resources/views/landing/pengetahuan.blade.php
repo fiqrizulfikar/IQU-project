@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perbanyak Pengetahuanmu!</title>
+     <link href="assets/css/main.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,7 +62,8 @@
         <h2>MANA YANG INGIN KAMU KUASAI:</h2>
         <div class="options">
             <div class="option">
-                <img src="icon-buku.png" alt="Buku"> <!-- Ganti dengan ikon yang sesuai -->
+                <img src="icon-buku.png" alt="Buku"> 
+                <a href="#" class="read-more"><span>Mari Belajar</span><i class="bi bi-arrow-right"></i></a>
             </div>
             <div class="option">
                 <img src="icon-globe.png" alt="Globe"> <!-- Ganti dengan ikon yang sesuai -->
