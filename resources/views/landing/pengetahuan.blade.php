@@ -159,6 +159,8 @@ main {
 .read-more span {
     font-weight: bold; /* Membuat teks lebih tebal */
 }
+
+
 .header {
   --background-color: rgba(255, 255, 255, 0);
   --default-color: #ffffff;
