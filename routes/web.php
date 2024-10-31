@@ -13,7 +13,7 @@ Route::get('/games', [App\Http\Controllers\LandingControllers::class, 'games']);
 Route::get('/mediasosial', [App\Http\Controllers\LandingControllers::class, 'mediasosial']);
 Route::get('/aboutus', [App\Http\Controllers\LandingControllers::class, 'aboutus']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
-<<<<<<< HEAD
+>>>>>> HEAD
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 =======
 Route::get('/login', [SesiController::class, 'login']);
