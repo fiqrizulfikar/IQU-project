@@ -1,5 +1,5 @@
-/* Fonts */
-:root {
+ <style>
+  :root {
     --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --heading-font: "Raleway",  sans-serif;
     --nav-font: "Poppins",  sans-serif;
@@ -14,8 +14,6 @@
     --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
     --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   }
-  /* membuat root 2*/
-  
   
   /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
   :root {
@@ -50,11 +48,6 @@
   /*--------------------------------------------------------------
   # General Styling & Shared Classes
   --------------------------------------------------------------*/
-  body {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    font-family: var(--default-font);
-  }
   
   a {
     color: var(--accent-color);
@@ -76,69 +69,12 @@
     color: var(--heading-color);
     font-family: var(--heading-font);
   }
-  
-  /* PHP Email Form Messages
-  ------------------------------*/
-  .php-email-form .error-message {
-    display: none;
-    background: #df1529;
-    color: #ffffff;
-    text-align: left;
-    padding: 15px;
-    margin-bottom: 24px;
-    font-weight: 600;
-  }
-  
-  .php-email-form .sent-message {
-    display: none;
-    color: #ffffff;
-    background: #059652;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 24px;
-    font-weight: 600;
-  }
-  
-  .php-email-form .loading {
-    display: none;
-    background: var(--surface-color);
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 24px;
-  }
-  
-  .php-email-form .loading:before {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    margin: 0 10px -6px 0;
-    border: 3px solid var(--accent-color);
-    border-top-color: var(--surface-color);
-    animation: php-email-form-loading 1s linear infinite;
-  }
-  
-  @keyframes php-email-form-loading {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  /*--------------------------------------------------------------
-  # Global Header
-  --------------------------------------------------------------*/
   .header {
-    --background-color: rgba(255, 255, 255, 0);
+    --background-color: #040677;
     --default-color: #ffffff;
     --heading-color: #ffffff;
     color: var(--default-color);
     background-color: var(--background-color);
-    background-color:  #0c0091;
     padding: 20px 0;
     transition: all 0.5s;
     z-index: 997;
@@ -174,10 +110,14 @@
   # Navigation Menu
   --------------------------------------------------------------*/
   /* Desktop Navigation */
+  nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
   @media (min-width: 1200px) {
     .navmenu {
       padding: 0;
-     
   
     }
   
@@ -432,384 +372,64 @@
       display: block;
     }
   }
+  
+ </style>
 
+<body class="index-page">
 
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
-.footer {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    font-size: 14px;
-    position: relative;
-  }
-  
-  .footer .footer-top {
-    padding-top: 50px;
-    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  }
-  
-  .footer .footer-about .logo {
-    line-height: 1;
-    margin-bottom: 25px;
-  }
-  
-  .footer .footer-about .logo img {
-    max-height: 40px;
-    margin-right: 6px;
-  }
-  
-  .footer .footer-about .logo span {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: var(--heading-font);
-    color: var(--heading-color);
-  }
-  
-  .footer .footer-about p {
-    font-size: 14px;
-    font-family: var(--heading-font);
-  }
-  
-  .footer .social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-    font-size: 16px;
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    margin-right: 10px;
-    transition: 0.3s;
-  }
-  
-  .footer .social-links a:hover {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-  }
-  
-  .footer h4 {
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-    padding-bottom: 12px;
-  }
-  
-  .footer .footer-links {
-    margin-bottom: 30px;
-  }
-  
-  .footer .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer .footer-links ul i {
-    padding-right: 2px;
-    font-size: 12px;
-    line-height: 0;
-  }
-  
-  .footer .footer-links ul li {
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .footer .footer-links ul li:first-child {
-    padding-top: 0;
-  }
-  
-  .footer .footer-links ul a {
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    display: inline-block;
-    line-height: 1;
-  }
-  
-  .footer .footer-links ul a:hover {
-    color: var(--accent-color);
-  }
-  
-  .footer .footer-contact p {
-    margin-bottom: 5px;
-  }
-  
-  .footer .footer-newsletter .newsletter-form {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    padding: 6px 8px;
-    position: relative;
-    border-radius: 4px;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-    display: flex;
-    background-color: var(--background-color);
-    transition: 0.3s;
-  }
-  
-  .footer .footer-newsletter .newsletter-form:focus-within {
-    border-color: var(--accent-color);
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=email] {
-    border: 0;
-    padding: 4px;
-    width: 100%;
-    background-color: var(--background-color);
-    color: var(--default-color);
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
-    outline: none;
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=submit] {
-    border: 0;
-    font-size: 16px;
-    padding: 0 20px;
-    margin: -7px -8px -7px 0;
-    background: var(--accent-color);
-    color: var(--contrast-color);
-    transition: 0.3s;
-    border-radius: 0 4px 4px 0;
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-    background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  }
-  
-  .footer .copyright {
-    padding: 25px 0;
-    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  }
-  
-  .footer .copyright p {
-    margin-bottom: 0;
-  }
-  
-  .footer .credits {
-    margin-top: 6px;
-    font-size: 13px;
-  }
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-  /*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
-.scroll-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 99999;
-    background-color: var(--accent-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    transition: all 0.4s;
-  }
-  
-  .scroll-top i {
-    font-size: 24px;
-    color: var(--contrast-color);
-    line-height: 0;
-  }
-  
-  .scroll-top:hover {
-    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-    color: var(--contrast-color);
-  }
-  
-  .scroll-top.active {
-    visibility: visible;
-    opacity: 1;
-  }
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="logoiqu.com">
+        <h1 class="sitename">i</i></h1>
+        <h1 class="sitename">-Learning</h1>
+      </a>
 
-  /* kool mode */
-  .kool-content{
-    background-image: url('https://e0.pxfuel.com/wallpapers/498/589/desktop-wallpaper-unique-unique-live.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    padding: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-  }
+      <nav id="navmenu" class="navmenu">
 
-
-.kool-content h1 {
-    font-size: 32px;
-    font-family: 'Times New Roman', serif;
-    font-weight: normal;
-    color: rgb(255, 255, 255);
-    margin-bottom: 10px;
-}
-/*sistem input/search*/
-
-.search-container {
-    text-align: center;
-    backdrop-filter: blur(8px);
-    padding: 20px;
-}
-
-.search-container h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.search-container h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.search-box {
-    position: relative;
-    display: inline-block;
-    width: 400px;
-}
-
-.search-box input {
-    width: 100%;
-    padding: 12px 20px;
-    border: 2px solid #fff;
-    border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    font-size: 18px;
-    transition: all 0.3s ease;
-    outline: none;
-}
-
-.search-box input:focus {
-    width: 450px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: #00b4d8;
-}
-
-.search-box button {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px 15px;
-    border: none;
-    background-color: #00b4d8;
-    color: white;
-    font-size: 18px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-box button:hover {
-    background-color: #0077b6;
-}
-
-/*kool-konten*/
-
-.kool-konten{
-  padding: 5px;
-}
-
-/* ipa konten*/
-body.ngendol { 
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #ffecb3;
-  margin: 0;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 180vh;
-  color: #000000;
-}
-
-.container-ipa {
-  background-color: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  padding: 30px;
-  width: 100%;
-  max-width: cover;
-  text-align: center;
-}
-
-header.ipa {
-  background-color: #058faa;
-  color: white;
-  padding: 15px;
-  border-radius: 20px 20px 0 0;
-}
-
-header.ipa h1 {
-  font-size: 43px;
-  font-family: 'times', sans-serif;
-}
-
-.explanation h2 {
-  text-align: center;
-  margin: 20px 0;
-  font-size: 26px;
-  font-weight: bold;
-}
-
-.explanation p {
-  text-align: center;
-  margin: 20px 0;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.quiz-container {
-  display: flex;
-  gap: 20px; /* Jarak antar elemen kuis */
-  padding: 20px;
-  overflow-x: auto; /* Menambahkan scroll horizontal jika elemen terlalu panjang */
-}
-
-.quiz-item {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  min-width: 450px; /* Lebar minimal setiap kuis agar tampak rapi */
-}
-
-.answer-button {
-  display: block;
-  width: 100%;
-  margin: 5px 0;
-  padding: 10px;
-  background-color: #2196F3;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.answer-button:hover {
-  background-color: #1976D2;
-}
-
-button.hidden {
-  position: fixed;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 10px 15px;
-  border: none;
-  background-color: #00b4d8;
-  color: white;
-  font-size: 18px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+<ul>
+  <li><a href="#hero" class="active">Beranda</a></li>
+  <li class="dropdown"><a href="#"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+    <ul>
+      <li class="dropdown"><a href="#"><span>Sekolah Dasar</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <ul>
+          <li><a href="#">IPA</a></li>
+          <li><a href="#">IPS</a></li>
+          <li><a href="#">MTK</a></li>
+          <li><a href="#">PKN</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a href="#"><span>Sekolah Menengah Pertama</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="#">IPA</a></li>
+        <li><a href="#">IPS</a></li>
+        <li><a href="#">PKN</a></li>
+        <li><a href="#">Bahasa Inggris</a></li>
+      </ul>
+      <li class="dropdown"><a href="#"><span>Sekolah Menengah Atas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="#">IPA</a></li>
+        <li><a href="#">IPS</a></li>
+        <li><a href="#">PKN</a></li>
+        <li><a href="#">TIK</a></li>
+      </ul>
+    </ul>
+  <li class="dropdown"><a href="#"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <ul>
+          <li><a href="#">Umum </a></li>
+          <li><a href="#">Teknologi</a></li>
+          <li><a href="#">Ekonomi</a></li>
+          <li><a href="#">Politik</a></li>
+        </ul>
+  </li>
+    <li class="dropdown"><a href="#"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+    <ul>
+      <li><a href="#">Ice Breaking</a></li>
+      <li><a href="#">Tes IQ</a></li>
+    </ul>
+    <li><a href="#gallery">Media Sosial</a></li>
+    <li><a href={{"aboutus"}}>About US</a></li>
+  </li>
+<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
