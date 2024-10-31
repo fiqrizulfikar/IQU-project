@@ -26,14 +26,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/SekolahDasar.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Bootslander
-  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
@@ -50,13 +42,12 @@
 
 <ul>
   <li><a href="index" class="active">Beranda</a></li>
-  <li class="dropdown"><a href="ipa"><span>IPA</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  <li class="dropdown"><a href="ipa"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
    
     <li class="dropdown"><a href="#"><span>IPS</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a></li>
     <li class="dropdown"><a href="#"><span>MTK</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
     <li class="dropdown"><a href="#"><span>PKN</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-    <li class="dropdown"><a href="#"><span>B INDO</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-
+   
     <li><a href="aboutus">About US</a></li>
   </li>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -67,18 +58,7 @@
 
 <!-- create section -->
 
-        <div class="kool-content">
-            <h1>Learn more about our conference vision.</h1>
-               <!-- Search box -->
-        <div class="search-box">
-            <input type="text" id="search" placeholder="Masukkan Kata-Kata Kunci" />
-            <button type="submit" id="search-btn">Cari</button>
-         </div>
-       </div>
-
-       <p id="output">Teks Hasil Cari</p>
-    </div>
-
+     
  <section class="ngendol">
     <div class="container-ipa">
         <header class="ipa">

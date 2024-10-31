@@ -43,8 +43,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="logoiqu.com">
-        <h1 class="sitename">i</i></h1>
-        <h1 class="sitename">-Learning</h1>
+        <h1 class="sitename">i'm Quiz</i></h1>
       </a>
        
  <nav id="navmenu" class="navmenu">
