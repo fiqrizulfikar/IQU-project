@@ -6,7 +6,8 @@ use App\Http\Controllers\SesiController;
 
 
 Route::get('/', [LandingControllers::class, 'index']);
-Route::get('/SekolahDasar', [App\Http\Controllers\LandingControllers::class, 'SekolahDasar']);
+Route::get('/SekolahDasar', [App\Http\Controllers\LandingControllers::class, 'SekolahDasar']);>>>>>>>
+Route::get('/Smp', [App\Http\Controllers\LandingControllers::class, 'Smp']);
 Route::get('/pengetahuan', [App\Http\Controllers\LandingControllers::class, 'pengetahuan']);
 Route::get('/games', [App\Http\Controllers\LandingControllers::class, 'games']);
 Route::get('/mediasosial', [App\Http\Controllers\LandingControllers::class, 'mediasosial']);

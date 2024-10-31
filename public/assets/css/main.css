@@ -143,6 +143,10 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
+  position: fixed; /* Menjadikan header tetap di atas saat scroll */
+  top: 0; /* Memastikan header berada di bagian atas */
+  left: 0; /* Memastikan header berada di sisi kiri */
+  width: 100%; /* Memastikan header mengambil lebar penuh */
   --background-color: rgba(255, 255, 255, 0);
   --default-color: #ffffff;
   --heading-color: #ffffff;
@@ -150,7 +154,7 @@ h6 {
   background-color: var(--background-color);
   padding: 20px 0;
   transition: all 0.5s;
-  z-index: 997;
+  z-index: 997; /* Pastikan ini lebih tinggi dari elemen lain */
 }
 
 .header .logo {
@@ -172,22 +176,13 @@ h6 {
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
-
 /* Global Header on Scroll
 ------------------------------*/
-.scrolled .header {
-  --background-color: #10058c;
-}
 
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-nav {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-}
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
@@ -1632,11 +1627,4 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
-}
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
 }
