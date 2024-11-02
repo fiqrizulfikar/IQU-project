@@ -714,7 +714,7 @@
 
         <div class="col-lg-4 col-md-12 footer-newsletter">
           <h4></h4>
-          <p>Berlangganan di website kami dan dapatkan berita terbaru tentang materi-materi yang unggul dan pengalaman yang baru</p>
+          <p>Selamat menikmati</p>
           <form action="forms/newsletter.php" method="post" class="php-email-form">
             <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
             <div class="loading">Loading</div>
