@@ -489,7 +489,7 @@ h1 {
   flex: 1;
   padding-left: 20px;
   text-align: left;
-  margin-bottom: 170px;
+  
 }
 
 .text-kotak h2 
@@ -1016,20 +1016,19 @@ p {
             </div>
             <div class="content">
                 <div class="image-kotak">
-                    <img src="https://images.pexels.com/photos/5677357/pexels-photo-5677357.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Conference" class="conference-image"> <!-- Ganti dengan gambar yang sesuai -->
+                    <img src="https://i.pinimg.com/736x/b6/86/85/b68685b4c686644cf4c93f06fb2ae896.jpg" alt="Conference" class="conference-image"> <!-- Ganti dengan gambar yang sesuai -->
                 </div>
                 <div class="text-kotak">
                     <h2>IQU.com</h2>
                     <p>Selamat datang di IQU.com - platform e-learning yang dirancang untuk mendukung setiap langkah dalam perjalanan belajar Anda. Kami berkomitmen untuk menyediakan akses ke berbagai materi pendidikan berkualitas, yang dapat diakses kapan saja dan di mana saja. Di IQU.com, kami percaya bahwa pembelajaran adalah kunci kesuksesan masa depan, dan kami di sini untuk membantu Anda mencapai tujuan tersebut.</p>
-                    <p>Dengan berbagai kursus, video pembelajaran, latihan interaktif, dan komunitas belajar yang suportif, kami bertujuan menciptakan pengalaman belajar yang menyenangkan dan bermanfaat. Tim kami terdiri dari para ahli dan pendidik berpengalaman yang bekerja keras untuk memastikan Anda mendapatkan materi terkini dan relevan di berbagai bidang.</p>
-                    <p>Mari bersama-sama membangun masa depan yang lebih baik dengan pembelajaran berkelanjutan. Temukan potensi Anda dan raih impian bersama IQU.com.</p>
+                    <p>Dengan lebih dari sekadar kursus, IQU.com menawarkan pengalaman belajar yang holistik. Dari video pembelajaran yang interaktif, latihan soal adaptif, hingga forum diskusi yang memungkinkan Anda terhubung dengan komunitas belajar dari seluruh penjuru, kami menciptakan ekosistem pembelajaran yang lengkap dan mendalam. Setiap kursus di IQU.com disusun secara sistematis dan dirancang untuk memudahkan Anda mempelajari konsep-konsep baru serta mengaplikasikannya dalam kehidupan nyata.</p>
+                   
                     <ul class="features">
-                       <h2>Dengan menampilkan fitur</h2>
-                        <li><span>✔</span> Pendidikan</li>
-                        <li><span>✔</span> Pengetahuan</li>
-                        <li><span>✔</span> Games</li>
-                        <li><span>✔</span> mediasosial</li>
-                        <li><span>✔</span> Aout as</li>
+                       <h2>Apa yang Membuat IQU.com Berbeda?</h2>
+                        <li>Pembelajaran Berbasis Kompetensi: Program-program kami dirancang untuk membantu Anda menguasai keterampilan yang nyata, relevan, dan dibutuhkan di dunia kerja. Dari pemula hingga mahir, setiap level pembelajaran didesain agar Anda dapat mengikuti alur sesuai kecepatan Anda sendiri. </li>
+                        <li>Interaksi Langsung dengan Instruktur: Kami memberikan Anda akses untuk bertanya dan berdiskusi langsung dengan para pengajar dan ahli di bidang masing-masing. Dengan begitu, Anda bisa mendapatkan wawasan lebih mendalam dan mempercepat pemahaman Anda.</li>
+                        <li>Fitur Pelacakan Kemajuan: Dengan fitur ini, Anda bisa memantau perkembangan belajar Anda, melihat sejauh mana materi yang telah dikuasai, dan mengetahui area yang perlu ditingkatkan.</li>
+                        <li>Fitur Pelacakan Kemajuan: Dengan fitur ini, Anda bisa memantau perkembangan belajar Anda, melihat sejauh mana materi yang telah dikuasai, dan mengetahui area yang perlu ditingkatkan.</li>
                     </ul>
                 </div>
             </div>
