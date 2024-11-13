@@ -13,8 +13,11 @@ Route::get('/games', [App\Http\Controllers\LandingControllers::class, 'games']);
 Route::get('/mediasosial', [App\Http\Controllers\LandingControllers::class, 'mediasosial']);
 Route::get('/aboutus', [App\Http\Controllers\LandingControllers::class, 'aboutus']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
-
+Route::get('/IPAsd', [App\Http\Controllers\LandingControllers::class, 'IPAsd']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
+Route::get('/IPSsd', [App\Http\Controllers\LandingControllers::class, 'IPSsd']);
+
+
 
 Route::get('/login', [SesiController::class, 'login']);
 

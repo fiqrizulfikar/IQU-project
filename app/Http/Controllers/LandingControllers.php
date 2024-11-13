@@ -14,7 +14,7 @@ class LandingControllers extends Controller
 
     public function SekolahDasar()
     {
-        return view ('landing.SekolahDasar');
+        return view ('landing.SD.SekolahDasar');
     }
     public function Smp()
     {
@@ -43,6 +43,16 @@ class LandingControllers extends Controller
     public function aboutus()
     {
         return view ('landing.aboutus');
+    }
+
+    public function IPAsd()
+    {
+        return view ('landing.SD.IPA');
+    }
+
+    public function IPSsd()
+    {
+        return view ('landing.SD.IPS');
     }
     
     

@@ -25,7 +25,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/SekolahDasar.css" rel="stylesheet">
+  <link href="assets/css/SD/IPASD.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -41,13 +41,13 @@
  <nav id="navmenu" class="navmenu">
 
 <ul>
-  <li><a href="index" class="active">Beranda</a></li>
-  <li class="dropdown"><a href="ipa"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  <li><a href="/" class="active">Beranda</a></li>
+  
    
     <li class="dropdown"><a href="#"><span>IPS</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a></li>
     <li class="dropdown"><a href="#"><span>MTK</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
     <li class="dropdown"><a href="#"><span>PKN</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-   
+    <li class="dropdown"><a href="IPAsd"><span>IPA</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
     <li><a href="aboutus">About US</a></li>
   </li>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
