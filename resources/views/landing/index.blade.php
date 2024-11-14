@@ -53,12 +53,7 @@
   <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
     <ul>
       <li class="dropdown"><a href="{{ url('/SekolahDasar') }}"><span>Sekolah Dasar</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-        <ul>
-          <li><a href="#">IPA</a></li>
-          <li><a href="#">IPS</a></li>
-          <li><a href="#">MTK</a></li>
-          <li><a href="#">PKN</a></li>
-        </ul>
+       
       </li>
       <li class="dropdown"><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
       <ul>
@@ -89,8 +84,8 @@
       <li><a href="#">Tes IQ</a></li>
     </ul>
     <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
-    <li><a href={{ url('/aboutus') }}>About US</a></li>
-    <li><a href={{ url('/login') }}>Login</a></li>
+    <li><a href="/aboutus">About US</a></li>
+    <li><a href="/login">Login</a></li>
   </li>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
@@ -113,8 +108,8 @@
             <h1>Langkah Kecil Menuju Masa Depan Cerah <span>IQU.com</span></h1>
            
             <div class="d-flex">
-              <a href="#about" class="btn-get-started">Ayo Mulai</a>
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Tonton Video</span></a>
+              <a href="/pendidikan" class="btn-get-started">Ayo Mulai</a>
+              <a href="https://youtu.be/H0gqYMTFos0?si=oM92-VaZBCGRxAmJ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Tonton Video</span></a>
             </div>
           </div>
 

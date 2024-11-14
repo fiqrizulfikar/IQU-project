@@ -185,6 +185,7 @@
 <body>
 
     <!-- Navbar -->
+     
     <nav class="navbar">
         <h1>
             <img src="assets/img/logo.png" alt="Logo">
@@ -193,62 +194,51 @@
         <ul>
             <li><a href="/">Beranda</a></li>
             <li>
-                <a href="IPSsd">IPS</a>
-                <div class="dropdown">
-                    <a href="#">IPS 1</a>
-                    <a href="#">IPS 2</a>
-                </div>
-            </li>
-            <li>
-                <a href="#">MTK</a>
-                <div class="dropdown">
-                    <a href="#">MTK 1</a>
-                    <a href="#">MTK 2</a>
-                </div>
-            </li>
-            <li>
-                <a href="#">PKN</a>
-                <div class="dropdown">
-                    <a href="#">PKN 1</a>
-                    <a href="#">PKN 2</a>
-                </div>
-            </li>
-            <li>
                 <a href="IPAsd">IPA</a>
-                <div class="dropdown">
-                    <a href="#">IPA 1</a>
-                    <a href="#">IPA 2</a>
+                
+            </li>
+            <li>
+                <a href="IPSsd">IPS</a>
+                
+            </li>
+            <li>
+                <a href="MTKsd">MTK</a>
+               
+            </li>
+            <li>
+                <a href="PKNsd">PKN</a>
+               
                 </div>
             </li>
-            <li><a href="about.html">About US</a></li>
+            <li><a href="/aboutus">About US</a></li>
         </ul>
     </nav>
 
     <!-- Card Section -->
     <div class="card-container">
         <div class="card">
-            <img src="https://cdn1.katadata.co.id/media/images/thumb/2022/10/04/Ilustrasi_ilmu_pengetahuan_alam_IPA-2022_10_04-19_45_49_c3f8cba8b04ac12b452d88b521a5debb_960x640_thumb.png" alt="Ilmu IPA">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcHeaS_NR0GL3Ml9fi1oEAdHb63VuaXhDqFg&s" alt="Ilmu IPA">
             <h5>IPA</h5>
             <p>Mata pelajaran yang mempelajari alam sekitar dan isinya, termasuk benda-benda, peristiwa, dan gejala alam.</p>
-            <a href="IPAsd.html">QUIZ SKUY</a>
+            <a href="IPAsd">QUIZ SKUY</a>
         </div>
         <div class="card">
             <img src="https://rencanamu.id/assets/file_uploaded/blog/1463642073-20120314-q.jpg" alt="Ilmu IPS">
             <h5>IPS</h5>
             <p>Mata pelajaran yang mempelajari hubungan antar manusia, masalah sosial dan interaksinya dengan lingkungan sekitar.</p>
-            <a href="IPSsd.html">QUIZ SKUY</a>
+            <a href="IPSsd">QUIZ SKUY</a>
         </div>
         <div class="card">
-            <img src="https://cdn1.katadata.co.id/media/images/thumb/2022/10/04/Ilustrasi_ilmu_pengetahuan_alam_IPA-20221004150836.jpg" alt="Ilmu MTK">
+            <img src="https://media.istockphoto.com/id/1439286764/id/vektor/matematika-tulisan-tangan-dengan-corat-coret-matematika.jpg?s=612x612&w=0&k=20&c=A5UsOnOuspqLDqzifguOHHyA4Dn06LV9Y3yKPqPRYPo=" alt="Ilmu MTK">
             <h5>MTK</h5>
             <p>Mata pelajaran yang mempelajari konsep matematika dasar seperti angka, bentuk, dan hitungan.</p>
-            <a href="MTKsd.html">QUIZ SKUY</a>
+            <a href="MTKsd">QUIZ SKUY</a>
         </div>
         <div class="card">
-            <img src="https://cdn1.katadata.co.id/media/images/thumb/2022/10/04/Ilustrasi_ilmu_pengetahuan_alam_IPA-20221004150836.jpg" alt="Ilmu PKN">
+            <img src="https://sman2pinggir.sch.id/media_library/posts/large/4aa2de96bb4948c801a4f3b878251259.jpg" alt="Ilmu PKN">
             <h5>PKN</h5>
             <p>Mata pelajaran yang mempelajari nilai-nilai kewarganegaraan dan dasar-dasar demokrasi.</p>
-            <a href="PKNsd.html">QUIZ SKUY</a>
+            <a href="PKNsd">QUIZ SKUY</a>
         </div>
     </div>
 
@@ -306,13 +296,8 @@
 
 <div class="col-lg-4 col-md-12 footer-newsletter">
   <h4></h4>
-  <p>Berlangganan di website kami dan dapatkan berita terbaru tentang materi-materi yang unggul dan pengalaman yang baru</p>
-  <form action="forms/newsletter.php" method="post" class="php-email-form">
-    <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-    <div class="loading">Loading</div>
-    <div class="error-message"></div>
-    <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-  </form>
+  
+  
 </div>
 
 </div>

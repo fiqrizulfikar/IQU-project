@@ -44,11 +44,11 @@
   <li><a href="/" class="active">Beranda</a></li>
   
    
-    <li class="dropdown"><a href="#"><span>IPS</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a></li>
-    <li class="dropdown"><a href="#"><span>MTK</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-    <li class="dropdown"><a href="#"><span>PKN</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-    <li class="dropdown"><a href="IPAsd"><span>IPA</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-    <li><a href="aboutus">About US</a></li>
+    <li class="dropdown"><a href="IPAsd"><span>IPA</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a></li>
+    <li class="dropdown"><a href="IPSsd"><span>IPS</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+    <li class="dropdown"><a href="MTKsd"><span>MTK</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+    <li class="dropdown"><a href="PKNsd"><span>PKN</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+    <li><a href="/aboutus">About US</a></li>
   </li>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 
@@ -124,13 +124,7 @@
 
     <div class="col-lg-4 col-md-12 footer-newsletter">
       <h4></h4>
-      <p>Berlangganan di website kami dan dapatkan berita terbaru tentang materi-materi yang unggul dan pengalaman yang baru</p>
-      <form action="forms/newsletter.php" method="post" class="php-email-form">
-        <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-        <div class="loading">Loading</div>
-        <div class="error-message"></div>
-        <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-      </form>
+      
     </div>
 
   </div>

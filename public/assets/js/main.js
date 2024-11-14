@@ -186,9 +186,10 @@
 
 
 
-          /**materi SD */
+          /**----------MATERI SD------------**/
+          
 
-
+ /**IPA */
           const questions = [
   {
       title: "Kuis IPA 1",
@@ -241,11 +242,14 @@
   // tempat nambahin pertanyaan lebih banyak di sini
 ];
 
+
 const quizContainer = document.querySelector('.quiz-container');
 
 questions.forEach(q => {
   const quizItem = document.createElement('div');
   quizItem.classList.add('quiz-item');
+
+
 
   quizItem.innerHTML = `
       <h2>${q.title}</h2>
@@ -270,7 +274,12 @@ quizContainer.addEventListener('click', (event) => {
   }
 });
 
-       
+ 
+
+
+
+
+
 
 
 

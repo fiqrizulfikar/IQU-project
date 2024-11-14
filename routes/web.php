@@ -6,16 +6,21 @@ use App\Http\Controllers\SesiController;
 
 
 Route::get('/', [LandingControllers::class, 'index']);
-Route::get('/SekolahDasar', [App\Http\Controllers\LandingControllers::class, 'SekolahDasar']);
+
 Route::get('/Smp', [App\Http\Controllers\LandingControllers::class, 'Smp']);
 Route::get('/pengetahuan', [App\Http\Controllers\LandingControllers::class, 'pengetahuan']);
 Route::get('/games', [App\Http\Controllers\LandingControllers::class, 'games']);
 Route::get('/mediasosial', [App\Http\Controllers\LandingControllers::class, 'mediasosial']);
 Route::get('/aboutus', [App\Http\Controllers\LandingControllers::class, 'aboutus']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
-Route::get('/IPAsd', [App\Http\Controllers\LandingControllers::class, 'IPAsd']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
+
+
+Route::get('/SekolahDasar', [App\Http\Controllers\LandingControllers::class, 'SekolahDasar']);
+Route::get('/IPAsd', [App\Http\Controllers\LandingControllers::class, 'IPAsd']);
+Route::get('/MTKsd', [App\Http\Controllers\LandingControllers::class, 'MTKsd']);
 Route::get('/IPSsd', [App\Http\Controllers\LandingControllers::class, 'IPSsd']);
+Route::get('/PKNsd', [App\Http\Controllers\LandingControllers::class, 'PKNsd']);
 
 
 
