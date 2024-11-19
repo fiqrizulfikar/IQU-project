@@ -805,7 +805,7 @@ main {
         <a href="index.html" class="logo d-flex align-items-center">
           <img src="assets/img/logo.png" alt="logoiqu.com">
           <h1 class="sitename">i</i></h1>
-          <h1 class="sitename">-Learning</h1>
+          <h1 class="sitename">-QUIZ</h1>
         </a>
          
    <nav id="navmenu" class="navmenu">
@@ -869,7 +869,7 @@ main {
                 </div>
                 <div class="option">
                     <img src="assets/img/ekonomi.png" alt="Globe">
-                    <a href="#" class="read-more"><span>Belajar Ekonomi</span><i class="bi bi-arrow-right"></i></a>
+                    <a href="{{ url('/ekonomi') }}" class="read-more"><span>Belajar Ekonomi</span><i class="bi bi-arrow-right"></i></a>
                 </div>
                 <div class="option">
                     <img src="assets/img/teknologi.png"alt="teknologi">

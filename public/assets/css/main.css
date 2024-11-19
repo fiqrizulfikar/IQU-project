@@ -432,7 +432,7 @@ h6 {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
+    background: rgba(55, 0, 253, 0.8);
     transition: 0.3s;
   }
 

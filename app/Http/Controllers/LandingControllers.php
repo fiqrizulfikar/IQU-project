@@ -11,7 +11,6 @@ class LandingControllers extends Controller
     {
         return view('landing.index');
     }
-
     public function SekolahDasar()
     {
         return view ('landing.SekolahDasar');
@@ -35,10 +34,6 @@ class LandingControllers extends Controller
     public function pendidikan()
     {
         return view ('landing.pendidikan');
-    }
-    public function pengetahuan()
-    {
-        return view ('landing.pengetahuan');
     }
     public function aboutus()
     {
