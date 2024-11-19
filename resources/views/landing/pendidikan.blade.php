@@ -27,7 +27,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  @include('componen.navbar')
+  
 <div class="container">
 
 <div class="row gy-4">
