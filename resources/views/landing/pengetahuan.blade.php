@@ -877,7 +877,7 @@ main {
                 </div>
                 <div class="option">
                     <img src="assets/img/court.png"alt="Politik">
-                    <a href="#" class="read-more"><span>Belajar Politik</span><i class="bi bi-arrow-right"></i></a>
+                    <a href="{{ url('/politik') }}" class="read-more"><span>Belajar Politik</span><i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
         </div>

@@ -19,14 +19,12 @@ Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pend
 
 
 Route::get('/SekolahDasar', [App\Http\Controllers\LandingControllers::class, 'SekolahDasar']);
-Route::get('/IPAsd', [App\Http\Controllers\LandingControllers::class, 'IPAsd']);
-Route::get('/MTKsd', [App\Http\Controllers\LandingControllers::class, 'MTKsd']);
-Route::get('/IPSsd', [App\Http\Controllers\LandingControllers::class, 'IPSsd']);
-Route::get('/PKNsd', [App\Http\Controllers\LandingControllers::class, 'PKNsd']);
+Route::get('/IPAsd', [App\Http\Controllers\LandingControllers::class, 'IPA']);
+Route::get('/MTKsd', [App\Http\Controllers\LandingControllers::class, 'MTK']);
+Route::get('/IPSsd', [App\Http\Controllers\LandingControllers::class, 'IPS']);
+Route::get('/PKNsd', [App\Http\Controllers\LandingControllers::class, 'PKN']);
 
-
-
->>>>>>> 38593ba865acda01488eb41622789149755d6ec0
 Route::get('/login', [SesiController::class, 'login']);
 Route::get('/pengetahuan', [LandingPengetahuan::class, 'index']);
 Route::get('/ekonomi', [LandingPengetahuan::class, 'showQuiz'])->name('ekonomi.show'); // Menampilkan daftar kuis
+Route::get('/politik', [LandingPengetahuan::class, 'showQuizPolitik'])->name('politik.show'); // Menampilkan daftar kuis
