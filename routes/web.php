@@ -24,7 +24,7 @@ Route::get('/MTKsd', [App\Http\Controllers\LandingControllers::class, 'MTK']);
 Route::get('/IPSsd', [App\Http\Controllers\LandingControllers::class, 'IPS']);
 Route::get('/PKNsd', [App\Http\Controllers\LandingControllers::class, 'PKN']);
 
-Route::get('/login', [SesiController::class, 'login']);
+Route::get('/Login', [SesiController::class, 'login']);
 Route::get('/pengetahuan', [LandingPengetahuan::class, 'index']);
 Route::get('/ekonomi', [LandingPengetahuan::class, 'showQuiz'])->name('ekonomi.show'); // Menampilkan daftar kuis
 Route::get('/politik', [LandingPengetahuan::class, 'showQuizPolitik'])->name('politik.show'); // Menampilkan daftar kuis
