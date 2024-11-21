@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuis Teknologi</title>
+    <title>Kuis Umum</title>
     <link rel="stylesheet" href="{{ asset('assets/css/ekonomi.css') }}">
 </head>
 <body>
     <body>
         <div class="quiz-container">
             <!-- Judul Pertanyaan -->
-            <h1 id="quiz-politik-title">Selamat Datang di Kuis Teknologi</h1>
+            <h1 id="quiz-politik-title">Selamat Datang di Kuis Umum</h1>
         
             <!-- Timer -->
             <div id="timer" class="timer"></div>
@@ -47,8 +47,6 @@
             <!-- Tombol Kembali -->
             <button id="homeButton" style="display: none;">Kembali ke Pilih Kuis</button>
         </div>
-        
-        
         <script>
             document.addEventListener('DOMContentLoaded', function () {
     let currentQuestionIndex = 0;
@@ -56,7 +54,7 @@
     const timeLimit = 15; // Waktu maksimal per pertanyaan
     let timerInterval;
 
-    const questions = @json($quizTeknologi);
+    const questions = @json($quizUmum); // Mengambil data kuis umum dari controller
 
     const quizContainer = document.querySelector('.quiz-container');
     const quizTitle = document.getElementById('quiz-politik-title');
@@ -181,7 +179,3 @@
 });
 
         </script>
-        
-    
-</body>
-</html>

@@ -6,6 +6,8 @@ use App\Models\QuizPolitik;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\QuizTeknologi;
+use App\Models\QuizUmum;
 
 class LandingPengetahuan extends Controller
 {
@@ -22,6 +24,16 @@ class LandingPengetahuan extends Controller
     {
         $quizPolitik = QuizPolitik::all(); // Ambil semua data pertanyaan dari database
         return view('landing.landing_pengetahuan.politik', compact('quizPolitik'));
+    }
+    public function showQuizTeknologi()
+    {
+        $quizTeknologi = QuizTeknologi::all(); // Ambil semua data pertanyaan dari database
+        return view('landing.landing_pengetahuan.teknologi', compact('quizTeknologi'));
+    }
+    public function showQuizUmum()
+    {
+        $quizUmum = QuizUmum::all(); // Ambil semua data pertanyaan dari database
+        return view('landing.landing_pengetahuan.umum', compact('quizUmum'));
     }
 }
 
