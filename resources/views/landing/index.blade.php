@@ -70,13 +70,14 @@
         <li><a href="#">TIK</a></li>
       </ul>
     </ul>
-  <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-        <ul>
-          <li><a href="#">Umum </a></li>
-          <li><a href="#">Teknologi</a></li>
-          <li><a href="#">Ekonomi</a></li>
-          <li><a href="#">Politik</a></li>
-        </ul>
+    <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="{{ url('/umum') }}">Umum </a></li>
+        <li><a href="{{ url('/teknologi') }}">Teknologi</a></li>
+        <li><a href="{{ url('/ekonomi') }}">Ekonomi</a></li>
+        <li><a href="{{ url('/politik') }}">Politik</a></li>
+      </ul>
+</li>
   </li>
     <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
     <ul>

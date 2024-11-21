@@ -810,7 +810,7 @@ main {
          
    <nav id="navmenu" class="navmenu">
    <ul>
-    <li><a href="#hero" class="active">Beranda</a></li>
+    <li><a href="{{ url('/') }}" class="active">Beranda</a></li>
     <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
       <ul>
         <li class="dropdown"><a href="{{ url('/SekolahDasar') }}"><span>Sekolah Dasar</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -838,10 +838,10 @@ main {
       </ul>
     <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
-            <li><a href="#">Umum </a></li>
-            <li><a href="#">Teknologi</a></li>
-            <li><a href="#">Ekonomi</a></li>
-            <li><a href="#">Politik</a></li>
+            <li><a href="{{ url('/umum') }}">Umum </a></li>
+            <li><a href="{{ url('/teknologi') }}">Teknologi</a></li>
+            <li><a href="{{ url('/ekonomi') }}">Ekonomi</a></li>
+            <li><a href="{{ url('/politik') }}">Politik</a></li>
           </ul>
     </li>
       <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -865,7 +865,7 @@ main {
             <div class="options">
                 <div class="option">
                     <img src="assets/img/buku.png" alt="Buku"> 
-                    <a href="#" class="read-more"><span>Belajar Umum</span><i class="bi bi-arrow-right"></i></a>
+                    <a href="{{ url('/umum') }}" class="read-more"><span>Belajar Umum</span><i class="bi bi-arrow-right"></i></a>
                 </div>
                 <div class="option">
                     <img src="assets/img/ekonomi.png" alt="Globe">
@@ -873,7 +873,7 @@ main {
                 </div>
                 <div class="option">
                     <img src="assets/img/teknologi.png"alt="teknologi">
-                    <a href="#" class="read-more"><span>Belajar Teknologi</span><i class="bi bi-arrow-right"></i></a>
+                    <a href="{{ url('/teknologi') }}" class="read-more"><span>Belajar Teknologi</span><i class="bi bi-arrow-right"></i></a>
                 </div>
                 <div class="option">
                     <img src="assets/img/court.png"alt="Politik">
@@ -881,6 +881,7 @@ main {
                 </div>
             </div>
         </div>
+
     </main>
 
 
