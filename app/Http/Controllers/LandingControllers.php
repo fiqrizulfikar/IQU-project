@@ -11,10 +11,7 @@ class LandingControllers extends Controller
     {
         return view('landing.index');
     }
-    public function SekolahDasar()
-    {
-        return view ('landing.SD.SekolahDasar');
-    }
+   
     public function Smp()
     {
         return view ('landing.Smp');
@@ -41,25 +38,7 @@ class LandingControllers extends Controller
     }
 
 
-/*Sekolah Dasar */
 
-    public function IPAsd()
-    {
-        return view ('landing.SD.IPA');
-    }
-
-    public function IPSsd()
-    {
-        return view ('landing.SD.IPS');
-    }
-    public function MTKsd()
-    {
-        return view ('landing.SD.MTK');
-    }
-    public function PKNsd()
-    {
-        return view ('landing.SD.PKN');
-    }
     
     
 

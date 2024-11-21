@@ -163,6 +163,7 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.2s;
+            text align: center;
         }
 
         .card a:hover {
