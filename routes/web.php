@@ -4,12 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SesiController;
 use App\Http\Controllers\LandingControllers;
 use App\Http\Controllers\LandingPengetahuan;
-
+use App\Http\Controllers\LandingSDcontrollers;
+use App\Http\Controllers\LandingSMPcontroller;
 
 
 Route::get('/', [LandingControllers::class, 'index']);
 
-Route::get('/Smp', [App\Http\Controllers\LandingControllers::class, 'Smp']);
+
 Route::get('/pengetahuan', [App\Http\Controllers\LandingControllers::class, 'pengetahuan']);
 Route::get('/games', [App\Http\Controllers\LandingControllers::class, 'games']);
 Route::get('/mediasosial', [App\Http\Controllers\LandingControllers::class, 'mediasosial']);
@@ -18,17 +19,20 @@ Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pend
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 
 
-Route::get('/SekolahMenengahPertama', [App\Http\Controllers\LandingControllers::class, 'SekolahMenengahPertama']);
-Route::get('/IPAsmp', [App\Http\Controllers\LandingControllers::class, 'IPA']);
-Route::get('/MTKsmp', [App\Http\Controllers\LandingControllers::class, 'MTK']);
-Route::get('/IPSsmp', [App\Http\Controllers\LandingControllers::class, 'IPS']);
-Route::get('/PKNsmp', [App\Http\Controllers\LandingControllers::class, 'PKN']);
 
-Route::get('/SekolahDasar', [App\Http\Controllers\LandingControllers::class, 'SekolahDasar']);
-Route::get('/IPAsd', [App\Http\Controllers\LandingControllers::class, 'IPA']);
-Route::get('/MTKsd', [App\Http\Controllers\LandingControllers::class, 'MTK']);
-Route::get('/IPSsd', [App\Http\Controllers\LandingControllers::class, 'IPS']);
-Route::get('/PKNsd', [App\Http\Controllers\LandingControllers::class, 'PKN']);
+Route::get('/Smp', [LandingSMPcontroller::class, 'index']);
+Route::get('/IPAsmp', [LandingSMPcontroller::class, 'IPAsmp']);
+Route::get('/MTKsmp', [LandingSMPcontroller::class, 'MTKsmp']);
+Route::get('/IPSsmp', [LandingSMPcontroller::class, 'IPSsmp']);
+Route::get('/PKNsmp', [LandingSMPcontroller::class, 'PKNsmp']);
+
+
+Route::get('/sekolahdasar', [LandingSDcontrollers::class, 'index']);
+Route::get('/IPAsd', [LandingSDcontrollers::class, 'IPAsd']);
+Route::get('/MTKsd', [LandingSDcontrollers::class, 'MTKsd']);
+Route::get('/IPSsd', [LandingSDcontrollers::class, 'IPSsd']);
+Route::get('/PKNsd', [LandingSDcontrollers::class, 'PKNsd']);
+
 
 Route::get('/Login', [SesiController::class, 'login']);
 Route::get('/pengetahuan', [LandingPengetahuan::class, 'index']);
