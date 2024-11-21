@@ -135,6 +135,7 @@
             transition: transform 0.2s;
             text-align: center;
             padding: 10px;
+            justify-content: space-between; /* Agar tombol ada di bawah */
         }
 
         .card img {
@@ -163,6 +164,7 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.2s;
+            justify-content: space-between; /* Agar tombol ada di bawah */
         }
 
         .card a:hover {

@@ -18,6 +18,12 @@ Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pend
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 
 
+Route::get('/SekolahMenengahPertama', [App\Http\Controllers\LandingControllers::class, 'SekolahMenengahPertama']);
+Route::get('/IPAsmp', [App\Http\Controllers\LandingControllers::class, 'IPA']);
+Route::get('/MTKsmp', [App\Http\Controllers\LandingControllers::class, 'MTK']);
+Route::get('/IPSsmp', [App\Http\Controllers\LandingControllers::class, 'IPS']);
+Route::get('/PKNsmp', [App\Http\Controllers\LandingControllers::class, 'PKN']);
+
 Route::get('/SekolahDasar', [App\Http\Controllers\LandingControllers::class, 'SekolahDasar']);
 Route::get('/IPAsd', [App\Http\Controllers\LandingControllers::class, 'IPA']);
 Route::get('/MTKsd', [App\Http\Controllers\LandingControllers::class, 'MTK']);

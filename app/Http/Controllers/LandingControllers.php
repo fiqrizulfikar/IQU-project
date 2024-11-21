@@ -15,9 +15,9 @@ class LandingControllers extends Controller
     {
         return view ('landing.SD.SekolahDasar');
     }
-    public function Smp()
+    public function SekolahMenengahPertama()
     {
-        return view ('landing.Smp');
+        return view ('landing.SMP.SekolahMenengahPertama');
     }
     public function Sma()
     {
@@ -62,6 +62,29 @@ class LandingControllers extends Controller
     }
     
     
+
+    /*Sekolah Menengah Pertama */
+
+    public function IPAsmp()
+    {
+        return view ('landing.SMP.IPA');
+    }
+
+    public function IPSsmp()
+    {
+        return view ('landing.SMP.IPS');
+    }
+    public function MTKsmp()
+    {
+        return view ('landing.SMP.MTK');
+    }
+    public function PKNsmp()
+    {
+        return view ('landing.SMP.PKN');
+    }
+
+
+
 
     /**
      * Show the form for creating a new resource.
