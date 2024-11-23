@@ -6,6 +6,7 @@ use App\Http\Controllers\LandingControllers;
 use App\Http\Controllers\LandingPengetahuan;
 use App\Http\Controllers\LandingSDcontrollers;
 use App\Http\Controllers\LandingSMPcontroller;
+use App\Http\Controllers\LandingSMAcontroller;
 
 
 Route::get('/', [LandingControllers::class, 'index']);
@@ -39,3 +40,6 @@ Route::get('/ekonomi', [LandingPengetahuan::class, 'showQuiz'])->name('ekonomi.s
 Route::get('/politik', [LandingPengetahuan::class, 'showQuizPolitik'])->name('politik.show'); // Menampilkan daftar kuis
 Route::get('/teknologi', [LandingPengetahuan::class, 'showQuizTeknologi'])->name('teknologi.show');
 Route::get('/umum', [LandingPengetahuan::class, 'showQuizUmum'])->name('umum.show');
+
+Route::get('/SMA', [LandingSMAcontroller::class, 'index']);
+Route::get('/smaipa', [LandingSMAcontroller::class, 'showQuizSMAIPA'])->name('IPA.show');

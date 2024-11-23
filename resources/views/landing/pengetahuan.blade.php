@@ -96,17 +96,33 @@ main {
 .options {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .option {
     margin: 20px;
+    text-align: center;
+    opacity: 0; /* Mulai dengan transparan */
+    animation: fadeIn 1s forwards; /* Animasi selama 1 detik */
     text-align: center;
 }
 
 .option img {
     width: 100px; /* Atur ukuran gambar sesuai kebutuhan */
     height: auto;
+    margin-bottom: 10px;
+}
+.option:nth-child(1) {
+  animation-delay: 0s; /* Ikon pertama muncul tanpa delay */
+}
+.option:nth-child(2) {
+  animation-delay: 0.3s; /* Ikon kedua muncul setelah 0.3 detik */
+}
+.option:nth-child(3) {
+  animation-delay: 0.6s; /* Ikon ketiga muncul setelah 0.6 detik */
+}
+.option:nth-child(4) {
+  animation-delay: 0.9s; /* Ikon keempat muncul setelah 0.9 detik */
 }
 .main-title {
     font-family: 'Raleway', sans-serif; /* Ganti dengan font yang diinginkan */
@@ -160,6 +176,7 @@ main {
 .read-more span {
     font-weight: bold; /* Membuat teks lebih tebal */
 }
+
 
 
 .header {
@@ -725,6 +742,14 @@ main {
       transform: rotate(360deg);
     }
   }
+  @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
   
   /*--------------------------------------------------------------
   # Scroll Top Button

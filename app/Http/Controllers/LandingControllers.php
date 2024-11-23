@@ -20,10 +20,6 @@ class LandingControllers extends Controller
     {
         return view ('landing.SMP.SekolahMenengahPertama');
     }
-    public function Sma()
-    {
-        return view ('landing.Sma');
-    }
     public function games()
     {
         return view ('landing.games');

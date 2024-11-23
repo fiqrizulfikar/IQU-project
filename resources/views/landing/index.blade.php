@@ -62,9 +62,9 @@
         <li><a href="#">PKN</a></li>
         <li><a href="#">Bahasa Inggris</a></li>
       </ul>
-      <li class="dropdown"><a href="{{ url('/Sma') }}"><span>Sekolah Menengah Atas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <li class="dropdown"><a href="{{ url('/SMA') }}"><span>Sekolah Menengah Atas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
       <ul>
-        <li><a href="#">IPA</a></li>
+        <li><a href="{{ url('/smaipa') }}">IPA</a></li>
         <li><a href="#">IPS</a></li>
         <li><a href="#">PKN</a></li>
         <li><a href="#">TIK</a></li>
