@@ -10,7 +10,7 @@
     <body>
         <div class="quiz-container">
             <!-- Judul Pertanyaan -->
-            <h1 id="quiz-politik-title">Selamat Datang di Kuis SMA IPA</h1>
+            <h1 id="quiz-ips-title">Selamat Datang di Kuis SMA IPA</h1>
         
             <!-- Timer -->
             <div id="timer" class="timer"></div>

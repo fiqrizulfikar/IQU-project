@@ -43,3 +43,4 @@ Route::get('/umum', [LandingPengetahuan::class, 'showQuizUmum'])->name('umum.sho
 
 Route::get('/SMA', [LandingSMAcontroller::class, 'index']);
 Route::get('/smaipa', [LandingSMAcontroller::class, 'showQuizSMAIPA'])->name('IPA.show');
+Route::get('/smaips', [LandingSMAcontroller::class, 'showQuizSMAIPS'])->name('IPS.show');

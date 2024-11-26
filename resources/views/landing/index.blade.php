@@ -65,7 +65,7 @@
       <li class="dropdown"><a href="{{ url('/SMA') }}"><span>Sekolah Menengah Atas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
       <ul>
         <li><a href="{{ url('/smaipa') }}">IPA</a></li>
-        <li><a href="#">IPS</a></li>
+        <li><a href="{{ url('/smaips') }}">IPS</a></li>
         <li><a href="#">PKN</a></li>
         <li><a href="#">TIK</a></li>
       </ul>

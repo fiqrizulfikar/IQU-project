@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class QuizUmum extends Model
+class QuizSMAIPS extends Model
 {
     use HasFactory;
 
-    protected $table = 'quizumum'; // Nama tabel yang digunakan
+    protected $table = 'quizsmaips'; // Nama tabel yang digunakan
 
     protected $fillable = [
         'quiz',
@@ -20,4 +20,3 @@ class QuizUmum extends Model
         'jawaban_benar',
     ];
 }
-

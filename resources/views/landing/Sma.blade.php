@@ -909,7 +909,6 @@
     
         </main>
     
-    
         <footer id="footer" class="footer dark-background">
     
           <div class="container footer-top">
