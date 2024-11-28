@@ -1011,7 +1011,7 @@ p {
             </div>
             <div class="content">
                 <div class="image-kotak">
-                    <img src="https://i.pinimg.com/736x/b6/86/85/b68685b4c686644cf4c93f06fb2ae896.jpg" alt="Conference" class="conference-image"> <!-- Ganti dengan gambar yang sesuai -->
+                    <img src="https://images.pexels.com/photos/29041790/pexels-photo-29041790.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Conference" class="conference-image"> <!-- Ganti dengan gambar yang sesuai -->
                 </div>
                 <div class="text-kotak">
                     <h2>IQU.com</h2>

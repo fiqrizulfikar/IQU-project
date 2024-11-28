@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuis Teknologi</title>
+    <title>Kuis Pengetahuan Teknologi</title>
     <link rel="stylesheet" href="{{ asset('assets/css/ekonomi.css') }}">
 </head>
 <body>
     <body>
         <div class="quiz-container">
             <!-- Judul Pertanyaan -->
-            <h1 id="quiz-politik-title">Selamat Datang di Kuis Teknologi</h1>
+            <h1 id="quiz-ips-title">Selamat Datang di Kuis Teknologi</h1>
         
             <!-- Timer -->
             <div id="timer" class="timer"></div>
@@ -47,27 +47,23 @@
             <!-- Tombol Kembali -->
             <button id="homeButton" style="display: none;">Kembali ke Pilih Kuis</button>
         </div>
-        
-        
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('DOMContentLoaded', function () { 
     let currentQuestionIndex = 0;
     let correctAnswersCount = 0;
-    const timeLimit = 15; // Waktu maksimal per pertanyaan
+    const timeLimit = 15; // Waktu maksimal per pertanyaan (detik)
     let timerInterval;
-
     const questions = @json($quizTeknologi);
 
+    // Ambil elemen-elemen dari DOM
     const quizContainer = document.querySelector('.quiz-container');
-    const quizTitle = document.getElementById('quiz-politik-title');
+    const quizTitle = document.getElementById('quiz-ips-title');
     const labelA = document.getElementById('labelA');
     const labelB = document.getElementById('labelB');
     const labelC = document.getElementById('labelC');
     const labelD = document.getElementById('labelD');
     const resultContainer = document.getElementById('result');
     const quizForm = document.getElementById('quizForm');
-
-    // Elemen tambahan
     const timerElement = document.getElementById('timer');
     const startButton = document.getElementById('startButton');
     const restartButton = document.getElementById('restartButton');
@@ -83,13 +79,11 @@
     });
 
     // Event tombol mulai ulang
-    restartButton.addEventListener('click', function () {
-        resetQuiz();
-    });
+    restartButton.addEventListener('click', resetQuiz);
 
     // Event tombol kembali
     backButton.addEventListener('click', function () {
-        window.location.href = "/pilih-quiz"; // Redirect ke halaman pilih kuis
+        window.location.href = "/pengetahuan"; // Redirect ke halaman pilih kuis
     });
 
     // Fungsi untuk memulai timer
@@ -180,8 +174,5 @@
     backButton.style.display = 'none';
 });
 
+
         </script>
-        
-    
-</body>
-</html>

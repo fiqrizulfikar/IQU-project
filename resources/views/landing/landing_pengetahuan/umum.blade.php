@@ -10,7 +10,7 @@
     <body>
         <div class="quiz-container">
             <!-- Judul Pertanyaan -->
-            <h1 id="quiz-politik-title">Selamat Datang di Kuis Umum</h1>
+            <h1 id="quiz-umum-title">Selamat Datang di Kuis Umum</h1>
         
             <!-- Timer -->
             <div id="timer" class="timer"></div>
@@ -57,7 +57,7 @@
     const questions = @json($quizUmum); // Mengambil data kuis umum dari controller
 
     const quizContainer = document.querySelector('.quiz-container');
-    const quizTitle = document.getElementById('quiz-politik-title');
+    const quizTitle = document.getElementById('quiz-umum-title');
     const labelA = document.getElementById('labelA');
     const labelB = document.getElementById('labelB');
     const labelC = document.getElementById('labelC');
@@ -87,7 +87,7 @@
 
     // Event tombol kembali
     backButton.addEventListener('click', function () {
-        window.location.href = "/pilih-quiz"; // Redirect ke halaman pilih kuis
+        window.location.href = "/pengetahuan"; // Redirect ke halaman pilih kuis
     });
 
     // Fungsi untuk memulai timer
