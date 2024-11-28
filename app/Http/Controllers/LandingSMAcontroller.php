@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\QuizSMAIPA;
 use App\Models\QuizSMAIPS;
+use App\Models\QuizSMAPKN;
+use App\Models\QuizSMATIK;
 
 
 class LandingSMAcontroller extends Controller
@@ -22,6 +24,16 @@ class LandingSMAcontroller extends Controller
     {
         $quizsmaips = QuizSMAIPS::all(); // Ambil semua data pertanyaan dari database
         return view('landing.SMA.IPS', compact('quizsmaips'));
+    }
+    public function showQuizSMAPKN()
+    {
+        $quizsmapkn = QuizSMAPKN::all(); // Ambil semua data pertanyaan dari database
+        return view('landing.SMA.PKN', compact('quizsmapkn'));
+    }
+    public function showQuizSMATIK()
+    {
+        $quizsmatik = QuizSMATIK::all(); // Ambil semua data pertanyaan dari database
+        return view('landing.SMA.TIK', compact('quizsmatik'));
     }
 
 }

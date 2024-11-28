@@ -75,109 +75,110 @@
       color: var(--heading-color);
       font-family: var(--heading-font);
     }
+  
     body {
-      font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-image: url('assets/img/UMUM.png');
-        background-size: cover; /* Mengisi seluruh latar belakang */
-        background-position: center; /* Memusatkan gambar latar */
-        background-attachment: fixed; /* Membuat gambar tetap di tempat saat di-scroll */
-        color: white;
-    }
-    main {
-        padding-top: 200px; /* Atur sesuai kebutuhan */
-    }
-    
-    .container {
-        text-align: center;
-    }
-    
-    .options {
-        display: flex;
-        justify-content: space-around;
-        gap: 20px;
-    }
-    
-    .option {
-        margin: 20px;
-        text-align: center;
-        opacity: 0; /* Mulai dengan transparan */
-        animation: fadeIn 1s forwards; /* Animasi selama 1 detik */
-        text-align: center;
-    }
-    
-    .option img {
-        width: 100px; /* Atur ukuran gambar sesuai kebutuhan */
-        height: auto;
-        margin-bottom: 10px;
-    }
-    .option:nth-child(1) {
-      animation-delay: 0s; /* Ikon pertama muncul tanpa delay */
-    }
-    .option:nth-child(2) {
-      animation-delay: 0.3s; /* Ikon kedua muncul setelah 0.3 detik */
-    }
-    .option:nth-child(3) {
-      animation-delay: 0.6s; /* Ikon ketiga muncul setelah 0.6 detik */
-    }
-    .option:nth-child(4) {
-      animation-delay: 0.9s; /* Ikon keempat muncul setelah 0.9 detik */
-    }
-    .main-title {
-        font-family: 'Raleway', sans-serif; /* Ganti dengan font yang diinginkan */
-        font-size: 3rem; /* Ukuran font besar */
-        color: #ffcc00; /* Warna cerah untuk judul utama */
-        text-align: center; /* Rata tengah */
-        margin: 20px 0; /* Margin atas dan bawah */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan teks */
-        transition: transform 0.3s, color 0.3s; /* Transisi untuk efek hover */
-    }
-    
-    .main-title:hover {
-        transform: scale(1.05); /* Efek membesar saat hover */
-        color: #ff9900; /* Warna saat hover */
-    }
-    
-    .sub-title {
-        font-family: 'Poppins', sans-serif; /* Ganti dengan font yang diinginkan */
-        font-size: 2rem; /* Ukuran font sedang */
-        color: #ff6600; /* Warna cerah untuk subjudul */
-        text-align: center; /* Rata tengah */
-        margin: 10px 0; /* Margin atas dan bawah */
-        font-weight: 600; /* Bold */
-        transition: color 0.3s; /* Transisi untuk efek hover */
-    }
-    
-    .sub-title:hover {
-        color: #ff3300; /* Warna saat hover */
-    }
-    .read-more {
-        display: block;
-        margin-top: 10px; /* Jarak antara gambar dan teks */
-        text-decoration: none;
-        color: #000; /* Warna teks default */
-        transition: color 0.3s, background-color 0.3s; /* Transisi warna */
-        padding: 10px 15px; /* Tambahkan padding untuk kotak */
-        border: 2px solid #2f00ff; /* Tambahkan border */
-        border-radius: 5px; /* Buat sudut kotak membulat */
-        background-color: transparent; /* Warna latar belakang default */
-    }
-    
-    .read-more:hover {
-        color: #fff; /* Warna teks saat hover */
-        background-color: #2f00ff; /* Warna latar belakang saat hover */
-    }
-    
-    .read-more:active {
-        background-color: #1a00cc; /* Warna latar belakang saat diklik */
-    }
-    
-    .read-more span {
-        font-weight: bold; /* Membuat teks lebih tebal */
-    }
-    
-    
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.child {
+  width: 100px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 1s ease;
+}
+
+.main-title {
+  font-size: 2.8rem;
+  color: #ffcc00;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  color: #f1f1f1;
+  margin-bottom: 40px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.option {
+  background: #243b55;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 80%;
+  max-width: 400px;
+}
+
+.option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.option a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffcc00;
+  transition: color 0.3s ease;
+}
+
+.option span {
+  display: block;
+}
+.child {
+  width: 120px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 1s ease;
+  filter: brightness(1.2) contrast(1.1) saturate(1.3); /* Menyesuaikan kecerahan dan saturasi */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+@keyframes bounceIn {
+  0% {
+    transform: translateY(50px) scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.child {
+  animation: bounceIn 1.5s ease-out;
+}
+
+
     
     .header {
       --background-color: rgba(255, 255, 255, 0);
@@ -542,197 +543,6 @@
         color: var(--heading-color);
         font-family: var(--heading-font);
       }
-      .footer {
-        color: var(--default-color);
-        background-color: var(--background-color);
-        font-size: 14px;
-        position: relative;
-        margin-top: 180px;
-      }
-      
-      .footer .footer-top {
-        padding-top: 50px;
-        border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-      }
-      
-      .footer .footer-about .logo {
-        line-height: 1;
-        margin-bottom: 25px;
-      }
-      
-      .footer .footer-about .logo img {
-        max-height: 40px;
-        margin-right: 6px;
-      }
-      
-      .footer .footer-about .logo span {
-        font-size: 26px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        font-family: var(--heading-font);
-        color: var(--heading-color);
-      }
-      
-      .footer .footer-about p {
-        font-size: 14px;
-        font-family: var(--heading-font);
-        text-align: left;
-      }
-      
-      .footer .social-links a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-        font-size: 16px;
-        color: color-mix(in srgb, var(--default-color), transparent 30%);
-        margin-right: 10px;
-        transition: 0.3s;
-        
-      }
-      
-      .footer .social-links a:hover {
-        color: var(--accent-color);
-        border-color: var(--accent-color);
-      }
-      
-      .footer h4 {
-        font-size: 16px;
-        font-weight: bold;
-        position: relative;
-        padding-bottom: 12px;
-      }
-      
-      .footer .footer-links {
-        margin-bottom: 30px;
-        
-      }
-      
-      .footer .footer-links ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      
-      }
-      
-      .footer .footer-links ul i {
-        padding-right: 2px;
-        font-size: 12px;
-        line-height: 0;
-        
-      }
-      
-      .footer .footer-links ul li {
-        padding: 10px 0;
-        display: flex;
-        align-items: center;
-        
-      }
-      
-      .footer .footer-links ul li:first-child {
-        padding-top: 0;
-       
-      }
-      
-      .footer .footer-links ul a {
-        color: color-mix(in srgb, var(--default-color), transparent 30%);
-        display: inline-block;
-        line-height: 1;
-      }
-      
-      .footer .footer-links ul a:hover {
-        color: var(--accent-color);
-      }
-      
-      .footer .footer-contact p {
-        margin-bottom: 5px;
-      }
-      
-      .footer .footer-newsletter .newsletter-form {
-        margin-top: 30px;
-        margin-bottom: 15px;
-        padding: 6px 8px;
-        position: relative;
-        border-radius: 4px;
-        border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-        display: flex;
-        background-color: var(--background-color);
-        transition: 0.3s;
-      }
-      
-      .footer .footer-newsletter .newsletter-form:focus-within {
-        border-color: var(--accent-color);
-      }
-      
-      .footer .footer-newsletter .newsletter-form input[type=email] {
-        border: 0;
-        padding: 4px;
-        width: 100%;
-        background-color: var(--background-color);
-        color: var(--default-color);
-      }
-      
-      .footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
-        outline: none;
-      }
-      
-      .footer .footer-newsletter .newsletter-form input[type=submit] {
-        border: 0;
-        font-size: 16px;
-        padding: 0 20px;
-        margin: -7px -8px -7px 0;
-        background: var(--accent-color);
-        color: var(--contrast-color);
-        transition: 0.3s;
-        border-radius: 0 4px 4px 0;
-      }
-      
-      .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-        background: color-mix(in srgb, var(--accent-color), transparent 20%);
-      }
-      
-      .footer .copyright {
-        padding: 25px 0;
-        border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-      }
-      
-      .footer .copyright p {
-        margin-bottom: 0;
-      }
-      
-      .footer .credits {
-        margin-top: 6px;
-        font-size: 13px;
-      }
-      
-      /*--------------------------------------------------------------
-      # Preloader
-      --------------------------------------------------------------*/
-      #preloader {
-        position: fixed;
-        inset: 0;
-        z-index: 999999;
-        overflow: hidden;
-        background: var(--background-color);
-        transition: all 0.6s ease-out;
-      }
-      
-      #preloader:before {
-        content: "";
-        position: fixed;
-        top: calc(50% - 30px);
-        left: calc(50% - 30px);
-        border: 6px solid #ffffff;
-        border-color: var(--accent-color) transparent var(--accent-color) transparent;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        animation: animate-preloader 1.5s linear infinite;
-      }
-      
       @keyframes animate-preloader {
         0% {
           transform: rotate(0deg);
@@ -798,6 +608,7 @@
             <!-- Favicons -->
             <link href="assets/img/www.png" rel="icon">
             <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+            <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
           
             <!-- Fonts -->
             <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -833,172 +644,87 @@
               <h1 class="sitename">-QUIZ</h1>
             </a>
              
-       <nav id="navmenu" class="navmenu">
-       <ul>
-        <li><a href="{{ url('/') }}" class="active">Beranda</a></li>
-        <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li class="dropdown"><a href="{{ url('/SekolahDasar') }}"><span>Sekolah Dasar</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <nav id="navmenu" class="navmenu">
+
               <ul>
-                <li><a href="#">IPA</a></li>
-                <li><a href="#">IPS</a></li>
-                <li><a href="#">MTK</a></li>
-                <li><a href="#">PKN</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">IPA</a></li>
-              <li><a href="#">IPS</a></li>
-              <li><a href="#">PKN</a></li>
-              <li><a href="#">Bahasa Inggris</a></li>
-            </ul>
-            <li class="dropdown"><a href="{{ url('/Sma') }}"><span>Sekolah Menengah Atas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="{{ url('/smaipa') }}">IPA</a></li>
-              <li><a href="#">IPS</a></li>
-              <li><a href="#">PKN</a></li>
-              <li><a href="#">TIK</a></li>
-            </ul>
-          </ul>
-        <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="{{ url('/umum') }}">Umum </a></li>
-                <li><a href="{{ url('/teknologi') }}">Teknologi</a></li>
-                <li><a href="{{ url('/ekonomi') }}">Ekonomi</a></li>
-                <li><a href="{{ url('/politik') }}">Politik</a></li>
-              </ul>
-        </li>
-          <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Ice Breaking</a></li>
-            <li><a href="#">Tes IQ</a></li>
-          </ul>
-          <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
-          <li><a href={{ url('/aboutus') }}>About US</a></li>
-          <li><a href={{ url('/Login') }}>Login</a></li>
-        </li>
-      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
+                <li><a href="#hero" class="active">Beranda</a></li>
+                <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li>
+                      <a href="{{ url('/sekolahdasar') }}"><span>Sekolah Dasar</span> </i></a>                    
+                    </li>
+                    <li><a href="/SMA" class="active"><span>Sekolah Menengah Pertama</span></a></li>
+                  </ul>
+                  <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="{{ url('/umum') }}">Umum </a></li>
+                      <li><a href="{{ url('/teknologi') }}">Teknologi</a></li>
+                      <li><a href="{{ url('/ekonomi') }}">Ekonomi</a></li>
+                      <li><a href="{{ url('/politik') }}">Politik</a></li>
+                    </ul>
+              </li>
+                </li>
+                  <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Ice Breaking</a></li>
+                    <li><a href="#">Tes IQ</a></li>
+                  </ul>
+                  <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
+                  <li><a href="/aboutus">About US</a></li>
+                  <li><a href="/login">Login</a></li>
+                </li>
+              <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+              </nav>
       </div>
     </header>
     <body>
         <main>
-            <div class="container">
-              <h1 class="main-title">AYO PERBANYAK PENGETAHUANMU!</h1>
-              <h2 class="sub-title">MANA YANG INGIN KAMU KUASAI:</h2>
-                <div class="options">
-                    <div class="option">
-                        <img src="assets/img/buku.png" alt="Buku"> 
-                        <a href="{{ url('/umum') }}" class="read-more"><span>Belajar Umum</span><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                    <div class="option">
-                        <img src="assets/img/ekonomi.png" alt="Globe">
-                        <a href="{{ url('/ekonomi') }}" class="read-more"><span>Belajar Ekonomi</span><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                    <div class="option">
-                        <img src="assets/img/teknologi.png"alt="teknologi">
-                        <a href="{{ url('/teknologi') }}" class="read-more"><span>Belajar Teknologi</span><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                    <div class="option">
-                        <img src="assets/img/court.png"alt="Politik">
-                        <a href="{{ url('/politik') }}" class="read-more"><span>Belajar Politik</span><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-    
-        </main>
-    
-        <footer id="footer" class="footer dark-background">
-    
-          <div class="container footer-top">
-            <div class="row gy-4">
-              <div class="col-lg-4 col-md-6 footer-about">
-                <a href="index.html" class="logo d-flex align-items-center">
-                  <span class="sitename">IQU.com</span>
+          <div class="container">
+            <h1 class="main-title">💡 AYO PERBANYAK PENGETAHUANMU!</h1>
+            <h2 class="sub-title">PILIH MATERI YANG INGIN KAMU KUASAI:</h2>
+            <img src="assets/img/anak.jpg" alt="Anak Kecil" class="child" id="childAnimation">
+            <div class="options">
+              <div class="option" data-option="IPA">
+                <a href="{{ url('/smaipa') }}" class="read-more">
+                  <span>🌿 Ilmu Pengetahuan Alam</span>
                 </a>
-                <div class="footer-contact pt-3">
-                  <p>Semarang</p>
-                  <p>Tembalang,Amposari</p>
-                  <p class="mt-3"><strong>Phone:</strong> <span>085601742751</span></p>
-                  <p><strong>Email:</strong> <span>iqu123@gmail.com</span></p>
-                </div>
-                <div class="social-links d-flex mt-4">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
               </div>
-      
-              <div class="col-lg-2 col-md-3 footer-links">
-                <h4>Tautan Berguna</h4>
-                <ul>
-                  <li><a href="#">Beranda</a></li>
-                  <li><a href="#">Pendidikan</a></li>
-                  <li><a href="#">Pengetahuan</a></li>
-                  <li><a href="#">Games</a></li>
-                  <li><a href="#">Media Sosial</a></li>
-                  <li><a href="#">About As</a></li>
-                </ul>
+              <div class="option" data-option="IPS">
+                <a href="{{ url('/smaips') }}" class="read-more">
+                  <span>🌍 Ilmu Pengetahuan Sosial</span>
+                </a>
               </div>
-      
-              <div class="col-lg-2 col-md-3 footer-links">
-                <h4>Layanan Kami</h4>
-                <ul>
-                  <li><a href="#">Pembelajaran Interaktif</a></li>
-                  <li><a href="#">Kuis & Tes Pemahaman</a></li>
-                  <li><a href="#">Bimbingan Belajar Online</a></li>
-                  <li><a href="#">Belajar Terstruktur</a></li>
-                  <li><a href="#">Fitur Ice Breaking & Tes IQ</a></li>
-                </ul>
+              <div class="option" data-option="PKN">
+                <a href="{{ url('/smapkn') }}" class="read-more">
+                  <span>🏛 Pendidikan Kewarganegaraan</span>
+                </a>
               </div>
-      
-              <div class="col-lg-4 col-md-12 footer-newsletter">
-                <h4></h4>
-                <p>Selamat menikmati</p>
-                <form action="forms/newsletter.php" method="post" class="php-email-form">
-                  <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-                </form>
+              <div class="option" data-option="TI">
+                <a href="{{ url('/smatik') }}" class="read-more">
+                  <span>💻 Ilmu Teknologi Informasi</span>
+                </a>
               </div>
-      
             </div>
           </div>
+          
+          </div>          
+          
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800, // Durasi animasi
+    once: true,    // Animasi hanya berjalan sekali
+  });
+  document.querySelectorAll('.option').forEach(option => {
+    option.addEventListener('click', function() {
+      const child = document.getElementById('childAnimation');
+      child.style.transform = 'translateX(0) scale(1.2)';
       
-          <div class="container copyright text-center mt-4">
-            <link href="assets/img/www.png" rel="icon">
-            <p> <span></span> <strong class="px-1 sitename">IQU.com</strong> <span></span></p>
-            <div class="credits">
-              <!-- All the links in the footer should remain intact. -->
-              <!-- You can delete the links only if you've purchased the pro version. -->
-              <!-- Licensing information: https://bootstrapmade.com/license/ -->
-              <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-              
-            </div>
-          </div>
-      
-        </footer>
-      
-        <!-- Scroll Top -->
-        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-      
-        <!-- Preloader -->
-        <div id="preloader"></div>
-      
-        <!-- Vendor JS Files -->
-        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/vendor/php-email-form/validate.js"></script>
-        <script src="assets/vendor/aos/aos.js"></script>
-        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-      
-        <!-- Main JS File -->
-        <script src="assets/js/main.js"></script>
-      
-        
-      
-    
+      // Mengembalikan ke posisi semula setelah 1 detik
+      setTimeout(() => {
+        child.style.transform = 'translateX(-50%) scale(1)';
+      }, 1000);
+    });
+  });
+</script>
+        </main>

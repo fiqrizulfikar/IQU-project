@@ -52,23 +52,12 @@
   <li><a href="#hero" class="active">Beranda</a></li>
   <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
     <ul>
-      <li class="dropdown"><a href="{{ url('/sekolahdasar') }}"><span>Sekolah Dasar</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <li>
+        <a href="{{ url('/sekolahdasar') }}"><span>Sekolah Dasar</span> </i></a>
        
       </li>
-      <li class="dropdown"><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-      <ul>
-        <li><a href="#">IPA</a></li>
-        <li><a href="#">IPS</a></li>
-        <li><a href="#">PKN</a></li>
-        <li><a href="#">Bahasa Inggris</a></li>
-      </ul>
-      <li class="dropdown"><a href="{{ url('/SMA') }}"><span>Sekolah Menengah Atas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-      <ul>
-        <li><a href="{{ url('/smaipa') }}">IPA</a></li>
-        <li><a href="{{ url('/smaips') }}">IPS</a></li>
-        <li><a href="#">PKN</a></li>
-        <li><a href="#">TIK</a></li>
-      </ul>
+      <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
+      <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
     </ul>
     <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
       <ul>
