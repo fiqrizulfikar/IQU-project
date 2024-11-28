@@ -34,7 +34,7 @@ Route::get('/IPSsd', [LandingSDcontrollers::class, 'IPSsd']);
 Route::get('/PKNsd', [LandingSDcontrollers::class, 'PKNsd']);
 
 
-Route::get('/Login', [SesiController::class, 'login']);
+Route::get('/login', [SesiController::class, 'login']);
 Route::get('/pengetahuan', [LandingPengetahuan::class, 'index']);
 Route::get('/ekonomi', [LandingPengetahuan::class, 'showQuiz'])->name('ekonomi.show'); // Menampilkan daftar kuis
 Route::get('/politik', [LandingPengetahuan::class, 'showQuizPolitik'])->name('politik.show'); // Menampilkan daftar kuis
@@ -44,3 +44,8 @@ Route::get('/umum', [LandingPengetahuan::class, 'showQuizUmum'])->name('umum.sho
 Route::get('/SMA', [LandingSMAcontroller::class, 'index']);
 Route::get('/smaipa', [LandingSMAcontroller::class, 'showQuizSMAIPA'])->name('IPA.show');
 Route::get('/smaips', [LandingSMAcontroller::class, 'showQuizSMAIPS'])->name('IPS.show');
+
+
+Route::get('/loginz', function () {
+    return view('landing.loginz');
+});
