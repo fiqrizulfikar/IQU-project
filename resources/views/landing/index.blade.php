@@ -238,22 +238,28 @@
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
             <div class="features-item">
               <i class="bi bi-command" style="color: #b2904f;"></i>
-              <h3><a href="" class="stretched-link">Kelas X</a></h3>
+              <h3><a href="/smaipa" class="stretched-link">Ilmu Pengetahuan Alam</a></h3>
             </div>
           </div><!-- End Feature Item -->
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
             <div class="features-item">
               <i class="bi bi-dribbble" style="color: #b20969;"></i>
-              <h3><a href="" class="stretched-link">Kelas XI</a></h3>
+              <h3><a href="/smaips" class="stretched-link">Ilmu Pengetahuan Sosial</a></h3>
             </div>
           </div><!-- End Feature Item -->
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
             <div class="features-item">
               <i class="bi bi-activity" style="color: #ff5828;"></i>
-              <h3><a href="" class="stretched-link">Kelas XII</a></h3>
+              <h3><a href="/smapkn" class="stretched-link">Pendidikan Kewarganegaraan</a></h3>
             </div>
+
+            <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
+              <div class="features-item">
+                <i class="bi bi-TIK" style="color: #ff5828;"></i>
+                <h3><a href="/smatik" class="stretched-link">Ilmu Teknologi Informasi</a></h3>
+              </div>
           </div><!-- End Feature Item -->
 
           
