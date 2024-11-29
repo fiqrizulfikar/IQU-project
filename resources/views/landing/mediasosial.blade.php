@@ -25,11 +25,20 @@
 </head>
 <body>
 
+<nav class="navbar">
+    <h1>
+        <img src="assets/img/logo.png" alt="Logo">
+    </h1>
+    <ul>
+        <li><a href="/">Beranda</a></li>
+        <li><a href="/aboutus">About US</a></li>
+    </ul>
+</nav>
 
     <!-- Banner -->
 
 <section class="medsosv">
-
+<div class="cinta">
 <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-sm-8 col-lg-6">
@@ -131,6 +140,7 @@
       </a>
     </li>
   </ul>
+</div>
 </section>
 
 
