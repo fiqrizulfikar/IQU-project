@@ -1641,7 +1641,7 @@ section,
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background: 10px url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQfwACVeK9kVUjHuTlQlC5dH_PaMZU0EwbPQ&s");
+	background: #ccc;
 }
 .mainv{
 	width: 350px;
