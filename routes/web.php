@@ -7,6 +7,8 @@ use App\Http\Controllers\LandingPengetahuan;
 use App\Http\Controllers\LandingSDcontrollers;
 use App\Http\Controllers\LandingSMPcontroller;
 use App\Http\Controllers\LandingSMAcontroller;
+use App\Http\Controllers\Quizcontroller;
+
 
 
 Route::get('/', [LandingControllers::class, 'index']);
@@ -46,6 +48,19 @@ Route::get('/smaipa', [LandingSMAcontroller::class, 'showQuizSMAIPA'])->name('IP
 Route::get('/smaips', [LandingSMAcontroller::class, 'showQuizSMAIPS'])->name('IPS.show');
 Route::get('/smapkn', [LandingSMAcontroller::class, 'showQuizSMAPKN'])->name('PKN.show');
 Route::get('/smatik', [LandingSMAcontroller::class, 'showQuizSMATIK'])->name('TIK.show');
+
+Route::get('/admin/questions', [QuizController::class, 'index'])->name('admin.questions.index');
+
+// Route untuk halaman tambah pertanyaan
+Route::get('/admin/questions/create', [QuizController::class, 'create'])->name('admin.questions.create');
+Route::post('/admin/questions/store', [QuizController::class, 'store'])->name('admin.questions.store');
+
+// Route untuk edit pertanyaan
+Route::get('/admin/questions/{table}/{id}/edit', [QuizController::class, 'edit'])->name('admin.questions.edit');
+Route::put('/admin/questions/{table}/{id}', [QuizController::class, 'update'])->name('admin.questions.update');
+
+// Route untuk hapus pertanyaan
+Route::delete('/admin/questions/{table}/{id}', [QuizController::class, 'destroy'])->name('admin.questions.destroy');
 
 
 Route::get('/loginz', function () {
