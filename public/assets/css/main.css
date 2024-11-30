@@ -441,6 +441,20 @@ h6 {
   }
 }
 
+nav ul li a.login-icon {
+  font-size: 30px; /* Ukuran lebih besar untuk ikon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li a.login-icon i {
+  color: white;
+}
+
+nav ul li a.login-icon:hover i {
+  color: #ff6600; /* Warna ikon saat hover */
+}
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/

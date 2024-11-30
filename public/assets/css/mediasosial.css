@@ -116,8 +116,9 @@
 /* Navbar */
 .navbar {
   background-color: #002776;
-  color: white;
-  padding: 10px 30px;  /* Menambahkan padding kiri dan kanan */
+  padding: 20px 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 15vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -132,7 +133,7 @@
 }
 
 .navbar h1 img {
-  height: 40px;   /* Menjaga ukuran logo tetap konsisten */
+  height: 60px;   /* Menjaga ukuran logo tetap konsisten */
   margin-right: 20px;  /* Memberi ruang antara logo dan teks */
 }
 
@@ -370,143 +371,163 @@
 
 /*new*/
 
-.single_advisor_profile {
-  position: relative;
-  margin-bottom: 50px;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-  z-index: 1;
-  border-radius: 15px;
-  -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
-  box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+
+.cinta{
+    background-color: #ccc;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #4a4a4a;
 }
-.single_advisor_profile .advisor_thumb {
-  position: relative;
-  z-index: 1;
-  border-radius: 15px 15px 0 0;
-  margin: 0 auto;
-  padding: 30px 30px 0 30px;
-  background-color: #3f43fd;
-  overflow: hidden;
+/* General styling for the container */
+.container.space-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-.single_advisor_profile .advisor_thumb::after {
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-  position: absolute;
-  width: 150%;
-  height: 80px;
-  bottom: -45px;
-  left: -25%;
-  content: "";
-  background-color: #ffffff;
-  -webkit-transform: rotate(-15deg);
-  transform: rotate(-15deg);
+
+/* Title section styling */
+.container.space-2 .text-center h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 1rem;
 }
-@media only screen and (max-width: 575px) {
-  .single_advisor_profile .advisor_thumb::after {
-      height: 160px;
-      bottom: -90px;
-  }
+
+/* Adjusting the avatar size */
+.avatar.avatar-sm {
+  width: 50px;  /* Smaller avatars */
+  height: 50px;
 }
-.single_advisor_profile .advisor_thumb .social-info {
-  position: absolute;
-  z-index: 1;
+
+.avatar.avatar-circle {
+  border-radius: 50%;  /* Ensure avatars are round */
+}
+
+.avatar-img {
   width: 100%;
-  bottom: 0;
-  right: 30px;
-  text-align: right;
+  height: 100%;
+  object-fit: cover;
 }
-.single_advisor_profile .advisor_thumb .social-info a {
-  font-size: 14px;
-  color: #020710;
-  padding: 0 5px;
+
+/* Card adjustments for rounded and compact appearance */
+.card {
+  border-radius: 8px;  /* Slightly rounded corners */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+  overflow: hidden;  /* Ensure the card contents fit neatly */
 }
-.single_advisor_profile .advisor_thumb .social-info a:hover,
-.single_advisor_profile .advisor_thumb .social-info a:focus {
-  color: #3f43fd;
+
+.card-body {
+  padding: 1rem;  /* Slightly smaller padding */
 }
-.single_advisor_profile .advisor_thumb .social-info a:last-child {
-  padding-right: 0;
+
+.card-footer {
+  padding: 0.5rem 1rem;
 }
-.single_advisor_profile .single_advisor_details_info {
-  position: relative;
-  z-index: 1;
-  padding: 30px;
-  text-align: right;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-  border-radius: 0 0 15px 15px;
-  background-color: #ffffff;
+
+.card-footer .list-inline {
+  margin: 0;
 }
-.single_advisor_profile .single_advisor_details_info::after {
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-  position: absolute;
-  z-index: 1;
-  width: 50px;
-  height: 3px;
-  background-color: #3f43fd;
-  content: "";
-  top: 12px;
-  right: 30px;
+
+.card-footer .list-inline-item {
+  margin-right: 0.5rem;  /* Space out social icons */
 }
-.single_advisor_profile .single_advisor_details_info h6 {
-  margin-bottom: 0.25rem;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
+
+/* Social buttons - rounded circles and small size */
+.btn.btn-xs {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;  /* Smaller font size */
+  border-radius: 50%;  /* Fully rounded buttons */
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .single_advisor_profile .single_advisor_details_info h6 {
-      font-size: 14px;
+
+.btn-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button styles for social networks */
+.btn.btn-soft-secondary {
+  background-color: #f1f1f1;
+  border: 1px solid #dcdcdc;
+  color: #555;
+}
+
+.btn.btn-soft-secondary:hover {
+  background-color: #e0e0e0;
+  border-color: #ccc;
+}
+
+/* Button for 'View Open Jobs' */
+.card-footer .btn {
+  font-size: 0.75rem;  /* Smaller text size */
+  padding: 0.25rem 1rem;
+  border-radius: 20px;  /* Rounded edges */
+}
+
+/* Call-to-action info section styling */
+.text-center .d-inline-block {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50px;  /* Rounded pill shape */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.text-center .d-inline-block a {
+  font-weight: 600;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.text-center .d-inline-block a:hover {
+  text-decoration: underline;
+}
+
+/* Layout adjustments for responsive design */
+@media (max-width: 768px) {
+  .container.space-2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .container.space-2 .text-center h2 {
+    font-size: 1.5rem;  /* Adjust heading size on smaller screens */
+  }
+
+  .card-body {
+    padding: 1rem;  /* Keep consistent padding */
+  }
+
+  .btn.btn-xs {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .avatar.avatar-sm {
+    width: 45px;
+    height: 45px;  /* Adjust avatar size further for smaller screens */
   }
 }
-.single_advisor_profile .single_advisor_details_info p {
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-  margin-bottom: 0;
-  font-size: 14px;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .single_advisor_profile .single_advisor_details_info p {
-      font-size: 12px;
+
+@media (max-width: 480px) {
+  .avatar.avatar-sm {
+    width: 40px;
+    height: 40px;  /* Even smaller avatars for mobile */
   }
-}
-.single_advisor_profile:hover .advisor_thumb::after,
-.single_advisor_profile:focus .advisor_thumb::after {
-  background-color: #070a57;
-}
-.single_advisor_profile:hover .advisor_thumb .social-info a,
-.single_advisor_profile:focus .advisor_thumb .social-info a {
-  color: #ffffff;
-}
-.single_advisor_profile:hover .advisor_thumb .social-info a:hover,
-.single_advisor_profile:hover .advisor_thumb .social-info a:focus,
-.single_advisor_profile:focus .advisor_thumb .social-info a:hover,
-.single_advisor_profile:focus .advisor_thumb .social-info a:focus {
-  color: #ffffff;
-}
-.single_advisor_profile:hover .single_advisor_details_info,
-.single_advisor_profile:focus .single_advisor_details_info {
-  background-color: #070a57;
-}
-.single_advisor_profile:hover .single_advisor_details_info::after,
-.single_advisor_profile:focus .single_advisor_details_info::after {
-  background-color: #ffffff;
-}
-.single_advisor_profile:hover .single_advisor_details_info h6,
-.single_advisor_profile:focus .single_advisor_details_info h6 {
-  color: #ffffff;
-}
-.single_advisor_profile:hover .single_advisor_details_info p,
-.single_advisor_profile:focus .single_advisor_details_info p {
-  color: #ffffff;
+
+  .container.space-2 .text-center h2 {
+    font-size: 1.25rem;  /* Smaller title for very small screens */
+  }
+
+  .btn.btn-xs {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;  /* Make buttons even smaller */
+  }
 }
 
 /* media sosial new*/
 
 .medsosv {
   
-  height: 160vh;
+  height: 60vh;
   margin: 0;
   padding: 0;
   background: #ccc;
@@ -515,7 +536,7 @@
 
 .social-linkss {
   position: absolute;
-  top: 140vh;
+  top: 250vh;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
