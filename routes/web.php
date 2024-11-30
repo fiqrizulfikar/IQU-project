@@ -8,6 +8,7 @@ use App\Http\Controllers\LandingSDcontrollers;
 use App\Http\Controllers\LandingSMPcontroller;
 use App\Http\Controllers\LandingSMAcontroller;
 use App\Http\Controllers\Quizcontroller;
+use App\Http\Controllers\QuizCPNScontroller;
 
 
 
@@ -62,6 +63,10 @@ Route::put('/admin/questions/{table}/{id}', [QuizController::class, 'update'])->
 // Route untuk hapus pertanyaan
 Route::delete('/admin/questions/{table}/{id}', [QuizController::class, 'destroy'])->name('admin.questions.destroy');
 
+Route::get('/cpns-quiz/categories', [QuizCPNSController::class, 'showCategories'])->name('cpns.categories');
+Route::get('/cpns-quiz/tiu', [QuizCPNSController::class, 'showTIU'])->name('cpns.tiu');
+Route::get('/cpns-quiz/twk', [QuizCPNSController::class, 'showTWK'])->name('cpns.twk');
+Route::get('/cpns-quiz/tkp', [QuizCPNSController::class, 'showTKP'])->name('cpns.tkp');
 
 Route::get('/loginz', function () {
     return view('landing.loginz');

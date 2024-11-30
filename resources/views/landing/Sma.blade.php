@@ -645,30 +645,17 @@
             </a>
              
             <nav id="navmenu" class="navmenu">
-
               <ul>
                 <li><a href="#hero" class="active">Beranda</a></li>
                 <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li>
-                      <a href="{{ url('/sekolahdasar') }}"><span>Sekolah Dasar</span> </i></a>                    
+                      <a href="{{ url('/sekolahdasar') }}"><span>Sekolah Dasar</span> </i></a>    
                     </li>
-                    <li><a href="/SMA" class="active"><span>Sekolah Menengah Pertama</span></a></li>
+                    <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
                   </ul>
-                  <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                      <li><a href="{{ url('/umum') }}">Umum </a></li>
-                      <li><a href="{{ url('/teknologi') }}">Teknologi</a></li>
-                      <li><a href="{{ url('/ekonomi') }}">Ekonomi</a></li>
-                      <li><a href="{{ url('/politik') }}">Politik</a></li>
-                    </ul>
-              </li>
-                </li>
-                  <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Ice Breaking</a></li>
-                    <li><a href="#">Tes IQ</a></li>
-                  </ul>
+                  <li><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span></i></a>
+                  <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
                   <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
                   <li><a href="/aboutus">About US</a></li>
                   <li><a href="/login">Login</a></li>
