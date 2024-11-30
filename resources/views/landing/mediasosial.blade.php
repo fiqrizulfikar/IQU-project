@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!--link-->
     <link href="assets/css/mediasosial.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
     <!--link-->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -18,102 +19,214 @@
     <!--link-->
     <link href="assets/img/www.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
     <style>
       @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
       @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+      
+
     </style>
 </head>
 <body>
 
 <nav class="navbar">
     <h1>
+    <img src="" alt="">
+    <img src="" alt="">
         <img src="assets/img/logo.png" alt="Logo">
     </h1>
     <ul>
-        <li><a href="/">Beranda</a></li>
-        <li><a href="/aboutus">About US</a></li>
+        <li><a href="/"><b>Beranda</b>
+        </a></li>
+        <li><a href="/aboutus"> <b> About US </b></a></li>
+        <li></li>
+        <li></li>
+        <li></li>
+
     </ul>
 </nav>
+<section class="cinta">
+<div class="container space-2">
+  <!-- Title -->
+  <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-5 mb-md-9">
+    <span class="d-block small font-weight-bold text-cap mb-2">Our team</span>
+    <h2>Creative mind by people like you</h2>
+  </div>
+  <!-- End Title -->
 
-    <!-- Banner -->
-
-<section class="medsosv">
-<div class="cinta">
-<div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-sm-8 col-lg-6">
-            <!-- Section Heading-->
-            <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-              <h3>Our Creative <span> Team</span></h3>
-              <p>Appland is completely creative, lightweight, clean &amp; super responsive app landing page.</p>
-              <div class="line"></div>
-            </div>
+  <div class="row mx-n2 mb-5">
+    <div class="col-sm-6 col-lg-3 px-2 mb-3">
+      <!-- Team -->
+      <div class="card h-100 transition-3d-hover">
+        <div class="card-body">
+          <div class="avatar avatar-lg avatar-circle mb-4">
+            <img class="avatar-img" src="https://media-sin6-1.cdn.whatsapp.net/v/t61.24694-24/466384134_1214018412999109_7740787081123476748_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIEoPGE2w_yZQe-Wb-HZM7pbncpm35H6zFEByN1vIs2Gq&oe=67558AA8&_nc_sid=5e03e0&_nc_cat=101" alt="Image Description">
           </div>
+
+          <span class="d-block small font-weight-bold text-cap mb-1">Founder / CEO</span>
+          <h4 class="text-lh-sm">Fqri Zulfikar</h4>
+          <p class="font-size-1">I am an ambitious workaholic, but apart from that, pretty simple person.</p>
         </div>
-        <div class="row">
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-              </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Samantha Sarah</h6>
-                <p class="designation">Founder &amp; CEO</p>
-              </div>
-            </div>
-          </div>
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-              </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Nazrul Islam</h6>
-                <p class="designation">UI Designer</p>
-              </div>
-            </div>
-          </div>
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-              </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Riyadh Khan</h6>
-                <p class="designation">Developer</p>
-              </div>
-            </div>
-          </div>
-          <!-- Single Advisor-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-              </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6>Niloy Islam</h6>
-                <p class="designation">Marketing Manager</p>
-              </div>
-            </div>
-          </div>
+
+        <div class="card-footerv border-0 pt-0">
+          <!-- Social Networks -->
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
+                <i class="fab fa-google"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+          <!-- End Social Networks -->
         </div>
       </div>
+      <!-- End Team -->
+    </div>
 
+    <div class="col-sm-6 col-lg-3 px-2 mb-3">
+      <!-- Team -->
+      <div class="card h-100 transition-3d-hover">
+        <div class="card-body">
+          <div class="avatar avatar-lg avatar-circle mb-4">
+            <img class="avatar-img" src="https://media-sin6-1.cdn.whatsapp.net/v/t61.24694-24/457520302_483518451130567_1885489352583746006_n.jpg?ccb=11-4&oh=01_Q5AaIIb6WD2DD278JnOcdCGwzJjpCE8s2nMu3TvJlYYX9yCj&oe=67581558&_nc_sid=5e03e0&_nc_cat=108" alt="Image Description">
+          </div>
+
+          <span class="d-block small font-weight-bold text-cap mb-1">Project Manager</span>
+          <h4 class="text-lh-sm">Aqib Aree</h4>
+          <p class="font-size-1">I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+        </div>
+
+        <div class="card-footerv border-0 pt-0">
+          <!-- Social Networks -->
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
+                <i class="fab fa-google"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+          <!-- End Social Networks -->
+        </div>
+      </div>
+      <!-- End Team -->
+    </div>
+
+    <div class="col-sm-6 col-lg-3 px-2 mb-3">
+      <!-- Team -->
+      <div class="card h-100 transition-3d-hover">
+        <div class="card-body">
+          <div class="avatar avatar-lg avatar-circle mb-4">
+            <img class="avatar-img" src="https://media-sin6-1.cdn.whatsapp.net/v/t61.24694-24/466375924_1552917922008223_3629996398480371095_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIIHUbYxlkbtPbadiV6q008XJmmr2yzAl_yMpa50-FXiD&oe=67543F5E&_nc_sid=5e03e0&_nc_cat=102" alt="Image Description">
+          </div>
+
+          <span class="d-block small font-weight-bold text-cap mb-1">Product Designer</span>
+          <h4 class="text-lh-sm">Faris Chakim</h4>
+          <p class="font-size-1">I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+        </div>
+
+        <div class="card-footerv border-0 pt-0">
+          <!-- Social Networks -->
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
+                <i class="fab fa-google"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+          <!-- End Social Networks -->
+        </div>
+      </div>
+      <!-- End Team -->
+    </div>
+
+    <div class="col-sm-6 col-lg-3 px-2 mb-3">
+      <!-- Team -->
+      <div class="card h-100 transition-3d-hover">
+        <div class="card-body">
+          <div class="avatar avatar-lg avatar-circle mb-4">
+            <img class="avatar-img" src="https://media-sin6-1.cdn.whatsapp.net/v/t61.24694-24/460370755_1822540575169282_6097601192870883475_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIA19ry3okTIQ1EJUGO8M3fvJZabOm5sWQ3LhToG_xH56&oe=6755950B&_nc_sid=5e03e0&_nc_cat=102" alt="Image Description">
+          </div>
+
+          <span class="d-block small font-weight-bold text-cap mb-1">Want a new challenge?</span>
+          <h4 class="text-lh-sm">Fahri</h4>
+          <p class="font-size-1">Browse through our job opportunities and become a member of the family!</p>
+        </div>
+
+        <div class="card-footerv border-0 pt-0">
+          <a class="btn btn-xs btn-soft-secondary" href="#">View Open Jobs</a>
+        </div>
+      </div>
+      <!-- End Team -->
+    </div>
+
+    <div class="col-sm-6 col-lg-3 px-2 mb-3">
+      <!-- Team -->
+      <div class="card h-100 transition-3d-hover">
+        <div class="card-body">
+          <div class="avatar avatar-lg avatar-circle mb-4">
+            <img class="avatar-img" src="https://media-sin6-1.cdn.whatsapp.net/v/t61.24694-24/413649149_1188671225446064_5925666180291235278_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIOVdlzSO5qPb30QrqKZqMPffBQ-C_9fUK0Ex16FNA_sm&oe=67538F0F&_nc_sid=5e03e0&_nc_cat=100" alt="Image Description">
+          </div>
+
+          <span class="d-block small font-weight-bold text-cap mb-1">Want a new challenge?</span>
+          <h4 class="text-lh-sm">Irba Elzami</h4>
+          <p class="font-size-1">Browse through our job opportunities and become a member of the family!</p>
+        </div>
+
+        <div class="card-footerv border-0 pt-0">
+          <a class="btn btn-xs btn-soft-secondary" href="#">View Open Jobs</a>
+        </div>
+      </div>
+      <!-- End Team -->
+    </div>
+  </div>
+
+  <!-- Info -->
+  <div class="text-center">
+    <div class="d-inline-block font-size-1 border bg-white text-center rounded-pill py-3 px-4">
+      Wanna work with us? <a class="font-weight-bold ml-3" href="hire-us.html">We are hiring <span class="fas fa-angle-right fa-sm ml-1"></span></a>
+    </div>
+  </div>
+  <!-- End Info -->
+</div>
+<!-- End Team Section -->
+</section>
+
+
+
+<section class="medsosv">
   <ul class="social-linkss">
     <li class="social-item">
       <a href="#">
@@ -221,5 +334,10 @@
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+  <script src="assets/js/main.js"></script>
+
+  
 </body>
 </html>

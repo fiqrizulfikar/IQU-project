@@ -15,6 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -58,13 +59,19 @@
       <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
     </ul>
     <li><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span></i></a>
-</li>
-    <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
-    <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
-    <li><a href="/aboutus">About US</a></li>
-    <li><a href="/login">Login</a></li>
+    </li>
   </li>
-<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+    <ul>
+      <li><a href="#">Ice Breaking</a></li>
+      <li><a href="#">Tes IQ</a></li>
+    </ul>
+    <li><a href="{{ url('/mediasosial') }}">Contact</a></li>
+    <li><a href="/aboutus">About US</a></li>
+    <div>
+    <li><a href="/login" class="login-icon"><i class="fas fa-user"></i></a></li>  </li>
+    </div>
+    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
 
 </div>
@@ -367,7 +374,7 @@
             <img src="assets/img/details-4.png" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-            <h3>Media Social</h3>
+            <h3>Contact</h3>
             <p class="fst-italic">
             Terus Update & Terhubung Bersama Kami! Ikuti kami di media sosial untuk mendapatkan wawasan terbaru tentang teknologi, ekonomi, politik, dan banyak lagi. Jangan lewatkan konten eksklusif, diskusi seru, dan update harian yang siap memperkaya pengetahuan Anda!
             </p>
