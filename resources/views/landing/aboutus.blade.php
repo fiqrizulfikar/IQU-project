@@ -899,13 +899,9 @@ p {
     
 
 
-
-
-    </style>
+ </style>
 </head>
 <body>
-    
-
   <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <title>IQU.com</title>
@@ -937,8 +933,7 @@ p {
         * Author: BootstrapMade.com
         * License: https://bootstrapmade.com/license/
         ======================================================== -->
-      </head>
-<head>
+  
   <body class="index-page">
 
     <header id="header" class="header d-flex align-items-center fixed-top">
@@ -1122,4 +1117,8 @@ p {
     <script src="assets/js/main.js"></script>
   
     
+  
+
+</body>
+</html>
   
