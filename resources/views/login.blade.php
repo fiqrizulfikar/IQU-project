@@ -34,3 +34,25 @@
 </body>
 </body>
 </html>
+
+<div class="category-container">
+    <h2>Pilih Kategori Soal CPNS</h2>
+    <p>Silakan pilih kategori soal yang ingin Anda kerjakan. Baca aturan di bawah sebelum memulai!</p>
+    
+    <div class="categories">
+        <a href="{{ route('cpns.tiu') }}" class="btn btn-primary">TIU (Tes Intelegensia Umum)</a>
+        <a href="{{ route('cpns.twk') }}" class="btn btn-primary">TWK (Tes Wawasan Kebangsaan)</a>
+        <a href="{{ route('cpns.tkp') }}" class="btn btn-primary">TKP (Tes Karakteristik Pribadi)</a>
+    </div>
+
+    <div class="rules-container">
+        <h3>Aturan Mengerjakan Soal</h3>
+        <ul>
+            <li>Waktu pengerjaan maksimal adalah <strong>20 menit</strong> per kategori.</li>
+            <li>Tidak diperbolehkan meninggalkan halaman selama mengerjakan soal.</li>
+            <li>Setiap soal wajib dijawab sebelum melanjutkan ke soal berikutnya.</li>
+            <li>Anda dapat melihat hasil jawaban Anda di akhir sesi, termasuk soal yang salah dan pembahasannya.</li>
+            <li>Gunakan tombol <strong>"Selesai"</strong> jika Anda telah menyelesaikan semua soal.</li>
+        </ul>
+    </div>
+</div>
