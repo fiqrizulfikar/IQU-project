@@ -44,7 +44,13 @@
         <li><a href="/aboutus"> <b> About US </b></a></li>
         <li></li>
         <li></li>
-        <li></li>
+        <li><a href="logout"><b><form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit" onclick="return confirm('Apakah Anda yakin ingin logout?')">Logout</button>
+        </form></b> </li>
+      
+        
+    
 
     </ul>
 </nav>

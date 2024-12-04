@@ -71,7 +71,7 @@ Route::get('/login', function () {
 Route::post('/login', [AuthController::class, 'login'])->name('login.post'); 
 Route::post('/register', [AuthController::class, 'register'])->name('register.post'); 
 Route::get('/mediasosial', [LandingControllers::class, 'mediasosial'])->name('mediasosial'); 
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout'); 
+Route::post('/logout', [AuthController::class, 'login'])->name('logout'); 
 
 Route::get('/cpns-quiz/categories', [QuizCPNSController::class, 'showCategories'])->name('cpns.categories');
 Route::get('/cpns-quiz/tiu', [QuizCPNSController::class, 'showTIU'])->name('cpns.tiu');
