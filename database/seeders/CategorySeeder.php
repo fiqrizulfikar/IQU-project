@@ -18,7 +18,9 @@ class CategorySeeder extends Seeder
             ['name' => 'Pengetahuan Politik', 'table_name' => '_quiz_politik'],
             ['name' => 'Pengetahuan Ekonomi', 'table_name' => 'quizzes'],
             ['name' => 'Pengetahuan Teknologi', 'table_name' => 'quizteknologi'],
-
+            ['name' => 'Soal CPNS TIU', 'table_name' => 'quiztiu'],
+            ['name' => 'Soal CPNS TWK', 'table_name' => 'quiztwk'],
+            ['name' => 'Soal CPNS TKP', 'table_name' => 'quiztkp'],
         ]);
     }
 }
