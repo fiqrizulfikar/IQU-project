@@ -61,6 +61,8 @@
     <li><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span></i></a>
     </li>
   </li>
+  <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
+  </li>
     <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
     <ul>
       <li><a href="#">Ice Breaking</a></li>
