@@ -9,7 +9,7 @@ use App\Http\Controllers\LandingSMPcontroller;
 use App\Http\Controllers\LandingSMAcontroller;
 use App\Http\Controllers\Quizcontroller;
 use App\Http\Controllers\QuizCPNScontroller;
-
+use App\Http\Controllers\AuthController;
 
 
 Route::get('/', [LandingControllers::class, 'index']);
@@ -70,8 +70,9 @@ Route::get('/login', function () {
 
 Route::post('/login', [AuthController::class, 'login'])->name('login.post'); 
 Route::post('/register', [AuthController::class, 'register'])->name('register.post'); 
-Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard'); 
+Route::get('/mediasosial', [AuthController::class, 'mediasosial'])->name('mediasosial'); 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout'); 
+
 Route::get('/cpns-quiz/categories', [QuizCPNSController::class, 'showCategories'])->name('cpns.categories');
 Route::get('/cpns-quiz/tiu', [QuizCPNSController::class, 'showTIU'])->name('cpns.tiu');
 Route::get('/cpns-quiz/twk', [QuizCPNSController::class, 'showTWK'])->name('cpns.twk');
