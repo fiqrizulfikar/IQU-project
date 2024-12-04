@@ -24,11 +24,10 @@ Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pend
 
 
 Route::get('/Smp', [LandingSMPcontroller::class, 'index']);
-Route::get('/IPAsmp', [LandingSMPcontroller::class, 'IPAsmp']);
-Route::get('/MTKsmp', [LandingSMPcontroller::class, 'MTKsmp']);
-Route::get('/IPSsmp', [LandingSMPcontroller::class, 'IPSsmp']);
-Route::get('/PKNsmp', [LandingSMPcontroller::class, 'PKNsmp']);
-
+Route::get('/smpips', [LandingSMPcontroller::class, 'showQuizSMPIPS'])->name('IPS.show');
+Route::get('/smpipa', [LandingSMPcontroller::class, 'showQuizSMPIPA'])->name('IPA.show');
+Route::get('/smpmtk', [LandingSMPcontroller::class, 'showQuizSMPMTK'])->name('MTK.show');
+Route::get('/smppkn', [LandingSMPcontroller::class, 'showQuizSMPPKN'])->name('PKN.show');
 
 Route::get('/sekolahdasar', [LandingSDcontrollers::class, 'index']);
 Route::get('/IPAsd', [LandingSDcontrollers::class, 'IPAsd']);
