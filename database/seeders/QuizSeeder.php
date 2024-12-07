@@ -153,12 +153,8 @@ class QuizSeeder extends Seeder
                 'jawaban_b' => 'Menghindari tantangan tersebut karena merasa tidak mampu',
                 'jawaban_c' => 'Menyerah tanpa mencoba',
                 'jawaban_d' => 'Mencari jalan pintas untuk menyelesaikan pekerjaan',
->>>>>>> d678b4a (nambah tes cpns)
                 'jawaban_benar' => 'A',
              ],
-            
-            
-            
         ]);      
     }
 }

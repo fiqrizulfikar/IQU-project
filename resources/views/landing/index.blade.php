@@ -57,11 +57,11 @@
       </li>
       <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
       <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
+      <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
+      </li>
     </ul>
     <li><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span></i></a>
     </li>
-  </li>
-  <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
   </li>
     <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
     <ul>
@@ -157,7 +157,14 @@
                   <h3>SMA</h3>
                   <p>Kumpulan soal berkualitas untuk membantu siswa menguasai materi dan bersiap menghadapi ujian akhir serta seleksi masuk perguruan tinggi.</p>
                 </div>
-              </div> <!-- End Icon Box -->
+              </div> 
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-command"></i>
+                  <h3>Tes CPNS</h3>
+                  <p>Kumpulan soal berkualitas untuk membantu siswa menguasai materi dan bersiap menghadapi ujian akhir serta seleksi masuk perguruan tinggi.</p>
+                </div>
+              </div><!-- End Icon Box -->
               </div> <!-- End Icon Box -->
 
             </div>

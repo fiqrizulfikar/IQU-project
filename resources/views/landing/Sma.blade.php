@@ -92,6 +92,7 @@
 .container {
   text-align: center;
   position: relative;
+  padding-top: 80px;
 }
 
 .child {
@@ -593,7 +594,91 @@
         visibility: visible;
         opacity: 1;
       }
-        
+    
+      /* Efek umum untuk tombol dan link */
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #243b55;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.read-more:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Efek Fade-in untuk halaman */
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animasi Fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animasi untuk gambar anak */
+#childAnimation {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi slide-up untuk opsi */
+.option {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.option:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.option:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.option:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.option:nth-child(4) {
+    animation-delay: 1.1s;
+}
+
     
     
       
@@ -665,36 +750,35 @@
       </div>
     </header>
     <body>
-        <main>
-          <div class="container">
-            <h1 class="main-title">💡 AYO PERBANYAK PENGETAHUANMU!</h1>
-            <h2 class="sub-title">PILIH MATERI YANG INGIN KAMU KUASAI:</h2>
-            <img src="assets/img/anak.jpg" alt="Anak Kecil" class="child" id="childAnimation">
-            <div class="options">
-              <div class="option" data-option="IPA">
-                <a href="{{ url('/smaipa') }}" class="read-more">
-                  <span>🌿 Ilmu Pengetahuan Alam</span>
-                </a>
-              </div>
-              <div class="option" data-option="IPS">
-                <a href="{{ url('/smaips') }}" class="read-more">
-                  <span>🌍 Ilmu Pengetahuan Sosial</span>
-                </a>
-              </div>
-              <div class="option" data-option="PKN">
-                <a href="{{ url('/smapkn') }}" class="read-more">
-                  <span>🏛 Pendidikan Kewarganegaraan</span>
-                </a>
-              </div>
-              <div class="option" data-option="TI">
-                <a href="{{ url('/smatik') }}" class="read-more">
-                  <span>💻 Ilmu Teknologi Informasi</span>
-                </a>
-              </div>
+      <main>
+        <div class="container">
+          <h1 class="main-title">💡 AYO BELAJAR!</h1>
+          <h2 class="sub-title">PILIH MATERI YANG INGIN KAMU KUASAI:</h2>
+          <img src="assets/img/anak.jpg" alt="Anak Kecil" class="child" id="childAnimation">
+          <div class="options">
+            <div class="option" data-option="IPA">
+              <a href="{{ url('/smaipa') }}" class="read-more">
+                <span>🌿 Ilmu Pengetahuan Alam</span>
+              </a>
+            </div>
+            <div class="option" data-option="IPS">
+              <a href="{{ url('/smaips') }}" class="read-more">
+                <span>🌍 Ilmu Pengetahuan Sosial</span>
+              </a>
+            </div>
+            <div class="option" data-option="PKN">
+              <a href="{{ url('/smapkn') }}" class="read-more">
+                <span>🏛 Pendidikan Kewarganegaraan</span>
+              </a>
+            </div>
+            <div class="option" data-option="TI">
+              <a href="{{ url('/smatik') }}" class="read-more">
+                <span>💻 Ilmu Teknologi Informasi</span>
+              </a>
             </div>
           </div>
-          
-          </div>          
+        </div>  
+      </main>             
           
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
@@ -713,5 +797,34 @@
       }, 1000);
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Menambahkan efek fade-in pada seluruh halaman
+    const container = document.querySelector('main');
+    container.classList.add('fade-in');
+    
+    // Menambahkan efek pada gambar anak
+    const childImage = document.getElementById('childAnimation');
+    childImage.classList.add('fade-up');
+    
+    // Menambahkan efek pada setiap opsi
+    const options = document.querySelectorAll('.option');
+    options.forEach((option, index) => {
+        option.classList.add('slide-up');
+        option.style.animationDelay = `${(index + 1) * 0.2}s`;  // Penundaan bertahap
+    });
+    
+    // Efek saat tombol opsi diklik
+    const buttons = document.querySelectorAll('.read-more');
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            button.classList.add('clicked');
+            setTimeout(() => {
+                button.classList.remove('clicked');
+            }, 300); // Efek klik sementara
+        });
+    });
+});
+
 </script>
         </main>
