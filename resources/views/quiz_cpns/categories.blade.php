@@ -92,6 +92,7 @@ body {
         font-size: 1rem;
     }
 }
+<<<<<<< HEAD
     /* Navbar */
     .navbar {
         background-color: #002776;
@@ -229,7 +230,6 @@ body {
             <li><a href="/aboutus">About US</a></li>
         </ul>
     </nav>
-</head>
 <div class="category-container">
     <h2>Pilih Kategori Soal CPNS</h2>
     <p>Silakan pilih kategori soal yang ingin Anda kerjakan. Baca aturan di bawah sebelum memulai!</p>
