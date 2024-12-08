@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\QuizSDIPA;
 
 class LandingSDcontrollers extends Controller
 {
@@ -10,22 +11,11 @@ class LandingSDcontrollers extends Controller
     {
         return view('landing.SD.SekolahDasar');
     } 
-
-    public function IPAsd()
+    public function showQuizSDIPA()
     {
-        return view ('landing.SD.IPA');
+        $questions = QuizSDIPA::all(); // Ambil semua data pertanyaan dari database
+        return view('landing.SD.IPA', compact('questions'));
     }
 
-    public function IPSsd()
-    {
-        return view ('landing.SD.IPS');
-    }
-    public function MTKsd()
-    {
-        return view ('landing.SD.MTK');
-    }
-    public function PKNsd()
-    {
-        return view ('landing.SD.PKN');
-    }       
+    
 }

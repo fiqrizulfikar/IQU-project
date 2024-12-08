@@ -11,6 +11,7 @@
   <!-- Favicons -->
   <link href="assets/img/www.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="{{ asset('assets/css/Sdipa.css') }}">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -55,114 +56,188 @@
 </nav> 
 </section><!-- /About Section -->
 </header>
+    <body>
+    <body>
+        <div class="quiz-container">
+            <!-- Judul Pertanyaan -->
+            <h1 id="quiz-ips-title">Selamat Datang di Kuis SD IPA</h1>
+        
+            <!-- Timer -->
+            <div id="timer" class="timer"></div>
+        
+            <!-- Form Kuis -->
+            <form id="quizForm" style="display: none;">
+                <div class="option">
+                    <input type="radio" id="optionA" name="answer" value="A">
+                    <label for="optionA" id="labelA"></label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="optionB" name="answer" value="B">
+                    <label for="optionB" id="labelB"></label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="optionC" name="answer" value="C">
+                    <label for="optionC" id="labelC"></label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="optionD" name="answer" value="D">
+                    <label for="optionD" id="labelD"></label>
+                </div>
+            </form>
+        
+            <!-- Hasil -->
+            <div id="result" class="result"></div>
+        
+            <!-- Tombol Mulai -->
+            <button id="startButton">Mulai Kuis</button>
+        
+            <!-- Tombol Mulai Ulang -->
+            <button id="restartButton" style="display: none;">Mulai Ulang</button>
+        
+            <!-- Tombol Kembali -->
+            <button id="homeButton" style="display: none;">Kembali ke Pilih Kuis</button>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () { 
+    let currentQuestionIndex = 0;
+    let correctAnswersCount = 0;
+    const timeLimit = 15; // Waktu maksimal per pertanyaan (detik)
+    let timerInterval;
+    const questions = @json( $questions);
 
-<!-- create section -->
+    // Ambil elemen-elemen dari DOM
+    const quizContainer = document.querySelector('.quiz-container');
+    const quizTitle = document.getElementById('quiz-ips-title');
+    const labelA = document.getElementById('labelA');
+    const labelB = document.getElementById('labelB');
+    const labelC = document.getElementById('labelC');
+    const labelD = document.getElementById('labelD');
+    const resultContainer = document.getElementById('result');
+    const quizForm = document.getElementById('quizForm');
+    const timerElement = document.getElementById('timer');
+    const startButton = document.getElementById('startButton');
+    const restartButton = document.getElementById('restartButton');
+    const backButton = document.getElementById('homeButton');
+
+    // Event tombol mulai kuis
+    startButton.addEventListener('click', function () {
+        quizForm.style.display = 'block';
+        startButton.style.display = 'none';
+        restartButton.style.display = 'none';
+        backButton.style.display = 'none';
+        loadQuestion(currentQuestionIndex);
+    });
+
+    // Event tombol mulai ulang
+    restartButton.addEventListener('click', resetQuiz);
+
+    // Event tombol kembali
+    backButton.addEventListener('click', function () {
+        window.location.href = "/sekolahdasar"; // Redirect ke halaman pilih kuis
+    });
+
+    // Fungsi untuk memulai timer
+    function startTimer() {
+        let timeLeft = timeLimit;
+        timerElement.textContent = `Waktu tersisa: ${timeLeft} detik`;
+
+        timerInterval = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = `Waktu tersisa: ${timeLeft} detik`;
+
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                resultContainer.textContent = `Waktu habis! Jawaban yang benar adalah: ${questions[currentQuestionIndex].jawaban_benar}`;
+                setTimeout(() => {
+                    currentQuestionIndex++;
+                    loadQuestion(currentQuestionIndex);
+                }, 2000);
+            }
+        }, 1000);
+    }
+
+    // Fungsi untuk memuat pertanyaan
+    function loadQuestion(index) {
+        if (index < questions.length) {
+            clearInterval(timerInterval);
+            startTimer();
+
+            const question = questions[index];
+            quizTitle.textContent = question.quiz;
+            labelA.textContent = question.jawaban_a;
+            labelB.textContent = question.jawaban_b;
+            labelC.textContent = question.jawaban_c;
+            labelD.textContent = question.jawaban_d;
+
+            document.querySelectorAll('.option input').forEach(input => (input.checked = false));
+            resultContainer.textContent = '';
+        } else {
+            clearInterval(timerInterval);
+            quizTitle.textContent = `Kuis selesai! Anda menjawab ${correctAnswersCount} dari ${questions.length} pertanyaan dengan benar.`;
+            quizForm.style.display = 'none';
+            timerElement.style.display = 'none';
+
+            // Tampilkan tombol kembali dan mulai ulang
+            restartButton.style.display = 'block';
+            backButton.style.display = 'block';
+        }
+    }
+
+    // Fungsi untuk memilih jawaban
+    document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', function (event) {
+            clearInterval(timerInterval);
+
+            const selectedOption = event.target.value;
+            const correctAnswer = questions[currentQuestionIndex].jawaban_benar;
+
+            if (selectedOption === correctAnswer) {
+                resultContainer.textContent = 'Jawaban Anda benar!';
+                correctAnswersCount++;
+            } else {
+                resultContainer.textContent = `Jawaban Anda salah. Jawaban yang benar adalah: ${correctAnswer}`;
+            }
+
+            setTimeout(() => {
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            }, 2000);
+        });
+    });
+
+    // Fungsi untuk mereset kuis
+    function resetQuiz() {
+        currentQuestionIndex = 0;
+        correctAnswersCount = 0;
+        timerElement.style.display = 'block';
+        resultContainer.textContent = '';
+        startButton.style.display = 'none';
+        restartButton.style.display = 'none';
+        backButton.style.display = 'none';
+        quizForm.style.display = 'block';
+        loadQuestion(currentQuestionIndex);
+    }
+
+    // Awal form tersembunyi
+    quizForm.style.display = 'none';
+    restartButton.style.display = 'none';
+    backButton.style.display = 'none';
+});
+
+
+        </script>
+  
+
+
+
+    </body>
+
+
 
      
- <section class="ngendol">
-    <div class="container-ipa">
-        <header class="ipa">
-            <h1>Kuis IPA Seru!</h1>
-        </header>
-        <div class="explanation">
-            <h2>Pelajaran IPA</h2>
-            <p>Selamat datang di kuis IPA! Ayo kita belajar tentang sel dan ekosistem!</p>
-        </div>
-        <div class="quiz-container">
-            <!-- di sini JavaScript -->
-        </div>
-    </div>
-</section>
-
-    <p id="output"></p>
+ 
 
 
-    <footer id="footer" class="footer dark-background">
-
-<div class="container footer-top">
-  <div class="row gy-4">
-    <div class="col-lg-4 col-md-6 footer-about">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <span class="sitename">IQU.com</span>
-      </a>
-      <div class="footer-contact pt-3">
-        <p>Semarang</p>
-        <p>Tembalang,Amposari</p>
-        <p class="mt-3"><strong>Phone:</strong> <span>085601742751</span></p>
-        <p><strong>Email:</strong> <span>iqu123@gmail.com</span></p>
-      </div>
-      <div class="social-links d-flex mt-4">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-    </div>
-
-    <div class="col-lg-2 col-md-3 footer-links">
-      <h4>Tautan Berguna</h4>
-      <ul>
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Pendidikan</a></li>
-        <li><a href="#">Pengetahuan</a></li>
-        <li><a href="#">Games</a></li>
-        <li><a href="#">Media Sosial</a></li>
-        <li><a href="#">About As</a></li>
-      </ul>
-    </div>
-
-    <div class="col-lg-2 col-md-3 footer-links">
-      <h4>Layanan Kami</h4>
-      <ul>
-        <li><a href="#">Pembelajaran Interaktif</a></li>
-        <li><a href="#">Kuis & Tes Pemahaman</a></li>
-        <li><a href="#">Bimbingan Belajar Online</a></li>
-        <li><a href="#">Belajar Terstruktur</a></li>
-        <li><a href="#">Fitur Ice Breaking & Tes IQ</a></li>
-      </ul>
-    </div>
-
-    <div class="col-lg-4 col-md-12 footer-newsletter">
-      <h4></h4>
-      
-    </div>
-
-  </div>
-</div>
-
-<div class="container copyright text-center mt-4">
-  <link href="assets/img/www.png" rel="icon">
-  <p> <span></span> <strong class="px-1 sitename">IQU.com</strong> <span></span></p>
-  <div class="credits">
-    <!-- All the links in the footer should remain intact. -->
-    <!-- You can delete the links only if you've purchased the pro version. -->
-    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-    <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-    
-  </div>
-</div>
-
-</footer>
-
-<!-- Scroll Top -->
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-<!-- Preloader -->
-<div id="preloader"></div>
-
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
-
-
-</div>
 </header>
 
 </body>

@@ -4,7 +4,7 @@
 <link href="assets/css/SD/IPASD.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar dan Cards</title>
+    <title>Quiz SD</title>
 
 
 
@@ -33,7 +33,7 @@
 
   <style>
     /* Reset */
-    * {
+     {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
@@ -182,7 +182,7 @@
             width: 100%;
             max-width: 300px;
         }
-    }
+    }*
 </style>
 </head>
 <body>
