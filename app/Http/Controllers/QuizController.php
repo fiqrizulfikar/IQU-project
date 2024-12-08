@@ -16,7 +16,7 @@ class QuizController extends Controller
     // Daftar tabel yang valid
     $validTables = [
         'quizsmatik', 'quizsmaipa', 'quizsmaips', 'quizsmapkn',
-        'quizumum', 'quizpolitik', 'quizteknologi', 'quizzes'
+        'quizumum', 'quizpolitik', 'quizteknologi', 'quizzes','quiztiu','quiztwk','quiztkp'
     ];
 
     // Pastikan tabel yang dipilih ada dalam daftar valid

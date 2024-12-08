@@ -3,29 +3,42 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\QuizSMPIPS;
+use App\Models\QuizSMPIPA;
+use App\Models\QuizSMPMTK;
+use App\Models\QuizSMPPKN;
+use App\Models\QuizSMPENGLIS;
 
 class LandingSMPcontroller extends Controller
 {
     public function index()
     {
-        return view('landing.SMP.SekolahMenengahPertama');
+        return view('landing.SMP');
     } 
-
-    public function IPAsmp()
+    public function showQuizSMPIPS()
     {
-        return view ('landing.SMP.IPA');
+        $quizsmpips = QuizSMPIPS::all(); // Ambil semua data pertanyaan dari database
+        return view('landing.SMP.IPS', compact('quizsmpips'));      
+    }
+    public function showQuizSMPIPA()
+    {
+        $quizsmpipa = QuizSMPIPA::all(); // Ambil semua data pertanyaan dari database
+        return view('landing.SMP.IPA', compact('quizsmpipa'));      
+    }
+    public function showQuizSMPMTK()
+    {
+        $quizsmpmtk = QuizSMPMTK::all(); // Ambil semua data pertanyaan dari database
+        return view('landing.SMP.MTK', compact('quizsmpmtk'));      
+    }
+    public function showQuizSMPPKN()
+    {
+        $quizsmppkn = QuizSMPPKN::all(); // Ambil semua data pertanyaan dari database
+        return view('landing.SMP.PKN', compact('quizsmppkn'));      
+    }
+    public function showQuizSMPENGLIS()
+    {
+        $quizsmpenglis = QuizSMPENGLIS::all(); // Ambil semua data pertanyaan dari database
+        return view('landing.SMP.ENGLIS', compact('quizsmpenglis'));      
     }
 
-    public function IPSsmp()
-    {
-        return view ('landing.SMP.IPS');
-    }
-    public function MTKsmp()
-    {
-        return view ('landing.SMP.MTK');
-    }
-    public function PKNsmp()
-    {
-        return view ('landing.SMP.PKN');
-    }       
 }

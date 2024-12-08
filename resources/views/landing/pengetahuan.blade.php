@@ -178,6 +178,108 @@ main {
 }
 
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --default-font: "Roboto", system-ui, sans-serif;
+    --nav-font: "Poppins", sans-serif;
+    --nav-color: #ffffff;
+    --nav-hover-color: #1a73e8;
+    --nav-background-color: #0a2a4e; /* Warna biru tua */
+    --nav-dropdown-background-color: #0e3b5f;
+    --nav-dropdown-hover-color: #1a90ff;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-background-color);
+    padding: 15px 20px;
+    color: var(--nav-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: var(--nav-color);
+    text-decoration: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: var(--nav-hover-color);
+    color: var(--contrast-color);
+    border-radius: 4px;
+}
+
+.navmenu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navmenu li {
+    position: relative;
+}
+
+.navmenu .dropdown ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: var(--nav-dropdown-background-color);
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.navmenu .dropdown:hover ul {
+    display: block;
+}
+
+.navmenu .dropdown ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: var(--nav-dropdown-hover-color);
+}
+
+.navmenu .dropdown ul li a:hover {
+    background-color: var(--nav-dropdown-hover-color);
+    color: var(--contrast-color);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navmenu {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navmenu li {
+        width: 100%;
+    }
+    .navmenu a {
+        width: 100%;
+        text-align: left;
+    }
+}
 
 .header {
   --background-color: rgba(255, 255, 255, 0);
@@ -834,7 +936,7 @@ main {
         </a>         
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero" class="active">Beranda</a></li>
+            <li><a href="/" class="active">Beranda</a></li>
             <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li>
@@ -842,11 +944,12 @@ main {
                 </li>
                 <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
                 <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
+                <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
+                </li>
               </ul>
               <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
               <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
               <li><a href="/aboutus">About US</a></li>
-              <li><a href="/login">Login</a></li>
             </li>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>

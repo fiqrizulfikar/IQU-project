@@ -44,7 +44,13 @@
         <li><a href="/aboutus"> <b> About US </b></a></li>
         <li></li>
         <li></li>
-        <li></li>
+        <li><a href="logout"><b><form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit" onclick="return confirm('Apakah Anda yakin ingin logout?')">Logout</button>
+        </form></b> </li>
+      
+        
+    
 
     </ul>
 </nav>
@@ -76,17 +82,17 @@
           <ul class="list-inline mb-0">
             <li class="list-inline-item">
               <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
-                <i class="fab fa-facebook-f"></i>
+                <a href="https://www.facebook.com/zulfikar.fikri.395/"><i class="bi bi-facebook"></i></a>
               </a>
             </li>
             <li class="list-inline-item">
               <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
-                <i class="fab fa-google"></i>
+                <a href="https://www.instagram.com/frzulfiikar/"><i class="bi bi-instagram"></i></a>
               </a>
             </li>
             <li class="list-inline-item">
               <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
-                <i class="fab fa-twitter"></i>
+                <a href=""><i class="bi bi-twitter-x"></i></a>
               </a>
             </li>
           </ul>
@@ -255,6 +261,8 @@
   </ul>
 </div>
 </section>
+
+
 
 
 

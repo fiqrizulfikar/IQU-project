@@ -9,7 +9,7 @@ use App\Http\Controllers\LandingSMPcontroller;
 use App\Http\Controllers\LandingSMAcontroller;
 use App\Http\Controllers\Quizcontroller;
 use App\Http\Controllers\QuizCPNScontroller;
-
+use App\Http\Controllers\AuthController;
 
 
 Route::get('/', [LandingControllers::class, 'index']);
@@ -24,11 +24,11 @@ Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pend
 
 
 Route::get('/Smp', [LandingSMPcontroller::class, 'index']);
-Route::get('/IPAsmp', [LandingSMPcontroller::class, 'IPAsmp']);
-Route::get('/MTKsmp', [LandingSMPcontroller::class, 'MTKsmp']);
-Route::get('/IPSsmp', [LandingSMPcontroller::class, 'IPSsmp']);
-Route::get('/PKNsmp', [LandingSMPcontroller::class, 'PKNsmp']);
-
+Route::get('/smpips', [LandingSMPcontroller::class, 'showQuizSMPIPS'])->name('IPS.show');
+Route::get('/smpipa', [LandingSMPcontroller::class, 'showQuizSMPIPA'])->name('IPA.show');
+Route::get('/smpmtk', [LandingSMPcontroller::class, 'showQuizSMPMTK'])->name('MTK.show');
+Route::get('/smppkn', [LandingSMPcontroller::class, 'showQuizSMPPKN'])->name('PKN.show');
+Route::get('/smpenglis', [LandingSMPcontroller::class, 'showQuizSMPENGLIS'])->name('ENGLIS.show');
 
 Route::get('/sekolahdasar', [LandingSDcontrollers::class, 'index']);
 Route::get('/IPAsd', [LandingSDcontrollers::class, 'showQuizSDIPA'])->name('IPA.show');
@@ -37,7 +37,7 @@ Route::get('/IPSsd', [LandingSDcontrollers::class, 'IPSsd']);
 Route::get('/PKNsd', [LandingSDcontrollers::class, 'PKNsd']);
 
 
-Route::get('/login', [SesiController::class, 'login']);
+
 Route::get('/pengetahuan', [LandingPengetahuan::class, 'index']);
 Route::get('/ekonomi', [LandingPengetahuan::class, 'showQuiz'])->name('ekonomi.show'); // Menampilkan daftar kuis
 Route::get('/politik', [LandingPengetahuan::class, 'showQuizPolitik'])->name('politik.show'); // Menampilkan daftar kuis
@@ -62,6 +62,16 @@ Route::put('/admin/questions/{table}/{id}', [QuizController::class, 'update'])->
 
 // Route untuk hapus pertanyaan
 Route::delete('/admin/questions/{table}/{id}', [QuizController::class, 'destroy'])->name('admin.questions.destroy');
+
+//login
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
+Route::post('/login', [AuthController::class, 'login'])->name('login.post'); 
+Route::post('/register', [AuthController::class, 'register'])->name('register.post'); 
+Route::get('/mediasosial', [LandingControllers::class, 'mediasosial'])->name('mediasosial'); 
+Route::post('/logout', [AuthController::class, 'login'])->name('logout'); 
 
 Route::get('/cpns-quiz/categories', [QuizCPNSController::class, 'showCategories'])->name('cpns.categories');
 Route::get('/cpns-quiz/tiu', [QuizCPNSController::class, 'showTIU'])->name('cpns.tiu');

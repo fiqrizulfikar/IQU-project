@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuis SMP MTK</title>
+    <title>Kuis SMP IPA</title>
     <link rel="stylesheet" href="{{ asset('assets/css/SMA.css') }}">
 </head>
 <body>
     <body>
         <div class="quiz-container">
             <!-- Judul Pertanyaan -->
-            <h1 id="quiz-ips-title">Selamat Datang di Kuis SMP MTK</h1>
+            <h1 id="quiz-ips-title">Selamat Datang di Kuis SMP ENGLIS</h1>
         
             <!-- Timer -->
             <div id="timer" class="timer"></div>
@@ -51,9 +51,9 @@
             document.addEventListener('DOMContentLoaded', function () { 
     let currentQuestionIndex = 0;
     let correctAnswersCount = 0;
-    const timeLimit = 60; // Waktu maksimal per pertanyaan (detik)
+    const timeLimit = 15; // Waktu maksimal per pertanyaan (detik)
     let timerInterval;
-    const questions = @json($quizsmpmtk);
+    const questions = @json($quizsmpenglis);
 
     // Ambil elemen-elemen dari DOM
     const quizContainer = document.querySelector('.quiz-container');
