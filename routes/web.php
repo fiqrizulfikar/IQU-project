@@ -28,6 +28,7 @@ Route::get('/smpips', [LandingSMPcontroller::class, 'showQuizSMPIPS'])->name('IP
 Route::get('/smpipa', [LandingSMPcontroller::class, 'showQuizSMPIPA'])->name('IPA.show');
 Route::get('/smpmtk', [LandingSMPcontroller::class, 'showQuizSMPMTK'])->name('MTK.show');
 Route::get('/smppkn', [LandingSMPcontroller::class, 'showQuizSMPPKN'])->name('PKN.show');
+Route::get('/smpenglis', [LandingSMPcontroller::class, 'showQuizSMPENGLIS'])->name('ENGLIS.show');
 
 Route::get('/sekolahdasar', [LandingSDcontrollers::class, 'index']);
 Route::get('/IPAsd', [LandingSDcontrollers::class, 'IPAsd']);

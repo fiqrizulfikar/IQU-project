@@ -7,6 +7,7 @@ use App\Models\QuizSMPIPS;
 use App\Models\QuizSMPIPA;
 use App\Models\QuizSMPMTK;
 use App\Models\QuizSMPPKN;
+use App\Models\QuizSMPENGLIS;
 
 class LandingSMPcontroller extends Controller
 {
@@ -33,6 +34,11 @@ class LandingSMPcontroller extends Controller
     {
         $quizsmppkn = QuizSMPPKN::all(); // Ambil semua data pertanyaan dari database
         return view('landing.SMP.PKN', compact('quizsmppkn'));      
+    }
+    public function showQuizSMPENGLIS()
+    {
+        $quizsmpenglis = QuizSMPENGLIS::all(); // Ambil semua data pertanyaan dari database
+        return view('landing.SMP.ENGLIS', compact('quizsmpenglis'));      
     }
 
 }
