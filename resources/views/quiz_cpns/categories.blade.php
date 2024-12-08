@@ -92,7 +92,6 @@ body {
         font-size: 1rem;
     }
 }
-<<<<<<< HEAD
     /* Navbar */
     .navbar {
         background-color: #002776;
