@@ -936,7 +936,7 @@ body {
         </a>         
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero" class="active">Beranda</a></li>
+            <li><a href="/" class="active">Beranda</a></li>
             <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li>
@@ -944,11 +944,12 @@ body {
                 </li>
                 <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
                 <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
+                <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
+                </li>
               </ul>
               <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
               <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
               <li><a href="/aboutus">About US</a></li>
-              <li><a href="/login">Login</a></li>
             </li>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>

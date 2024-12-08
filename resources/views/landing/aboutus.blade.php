@@ -948,41 +948,7 @@ p {
    <nav id="navmenu" class="navmenu">
    <ul>
     <li><a href="/" class="active">Beranda</a></li>
-    <li class="dropdown"><a href="/pendidikan"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-      <ul>
-        <li class="dropdown"><a href="/SekolahDasar"><span>Sekolah Dasar</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          
-        </li>
-        <li class="dropdown"><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-        <ul>
-          <li><a href="#">IPA</a></li>
-          <li><a href="#">IPS</a></li>
-          <li><a href="#">PKN</a></li>
-          <li><a href="#">Bahasa Inggris</a></li>
-        </ul>
-        <li class="dropdown"><a href="{{ url('/Sma') }}"><span>Sekolah Menengah Atas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-        <ul>
-          <li><a href="#">IPA</a></li>
-          <li><a href="#">IPS</a></li>
-          <li><a href="#">PKN</a></li>
-          <li><a href="#">TIK</a></li>
-        </ul>
-      </ul>
-    <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Umum </a></li>
-            <li><a href="#">Teknologi</a></li>
-            <li><a href="#">Ekonomi</a></li>
-            <li><a href="#">Politik</a></li>
-          </ul>
-    </li>
-      <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-      <ul>
-        <li><a href="#">Ice Breaking</a></li>
-        <li><a href="#">Tes IQ</a></li>
-      </ul>
-      <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
-      <li><a href={{ url('/aboutus') }}>About US</a></li>
+   
       <li><a href={{ url('/Login') }}>Login</a></li>
     </li>
   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

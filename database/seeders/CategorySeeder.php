@@ -23,4 +23,5 @@ class CategorySeeder extends Seeder
             ['name' => 'Soal CPNS TKP', 'table_name' => 'quiztkp'],
         ]);
     }
+
 }
