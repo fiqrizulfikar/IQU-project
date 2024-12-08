@@ -33,7 +33,7 @@ Route::get('/smpenglis', [LandingSMPcontroller::class, 'showQuizSMPENGLIS'])->na
 Route::get('/sekolahdasar', [LandingSDcontrollers::class, 'index']);
 Route::get('/IPAsd', [LandingSDcontrollers::class, 'showQuizSDIPA'])->name('IPA.show');
 Route::get('/MTKsd', [LandingSDcontrollers::class, 'MTKsd']);
-Route::get('/IPSsd', [LandingSDcontrollers::class, 'IPSsd']);
+Route::get('/IPSsd', [LandingSDcontrollers::class, 'showQuizSDIPS'])->name('IPS.show');
 Route::get('/PKNsd', [LandingSDcontrollers::class, 'PKNsd']);
 
 
