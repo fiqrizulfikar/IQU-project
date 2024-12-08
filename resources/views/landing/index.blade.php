@@ -129,7 +129,7 @@
             <h3>Pendidikan</h3>
             <h2>Solusi Cerdas Untuk Pembelajaran Modern</h2>
             <p>Kami menghadirkan metode belajar yang mudah, interaktif, dan disesuaikan dengan kebutuhan Anda. Dari pelajaran sekolah hingga keterampilan profesional, semua bisa Anda temukan di sini. Mulai perjalanan belajar Anda sekarang dan temukan cara baru untuk mencapai kesuksesan! Klik di sini untuk eksplorasi lebih lanjut!</p>
-            <a href="#" class="read-more"><span>Mari Belajar</span><i class="bi bi-arrow-right"></i></a>
+            <a href="{{ url('/pendidikan') }}" class="read-more"><span>Mari Belajar</span><i class="bi bi-arrow-right"></i></a>
           </div>
 
           <div class="col-xl-7">

@@ -173,6 +173,32 @@
     restartButton.style.display = 'none';
     backButton.style.display = 'none';
 });
+let currentQuestion = 0;
+const questions = document.querySelectorAll('.question');
+const options = document.querySelectorAll('.option');
+
+function nextQuestion() {
+    // Sembunyikan soal lama dengan efek fade-out
+    questions[currentQuestion].classList.remove('zoom-in');
+    questions[currentQuestion].classList.add('zoom-out');
+    
+    // Increment soal
+    currentQuestion++;
+    
+    if (currentQuestion < questions.length) {
+        // Menampilkan soal baru dengan efek fade-in
+        questions[currentQuestion].classList.remove('zoom-out');
+        questions[currentQuestion].classList.add('zoom-in');
+    }
+}
+
+// Menambahkan event untuk pilihan
+options.forEach(option => {
+    option.addEventListener('click', () => {
+        option.classList.add('selected'); // Efek animasi pilihan
+        nextQuestion();
+    });
+});
 
 
         </script>
