@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuis SMA IPA</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/SMA.css') }}">
+    <title>Kuis SD IPS</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/SD.css') }}">
 </head>
 <body>
     <body>
         <div class="quiz-container">
             <!-- Judul Pertanyaan -->
-            <h1 id="quiz-ips-title">Selamat Datang di Kuis SMA IPA</h1>
+            <h1 id="quiz-ips-title">Selamat Datang di Kuis SD IPS</h1>
         
             <!-- Timer -->
             <div id="timer" class="timer"></div>
@@ -53,7 +53,7 @@
     let correctAnswersCount = 0;
     const timeLimit = 15; // Waktu maksimal per pertanyaan (detik)
     let timerInterval;
-    const questions = @json($questions);
+    const questions = @json($questionsips);
 
     // Ambil elemen-elemen dari DOM
     const quizContainer = document.querySelector('.quiz-container');
@@ -83,7 +83,7 @@
 
     // Event tombol kembali
     backButton.addEventListener('click', function () {
-        window.location.href = "/SMA"; // Redirect ke halaman pilih kuis
+        window.location.href = "/Sd"; // Redirect ke halaman pilih kuis
     });
 
     // Fungsi untuk memulai timer

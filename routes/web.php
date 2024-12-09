@@ -30,11 +30,11 @@ Route::get('/smpmtk', [LandingSMPcontroller::class, 'showQuizSMPMTK'])->name('MT
 Route::get('/smppkn', [LandingSMPcontroller::class, 'showQuizSMPPKN'])->name('PKN.show');
 Route::get('/smpenglis', [LandingSMPcontroller::class, 'showQuizSMPENGLIS'])->name('ENGLIS.show');
 
-Route::get('/sekolahdasar', [LandingSDcontrollers::class, 'index']);
+Route::get('/Sd', [LandingSDcontrollers::class, 'index']);
 Route::get('/IPAsd', [LandingSDcontrollers::class, 'showQuizSDIPA'])->name('IPA.show');
-Route::get('/MTKsd', [LandingSDcontrollers::class, 'MTKsd']);
+Route::get('/MTKsd', [LandingSDcontrollers::class, 'showQuizSDMTK'])->name('MTK.show');
 Route::get('/IPSsd', [LandingSDcontrollers::class, 'showQuizSDIPS'])->name('IPS.show');
-Route::get('/PKNsd', [LandingSDcontrollers::class, 'PKNsd']);
+Route::get('/PKNsd',  [LandingSDcontrollers::class, 'showQuizSDPKN'])->name('PKN.show');
 
 
 

@@ -53,7 +53,7 @@
   <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
     <ul>
       <li>
-        <a href="{{ url('/sekolahdasar') }}"><span>Sekolah Dasar</span> </i></a>    
+        <a href="{{ url('/Sd') }}"><span>Sekolah Dasar</span> </i></a>    
       </li>
       <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
       <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>

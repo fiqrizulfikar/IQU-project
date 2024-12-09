@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar dan Cards</title>
+    <title>Sekolah Dasar</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -211,7 +211,7 @@
     <nav class="navbar">
         <h1>
             <img src="assets/img/logo.png" alt="Logo">
-            Sekolah Menengah Atas
+            Sekolah Dasar
         </h1>
         <ul>
             <li><a href="/">Beranda</a></li>
@@ -225,25 +225,25 @@
             <img src="https://i.pinimg.com/474x/e3/fc/ff/e3fcff56201a208bf023c04ec8b307ae.jpg" alt="Ilmu IPA">
             <h5>IPA</h5>
             <p>Mata pelajaran yang mempelajari alam sekitar dan isinya, termasuk benda-benda, peristiwa, dan gejala alam.</p>
-            <a href="smaipa">Mulai Quiz</a>
+            <a href="/IPAsd">Mulai Quiz</a>
         </div>
         <div class="card">
             <img src="https://rencanamu.id/assets/file_uploaded/blog/1463642073-20120314-q.jpg" alt="Ilmu IPS">
             <h5>IPS</h5>
             <p>Mata pelajaran yang mempelajari hubungan antar manusia, masalah sosial dan interaksinya dengan lingkungan sekitar.</p>
-            <a href="sdips">Mulai Quiz</a>
+            <a href="/IPSsd">Mulai Quiz</a>
         </div>
         <div class="card">
             <img src="https://sman2pinggir.sch.id/media_library/posts/large/4aa2de96bb4948c801a4f3b878251259.jpg" alt="Ilmu MTK">
             <h5>PKN</h5>
             <p>Mata pelajaran yang mempelajari konsep matematika dasar seperti angka, bentuk, dan hitungan.</p>
-            <a href="smapkn">Mulai Quiz</a>
+            <a href="/PKNsd">Mulai Quiz</a>
         </div>
         <div class="card">
-            <img src="https://i.pinimg.com/474x/f4/3d/f5/f43df51ff61e6cbe59ff3d99aa1fea18.jpg" alt="Ilmu TIK">
-            <h5>TIK</h5>
+            <img src="https://i.pinimg.com/736x/b1/08/c6/b108c6be1ea418415a12ed7ed2ffa2ea.jpg" alt="Ilmu TIK">
+            <h5>MTK</h5>
             <p>Mata pelajaran yang mempelajari nilai-nilai kewarganegaraan dan dasar-dasar demokrasi.</p>
-            <a href="smatik">Mulai Quiz</a>
+            <a href="/MTKsd">Mulai Quiz</a>
         </div>
     </div>
 
