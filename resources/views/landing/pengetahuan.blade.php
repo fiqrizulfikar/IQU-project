@@ -49,11 +49,6 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
-body {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-family: var(--default-font);
-}
 
 a {
   color: var(--accent-color);
@@ -77,14 +72,15 @@ h6 {
 }
 body {
   font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('assets/img/UMUM.png');
-    background-size: cover; /* Mengisi seluruh latar belakang */
-    background-position: center; /* Memusatkan gambar latar */
-    background-attachment: fixed; /* Membuat gambar tetap di tempat saat di-scroll */
-    color: white;
+  margin: 0;
+  padding: 0;
+  background-image: url('assets/img/UMUM.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
 }
+
 main {
     padding-top: 200px; /* Atur sesuai kebutuhan */
 }
@@ -175,13 +171,6 @@ main {
 
 .read-more span {
     font-weight: bold; /* Membuat teks lebih tebal */
-}
-
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
 }
 
 :root {
@@ -282,12 +271,11 @@ body {
 }
 
 .header {
-  --background-color: rgba(255, 255, 255, 0);
+  background-color: #0a2a4e; /* Warna biru tua */
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -421,7 +409,7 @@ body {
     .navmenu .dropdown ul a:hover,
     .navmenu .dropdown ul .active:hover,
     .navmenu .dropdown ul li:hover>a {
-      color: var(--nav-dropdown-hover-color);
+      color: white;
     }
   
     .navmenu .dropdown:hover>ul {
@@ -618,12 +606,7 @@ body {
   /*--------------------------------------------------------------
   # General Styling & Shared Classes
   --------------------------------------------------------------*/
-  body {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    font-family: var(--default-font);
-  }
-  
+
   a {
     color: var(--accent-color);
     text-decoration: none;
@@ -885,7 +868,6 @@ body {
     visibility: visible;
     opacity: 1;
   }
-    
 
 
   
@@ -936,11 +918,10 @@ body {
         </a>         
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="/" class="active">Beranda</a></li>
             <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li>
-                  <a href="{{ url('/sekolahdasar') }}"><span>Sekolah Dasar</span> </i></a>    
+                  <a href="{{ url('/sd') }}"><span>Sekolah Dasar</span> </i></a>    
                 </li>
                 <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
                 <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
@@ -948,9 +929,11 @@ body {
                 </li>
               </ul>
               <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
-              <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
-              <li><a href="/aboutus">About US</a></li>
+              <li><a href="{{ url('/mediasosial') }}">Contact</a></li>
+              <li><a href="/">About US</a></li>
+              <li><a href="/login" class="login-icon"><i class="fas fa-user"></i></a></li>  </li>
             </li>
+              
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
   </div>
