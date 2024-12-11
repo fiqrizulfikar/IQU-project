@@ -4,13 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sekolah Dasar</title>
+    <title>IQU SD</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <style>
+        :root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #040677; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #1acc8d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #ffffff;  /* The default color of the main navmenu links */
+  --nav-hover-color: #1acc8d; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #040677; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #1acc8d; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #f4f5fe;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #08005e;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #0c0091;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
         /* Reset */
         * {
             margin: 0;
@@ -24,46 +70,6 @@
             color: #333;
             min-height: 100vh;
         }
-
-        /* Navbar */
-        .navbar {
-            background: #08005e;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar h1 {
-            font-size: 24px;
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar h1 img {
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .navbar ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-
-        .navbar ul li a:hover {
-            color: #ffdd59;
-        }
-
         /* Card Section */
         .card-container {
             display: flex;
@@ -202,22 +208,61 @@
                 max-width: 300px;
             }
         }
+        
+        .navbar {
+            background: #08005e;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar h1 img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #ffdd59;
+        }
+
     </style>
-</head>
+    <nav class="navbar">
+      <h1>
+          <img src="assets/img/logo.png" alt="Logo">
+          Sekolah Dasar
+      </h1>
+      <ul>
+          <li><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span></i></a>
+          <li><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span></i></a>
+          <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
+          <li><a href="/">About US</a></li>
+          <li><a href="/login" class="login-icon"><i class="fas fa-user"></i></a></li>  </li>
+      </ul>
+  </nav>
 
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h1>
-            <img src="assets/img/logo.png" alt="Logo">
-            Sekolah Dasar
-        </h1>
-        <ul>
-            <li><a href="/">Beranda</a></li>
-            <li><a href="/login">Login</a></li>
-        </ul>
-    </nav>
 
     <!-- Card Section -->
     <div class="card-container">

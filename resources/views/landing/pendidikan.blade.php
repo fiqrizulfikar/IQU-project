@@ -26,101 +26,45 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <style>
-  :root {
-    --default-font: "Roboto", system-ui, sans-serif;
-    --nav-font: "Poppins", sans-serif;
-    --nav-color: #ffffff;
-    --nav-hover-color: #1a73e8;
-    --nav-background-color: #0a2a4e; /* Warna biru tua */
-    --nav-dropdown-background-color: #0e3b5f;
-    --nav-dropdown-hover-color: #1a90ff;
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--nav-background-color);
-    padding: 15px 20px;
-    color: var(--nav-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #040677; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #1acc8d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
-.navbar a {
-    color: var(--nav-color);
-    text-decoration: none;
-    padding: 8px 16px;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s, background-color 0.3s;
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #ffffff;  /* The default color of the main navmenu links */
+  --nav-hover-color: #1acc8d; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #040677; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #1acc8d; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
-.navbar a:hover {
-    background-color: var(--nav-hover-color);
-    color: var(--contrast-color);
-    border-radius: 4px;
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #f4f5fe;
+  --surface-color: #ffffff;
 }
 
-.navmenu {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-.navmenu li {
-    position: relative;
-}
-
-.navmenu .dropdown ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    background-color: var(--nav-dropdown-background-color);
-    padding: 10px 0;
-    list-style: none;
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-}
-
-.navmenu .dropdown:hover ul {
-    display: block;
-}
-
-.navmenu .dropdown ul li a {
-    padding: 10px 20px;
-    display: block;
-    color: var(--nav-dropdown-hover-color);
-}
-
-.navmenu .dropdown ul li a:hover {
-    background-color: var(--nav-dropdown-hover-color);
-    color: var(--contrast-color);
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .navmenu {
-        flex-direction: column;
-        width: 100%;
-    }
-    .navmenu li {
-        width: 100%;
-    }
-    .navmenu a {
-        width: 100%;
-        text-align: left;
-    }
+.dark-background {
+  --background-color: #08005e;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #0c0091;
+  --contrast-color: #ffffff;
 }
 
 .header {
@@ -210,7 +154,7 @@
       height: 2px;
       bottom: -6px;
       left: 0;
-      background-color: var(--nav-hover-color);
+      background-color: #ffffff
       visibility: hidden;
       width: 0px;
       transition: all 0.3s ease-in-out 0s;
@@ -232,7 +176,7 @@
     .navmenu .dropdown ul {
       margin: 0;
       padding: 10px 0;
-      background: var(--nav-dropdown-background-color);
+      background: #ffffff;
       display: block;
       position: absolute;
       visibility: hidden;
@@ -254,6 +198,7 @@
       font-size: 15px;
       text-transform: none;
       color: var(--nav-dropdown-color);
+      color: #1acc8d;
     }
   
     .navmenu .dropdown ul a i {
@@ -263,7 +208,7 @@
     .navmenu .dropdown ul a:hover,
     .navmenu .dropdown ul .active:hover,
     .navmenu .dropdown ul li:hover>a {
-      color: var(--nav-dropdown-hover-color);
+      color: white;
     }
   
     .navmenu .dropdown:hover>ul {
@@ -372,7 +317,7 @@
       z-index: 99;
       padding: 10px 0;
       margin: 10px 20px;
-      background-color: var(--nav-dropdown-background-color);
+      background-color: white
       transition: all 0.5s ease-in-out;
     }
   
@@ -411,6 +356,104 @@
       display: block;
     }
   }
+  :root {
+    --default-font: "Roboto", system-ui, sans-serif;
+    --nav-font: "Poppins", sans-serif;
+    --nav-color: #ffffff;
+    --nav-hover-color: #1a73e8;
+    --nav-background-color: #0a2a4e; /* Warna biru tua */
+    --nav-dropdown-background-color: #0e3b5f;
+    --nav-dropdown-hover-color: #1a90ff;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-background-color);
+    padding: 15px 20px;
+    color: var(--nav-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: var(--nav-color);
+    text-decoration: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: var(--nav-hover-color);
+    color: var(--contrast-color);
+    border-radius: 4px;
+}
+
+.navmenu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navmenu li {
+    position: relative;
+}
+
+.navmenu .dropdown ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: white;
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.navmenu .dropdown:hover ul {
+    display: block;
+    
+}
+
+.navmenu .dropdown ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: #1acc8d;
+    
+}
+
+.navmenu .dropdown ul li a:hover {
+    background-color: #1acc8d;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navmenu {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navmenu li {
+        width: 100%;
+    }
+    .navmenu a {
+        width: 100%;
+        text-align: left;
+    }
+}
+
 :root {
     --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --heading-font: "Raleway",  sans-serif;
@@ -489,56 +532,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-/* General Body Styles */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Navbar Styles */
-.navbar {
-  background-color: #0a2a4e;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar .logo a {
-  color: #ecf0f1;
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-
-.navbar .logo span {
-  color: #e74c3c;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar ul li a {
-  color: #ecf0f1;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-  color: #e74c3c;
-}
-
 /* Resetting some basic styles */
 * {
   margin: 0;
@@ -829,18 +822,16 @@ body {
           </a>         
           <nav id="navmenu" class="navmenu">
             <ul>
-              <li><a href="/" class="active">Beranda</a></li>
-              <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li>
-                    <a href="{{ url('/sekolahdasar') }}"><span>Sekolah Dasar</span> </i></a>    
+                    <a href="{{ url('/ekonomi') }}"><span>Ekonomi</span> </i></a>    
                   </li>
-                  <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
-                  <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
-                  <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
+                  <li><a href="{{ url('/politik') }}"><span>Politik</span></a></li>
+                  <li><a href="/teknologi" class="active"><span>Teknologi</span></a></li>
+                  <li><a href="{{ url('/umum') }}"><span>Umum</span></i></a>
                   </li>
                 </ul>
-                <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
                 <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
                 <li><a href="/aboutus">About US</a></li>
               </li>
