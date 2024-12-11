@@ -579,11 +579,12 @@ body {
 /* Landing Section */
 .landing {
   padding: 80px 20px;
-  background-color: #0a2a4e;
+  background-color:  #0c0091;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  
 }
 
 .container {
@@ -688,130 +689,175 @@ body {
 }
 
 
-/* Section Pendidikan */
-.education-section {
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #ffffff, white);
-  color: #fff;
-  text-align: center;
-}
-
+/* Section Header */
 .section-header {
-  margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.section-title {
-  font-size: 42px;
-  font-weight: 700;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  color: white;
+.section-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #34495e; /* Warna netral */
   text-transform: uppercase;
+  letter-spacing: 1px;
   position: relative;
-  display: inline-block;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #000, #444);
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 4px;
-}
-
-.section-description {
-  font-size: 18px;
+.section-header h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ff6f61; /* Warna aksen */
   margin: 10px auto 0;
-  color: #555;
-  line-height: 1.8;
-  max-width: 600px;
 }
+
+/* Kotak Utama */
+.main-container {
+  background: #f7f9fc; /* Warna latar belakang lembut */
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow lembut */
+}
+
+/* Wrapper untuk kategori */
 .menu-container {
   display: flex;
+  gap: 20px; /* Jarak antar kotak utama */
+  justify-content: center; /* Pusatkan kotak utama */
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+}
+
+/* Kategori Wrapper */
+.category-wrapper {
+  background: linear-gradient(145deg, #92d9ff, #66c4ff); /* Warna gradien cerah */
+  border-radius: 15px;
+  padding: 20px;
+  width: 260px; /* Lebar kotak kategori */
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Shadow lembut */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.category-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Efek hover */
+}
+
+.category-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.category-header h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #34495e; /* Warna teks utama */
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Grid mata pelajaran */
+.subject-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .menu-card {
-  background: #1e3a8a;
+  background: linear-gradient(90deg, #ff9e80, #ff6f61); /* Warna gradien lembut */
+  color: white;
   border-radius: 10px;
-  padding: 20px;
-  width: 250px;
+  padding: 12px;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-card a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
 }
 
 .menu-card:hover {
-  transform: translateY(-10px);
-  background: #2563eb;
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #ff8a65, #e65100); /* Warna hover cerah */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.menu-card h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  font-family: "Montserrat", sans-serif;
-  color: #dbeafe;
-}
-
-.menu-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-card ul li {
-  margin: 8px 0;
-}
-
-.menu-card ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-  transition: color 0.3s;
-}
-
-.menu-card ul li a:hover {
-  color: #dbeafe;
-}
-
-/* Animasi Urutan */
-.menu-card:nth-child(1) {
-  animation: fadeInUp 0.6s 0.1s forwards;
-}
-
-.menu-card:nth-child(2) {
-  animation: fadeInUp 0.6s 0.3s forwards;
-}
-
-.menu-card:nth-child(3) {
-  animation: fadeInUp 0.6s 0.5s forwards;
-}
-
-.menu-card:nth-child(4) {
-  animation: fadeInUp 0.6s 0.7s forwards;
-}
-
-@keyframes fadeInUp {
-  0% {
+/* Animasi kotak utama */
+@keyframes slideIn {
+  from {
     opacity: 0;
     transform: translateY(50px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-.anjay{
-  color: black;
+
+.category-wrapper:nth-child(1) { animation: slideIn 0.6s ease-in-out; }
+.category-wrapper:nth-child(2) { animation: slideIn 0.8s ease-in-out; }
+.category-wrapper:nth-child(3) { animation: slideIn 1s ease-in-out; }
+.category-wrapper:nth-child(4) { animation: slideIn 1.2s ease-in-out; }
+
+/* Warna Berdasarkan Kategori */
+.sd-card {
+  background: linear-gradient(90deg, #ffeb3b, #ffc107);
 }
+
+.smp-card {
+  background: linear-gradient(90deg, #8c9eff, #536dfe);
+}
+
+.sma-card {
+  background: linear-gradient(90deg, #69f0ae, #00e676);
+}
+
+.cpns-card {
+  background: linear-gradient(90deg, #ff8a80, #ff5252);
+}
+
+/* Hover Warna */
+.sd-card:hover {
+  background: linear-gradient(90deg, #ffc107, #ff9800);
+}
+
+.smp-card:hover {
+  background: linear-gradient(90deg, #536dfe, #3d5afe);
+}
+
+.sma-card:hover {
+  background: linear-gradient(90deg, #00e676, #00c853);
+}
+
+.cpns-card:hover {
+  background: linear-gradient(90deg, #ff5252, #e53935);
+}
+
+
+
 </style>
 
 </head>
@@ -867,49 +913,90 @@ body {
   </div>
 </header>
 
-
-  <section id="education-section" class="education-section">
+<section id="education-section" class="education-section">
+  <div class="main-container">
     <div class="section-header">
-      <h2 class="anjay">Kategori Pendidikan</h2>
+      <h2>Kategori Pendidikan</h2>
     </div>
     <div class="menu-container">
-      <div class="menu-card">
-        <h3>SD</h3>
-        <ul>
-          <li><a href="#sd-ipa">IPA</a></li>
-          <li><a href="#sd-ips">IPS</a></li>
-          <li><a href="#sd-mtk">Matematika</a></li>
-          <li><a href="#sd-pkn">PKN</a></li>
-        </ul>
+      <!-- Sekolah Dasar -->
+      <div class="category-wrapper">
+        <div class="category-header">
+          <h3>SD</h3>
+        </div>
+        <div class="subject-grid">
+          <div class="menu-card"><a href="#sd-ipa">IPA</a></div>
+          <div class="menu-card"><a href="#sd-ips">IPS</a></div>
+          <div class="menu-card"><a href="#sd-mtk">MTK</a></div>
+          <div class="menu-card"><a href="#sd-pkn">PKN</a></div>
+        </div>
       </div>
-      <div class="menu-card">
-        <h3>SMP</h3>
-        <ul>
-          <li><a href="#smp-ipa">IPA</a></li>
-          <li><a href="#smp-ips">IPS</a></li>
-          <li><a href="#smp-mtk">Matematika</a></li>
-          <li><a href="#smp-pkn">PKN</a></li>
-        </ul>
+
+      <!-- Sekolah Menengah Pertama -->
+      <div class="category-wrapper">
+        <div class="category-header">
+          <h3>SMP</h3>
+        </div>
+        <div class="subject-grid">
+          <div class="menu-card"><a href="#smp-ipa">IPA</a></div>
+          <div class="menu-card"><a href="#smp-ips">IPS</a></div>
+          <div class="menu-card"><a href="#smp-mtk">MTK</a></div>
+          <div class="menu-card"><a href="#smp-pkn">PKN</a></div>
+          <div class="menu-card"><a href="#smp-english">ENGLISH</a></div>
+        </div>
       </div>
-      <div class="menu-card">
-        <h3>SMA</h3>
-        <ul>
-          <li><a href="#sma-ipa">IPA</a></li>
-          <li><a href="#sma-ips">IPS</a></li>
-          <li><a href="#sma-pkn">PKN</a></li>
-          <li><a href="#sma-tik">TIK</a></li>
-        </ul>
+
+      <!-- Sekolah Menengah Atas -->
+      <div class="category-wrapper">
+        <div class="category-header">
+          <h3>SMA</h3>
+        </div>
+        <div class="subject-grid">
+          <div class="menu-card"><a href="#sma-ipa">IPA</a></div>
+          <div class="menu-card"><a href="#sma-ips">IPS</a></div>
+          <div class="menu-card"><a href="#sma-pkn">PKN</a></div>
+          <div class="menu-card"><a href="#sma-tik">TIK</a></div>
+        </div>
       </div>
-      <div class="menu-card">
-        <h3>CPNS</h3>
-        <ul>
-          <li><a href="#cpns-tiu">TIU</a></li>
-          <li><a href="#cpns-twk">TWK</a></li>
-          <li><a href="#cpns-tkp">TKP</a></li>
-        </ul>
+
+      <!-- CPNS -->
+      <div class="category-wrapper">
+        <div class="category-header">
+          <h3>CPNS</h3>
+        </div>
+        <div class="subject-grid">
+          <div class="menu-card"><a href="#cpns-tiu">TIU</a></div>
+          <div class="menu-card"><a href="#cpns-twk">TWK</a></div>
+          <div class="menu-card"><a href="#cpns-tkp">TKP</a></div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const educationSection = document.querySelector('.education-section');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target); // Stop observing once visible
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(educationSection);
+  });
+</script>
+
+
+
+
 
 <script>
   // Smooth Scroll Effect

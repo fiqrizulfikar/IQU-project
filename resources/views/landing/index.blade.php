@@ -119,61 +119,7 @@
 
     </section><!-- /Hero Section -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row align-items-xl-center gy-5">
-
-          <div class="col-xl-5 content">
-            <h3>Pendidikan</h3>
-            <h2>Solusi Cerdas Untuk Pembelajaran Modern</h2>
-            <p>Kami menghadirkan metode belajar yang mudah, interaktif, dan disesuaikan dengan kebutuhan Anda. Dari pelajaran sekolah hingga keterampilan profesional, semua bisa Anda temukan di sini. Mulai perjalanan belajar Anda sekarang dan temukan cara baru untuk mencapai kesuksesan! Klik di sini untuk eksplorasi lebih lanjut!</p>
-            <a href="{{ url('/pendidikan') }}" class="read-more"><span>Mari Belajar</span><i class="bi bi-arrow-right"></i></a>
-          </div>
-
-          <div class="col-xl-7">
-            <div class="row gy-4 icon-boxes">
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon-box">
-                  <i class="bi bi-buildings"></i>
-                  <h3>SD </h3>
-                  <p>Ajak anak-anak berlatih dengan soal-soal yang seru dan interaktif, membantu mereka memahami pelajaran dengan lebih mudah</p>
-                </div>
-              </div> <!-- End Icon Box -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon-box">
-                  <i class="bi bi-clipboard-pulse"></i>
-                  <h3>SMP</h3>
-                  <p>Dengan kumpulan soal yang menantang dan bervariasi, siswa kami selalu siap menghadapi ujian dengan percaya diri dan meraih prestasi terbaik</p>
-                </div>
-              </div> <!-- End Icon Box -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon-box">
-                  <i class="bi bi-command"></i>
-                  <h3>SMA</h3>
-                  <p>Kumpulan soal berkualitas untuk membantu siswa menguasai materi dan bersiap menghadapi ujian akhir serta seleksi masuk perguruan tinggi.</p>
-                </div>
-              </div> 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="icon-box">
-                  <i class="bi bi-command"></i>
-                  <h3>Tes CPNS</h3>
-                  <p>Kumpulan soal berkualitas untuk membantu siswa menguasai materi dan bersiap menghadapi ujian akhir serta seleksi masuk perguruan tinggi.</p>
-                </div>
-              </div><!-- End Icon Box -->
-              </div> <!-- End Icon Box -->
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </section><!-- /About Section -->
+   
 
     <!-- Details Section -->
     <section id="details" class="details section">
