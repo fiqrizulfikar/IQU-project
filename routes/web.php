@@ -13,6 +13,7 @@ use App\Http\Controllers\AuthController;
 
 
 Route::get('/', [LandingControllers::class, 'index']);
+Route::get('/coba', [App\Http\Controllers\LandingControllers::class, 'coba']);
 
 Route::get('/Smp', [App\Http\Controllers\LandingControllers::class, 'Smp']);
 Route::get('/games', [App\Http\Controllers\LandingControllers::class, 'games']);
@@ -81,3 +82,4 @@ Route::get('/cpns-quiz/tkp', [QuizCPNSController::class, 'showTKP'])->name('cpns
 Route::get('/loginz', function () {
     return view('landing.loginz');
 });
+
