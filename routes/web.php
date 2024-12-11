@@ -13,11 +13,11 @@ use App\Http\Controllers\AuthController;
 
 
 Route::get('/', [LandingControllers::class, 'index']);
+Route::get('/coba', [App\Http\Controllers\LandingControllers::class, 'coba']);
 
 Route::get('/Smp', [App\Http\Controllers\LandingControllers::class, 'Smp']);
 Route::get('/games', [App\Http\Controllers\LandingControllers::class, 'games']);
 Route::get('/mediasosial', [App\Http\Controllers\LandingControllers::class, 'mediasosial']);
-Route::get('/aboutus', [App\Http\Controllers\LandingControllers::class, 'aboutus']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 
@@ -30,7 +30,7 @@ Route::get('/smpmtk', [LandingSMPcontroller::class, 'showQuizSMPMTK'])->name('MT
 Route::get('/smppkn', [LandingSMPcontroller::class, 'showQuizSMPPKN'])->name('PKN.show');
 Route::get('/smpenglis', [LandingSMPcontroller::class, 'showQuizSMPENGLIS'])->name('ENGLIS.show');
 
-Route::get('/Sd', [LandingSDcontrollers::class, 'index']);
+Route::get('/sd', [LandingSDcontrollers::class, 'index']);
 Route::get('/IPAsd', [LandingSDcontrollers::class, 'showQuizSDIPA'])->name('IPA.show');
 Route::get('/MTKsd', [LandingSDcontrollers::class, 'showQuizSDMTK'])->name('MTK.show');
 Route::get('/IPSsd', [LandingSDcontrollers::class, 'showQuizSDIPS'])->name('IPS.show');
@@ -81,3 +81,4 @@ Route::get('/cpns-quiz/tkp', [QuizCPNSController::class, 'showTKP'])->name('cpns
 Route::get('/loginz', function () {
     return view('landing.loginz');
 });
+

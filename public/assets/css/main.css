@@ -32,7 +32,7 @@
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
   --nav-hover-color: #1acc8d; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-background-color: #040677; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #1acc8d; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
@@ -150,7 +150,6 @@ h6 {
   --background-color: rgba(255, 255, 255, 0);
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;
   transition: all 0.5s;
@@ -175,6 +174,7 @@ h6 {
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-color);
 }
 /* Global Header on Scroll
 ------------------------------*/

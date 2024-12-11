@@ -36,6 +36,10 @@ class LandingControllers extends Controller
     {
         return view ('landing.aboutus');
     }
+    public function coba()
+    {
+        return view ('landing.coba');
+    }
 
 
 

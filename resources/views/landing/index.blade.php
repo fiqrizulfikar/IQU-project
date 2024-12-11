@@ -47,37 +47,23 @@
         <h1 class="sitename">i'm Quiz</i></h1>
       </a>
        
-<nav id="navmenu" class="navmenu">
-<ul>
-  <li><a href="#hero" class="active">Beranda</a></li>
-  <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-    <ul>
-      <li>
-        <a href="{{ url('/Sd') }}"><span>Sekolah Dasar</span> </i></a>    
-      </li>
-      <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
-      <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
-      <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
-      </li>
-    </ul>
-    <li><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span></i></a>
-    </li>
-  </li>
-    <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-    <ul>
-      <li><a href="#">Ice Breaking</a></li>
-      <li><a href="#">Tes IQ</a></li>
-    </ul>
-    <li><a href="{{ url('/mediasosial') }}">Contact</a></li>
-    <li><a href="/aboutus">About US</a></li>
-    <div>
-    <li><a href="/login" class="login-icon"><i class="fas fa-user"></i></a></li>  </li>
-    </div>
-    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-</nav>
+        <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/" class="active">About US</a></li>
+            <li><a href="{{ url('/mediasosial') }}">Contact</a></li>
+            <div>
+            <li><a href="/login" class="login-icon"><i class="fas fa-user"></i></a></li>  </li>
+            </div>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </ul>
+        </body>
+     </header>
+  </nav>
+
+
 
 </div>
-</header>
+
   <main class="main">
 
     <!-- Hero Section -->
