@@ -553,9 +553,15 @@ h1, h2 {
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
-}
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    color: color-mix(in srgb, var(--accent-color), transparent 25%);
+    text-decoration: none;
+  }
 * {
   margin: 0;
   padding: 0;
@@ -805,6 +811,32 @@ body {
 .anjay{
   color: black;
 }
+/* Menata link */
+.login-link {
+    display: inline-block;
+    text-decoration: none; /* Menghilangkan garis bawah di link */
+    cursor: pointer;
+    padding: 10px; /* Jarak di sekitar icon */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
+}
+
+/* Menata icon login */
+.login-icon {
+    width: 30px; /* Ukuran lebar icon */
+    height: 30px; /* Ukuran tinggi icon */
+    border-radius: 50%; /* Membuat icon berbentuk lingkaran */
+}
+
+/* Efek hover pada link dan icon */
+.login-link:hover .login-icon {
+    transform: scale(1.1); /* Memperbesar icon sedikit saat hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Memberikan bayangan saat hover */
+}
+
+/* Menambahkan efek hover pada link */
+.login-link:hover {
+    background-color: #f
+
 </style>
 
 </head>
@@ -832,9 +864,21 @@ body {
                   <li><a href="{{ url('/umum') }}"><span>Umum</span></i></a>
                   </li>
                 </ul>
+                <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li>
+                      <a href="{{ url('/ekonomi') }}"><span>Ekonomi</span> </i></a>    
+                    </li>
+                    <li><a href="{{ url('/politik') }}"><span>Politik</span></a></li>
+                    </li>
+                  </ul>
                 <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
-                <li><a href="/aboutus">About US</a></li>
+                <li><a href="/">About US</a></li>
+                <a href="/login" class="login-link">
+                  <img src="assets/img/login.png" alt="Login Icon" class="login-icon">
+              </a>
               </li>
+            </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
     </div>
