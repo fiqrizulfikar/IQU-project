@@ -1655,7 +1655,35 @@ section,
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background: #ccc;
+  background: #0c0c38;
+}
+.gravity-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.gravity-bg .circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-50px);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
 .mainv{
 	width: 350px;
@@ -1675,7 +1703,7 @@ section,
 	height: 100%;
 }
 label{
-	color: #230a7d;
+	color: #8a8ace;
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
@@ -1703,7 +1731,7 @@ button{
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: #240cac;
+	background: #2b179e;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 30px;
@@ -1718,13 +1746,13 @@ button:hover{
 }
 .login{
 	height: 460px;
-	background: #eee;
+	background: #2c384eb8;
 	border-radius: 60% / 10%;
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
 }
 .login label{
-	color: #2424c9;
+	color: #8a8ace;
 	transform: scale(.6);
 }
 
