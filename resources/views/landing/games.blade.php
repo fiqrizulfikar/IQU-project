@@ -40,7 +40,8 @@
   <img src="assets/img/logo.png" alt="logoiqu.com">
   <h1 class="sitename">i-QUIZ</i></h1>
   
-</a>         
+</a>     
+    
 <nav id="navmenu" class="navmenu">
   <ul>
     <li><a href="/" class="active">Beranda</a></li>
@@ -79,7 +80,8 @@
           <h2>IQ</h2>
           <img src="assets/img/breaking.png" alt="TesIQ">
         </div>
-        <button class="next-btn">Mulai</button>
+        <button class="next-btn">
+        <a href="{{ url('/tesiq') }}"> Mulai</a></button>
         
         
       </div>

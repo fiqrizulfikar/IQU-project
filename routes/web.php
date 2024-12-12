@@ -10,13 +10,13 @@ use App\Http\Controllers\LandingSMAcontroller;
 use App\Http\Controllers\Quizcontroller;
 use App\Http\Controllers\QuizCPNScontroller;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LandingGamesControllers;
 
 
 Route::get('/', [LandingControllers::class, 'index']);
 Route::get('/coba', [App\Http\Controllers\LandingControllers::class, 'coba']);
 
 Route::get('/Smp', [App\Http\Controllers\LandingControllers::class, 'Smp']);
-Route::get('/games', [App\Http\Controllers\LandingControllers::class, 'games']);
 Route::get('/mediasosial', [App\Http\Controllers\LandingControllers::class, 'mediasosial']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
@@ -35,6 +35,9 @@ Route::get('/IPAsd', [LandingSDcontrollers::class, 'showQuizSDIPA'])->name('IPA.
 Route::get('/MTKsd', [LandingSDcontrollers::class, 'showQuizSDMTK'])->name('MTK.show');
 Route::get('/IPSsd', [LandingSDcontrollers::class, 'showQuizSDIPS'])->name('IPS.show');
 Route::get('/PKNsd',  [LandingSDcontrollers::class, 'showQuizSDPKN'])->name('PKN.show');
+
+Route::get('/games',  [LandingGamesControllers::class, 'index']);
+Route::get('/tesiq',  [LandingGamesControllers::class, 'showQuiztesiq'])->name('tesiq.show');
 
 
 
