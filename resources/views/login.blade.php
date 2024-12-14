@@ -8,6 +8,13 @@
 
 </head>
 <body class="bodyv">
+<div class="gravity-bg">
+        <div class="circle" style="width: 100px; height: 100px; top: 20%; left: 10%;"></div>
+        <div class="circle" style="width: 150px; height: 150px; top: 40%; left: 50%;"></div>
+        <div class="circle" style="width: 80px; height: 80px; top: 70%; left: 30%;"></div>
+        <div class="circle" style="width: 100px; height: 100px; top: 90%; left: 80%;"></div>
+		<div class="circle" style="width: 130px; height: 130px; top: 30%; left: 100%;"></div>
+    </div>
 	<div class="mainv">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
 

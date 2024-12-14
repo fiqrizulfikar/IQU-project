@@ -1,120 +1,214 @@
 :root {
-    --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --heading-font: "Raleway",  sans-serif;
-    --nav-font: "Poppins",  sans-serif;
-  }
-  
-  /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-  :root { 
-    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-    --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-    --heading-color: #040677; /* Color for headings, subheadings and title throughout the website */
-    --accent-color: #1acc8d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-  }
-  
-  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-  :root {
-    --nav-color: #ffffff;  /* The default color of the main navmenu links */
-    --nav-hover-color: #1acc8d; /* Applied to main navmenu links when they are hovered over or active */
-    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-    --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-    --nav-dropdown-hover-color: #1acc8d; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-  }
-  
-  /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-  
-  .light-background {
-    --background-color: #f4f5fe;
-    --surface-color: #ffffff;
-  }
-  
-  .dark-background {
-    --background-color: #08005e;
-    --default-color: #ffffff;
-    --heading-color: #ffffff;
-    --surface-color: #0c0091;
-    --contrast-color: #ffffff;
-  }
-  
-  /* Smooth scroll */
-  :root {
-    scroll-behavior: smooth;
-  }
-  
-  /*--------------------------------------------------------------
-  # General Styling & Shared Classes
-  --------------------------------------------------------------*/
-  body {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    font-family: var(--default-font);
-  }
-  
-  a {
-    color: var(--accent-color);
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #152bf3; /* Background color for the entire website, including individual sections */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #040677; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #1acc8d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #ffffff;  /* The default color of the main navmenu links */
+  --nav-hover-color: #1acc8d; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #1acc8d; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #152bf3;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #08005e;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #0c0091;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('assets/img/UMUM.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+
+
+:root {
+    --default-font: "Roboto", system-ui, sans-serif;
+    --nav-font: "Poppins", sans-serif;
+    --nav-color: #ffffff;
+    --nav-hover-color: #1a73e8;
+    --nav-background-color: #0a2a4e; /* Warna biru tua */
+    --nav-dropdown-background-color: #0e3b5f;
+    --nav-dropdown-hover-color: #1a90ff;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-background-color);
+    padding: 15px 20px;
+    color: var(--nav-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: var(--nav-color);
     text-decoration: none;
-    transition: 0.3s;
-  }
-  
-  a:hover {
-    color: color-mix(in srgb, var(--accent-color), transparent 25%);
-    text-decoration: none;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--heading-color);
-    font-family: var(--heading-font);
-  }
-  .header {
-    --background-color: #040677;
-    --default-color: #ffffff;
-    --heading-color: #ffffff;
-    color: var(--default-color);
-    background-color: var(--background-color);
-    padding: 20px 0;
-    transition: all 0.5s;
-    z-index: 997;
-  }
-  
-  .header .logo {
-    line-height: 1;
-  }
-  
-  .header .logo img {
-    max-height: 90px;
-    margin-right: 8px;
-  }
-  
-  .header .logo h1 {
-    font-size: 30px;
-    margin: 0;
-    font-weight: 700;
-    color: var(--heading-color);
-  }
-  
-  .scrolled .header {
-    box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Global Header on Scroll
-  ------------------------------*/
-  .scrolled .header {
-    --background-color: #10058c;
-  }
-  
-  /*--------------------------------------------------------------
-  # Navigation Menu
-  --------------------------------------------------------------*/
-  /* Desktop Navigation */
-  @media (min-width: 1200px) {
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: var(--nav-hover-color);
+    color: var(--contrast-color);
+    border-radius: 4px;
+}
+
+.navmenu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navmenu li {
+    position: relative;
+}
+
+.navmenu .dropdown ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: var(--nav-dropdown-background-color);
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.navmenu .dropdown:hover ul {
+    display: block;
+}
+
+.navmenu .dropdown ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: var(--nav-dropdown-hover-color);
+}
+
+.navmenu .dropdown ul li a:hover {
+    background-color: var(--nav-dropdown-hover-color);
+    color: var(--contrast-color);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navmenu {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navmenu li {
+        width: 100%;
+    }
+    .navmenu a {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.header {
+  background-color: #0a2a4e; /* Warna biru tua */
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  color: var(--default-color);
+  padding: 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+.header .logo {
+  line-height: 1;
+}
+
+.header .logo img {
+  max-height: 90px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.scrolled .header {
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1200px) {
     .navmenu {
       padding: 0;
   
@@ -223,7 +317,7 @@
     .navmenu .dropdown ul a:hover,
     .navmenu .dropdown ul .active:hover,
     .navmenu .dropdown ul li:hover>a {
-      color: var(--nav-dropdown-hover-color);
+      color: white;
     }
   
     .navmenu .dropdown:hover>ul {
@@ -371,13 +465,7 @@
       display: block;
     }
   }
-  
-
-
-
-
-
-  :root {
+:root {
     --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --heading-font: "Raleway",  sans-serif;
     --nav-font: "Poppins",  sans-serif;
@@ -422,259 +510,154 @@
   :root {
     scroll-behavior: smooth;
   }
-  
-  /*--------------------------------------------------------------
-  # General Styling & Shared Classes
-  --------------------------------------------------------------*/
-  body {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    font-family: var(--default-font);
-  }
-  
-  a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  
-  a:hover {
-    color: color-mix(in srgb, var(--accent-color), transparent 25%);
-    text-decoration: none;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--heading-color);
-    font-family: var(--heading-font);
-  }
-  .footer {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    font-size: 14px;
-    position: relative;
-  }
-  
-  .footer .footer-top {
-    padding-top: 50px;
-    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  }
-  
-  .footer .footer-about .logo {
-    line-height: 1;
-    margin-bottom: 25px;
-  }
-  
-  .footer .footer-about .logo img {
-    max-height: 40px;
-    margin-right: 6px;
-  }
-  
-  .footer .footer-about .logo span {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: var(--heading-font);
-    color: var(--heading-color);
-  }
-  
-  .footer .footer-about p {
-    font-size: 14px;
-    font-family: var(--heading-font);
-  }
-  
-  .footer .social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-    font-size: 16px;
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    margin-right: 10px;
-    transition: 0.3s;
-  }
-  
-  .footer .social-links a:hover {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-  }
-  
-  .footer h4 {
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-    padding-bottom: 12px;
-  }
-  
-  .footer .footer-links {
-    margin-bottom: 30px;
-  }
-  
-  .footer .footer-links ul {
-    list-style: none;
-    padding: 0;
+
+
+:root {
+  --bg-color: #28282828;
+  --bg-color-white: #fafafa;
+  --black-color: #212b34;
+  --light-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffcccb; /* Warna latar belakang cerah */
     margin: 0;
-  }
-  
-  .footer .footer-links ul i {
-    padding-right: 2px;
-    font-size: 12px;
-    line-height: 0;
-  }
-  
-  .footer .footer-links ul li {
-    padding: 10px 0;
+    padding: 20px;
     display: flex;
+    justify-content: center;
     align-items: center;
-  }
-  
-  .footer .footer-links ul li:first-child {
-    padding-top: 0;
-  }
-  
-  .footer .footer-links ul a {
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    display: inline-block;
-    line-height: 1;
-  }
-  
-  .footer .footer-links ul a:hover {
-    color: var(--accent-color);
-  }
-  
-  .footer .footer-contact p {
-    margin-bottom: 5px;
-  }
-  
-  .footer .footer-newsletter .newsletter-form {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    padding: 6px 8px;
-    position: relative;
-    border-radius: 4px;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-    display: flex;
-    background-color: var(--background-color);
-    transition: 0.3s;
-  }
-  
-  .footer .footer-newsletter .newsletter-form:focus-within {
-    border-color: var(--accent-color);
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=email] {
-    border: 0;
-    padding: 4px;
-    width: 100%;
-    background-color: var(--background-color);
-    color: var(--default-color);
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
-    outline: none;
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=submit] {
-    border: 0;
-    font-size: 16px;
-    padding: 0 20px;
-    margin: -7px -8px -7px 0;
-    background: var(--accent-color);
-    color: var(--contrast-color);
-    transition: 0.3s;
-    border-radius: 0 4px 4px 0;
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-    background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  }
-  
-  .footer .copyright {
-    padding: 25px 0;
-    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  }
-  
-  .footer .copyright p {
-    margin-bottom: 0;
-  }
-  
-  .footer .credits {
-    margin-top: 6px;
-    font-size: 13px;
-  }
-  
-  /*--------------------------------------------------------------
-  # Preloader
-  --------------------------------------------------------------*/
-  #preloader {
-    position: fixed;
-    inset: 0;
-    z-index: 999999;
+    height: 100vh;
+    flex-direction: column;
+    background-image: radial-gradient(circle, #f33bf9, #6023ee); /* Gradien lembut dan cerah */
     overflow: hidden;
-    background: var(--background-color);
-    transition: all 0.6s ease-out;
-  }
-  
-  #preloader:before {
-    content: "";
-    position: fixed;
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
-    border: 6px solid #ffffff;
-    border-color: var(--accent-color) transparent var(--accent-color) transparent;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: animate-preloader 1.5s linear infinite;
-  }
-  
-  @keyframes animate-preloader {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  /*--------------------------------------------------------------
-  # Scroll Top Button
-  --------------------------------------------------------------*/
-  .scroll-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 99999;
-    background-color: var(--accent-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    transition: all 0.4s;
-  }
-  
-  .scroll-top i {
-    font-size: 24px;
-    color: var(--contrast-color);
-    line-height: 0;
-  }
-  
-  .scroll-top:hover {
-    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-    color: var(--contrast-color);
-  }
-  
-  .scroll-top.active {
-    visibility: visible;
-    opacity: 1;
-  }
-    
+    animation: backgroundAnimation 10s ease-in-out infinite; /* Animasi latar belakang */
+}
+
+img {
+  width: 100%; /* Gambar memenuhi lebar elemen induknya */
+  height: auto; /* Pertahankan rasio aspek */
+  object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto; /* Pusatkan kontainer */
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(40, 40, 40, 0.3);
+  border-radius: 10px;
+}
+
+.cards-container {
+  background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.card {
+  position: relative;
+  width: 100%; /* Sesuaikan dengan kolom grid */
+  height: 200px; /* Tetapkan tinggi yang seragam untuk kartu */
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Pusatkan gambar secara vertikal dan horizontal */
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+
+/* Basic container styles */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--black-color)
+}
+
+.cards-container {
+  display: flex;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Card styling */
+.card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  position: relative; /* Make card position relative to place the button */
+}
+
+/* Button styling */
+.card {
+  position: relative;
+  width: 200%; /* Atur ukuran kartu sesuai kebutuhan */
+  max-width: 400px;
+  height: auto; /* Sesuaikan tinggi secara dinamis */
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Susun elemen secara vertikal */
+  justify-content: space-between; /* Berikan ruang antar elemen */
+  align-items: center; /* Pusatkan elemen secara horizontal */
+  padding: 20px; /* Tambahkan ruang di dalam kartu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+  background-color: #f4f4f4; /* Warna latar kartu */
+}
+
+
+.card img {
+  width: 100%; /* Gambar memenuhi lebar kartu */
+  height: auto; /* Pertahankan proporsi gambar */
+  object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+  border-radius: 10px; /* Opsional: tambahkan radius pada gambar */
+}
+
+.next-btn {
+  margin-top: 20px; /* Berikan jarak antara tombol dan kartu */
+  padding: 10px 20px;
+  background-color: #ff8307;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.next-btn:hover {
+  background-color: #ffd609;
+}
+
+.next-btn:focus {
+  outline: none;
+}

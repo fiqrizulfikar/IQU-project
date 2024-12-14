@@ -825,32 +825,7 @@ body {
 .sd-card {
   background: linear-gradient(90deg, #ffeb3b, #ffc107);
 }
-/* Menata link */
-.login-link {
-    display: inline-block;
-    text-decoration: none; /* Menghilangkan garis bawah di link */
-    cursor: pointer;
-    padding: 10px; /* Jarak di sekitar icon */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
-}
-
-/* Menata icon login */
-.login-icon {
-    width: 30px; /* Ukuran lebar icon */
-    height: 30px; /* Ukuran tinggi icon */
-    border-radius: 50%; /* Membuat icon berbentuk lingkaran */
-}
-
-/* Efek hover pada link dan icon */
-.login-link:hover .login-icon {
-    transform: scale(1.1); /* Memperbesar icon sedikit saat hover */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Memberikan bayangan saat hover */
-}
-
-/* Menambahkan efek hover pada link */
-.login-link:hover {
-    background-color: #f
-}
+<<<<<<<<< Temporary merge branch 1
 
 .smp-card {
   background: linear-gradient(90deg, #8c9eff, #536dfe);
@@ -880,6 +855,35 @@ body {
 .cpns-card:hover {
   background: linear-gradient(90deg, #ff5252, #e53935);
 }
+
+
+=========
+/* Menata link */
+.login-link {
+    display: inline-block;
+    text-decoration: none; /* Menghilangkan garis bawah di link */
+    cursor: pointer;
+    padding: 10px; /* Jarak di sekitar icon */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
+}
+
+/* Menata icon login */
+.login-icon {
+    width: 30px; /* Ukuran lebar icon */
+    height: 30px; /* Ukuran tinggi icon */
+    border-radius: 50%; /* Membuat icon berbentuk lingkaran */
+}
+
+/* Efek hover pada link dan icon */
+.login-link:hover .login-icon {
+    transform: scale(1.1); /* Memperbesar icon sedikit saat hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Memberikan bayangan saat hover */
+}
+
+/* Menambahkan efek hover pada link */
+.login-link:hover {
+    background-color: #f
+>>>>>>>>> Temporary merge branch 2
 
 </style>
 
