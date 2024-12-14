@@ -11,6 +11,7 @@ use App\Http\Controllers\Quizcontroller;
 use App\Http\Controllers\QuizCPNScontroller;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LandingGamesControllers;
+use App\Http\Controllers\PinController;
 
 
 Route::get('/', [LandingControllers::class, 'index']);
@@ -18,7 +19,6 @@ Route::get('/coba', [App\Http\Controllers\LandingControllers::class, 'coba']);
 
 Route::get('/Smp', [App\Http\Controllers\LandingControllers::class, 'Smp']);
 Route::get('/mediasosial', [App\Http\Controllers\LandingControllers::class, 'mediasosial']);
-Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 
 
@@ -53,23 +53,30 @@ Route::get('/smaips', [LandingSMAcontroller::class, 'showQuizSMAIPS'])->name('IP
 Route::get('/smapkn', [LandingSMAcontroller::class, 'showQuizSMAPKN'])->name('PKN.show');
 Route::get('/smatik', [LandingSMAcontroller::class, 'showQuizSMATIK'])->name('TIK.show');
 
-Route::get('/admin/questions', [QuizController::class, 'index'])->name('admin.questions.index');
+// Grup route untuk admin, dilindungi oleh middleware auth, is_admin, dan verify.pin
+Route::middleware(['auth', 'is_admin', 'verify.pin'])->prefix('admin')->name('admin.')->group(function () {
+    // Halaman dashboard admin
+    Route::get('/dashboard', function () {
+        return view('admin.index');
+    })->name('index');
 
-// Route untuk halaman tambah pertanyaan
-Route::get('/admin/questions/create', [QuizController::class, 'create'])->name('admin.questions.create');
-Route::post('/admin/questions/store', [QuizController::class, 'store'])->name('admin.questions.store');
+    // Halaman daftar pertanyaan admin
+    Route::get('/questions', [QuizController::class, 'index'])->name('questions.index');
 
-// Route untuk edit pertanyaan
-Route::get('/admin/questions/{table}/{id}/edit', [QuizController::class, 'edit'])->name('admin.questions.edit');
-Route::put('/admin/questions/{table}/{id}', [QuizController::class, 'update'])->name('admin.questions.update');
+    // Halaman tambah pertanyaan
+    Route::get('/questions/create', [QuizController::class, 'create'])->name('questions.create');
+});
 
-// Route untuk hapus pertanyaan
-Route::delete('/admin/questions/{table}/{id}', [QuizController::class, 'destroy'])->name('admin.questions.destroy');
+// Rute khusus untuk form PIN dan verifikasi PIN
+Route::get('/admin/pin', [PinController::class, 'showPinForm'])->name('admin.pin');
+Route::post('/admin/pin', [PinController::class, 'verifyPin'])->name('pin.verify');
+
 
 //login
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
 
 Route::post('/login', [AuthController::class, 'login'])->name('login.post'); 
 Route::post('/register', [AuthController::class, 'register'])->name('register.post'); 

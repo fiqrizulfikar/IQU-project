@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
   <link rel="stylesheet" href="assets/css/games.css">
   
-  <title>Document</title>
+  <title>Games</title>
 </head>
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -44,7 +44,6 @@
     
 <nav id="navmenu" class="navmenu">
   <ul>
-    <li><a href="/" class="active">Beranda</a></li>
     <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
       <ul>
         <li>
@@ -55,15 +54,28 @@
         <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
         </li>
       </ul>
-      <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
+      <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <ul>
+          <li>
+            <a href="{{ url('/ekonomi') }}"><span>Ekonomi</span> </i></a>    
+          </li>
+          <li><a href="{{ url('/politik') }}"><span>Politik</span></a></li>
+          <li><a href="/teknologi" class="active"><span>Teknologi</span></a></li>
+          <li><a href="{{ url('/umum') }}"><span>Umum</span></i></a>
+          </li>
+        </ul>
       <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
-      <li><a href="/aboutus">About US</a></li>
+      <li><a href="/">About US</a></li>
+      <a href="/login" class="login-link">
+        <img src="assets/img/login.png" alt="Login Icon" class="login-icon">
+    </a>
     </li>
   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
   </nav>
 </div>
 </header>
 <body>
+  <div class="fade-in"> 
   <div class="container">
     <div class="cards-container">
       <div class="card">
@@ -87,14 +99,28 @@
       </div>
     </div>
   </div>
-  <style>
-    .card img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const fadeInElements = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Hentikan observasi setelah elemen muncul
         }
-  </style>
+      });
+    },
+    {
+      threshold: 0.1, // Elemen akan terlihat saat 10% bagian dari elemen muncul
+    }
+  );
+
+  fadeInElements.forEach((el) => observer.observe(el));
+});
+
+  </script>
 </body>
 </html>

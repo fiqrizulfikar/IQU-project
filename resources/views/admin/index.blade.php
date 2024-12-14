@@ -52,6 +52,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admin.questions.create') }}">Tambah Pertanyaan</a>
                 </li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit">Logout</button>
+                </form>
+                
             </ul>
         </div>
     </div>

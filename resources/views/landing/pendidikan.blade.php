@@ -578,7 +578,7 @@ body {
 /* Landing Section */
 .landing {
   padding: 80px 20px;
-  background-color:  #0c0091;
+  background-color:  #040677;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -855,9 +855,6 @@ body {
 .cpns-card:hover {
   background: linear-gradient(90deg, #ff5252, #e53935);
 }
-
-
-=========
 /* Menata link */
 .login-link {
     display: inline-block;
@@ -883,7 +880,7 @@ body {
 /* Menambahkan efek hover pada link */
 .login-link:hover {
     background-color: #f
->>>>>>>>> Temporary merge branch 2
+}
 
 </style>
 
@@ -915,9 +912,9 @@ body {
                 <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li>
-                      <a href="{{ url('/ekonomi') }}"><span>Ekonomi</span> </i></a>    
+                      <a href="{{ url('/ekonomi') }}"><span>Ice Breaking</span> </i></a>    
                     </li>
-                    <li><a href="{{ url('/politik') }}"><span>Politik</span></a></li>
+                    <li><a href="{{ url('/politik') }}"><span>Tes IQ</span></a></li>
                     </li>
                   </ul>
                 <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>

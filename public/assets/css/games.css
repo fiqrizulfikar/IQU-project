@@ -661,3 +661,45 @@ img {
 .next-btn:focus {
   outline: none;
 }
+/* Menata link */
+.login-link {
+  display: inline-block;
+  text-decoration: none; /* Menghilangkan garis bawah di link */
+  cursor: pointer;
+  padding: 10px; /* Jarak di sekitar icon */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
+}
+
+/* Menata icon login */
+.login-icon {
+  width: 30px; /* Ukuran lebar icon */
+  height: 30px; /* Ukuran tinggi icon */
+  border-radius: 50%; /* Membuat icon berbentuk lingkaran */
+}
+
+/* Efek hover pada link dan icon */
+.login-link:hover .login-icon {
+  transform: scale(1.1); /* Memperbesar icon sedikit saat hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Memberikan bayangan saat hover */
+}
+
+/* Menambahkan efek hover pada link */
+.login-link:hover {
+  background-color: #ffffff
+}
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animasi Kemunculan Elemen */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

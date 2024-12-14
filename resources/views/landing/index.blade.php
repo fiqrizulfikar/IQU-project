@@ -475,36 +475,27 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Tautan Berguna</h4>
           <ul>
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#">Pendidikan</a></li>
-            <li><a href="#">Pengetahuan</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Media Sosial</a></li>
-            <li><a href="#">About As</a></li>
+            <li><a href="/pendidikan">Pendidikan</a></li>
+            <li><a href="/pengetahuan">Pengetahuan</a></li>
+            <li><a href="/games">Games</a></li>
+            <li><a href="/mediasosial">Contact</a></li>
+            <li><a href="/">About As</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Layanan Kami</h4>
           <ul>
-            <li><a href="#">Pembelajaran Interaktif</a></li>
-            <li><a href="#">Kuis & Tes Pemahaman</a></li>
-            <li><a href="#">Bimbingan Belajar Online</a></li>
-            <li><a href="#">Belajar Terstruktur</a></li>
-            <li><a href="#">Fitur Ice Breaking & Tes IQ</a></li>
+            <li><a href="pendidikan">Pembelajaran Interaktif</a></li>
+            <li><a href="/pengetahuan">Kuis & Tes Pemahaman</a></li>
+            <li><a href="/pendidikan">Belajar Terstruktur</a></li>
+            <li><a href="/games">Fitur Ice Breaking & Tes IQ</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12 footer-newsletter">
           <h4></h4>
           <p>Selamat menikmati</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
-        </div>
 
       </div>
     </div>
