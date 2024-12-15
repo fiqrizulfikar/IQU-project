@@ -66,14 +66,27 @@
 <div class="container">
     <h1>Daftar Pertanyaan</h1>
 
-    <!-- Tampilkan pesan sukses jika ada -->
+    <!-- Tampilkan pesan sukses atau error -->
     @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
         </div>
     @endif
 
-    <!-- Form untuk memilih kategori atau tabel -->
+    @if($errors->any())
+        <div class="alert alert-danger">
+            {{ $errors->first() }}
+        </div>
+    @endif
+
+    <!-- Form Filter -->
+    <form method="GET" action="{{ route('admin.questions.index') }}" class="form-inline mb-3">
+        <input type="hidden" name="table" value="{{ $table }}">
+        <input type="text" name="search" class="form-control mr-2" placeholder="Cari soal..." value="{{ request('search') }}">
+        <button type="submit" class="btn btn-primary">Cari</button>
+    </form>
+
+    <!-- Form Pilih Kategori -->
     <form method="GET" action="{{ route('admin.questions.index') }}">
         <div class="form-group">
             <label for="table">Pilih Kategori</label>
@@ -87,7 +100,7 @@
         </div>
     </form>
 
-    <!-- Tabel untuk menampilkan pertanyaan -->
+    <!-- Tabel Data -->
     <table class="table table-striped mt-4">
         <thead>
             <tr>
@@ -97,10 +110,11 @@
                 <th>Jawaban C</th>
                 <th>Jawaban D</th>
                 <th>Jawaban Benar</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($questions as $question)
+            @forelse($questions as $question)
                 <tr>
                     <td>{{ $question->quiz }}</td>
                     <td>{{ $question->jawaban_a }}</td>
@@ -108,8 +122,26 @@
                     <td>{{ $question->jawaban_c }}</td>
                     <td>{{ $question->jawaban_d }}</td>
                     <td>{{ $question->jawaban_benar }}</td>
+                    <td>
+                        <a href="{{ route('admin.questions.edit', ['table' => $table, 'id' => $question->id]) }}" class="btn btn-warning btn-sm">Edit</a>
+                        <form method="POST" action="{{ route('admin.questions.destroy', ['table' => $table, 'id' => $question->id]) }}" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                        </form>
+                    </td>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td colspan="7">Tidak ada pertanyaan untuk kategori ini.</td>
+                </tr>
+            @endforelse
         </tbody>
     </table>
+
+    <!-- Paginasi -->
+    <div class="d-flex justify-content-center">
+        {{ $questions->links() }}
+    </div>
 </div>
+

@@ -53,23 +53,28 @@ Route::get('/smaips', [LandingSMAcontroller::class, 'showQuizSMAIPS'])->name('IP
 Route::get('/smapkn', [LandingSMAcontroller::class, 'showQuizSMAPKN'])->name('PKN.show');
 Route::get('/smatik', [LandingSMAcontroller::class, 'showQuizSMATIK'])->name('TIK.show');
 
-// Grup route untuk admin, dilindungi oleh middleware auth, is_admin, dan verify.pin
-Route::middleware(['auth', 'is_admin', 'verify.pin'])->prefix('admin')->name('admin.')->group(function () {
+// Rute khusus untuk form PIN dan verifikasi PIN
+Route::get('/admin/pin', [PinController::class, 'showPinForm'])->name('admin.pin');
+Route::post('/admin/pin', [PinController::class, 'verifyPin'])->name('pin.verify');
+
+// Grup route untuk admin yang dilindungi middleware verify.pin
+Route::middleware(['verify.pin'])->prefix('admin')->name('admin.')->group(function () {
     // Halaman dashboard admin
     Route::get('/dashboard', function () {
         return view('admin.index');
     })->name('index');
 
-    // Halaman daftar pertanyaan admin
-    Route::get('/questions', [QuizController::class, 'index'])->name('questions.index');
+    // Halaman daftar pertanyaan admin, dengan kategori dinamis
+    Route::get('/questions/{table?}', [QuizController::class, 'index'])->name('questions.index');
 
-    // Halaman tambah pertanyaan
-    Route::get('/questions/create', [QuizController::class, 'create'])->name('questions.create');
+    // Halaman tambah pertanyaan, dengan kategori dinamis
+    Route::get('/questions/create/{table}', [QuizController::class, 'create'])->name('questions.create');
+    Route::post('/questions/store/{table}', [QuizController::class, 'store'])->name('questions.store');
+
+    // Rute untuk edit pertanyaan
+    Route::get('/questions/edit/{table}/{id}', [QuizController::class, 'edit'])->name('questions.edit');
+    Route::put('/questions/update/{table}/{id}', [QuizController::class, 'update'])->name('questions.update');
 });
-
-// Rute khusus untuk form PIN dan verifikasi PIN
-Route::get('/admin/pin', [PinController::class, 'showPinForm'])->name('admin.pin');
-Route::post('/admin/pin', [PinController::class, 'verifyPin'])->name('pin.verify');
 
 
 //login
