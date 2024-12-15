@@ -52,12 +52,17 @@
 
         </div>
 
-        <form class="form-section">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+        @if(session('success'))
+        <p>{{ session('success') }}</p>
+    @endif
+
+    <form action="{{ route('contact.store') }}" method="POST">
+        @csrf
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+    </form>
     </div>
 
     <footer class="footer">

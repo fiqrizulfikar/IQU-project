@@ -251,6 +251,32 @@ transition: color 0.3s ease;
 color: #ffffff; /* Warna hover */
 }
 
+/* Efek Animasi Muncul */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Mulai dari bawah */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Posisi normal */
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.fade-in-delay {
+    animation-delay: 0.5s; /* Memberikan sedikit delay agar elemen muncul satu per satu */
+}
+
+.form-section input, .form-section textarea, .text-section h1, .text-section p {
+    opacity: 0; /* Mulai dengan opacity 0, sehingga elemen tidak terlihat */
+}
+
+
 
     </style>
    
@@ -280,9 +306,9 @@ color: #ffffff; /* Warna hover */
 
     <div class="container">
         <div class="text-section">
-            <h1>WANNA GET IN TOUCH?</h1>
-            <p>Have a question or want to collaborate? Reach out to us directly. Whether you’re looking to discuss partnerships, media inquiries, or simply connect, we’re here to help you take the next step.</p>
-            <div class="social-icons">
+          <h1 class="fade-in">WANNA GET IN TOUCH?</h1>
+             <p class="fade-in">Have a question or want to collaborate? Reach out to us directly. Whether you’re looking to discuss partnerships, media inquiries, or simply connect, we’re here to help you take the next step.</p>
+             <div class="social-icons">
                 <a href="https://www.facebook.com" target="_blank" title="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
@@ -311,5 +337,24 @@ color: #ffffff; /* Warna hover */
     </div>
     </footer>
 
+    
 </body>
+
+<script>
+    // Menunggu hingga halaman dimuat
+    window.addEventListener("load", function() {
+        // Pilih elemen yang ingin di-animasikan
+        const elements = document.querySelectorAll('.fade-in');
+        
+        // Tambahkan kelas 'fade-in' untuk memulai animasi
+        elements.forEach((element, index) => {
+            // Berikan delay agar elemen muncul satu per satu
+            element.classList.add('fade-in-delay');
+            setTimeout(() => {
+                element.classList.add('fade-in');
+            }, index * 300); // Delay tambahan untuk setiap elemen
+        });
+    });
+</script>
+
 </html>

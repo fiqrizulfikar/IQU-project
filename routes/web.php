@@ -12,7 +12,7 @@ use App\Http\Controllers\QuizCPNScontroller;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LandingGamesControllers;
 use App\Http\Controllers\PinController;
-
+use App\Http\Controllers\ContactController;
 
 Route::get('/', [LandingControllers::class, 'index']);
 Route::get('/coba', [App\Http\Controllers\LandingControllers::class, 'coba']);
@@ -81,6 +81,11 @@ Route::middleware(['verify.pin'])->prefix('admin')->name('admin.')->group(functi
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
+
+
+Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.form');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 
 Route::post('/login', [AuthController::class, 'login'])->name('login.post'); 
