@@ -2,33 +2,48 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactMessage;  
 use Illuminate\Http\Request;
-use App\Models\ContactMessage;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
+use Validator;
 
 class ContactController extends Controller
 {
     public function showForm()
     {
-        return view('contact');
+        return view('landing.contact');
     }
-
-    public function store(Request $request)
+    
+    public function submitForm(Request $request)
     {
-        // Validasi input
+        // Validasi data
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'message' => 'required|string',
+            'email' => 'required|email',
+            'message' => 'required|string|max:1000',
         ]);
 
-        // Simpan data ke database
+        // Simpan ke database (opsional)
         ContactMessage::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'message' => $validated['message'],
         ]);
 
-        // Redirect atau return response
-        return back()->with('success', 'Your message has been sent!');
+        // Kirim email menggunakan Mailtrap
+        Mail::to('iqu123@gmail.com')->send(new ContactUsMail($validated['name'], $validated['email'], $validated['message']));
+
+        // Redirect dengan pesan sukses
+        return redirect()->route('contact.form')->with('success', 'Pesan Anda berhasil dikirim!');
     }
+
+ 
+
+        public function showUs()
+    {
+        $us = ContactMessage::all();
+        return view('emails.us', compact('us'));
+    }
+
 }

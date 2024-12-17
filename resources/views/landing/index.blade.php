@@ -50,15 +50,15 @@
         <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="/" class="active">About US</a></li>
-            <li><a href="{{ url('/mediasosial') }}">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
             <div>
             <li><a href="/login" class="login-icon"><i class="fas fa-user"></i></a></li>  </li>
             </div>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </ul>
-        </body>
-     </header>
-  </nav>
+         </body>
+         </header>
+       </nav>
 
 
 

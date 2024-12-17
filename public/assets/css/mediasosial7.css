@@ -83,13 +83,12 @@ body {
 
 .text-section h1 {
     font-size: 4em;
-    font-family:'Playfair Display', serif;;
+    font-family:'Playfair Display', serif;
     margin-bottom: 40px;
-   
 }
 
 .text-section p {
-    font-family:'robo', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 0.9em;
     margin-bottom: 30px;
 }
@@ -111,6 +110,7 @@ body {
     background: transparent;
     color: #ffffff;
     transition: border-color 0.3s, color 0.3s;
+    box-sizing: border-box; 
 }
 
 .form-section input:focus, .form-section textarea:focus {
@@ -126,12 +126,24 @@ body {
     color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    text-align: center; /* Center align text */
+    box-sizing: border-box;
 }
 
 .form-section button:hover {
     background-color: #00bcd4;
     color: #ffffff;
 }
+
+
+.form-section input, .form-section textarea, .form-section button {
+    width: 100%; 
+}
+
+.form-section > *:not(button) {
+    margin-bottom: 15px;
+}
+
 .social-icons {
     margin-top: 20px;
     gap: 15px;

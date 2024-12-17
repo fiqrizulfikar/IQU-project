@@ -18,7 +18,6 @@ Route::get('/', [LandingControllers::class, 'index']);
 Route::get('/coba', [App\Http\Controllers\LandingControllers::class, 'coba']);
 
 Route::get('/Smp', [App\Http\Controllers\LandingControllers::class, 'Smp']);
-Route::get('/mediasosial', [App\Http\Controllers\LandingControllers::class, 'mediasosial']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 
 
@@ -83,9 +82,9 @@ Route::get('/login', function () {
 })->name('login');
 
 
-
 Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.form');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
+Route::get('/us', [ContactController::class, 'showUs'])->name('emails.us');
 
 
 Route::post('/login', [AuthController::class, 'login'])->name('login.post'); 
