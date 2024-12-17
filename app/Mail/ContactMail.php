@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Mail;
+
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -7,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContactUsMail extends Mailable
+class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -35,9 +37,9 @@ class ContactUsMail extends Mailable
     public function build()
     {
         return $this->from($this->email)  // Pengirim email (email yang diisi dalam form)
-                    ->to('iqu123@gmail.com')  // Penerima email
+                    ->to('aemanel74@gmail.com')  // Penerima email
                     ->subject('Contact Us Form Submission')
-                    ->view('emails.contactus')  // Nama view untuk isi email
+                    ->view('emails.us')  // Nama view untuk isi email
                     ->with([
                         'name' => $this->name,
                         'email' => $this->email,
@@ -45,4 +47,3 @@ class ContactUsMail extends Mailable
                     ]);
     }
 }
-

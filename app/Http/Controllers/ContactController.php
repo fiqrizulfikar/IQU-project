@@ -24,7 +24,6 @@ class ContactController extends Controller
             'message' => 'required|string|max:1000',
         ]);
 
-        // Simpan ke database (opsional)
         ContactMessage::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
@@ -32,8 +31,12 @@ class ContactController extends Controller
         ]);
 
         // Kirim email menggunakan Mailtrap
-        Mail::to('iqu123@gmail.com')->send(new ContactUsMail($validated['name'], $validated['email'], $validated['message']));
-
+        Mail::to('aemanel74@gmail.com')->send(new ContactMail(
+            $validated['name'], 
+            $validated['email'], 
+            $validated['message']
+        ));
+        
         // Redirect dengan pesan sukses
         return redirect()->route('contact.form')->with('success', 'Pesan Anda berhasil dikirim!');
     }
