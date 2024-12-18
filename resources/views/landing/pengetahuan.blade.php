@@ -868,8 +868,32 @@ main {
     visibility: visible;
     opacity: 1;
   }
+/* Menata link */
+.login-link {
+    display: inline-block;
+    text-decoration: none; /* Menghilangkan garis bawah di link */
+    cursor: pointer;
+    padding: 10px; /* Jarak di sekitar icon */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
+}
 
+/* Menata icon login */
+.login-icon {
+    width: 30px; /* Ukuran lebar icon */
+    height: 30px; /* Ukuran tinggi icon */
+    border-radius: 50%; /* Membuat icon berbentuk lingkaran */
+}
 
+/* Efek hover pada link dan icon */
+.login-link:hover .login-icon {
+    transform: scale(1.1); /* Memperbesar icon sedikit saat hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Memberikan bayangan saat hover */
+}
+
+/* Menambahkan efek hover pada link */
+.login-link:hover {
+    background-color: #f
+}
   
 </style>
 <head>
@@ -928,10 +952,17 @@ main {
                 <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
                 </li>
               </ul>
-              <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
+              <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li>
+                    <a href="{{ url('/sd') }}"><span>Ice Breaking</span> </i></a></li>
+                  <li><a href="{{ url('/Smp') }}"><span>Tes IQ</span></a></li>
+                </ul>
               <li><a href="{{ url('/mediasosial') }}">Contact</a></li>
               <li><a href="/">About US</a></li>
-              <li><a href="/login" class="login-icon"><i class="fas fa-user"></i></a></li>  </li>
+              <a href="/login" class="login-link">
+                <img src="assets/img/login.png" alt="Login Icon" class="login-icon">
+            </a>
             </li>
               
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -964,80 +995,6 @@ main {
         </div>
 
     </main>
-
-
-    <footer id="footer" class="footer dark-background">
-
-      <div class="container footer-top">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">IQU.com</span>
-            </a>
-            <div class="footer-contact pt-3">
-              <p>Semarang</p>
-              <p>Tembalang,Amposari</p>
-              <p class="mt-3"><strong>Phone:</strong> <span>085601742751</span></p>
-              <p><strong>Email:</strong> <span>iqu123@gmail.com</span></p>
-            </div>
-            <div class="social-links d-flex mt-4">
-              <a href=""><i class="bi bi-twitter-x"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-  
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Tautan Berguna</h4>
-            <ul>
-              <li><a href="#">Beranda</a></li>
-              <li><a href="#">Pendidikan</a></li>
-              <li><a href="#">Pengetahuan</a></li>
-              <li><a href="#">Games</a></li>
-              <li><a href="#">Media Sosial</a></li>
-              <li><a href="#">About As</a></li>
-            </ul>
-          </div>
-  
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Layanan Kami</h4>
-            <ul>
-              <li><a href="#">Pembelajaran Interaktif</a></li>
-              <li><a href="#">Kuis & Tes Pemahaman</a></li>
-              <li><a href="#">Bimbingan Belajar Online</a></li>
-              <li><a href="#">Belajar Terstruktur</a></li>
-              <li><a href="#">Fitur Ice Breaking & Tes IQ</a></li>
-            </ul>
-          </div>
-  
-          <div class="col-lg-4 col-md-12 footer-newsletter">
-            <h4></h4>
-            <p>Selamat menikmati</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
-  
-        </div>
-      </div>
-  
-      <div class="container copyright text-center mt-4">
-        <link href="assets/img/www.png" rel="icon">
-        <p> <span></span> <strong class="px-1 sitename">IQU.com</strong> <span></span></p>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          
-        </div>
-      </div>
-  
-    </footer>
   
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

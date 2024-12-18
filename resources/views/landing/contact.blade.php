@@ -6,10 +6,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="assets/css/mediasosial7.css" rel="stylesheet">
-    <title>Contact Page</title>
+    <title>Contact</title>
     
    
 </head>
+
 <body>
     <div class="gravity-bg">
         <div class="circle" style="width: 100px; height: 100px; top: 20%; left: 10%;"></div>
@@ -51,12 +52,31 @@
 
         </div>
 
-        <form class="form-section">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
+        @if(session('success'))
+            <div style="color: green; font-size: 16px; text-align: center;">
+                {{ session('success') }}
+            </div>
+        @elseif($errors->any())
+            <div style="color: red; font-size: 16px; text-align: center;">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        <!-- Formulir Kontak -->
+        <form class="form-section" action="{{ route('contact.submit') }}" method="POST">
+            @csrf
+            <input type="text" name="name" placeholder="Your Name" value="{{ old('name') }}" required>
+            <input type="email" name="email" placeholder="Your Email" value="{{ old('email') }}" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required>{{ old('message') }}</textarea>
             <button type="submit">Send</button>
         </form>
+
+        
+
     </div>
 
     <footer class="footer">

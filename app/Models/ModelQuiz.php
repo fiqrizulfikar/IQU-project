@@ -14,6 +14,17 @@ class ModelQuiz extends Model
     // Menetapkan nama tabel secara dinamis
     protected $table;
 
+    // Konstruktor untuk menerima nama tabel
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+
+        // Tentukan tabel jika belum ada
+        if (!$this->table) {
+            $this->table = 'quizzes'; // Tabel default jika belum di-set
+        }
+    }
+
     // Fungsi untuk mengatur nama tabel
     public function setTableName($tableName)
     {
@@ -21,4 +32,3 @@ class ModelQuiz extends Model
         return $this;
     }
 }
-

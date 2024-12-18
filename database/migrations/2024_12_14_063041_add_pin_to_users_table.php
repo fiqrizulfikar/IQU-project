@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('pin')->nullable(); // Menambahkan kolom 'pin'
+            $table->string('pin')->nullable();  // Menambahkan kolom 'pin' (nullable untuk pengguna baru yang belum punya PIN)
         });
     }
 
@@ -21,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 };

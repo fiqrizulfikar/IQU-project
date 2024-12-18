@@ -123,3 +123,169 @@ body {
   }
 }
 
+<<<<<<< HEAD
+=======
+img {
+  width: 100%; /* Gambar memenuhi lebar elemen induknya */
+  height: auto; /* Pertahankan rasio aspek */
+  object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto; /* Pusatkan kontainer */
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(40, 40, 40, 0.3);
+  border-radius: 10px;
+}
+
+.cards-container {
+  background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.card {
+  position: relative;
+  width: 100%; /* Sesuaikan dengan kolom grid */
+  height: 200px; /* Tetapkan tinggi yang seragam untuk kartu */
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Pusatkan gambar secara vertikal dan horizontal */
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+
+/* Basic container styles */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--black-color)
+}
+
+.cards-container {
+  display: flex;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Card styling */
+.card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  position: relative; /* Make card position relative to place the button */
+}
+
+/* Button styling */
+.card {
+  position: relative;
+  width: 200%; /* Atur ukuran kartu sesuai kebutuhan */
+  max-width: 400px;
+  height: auto; /* Sesuaikan tinggi secara dinamis */
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Susun elemen secara vertikal */
+  justify-content: space-between; /* Berikan ruang antar elemen */
+  align-items: center; /* Pusatkan elemen secara horizontal */
+  padding: 20px; /* Tambahkan ruang di dalam kartu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+  background-color: #f4f4f4; /* Warna latar kartu */
+}
+
+
+.card img {
+  width: 100%; /* Gambar memenuhi lebar kartu */
+  height: auto; /* Pertahankan proporsi gambar */
+  object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+  border-radius: 10px; /* Opsional: tambahkan radius pada gambar */
+}
+
+.next-btn {
+  margin-top: 20px; /* Berikan jarak antara tombol dan kartu */
+  padding: 10px 20px;
+  background-color: #ff8307;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.next-btn:hover {
+  background-color: #ffd609;
+}
+
+.next-btn:focus {
+  outline: none;
+}
+/* Menata link */
+.login-link {
+  display: inline-block;
+  text-decoration: none; /* Menghilangkan garis bawah di link */
+  cursor: pointer;
+  padding: 10px; /* Jarak di sekitar icon */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
+}
+
+/* Menata icon login */
+.login-icon {
+  width: 30px; /* Ukuran lebar icon */
+  height: 30px; /* Ukuran tinggi icon */
+  border-radius: 50%; /* Membuat icon berbentuk lingkaran */
+}
+
+/* Efek hover pada link dan icon */
+.login-link:hover .login-icon {
+  transform: scale(1.1); /* Memperbesar icon sedikit saat hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Memberikan bayangan saat hover */
+}
+
+/* Menambahkan efek hover pada link */
+.login-link:hover {
+  background-color: #ffffff
+}
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animasi Kemunculan Elemen */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+>>>>>>> 930f6f23cee9128fdad866ebaf5c7e57d1f049ed
