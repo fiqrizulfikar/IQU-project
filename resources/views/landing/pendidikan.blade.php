@@ -47,7 +47,7 @@
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
   --nav-hover-color: #1acc8d; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #040677; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #1acc8d; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
@@ -884,7 +884,7 @@ body {
 .login-link:hover {
     background-color: #f
 
-
+}
 </style>
 
 </head>
@@ -900,11 +900,12 @@ body {
             <h1 class="sitename">i</i></h1>
             <h1 class="sitename">-QUIZ</h1>
           </a>         
-          <nav id="navmenu" class="navmenu">
+
+          <nav id="navmenu" class="navmenu d-flex align-items-center">
             <ul>
               <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li>
+                <ul class="d-flex mb-0">
+                  <li class="dropdown">
                     <a href="{{ url('/ekonomi') }}"><span>Ekonomi</span> </i></a>    
                   </li>
                   <li><a href="{{ url('/politik') }}"><span>Politik</span></a></li>
