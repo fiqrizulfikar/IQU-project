@@ -8,34 +8,26 @@ use Illuminate\Http\Request;
 
 class QuizController extends Controller
 {
-    public function index(Request $request)
+    public function index($table = null) // $table adalah parameter opsional
     {
-        // Ambil nama tabel dari query parameter, default 'quizzes'
-        $table = $request->get('table', 'quizzes');  
-
-        try {
-            // Ambil semua pertanyaan dari tabel yang dipilih
-            $questions = (new ModelQuiz())->setTableName($table)->get();
-
-            // Ambil semua kategori untuk dropdown
-            $categories = Category::all();
-
-            // Kirim data ke view
-            return view('admin.index', compact('questions', 'categories', 'table'));
-
-        } catch (\Exception $e) {
-            // Tangani jika nama tabel tidak valid
-            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
-        }
-    }
-
-    public function create()
-    {
-        // Ambil semua kategori yang ada
+        // Ambil kategori atau sesuaikan berdasarkan tabel
         $categories = Category::all();
 
-        // Tampilkan halaman create dengan data kategori
-        return view('admin.create', compact('categories'));
+        // Jika $table ada, proses sesuai tabel yang dipilih, misalnya
+        // menggunakan $table untuk mengambil soal dari kategori yang dipilih
+        // Contoh: $quizzes = Quiz::where('table', $table)->get();
+
+        return view('admin.index', compact('categories', 'table'));
+    }
+    
+    public function create($table)
+    {
+        $allowedTables = ['quizsmatik', 'quizsmaipa', 'quizsmaips', 'quizsmapkn']; // Daftar tabel yang valid
+        if (!in_array($table, $allowedTables)) {
+            abort(404, 'Table not found.');
+        }
+
+        return view('admin.create', compact('table'));
     }
 
     public function store(Request $request)
@@ -55,14 +47,14 @@ class QuizController extends Controller
             $category = Category::findOrFail($request->category_id);
             $tableName = $category->table_name;
 
-            // Menggunakan model ModelQuiz dengan nama tabel dinamis
+            // Gunakan model ModelQuiz dengan nama tabel dinamis
             $modelQuiz = new ModelQuiz();
             $modelQuiz->setTableName($tableName);
             $modelQuiz->create($request->only([
                 'quiz', 'jawaban_a', 'jawaban_b', 'jawaban_c', 'jawaban_d', 'jawaban_benar'
             ]));
 
-            return redirect()->route('admin.questions.index', ['table' => $tableName])
+            return redirect()->route('admin.index', ['table' => $tableName])
                 ->with('success', 'Pertanyaan berhasil ditambahkan ke tabel ' . $tableName);
 
         } catch (\Exception $e) {
@@ -98,7 +90,7 @@ class QuizController extends Controller
             // Hapus pertanyaan berdasarkan ID
             $modelQuiz->findOrFail($id)->delete();
 
-            return redirect()->route('admin.questions.index', ['table' => $table])
+            return redirect()->route('admin.index', ['table' => $table])
                 ->with('success', 'Pertanyaan berhasil dihapus!');
 
         } catch (\Exception $e) {
