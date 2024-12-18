@@ -50,7 +50,7 @@
                     <a class="nav-link active" href="{{ route('admin.questions.index') }}">Halaman Admin</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.questions.create') }}">Tambah Pertanyaan</a>
+                    <a href="{{ route('admin.questions.create', ['table' => 'quizsmatik']) }}">Tambah Pertanyaan</a>
                 </li>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
@@ -79,26 +79,30 @@
         </div>
     @endif
 
-    <!-- Form Filter -->
-    <form method="GET" action="{{ route('admin.questions.index') }}" class="form-inline mb-3">
-        <input type="hidden" name="table" value="{{ $table }}">
-        <input type="text" name="search" class="form-control mr-2" placeholder="Cari soal..." value="{{ request('search') }}">
-        <button type="submit" class="btn btn-primary">Cari</button>
-    </form>
+<!-- Form Filter -->
+<form method="GET" action="{{ route('admin.questions.index') }}">
+    <input type="hidden" name="table" value="{{ $table }}">
 
-    <!-- Form Pilih Kategori -->
-    <form method="GET" action="{{ route('admin.questions.index') }}">
-        <div class="form-group">
-            <label for="table">Pilih Kategori</label>
-            <select name="table" id="table" class="form-control" onchange="this.form.submit()">
-                @foreach($categories as $category)
-                    <option value="{{ $category->table_name }}" {{ $category->table_name == $table ? 'selected' : '' }}>
-                        {{ $category->name }}
-                    </option>
-                @endforeach
-            </select>
-        </div>
-    </form>
+    <input type="text" name="search" class="form-control mr-2" placeholder="Cari soal..." value="{{ request('search') }}">
+
+    <button type="submit" class="btn btn-primary">Cari</button>
+</form>
+
+<!-- Dropdown Kategori -->
+<form method="GET" action="{{ route('admin.questions.index') }}">
+    <div class="form-group">
+        <label for="table">Pilih Kategori</label>
+        <select name="table" id="table" class="form-control" onchange="this.form.submit()">
+            @foreach($categories as $category)
+                <option value="{{ $category->table_name }}" {{ $category->table_name == $table ? 'selected' : '' }}>
+                    {{ $category->name }}
+                </option>
+            @endforeach
+        </select>
+    </div>
+</form>
+
+
 
     <!-- Tabel Data -->
     <table class="table table-striped mt-4">
@@ -133,10 +137,10 @@
                 </tr>
             @empty
                 <tr>
-                    <td colspan="7">Tidak ada pertanyaan untuk kategori ini.</td>
+                    <td colspan="7">Tidak ada data soal.</td>
                 </tr>
             @endforelse
-        </tbody>
+        </tbody>        
     </table>
 
     <!-- Paginasi -->

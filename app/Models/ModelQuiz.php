@@ -9,6 +9,13 @@ class ModelQuiz extends Model
 {
     use HasFactory;
 
+    // Konstanta untuk tabel yang diizinkan
+    const ALLOWED_TABLES = [
+        'quizsmatik', 'quizsmaipa', 'quizsmaips', 'quizsmapkn',
+        'quizumum', 'quizpolitik', 'quizteknologi', 'quizzes',
+        'quiztiu', 'quiztwk', 'quiztkp'
+    ];
+
     // Properti yang dapat diisi
     protected $fillable = ['quiz', 'jawaban_a', 'jawaban_b', 'jawaban_c', 'jawaban_d', 'jawaban_benar'];
 
@@ -24,11 +31,7 @@ class ModelQuiz extends Model
     public function setTableName($tableName)
     {
         // Validasi nama tabel jika perlu
-        if (!in_array($tableName, [
-            'quizsmatik', 'quizsmaipa', 'quizsmaips', 'quizsmapkn',
-            'quizumum', 'quizpolitik', 'quizteknologi', 'quizzes',
-            'quiztiu', 'quiztwk', 'quiztkp'
-        ])) {
+        if (!in_array($tableName, self::ALLOWED_TABLES)) {
             throw new \Exception("Nama tabel tidak valid: $tableName");
         }
 

@@ -52,29 +52,43 @@ Route::get('/smaips', [LandingSMAcontroller::class, 'showQuizSMAIPS'])->name('IP
 Route::get('/smapkn', [LandingSMAcontroller::class, 'showQuizSMAPKN'])->name('PKN.show');
 Route::get('/smatik', [LandingSMAcontroller::class, 'showQuizSMATIK'])->name('TIK.show');
 
-// Rute khusus untuk form PIN dan verifikasi PIN
-Route::get('/admin/pin', [PinController::class, 'showPinForm'])->name('admin.pin');
-Route::post('/admin/pin', [PinController::class, 'verifyPin'])->name('pin.verify');
+// Grup route untuk admin tanpa middleware PIN
+Route::prefix('admin')->name('admin.')->group(function () {
 
-// Grup route untuk admin yang dilindungi middleware verify.pin
-Route::middleware(['verify.pin'])->prefix('admin')->name('admin.')->group(function () {
     // Halaman dashboard admin
-    Route::get('/dashboard', function () {
-        return view('admin.index');
-    })->name('index');
+    Route::get('/dashboard', [QuizController::class, 'index'])->name('index');
 
     // Halaman daftar pertanyaan admin, dengan kategori dinamis
-    Route::get('/questions/{table?}', [QuizController::class, 'index'])->name('questions.index');
+// Rute untuk menampilkan daftar soal
+    Route::get('/questions/{table?}', [QuizController::class, 'index'])
+    ->where('table', '[a-zA-Z0-9_]+') // Validasi nama tabel dengan regex
+    ->name('questions.index');
 
-    // Halaman tambah pertanyaan, dengan kategori dinamis
-    Route::get('/questions/create/{table}', [QuizController::class, 'create'])->name('questions.create');
-    Route::post('/questions/store/{table}', [QuizController::class, 'store'])->name('questions.store');
+    // Halaman tambah pertanyaan
+    Route::get('/questions/create/{table}', [QuizController::class, 'create'])
+        ->where('table', '[a-zA-Z0-9_]+') // Validasi nama tabel dengan regex
+        ->name('questions.create');
+
+    // Simpan pertanyaan baru
+    Route::post('/questions/store/{table}', [QuizController::class, 'store'])
+        ->where('table', '[a-zA-Z0-9_]+') // Validasi nama tabel dengan regex
+        ->name('questions.store');
 
     // Rute untuk edit pertanyaan
-    Route::get('/questions/edit/{table}/{id}', [QuizController::class, 'edit'])->name('questions.edit');
-    Route::put('/questions/update/{table}/{id}', [QuizController::class, 'update'])->name('questions.update');
-});
+    Route::get('/questions/edit/{table}/{id}', [QuizController::class, 'edit'])
+        ->where(['table' => '[a-zA-Z0-9_]+', 'id' => '[0-9]+']) // Validasi nama tabel dan ID
+        ->name('questions.edit');
 
+    // Update pertanyaan yang ada
+    Route::put('/questions/update/{table}/{id}', [QuizController::class, 'update'])
+        ->where(['table' => '[a-zA-Z0-9_]+', 'id' => '[0-9]+']) // Validasi nama tabel dan ID
+        ->name('questions.update');
+
+    // Rute untuk hapus pertanyaan
+    Route::delete('/questions/destroy/{table}/{id}', [QuizController::class, 'destroy'])
+        ->where(['table' => '[a-zA-Z0-9_]+', 'id' => '[0-9]+']) // Validasi nama tabel dan ID
+        ->name('questions.destroy');
+});
 
 //login
 Route::get('/login', function () {
