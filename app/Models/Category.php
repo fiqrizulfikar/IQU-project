@@ -9,8 +9,7 @@ class Category extends Model
 {
     use HasFactory;
 
-        protected $table = 'categories'; // Sesuaikan dengan nama tabel kategori
-    
+    protected $fillable = ['name', 'table_name'];
 
     // Jika Anda ingin mengambil soal berdasarkan kategori, tambahkan relasi jika diperlukan
     // Misalnya, jika suatu kategori memiliki banyak soal:
@@ -19,4 +18,3 @@ class Category extends Model
     //     return $this->hasMany(Quiz::class);
     // }
 }
-

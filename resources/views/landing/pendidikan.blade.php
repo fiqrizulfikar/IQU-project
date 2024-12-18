@@ -687,7 +687,6 @@ body {
   }
 }
 
-
 /* Section Header */
 .section-header {
   text-align: center;
@@ -723,33 +722,36 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow lembut */
 }
 
-/* Wrapper untuk kategori */
-.menu-container {
-  display: flex;
-  gap: 20px; /* Jarak antar kotak utama */
-  justify-content: center; /* Pusatkan kotak utama */
-  flex-wrap: wrap;
+/* Wrapper untuk kategori utama (SD, SMP, SMA, CPNS) */
+.category-main-wrapper {
+  display: flex; /* Mengatur menjadi horizontal */
+  justify-content: space-between; /* Mengatur jarak antar kategori */
+  gap: 8px; /* Menambahkan jarak antar kotak */
+  flex-wrap: wrap; /* Agar bisa membungkus jika tidak muat dalam satu baris */
+  animation: slideIn 0.5s ease-out;
+  margin-top: 30px; /* Memberikan jarak atas */
 }
 
 /* Kategori Wrapper */
 .category-wrapper {
   background: linear-gradient(145deg, #92d9ff, #66c4ff); /* Warna gradien cerah */
   border-radius: 15px;
-  padding: 20px;
-  width: 260px; /* Lebar kotak kategori */
+  padding: 50px; /* Perbesar padding untuk memperbesar ukuran kotak */
+  width: 200px; /* Ukuran kotak kategori lebih besar */
   border: 1px solid #ddd;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Shadow lembut */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow lembut */
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+  min-height: 170px; /* Menjaga agar kotak tetap proporsional */
 }
 
 .category-wrapper:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Efek hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Efek hover */
 }
 
 .category-wrapper::before {
@@ -765,46 +767,14 @@ body {
 }
 
 .category-header h3 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
   color: #34495e; /* Warna teks utama */
   text-align: center;
   margin-bottom: 15px;
 }
 
-/* Grid mata pelajaran */
-.subject-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.menu-card {
-  background: linear-gradient(90deg, #ff9e80, #ff6f61); /* Warna gradien lembut */
-  color: white;
-  border-radius: 10px;
-  padding: 12px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, background 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.menu-card a {
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-}
-
-.menu-card:hover {
-  transform: scale(1.05);
-  background: linear-gradient(90deg, #ff8a65, #e65100); /* Warna hover cerah */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Animasi kotak utama */
+/* Animasi untuk Kotak */
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -816,45 +786,27 @@ body {
   }
 }
 
-.category-wrapper:nth-child(1) { animation: slideIn 0.6s ease-in-out; }
-.category-wrapper:nth-child(2) { animation: slideIn 0.8s ease-in-out; }
-.category-wrapper:nth-child(3) { animation: slideIn 1s ease-in-out; }
-.category-wrapper:nth-child(4) { animation: slideIn 1.2s ease-in-out; }
-
-/* Warna Berdasarkan Kategori */
-.sd-card {
-  background: linear-gradient(90deg, #ffeb3b, #ffc107);
-}
-<<<<<<<<< Temporary merge branch 1
-
-.smp-card {
-  background: linear-gradient(90deg, #8c9eff, #536dfe);
+/* Menambahkan link pada kategori */
+.category-link {
+  text-decoration: none;
+  color: inherit; /* Warna teks mengikuti warna kategori */
 }
 
-.sma-card {
-  background: linear-gradient(90deg, #69f0ae, #00e676);
+/* Responsif: Mengatur tata letak ketika lebar layar lebih kecil */
+@media (max-width: 768px) {
+  .category-main-wrapper {
+    justify-content: center; /* Pusatkan kategori */
+    gap: 15px; /* Mengurangi jarak antar kotak */
+  }
+
+  .category-wrapper {
+    width: 220px; /* Ukuran kotak lebih kecil pada perangkat mobile */
+    padding: 30px; /* Mengurangi padding */
+  }
 }
 
-.cpns-card {
-  background: linear-gradient(90deg, #ff8a80, #ff5252);
-}
 
-/* Hover Warna */
-.sd-card:hover {
-  background: linear-gradient(90deg, #ffc107, #ff9800);
-}
 
-.smp-card:hover {
-  background: linear-gradient(90deg, #536dfe, #3d5afe);
-}
-
-.sma-card:hover {
-  background: linear-gradient(90deg, #00e676, #00c853);
-}
-
-.cpns-card:hover {
-  background: linear-gradient(90deg, #ff5252, #e53935);
-}
 /* Menata link */
 .login-link {
     display: inline-block;
@@ -938,7 +890,6 @@ body {
         Jelajahi metode belajar interaktif yang dirancang untuk siswa berbagai jenjang. Tingkatkan kepercayaan diri dan hasil belajar dengan materi berkualitas!
       </p>
       <button class="cta-btn">
-        <a href="#education-section">Ayo Mulai</a>
       </button>
     </div>
     <div class="image-content">
@@ -952,61 +903,48 @@ body {
     <div class="section-header">
       <h2>Kategori Pendidikan</h2>
     </div>
-    <div class="menu-container">
+    <!-- Kotak Utama untuk Menampung Kategori -->
+    <div class="category-main-wrapper">
       <!-- Sekolah Dasar -->
-      <div class="category-wrapper">
-        <div class="category-header">
-          <h3>SD</h3>
+      <a href="/sd" class="category-link">
+        <div class="category-wrapper">
+          <div class="category-header">
+            <h3>SD</h3>
+          </div>
         </div>
-        <div class="subject-grid">
-          <div class="menu-card"><a href="#sd-ipa">IPA</a></div>
-          <div class="menu-card"><a href="#sd-ips">IPS</a></div>
-          <div class="menu-card"><a href="#sd-mtk">MTK</a></div>
-          <div class="menu-card"><a href="#sd-pkn">PKN</a></div>
-        </div>
-      </div>
+      </a>
 
       <!-- Sekolah Menengah Pertama -->
-      <div class="category-wrapper">
-        <div class="category-header">
-          <h3>SMP</h3>
+      <a href="/Smp" class="category-link">
+        <div class="category-wrapper">
+          <div class="category-header">
+            <h3>SMP</h3>
+          </div>
         </div>
-        <div class="subject-grid">
-          <div class="menu-card"><a href="#smp-ipa">IPA</a></div>
-          <div class="menu-card"><a href="#smp-ips">IPS</a></div>
-          <div class="menu-card"><a href="#smp-mtk">MTK</a></div>
-          <div class="menu-card"><a href="#smp-pkn">PKN</a></div>
-          <div class="menu-card"><a href="#smp-english">ENGLISH</a></div>
-        </div>
-      </div>
+      </a>
 
       <!-- Sekolah Menengah Atas -->
-      <div class="category-wrapper">
-        <div class="category-header">
-          <h3>SMA</h3>
+      <a href="/SMA" class="category-link">
+        <div class="category-wrapper">
+          <div class="category-header">
+            <h3>SMA</h3>
+          </div>
         </div>
-        <div class="subject-grid">
-          <div class="menu-card"><a href="#sma-ipa">IPA</a></div>
-          <div class="menu-card"><a href="#sma-ips">IPS</a></div>
-          <div class="menu-card"><a href="#sma-pkn">PKN</a></div>
-          <div class="menu-card"><a href="#sma-tik">TIK</a></div>
-        </div>
-      </div>
+      </a>
 
       <!-- CPNS -->
-      <div class="category-wrapper">
-        <div class="category-header">
-          <h3>CPNS</h3>
+      <a href="/cpns-quiz/categories" class="category-link">
+        <div class="category-wrapper">
+          <div class="category-header">
+            <h3>CPNS</h3>
+          </div>
         </div>
-        <div class="subject-grid">
-          <div class="menu-card"><a href="#cpns-tiu">TIU</a></div>
-          <div class="menu-card"><a href="#cpns-twk">TWK</a></div>
-          <div class="menu-card"><a href="#cpns-tkp">TKP</a></div>
-        </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
+
+
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {

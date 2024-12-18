@@ -492,12 +492,11 @@
             <li><a href="/games">Fitur Ice Breaking & Tes IQ</a></li>
           </ul>
         </div>
-
         <div class="col-lg-4 col-md-12 footer-newsletter">
           <h4></h4>
           <p>Selamat menikmati</p>
-
-      </div>
+          <img src="assets/img/logo.png" alt="logoiqu.com">
+        </div>
     </div>
 
     <div class="container copyright text-center mt-4">

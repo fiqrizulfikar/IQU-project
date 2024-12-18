@@ -9,45 +9,26 @@ class ModelQuiz extends Model
 {
     use HasFactory;
 
-    // Konstanta untuk tabel yang diizinkan
-    const ALLOWED_TABLES = [
-        'quizsmatik', 'quizsmaipa', 'quizsmaips', 'quizsmapkn',
-        'quizumum', 'quizpolitik', 'quizteknologi', 'quizzes',
-        'quiztiu', 'quiztwk', 'quiztkp'
-    ];
-
-    // Properti yang dapat diisi
     protected $fillable = ['quiz', 'jawaban_a', 'jawaban_b', 'jawaban_c', 'jawaban_d', 'jawaban_benar'];
 
     // Menetapkan nama tabel secara dinamis
     protected $table;
 
-    /**
-     * Fungsi untuk menetapkan nama tabel secara dinamis
-     * 
-     * @param string $tableName
-     * @return $this
-     */
-    public function setTableName($tableName)
+    // Konstruktor untuk menerima nama tabel
+    public function __construct(array $attributes = [])
     {
-        // Validasi nama tabel jika perlu
-        if (!in_array($tableName, self::ALLOWED_TABLES)) {
-            throw new \Exception("Nama tabel tidak valid: $tableName");
-        }
+        parent::__construct($attributes);
 
-        $this->table = $tableName;
-        return $this;
+        // Tentukan tabel jika belum ada
+        if (!$this->table) {
+            $this->table = 'quizzes'; // Tabel default jika belum di-set
+        }
     }
 
-    /**
-     * Override metode `newQuery` untuk mendukung nama tabel dinamis
-     */
-    public function newQuery()
+    // Fungsi untuk mengatur nama tabel
+    public function setTableName($tableName)
     {
-        if ($this->table) {
-            return parent::newQuery()->from($this->table);
-        }
-
-        return parent::newQuery();
+        $this->table = $tableName;
+        return $this;
     }
 }

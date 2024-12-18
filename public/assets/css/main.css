@@ -1765,3 +1765,7 @@ button:hover{
 #chk:checked ~ .signup label{
 	transform: scale(.6);
 }
+.footer-logo {
+  width: 10%; /* Ukuran logo */
+  height: auto; /* Menjaga rasio aspek logo */
+}
