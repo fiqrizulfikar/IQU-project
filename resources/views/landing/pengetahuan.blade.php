@@ -73,7 +73,7 @@ h6 {
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: auto;
   background-image: url('assets/img/UMUM.png');
   background-size: cover;
   background-position: center;
@@ -123,7 +123,7 @@ main {
 .main-title {
     font-family: 'Raleway', sans-serif; /* Ganti dengan font yang diinginkan */
     font-size: 3rem; /* Ukuran font besar */
-    color: #ffcc00; /* Warna cerah untuk judul utama */
+    color: #08005e; /* Warna cerah untuk judul utama */
     text-align: center; /* Rata tengah */
     margin: 20px 0; /* Margin atas dan bawah */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan teks */
@@ -132,13 +132,13 @@ main {
 
 .main-title:hover {
     transform: scale(1.05); /* Efek membesar saat hover */
-    color: #ff9900; /* Warna saat hover */
+    color:  #ffcc00; /* Warna saat hover */
 }
 
 .sub-title {
     font-family: 'Poppins', sans-serif; /* Ganti dengan font yang diinginkan */
     font-size: 2rem; /* Ukuran font sedang */
-    color: #ff6600; /* Warna cerah untuk subjudul */
+    color:  #08005e; /* Warna cerah untuk subjudul */
     text-align: center; /* Rata tengah */
     margin: 10px 0; /* Margin atas dan bawah */
     font-weight: 600; /* Bold */
@@ -146,7 +146,7 @@ main {
 }
 
 .sub-title:hover {
-    color: #ff3300; /* Warna saat hover */
+    color:  #08005e /* Warna saat hover */
 }
 .read-more {
     display: block;
@@ -625,174 +625,8 @@ main {
   h5,
   h6 {
     color: var(--heading-color);
-    font-family: var(--heading-font);
+    font: "Raleway",  sans-serif;
   }
-  .footer {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    font-size: 14px;
-    position: relative;
-    margin-top: 180px;
-  }
-  
-  .footer .footer-top {
-    padding-top: 50px;
-    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  }
-  
-  .footer .footer-about .logo {
-    line-height: 1;
-    margin-bottom: 25px;
-  }
-  
-  .footer .footer-about .logo img {
-    max-height: 40px;
-    margin-right: 6px;
-  }
-  
-  .footer .footer-about .logo span {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: var(--heading-font);
-    color: var(--heading-color);
-  }
-  
-  .footer .footer-about p {
-    font-size: 14px;
-    font-family: var(--heading-font);
-    text-align: left;
-  }
-  
-  .footer .social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-    font-size: 16px;
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    margin-right: 10px;
-    transition: 0.3s;
-    
-  }
-  
-  .footer .social-links a:hover {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-  }
-  
-  .footer h4 {
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-    padding-bottom: 12px;
-  }
-  
-  .footer .footer-links {
-    margin-bottom: 30px;
-    
-  }
-  
-  .footer .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  
-  }
-  
-  .footer .footer-links ul i {
-    padding-right: 2px;
-    font-size: 12px;
-    line-height: 0;
-    
-  }
-  
-  .footer .footer-links ul li {
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    
-  }
-  
-  .footer .footer-links ul li:first-child {
-    padding-top: 0;
-   
-  }
-  
-  .footer .footer-links ul a {
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    display: inline-block;
-    line-height: 1;
-  }
-  
-  .footer .footer-links ul a:hover {
-    color: var(--accent-color);
-  }
-  
-  .footer .footer-contact p {
-    margin-bottom: 5px;
-  }
-  
-  .footer .footer-newsletter .newsletter-form {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    padding: 6px 8px;
-    position: relative;
-    border-radius: 4px;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-    display: flex;
-    background-color: var(--background-color);
-    transition: 0.3s;
-  }
-  
-  .footer .footer-newsletter .newsletter-form:focus-within {
-    border-color: var(--accent-color);
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=email] {
-    border: 0;
-    padding: 4px;
-    width: 100%;
-    background-color: var(--background-color);
-    color: var(--default-color);
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
-    outline: none;
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=submit] {
-    border: 0;
-    font-size: 16px;
-    padding: 0 20px;
-    margin: -7px -8px -7px 0;
-    background: var(--accent-color);
-    color: var(--contrast-color);
-    transition: 0.3s;
-    border-radius: 0 4px 4px 0;
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-    background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  }
-  
-  .footer .copyright {
-    padding: 25px 0;
-    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  }
-  
-  .footer .copyright p {
-    margin-bottom: 0;
-  }
-  
-  .footer .credits {
-    margin-top: 6px;
-    font-size: 13px;
-  }
-  
   /*--------------------------------------------------------------
   # Preloader
   --------------------------------------------------------------*/
@@ -918,6 +752,7 @@ main {
         <link href="assets/vendor/aos/aos.css" rel="stylesheet">
         <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
         <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
       
         <!-- Main CSS File -->
       
@@ -958,7 +793,7 @@ main {
                     <a href="{{ url('/sd') }}"><span>Ice Breaking</span> </i></a></li>
                   <li><a href="{{ url('/Smp') }}"><span>Tes IQ</span></a></li>
                 </ul>
-              <li><a href="{{ url('/mediasosial') }}">Contact</a></li>
+              <li><a href="{{ url('/contact') }}">Contact</a></li>
               <li><a href="/">About US</a></li>
               <a href="/login" class="login-link">
                 <img src="assets/img/login.png" alt="Login Icon" class="login-icon">

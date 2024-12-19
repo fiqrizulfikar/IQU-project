@@ -1,42 +1,40 @@
 /* Mengatur gaya umum untuk body */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #ffcccb; /* Warna latar belakang cerah */
     margin: 0;
-    padding: 20px;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    background-image: radial-gradient(circle, #ffcccb, #ff66b2); /* Gradien lembut dan cerah */
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC, #FFFCB5, #C6B5FF);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
     overflow: hidden;
-    animation: backgroundAnimation 10s ease-in-out infinite; /* Animasi latar belakang */
 }
 
-/* Animasi latar belakang yang berubah-ubah */
-@keyframes backgroundAnimation {
-    0% { background-color: #ffcccb; }
-    50% { background-color: #ff80bf; }
-    100% { background-color: #ffcccb; }
+/* Animasi latar belakang gradien */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Gaya untuk quiz container */
 .quiz-container {
-    background: #fff;
+    background: #ffffff;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    max-width: 650px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
     width: 100%;
-    margin: auto;
     text-align: center;
-    transform: scale(1);
     animation: fadeIn 1s ease-out;
-    border: 2px solid #ff80bf; /* Border cerah */
+    border: 5px solid #FFC0CB; /* Pink pastel */
 }
 
-/* Animasi fadeIn untuk transisi elemen */
+/* Animasi fadeIn */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -50,153 +48,107 @@ body {
 
 /* Gaya untuk judul */
 h1 {
-    color: #333;
+    color: #7B68EE; /* Ungu pastel */
     font-size: 32px;
     margin-bottom: 20px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 5px rgba(123, 104, 238, 0.3);
 }
 
 /* Gaya untuk timer */
 #timer {
     font-size: 22px;
-    color: #ff6347; /* Warna merah cerah */
+    color: #FF6347; /* Merah lembut */
     margin-bottom: 20px;
     font-weight: bold;
-    text-transform: uppercase;
+    animation: pulse 1.5s infinite;
 }
 
 /* Gaya untuk pilihan */
 .option {
-    margin: 20px 0;
+    margin: 15px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease-in-out;
-    position: relative;
+    background: #E6FFFA; /* Hijau mint pastel */
+    border-radius: 15px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Animasi hover pada pilihan */
+.option:nth-child(odd) {
+    background: #FFF8DC; /* Kuning pastel */
+}
+
+.option:nth-child(even) {
+    background: #B5DFFB; /* Biru pastel */
+}
+
 .option:hover {
     transform: scale(1.1);
-    background-color: #ffe4e1;
-    border-radius: 10px;
-    padding: 10px;
+    background: #FFDAB9; /* Peach pastel */
 }
 
-/* Efek animasi partikel pada pilihan */
-.option::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    background: #ff80bf;
-    border-radius: 50%;
-    animation: bubble 1s infinite;
-    opacity: 0.5;
-    pointer-events: none;
-}
-
-@keyframes bubble {
-    0% { transform: scale(0) translate(-50%, -50%); opacity: 1; }
-    50% { transform: scale(1) translate(-50%, -50%); opacity: 0.3; }
-    100% { transform: scale(0) translate(-50%, -50%); opacity: 0; }
-}
-
-/* Gaya untuk label pilihan */
+/* Label pilihan */
 .option label {
     margin-left: 10px;
     font-size: 20px;
     color: #333;
-    transition: color 0.3s ease;
-}
-
-/* Efek hover pada label */
-.option:hover label {
-    color: #ff80bf;
+    font-weight: bold;
 }
 
 /* Tombol */
 button {
     padding: 14px 25px;
-    background-color: #4caf50;
-    color: white;
+    background-color: #FFEBB7; /* Kuning pastel */
+    color: #333;
     border: none;
-    border-radius: 12px;
+    border-radius: 15px;
     cursor: pointer;
-    font-size: 22px;
-    transition: all 0.3s;
+    font-size: 20px;
+    transition: all 0.3s ease;
     margin: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #FFDAB9; /* Peach pastel */
     transform: scale(1.1);
 }
 
-/* Tombol Start yang berbeda */
-#startButton {
-    background-color: #ffcc00;
-    color: #333;
-    font-weight: bold;
+/* Tombol kecil */
+#restartButton, #homeButton {
+    padding: 12px 22px;
+    background-color: #D5BFFB; /* Ungu pastel */
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    margin: 10px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#startButton:hover {
-    background-color: #ffb400;
+#restartButton:hover, #homeButton:hover {
+    background-color: #BFA0FF; /* Ungu lebih terang */
+    transform: scale(1.1);
 }
 
 /* Gaya untuk hasil */
 .result {
     margin-top: 20px;
     font-size: 24px;
-    color: #333;
+    color: #7B68EE; /* Ungu pastel */
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    animation: fadeIn 1s ease-out;
 }
 
-/* Tombol Disabled */
-button[disabled] {
-    background-color: #ddd;
-    color: #999;
-    cursor: not-allowed;
-}
-
-/* Menambahkan efek loading pada timer */
-#timer {
-    animation: pulse 1.5s infinite;
-}
-
+/* Animasi timer */
 @keyframes pulse {
-    0% {
-        color: #e63946;
-    }
-    50% {
-        color: #ff6200;
-    }
-    100% {
-        color: #e63946;
-    }
-}
-
-/* Tombol kecil animasi untuk 'Mulai Lagi' dan 'Kembali' */
-#restartButton, #homeButton {
-    padding: 12px 22px;
-    background-color: #ff80bf;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    transition: all 0.3s;
-    margin: 10px;
-}
-
-#restartButton:hover, #homeButton:hover {
-    background-color: #ff66b2;
-    transform: scale(1.1);
+    0% { color: #FF6347; }
+    50% { color: #FFA07A; }
+    100% { color: #FF6347; }
 }

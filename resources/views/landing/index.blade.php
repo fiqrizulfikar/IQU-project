@@ -495,7 +495,9 @@
         <div class="col-lg-4 col-md-12 footer-newsletter">
           <h4></h4>
           <p>Selamat menikmati</p>
-          <img src="assets/img/logo.png" alt="logoiqu.com">
+            <div class="footer-logo ">
+            <img src="assets/img/logo.png" alt="logoiqu.com" width="170px" >
+            </div>
         </div>
     </div>
 
@@ -539,3 +541,9 @@
 </body>
 
 </html>
+
+
+
+
+
+

@@ -655,3 +655,247 @@
     </script>
 </body>
 </html>
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+
+  .landing {
+    height: 70vh;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fffb10 0%, #1c1b07 100%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .landing h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .landing p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .landing .btn-primary {
+    display: inline-block;
+    background: #f9c80e;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .landing .btn-primary:hover {
+    background: #f5a623;
+    transform: scale(1.1);
+  }
+
+  .container1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+ 
+  .card {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+width: 230px;
+height: 330px;
+background-color: var(--white, #ffffff);
+border-radius: 10px;
+box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08), -4px -4px 12px rgba(0, 0, 0, 0.08);
+padding: 15px;
+box-sizing: border-box;
+overflow: hidden;
+transition: all 0.3s;
+cursor: pointer;
+}
+
+.card:hover {
+transform: translateY(-10px);
+box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-image-container {
+  width: 100%;
+  height: 280px; /* Tinggi kontainer */
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari kontainer */
+  background-color: rgb(254, 254, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img {
+  width: 100%; /* Membuat gambar memenuhi lebar kontainer */
+  height: 200%; /* Mempertahankan rasio aspek gambar */
+  max-height: 100%; /* Membatasi tinggi gambar agar tidak melebihi kontainer */
+  object-fit: cover; /* Memastikan gambar mengisi kontainer dengan baik */
+  transition: transform 0.3s; /* Menambahkan efek transisi saat gambar diperbesar */
+}
+
+.card-img img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* Menjaga proporsi gambar */
+border-radius: 10px;
+}
+
+.card-title {
+margin: 0;
+font-size: 17px;
+font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+font-weight: 600;
+color: #1797b8;
+text-align: center;
+}
+
+.card-des {
+margin: 0 0 15px;
+font-size: 13px;
+font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+color: #1797b8;
+text-align: center;
+line-height: 1.5;
+}
+
+.btn {
+color: purple;
+text-transform: uppercase;
+text-decoration: none;
+border: 2px solid purple;
+padding: 10px 20px;
+font-size: 17px;
+font-weight: bold;
+background: transparent;
+position: relative;
+transition: all 1s;
+overflow: hidden;
+text-align: center;
+}
+
+.btn:hover {
+color: white;
+}
+
+.btn::before {
+content: "";
+position: absolute;
+height: 100%;
+width: 0%;
+top: 0;
+left: -40px;
+transform: skewX(45deg);
+background-color: purple;
+z-index: -1;
+transition: all 1s;
+}
+
+.btn:hover::before {
+width: 160%;
+}
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<!-- Navbar -->
+<nav class="navbar">
+<h1>
+    <img src="assets/img/logo.png" alt="Logo">
+    Sekolah Dasar
+</h1>
+<ul>
+    <li><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span></i></a>
+    <li><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span></i></a>
+    <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
+    <li><a href="/">About US</a></li>
+    <li><a href="/login" class="login-icon"><i class="fas fa-user"></i></a></li>  </li>
+</ul>
+</nav>
+</head>
+</body>
+
+<!-- Hero Section -->
+<header class="landing">
+  <h1>Selamat Datang di <span>i-QUIZ</span></h1>
+  <p>
+    Temukan pengalaman belajar interaktif dan seru dengan i-QUIZ. Cobalah tes IQ, media pembelajaran, dan games menarik untuk semua tingkat pendidikan.
+  </p>
+  <a href="#features" class="btn-primary">Jelajahi Sekarang</a>
+</header>
+
+<!-- Content Section -->
+<div class="container1">
+  <div class="card">
+    <div class="card-image-container">
+      <img class="card-img" src="assets/img/TES IQ.png" alt="Tes IQ">
+      
+    </div>
+    
+    <p> TES IQ</p>
+    <p class="card-des">
+      AYO COBA PENGETAHUAN IQ
+    </p>
+     <a href="/tesiq" class="btn">Mulai</a>
+  </div>
+
+  
+  
+<div class="card">
+<div class="card-image-container">
+  <img class="card-img" src="assets/img/breaking.png" alt="icebreaking">
+</div>
+<p> ICE BREAKING</p>
+<p class="card-des">
+ AYO LAKUKAN GAMES
+</p>
+<button class="btn">Mulai</button>
+</div>
+
+
+</div>
+</body>
+</html>

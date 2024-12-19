@@ -1,7 +1,7 @@
 /* Mengatur gaya umum untuk body */
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #ffcccb; /* Warna latar belakang cerah */
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2a3d66, #1e2a47); /* Gradasi biru gelap yang lebih elegan */
     margin: 0;
     padding: 20px;
     display: flex;
@@ -9,155 +9,148 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    background-image: radial-gradient(circle, #ffcccb, #ff66b2); /* Gradien lembut dan cerah */
-    overflow: hidden;
-    animation: backgroundAnimation 10s ease-in-out infinite; /* Animasi latar belakang */
-}
-
-/* Animasi latar belakang yang berubah-ubah */
-@keyframes backgroundAnimation {
-    0% { background-color: #ffcccb; }
-    50% { background-color: #ff80bf; }
-    100% { background-color: #ffcccb; }
 }
 
 /* Gaya untuk quiz container */
 .quiz-container {
-    background: #fff;
+    background: #ffffff;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    max-width: 650px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Bayangan lebih halus */
+    max-width: 700px;
     width: 100%;
-    margin: auto;
     text-align: center;
-    transform: scale(1);
-    animation: fadeIn 1s ease-out;
-    border: 2px solid #ff80bf; /* Border cerah */
+    animation: fadeIn 0.8s ease-out;
+    border: 3px solid #a1b3c5; /* Warna abu-abu terang untuk border */
 }
 
-/* Animasi fadeIn untuk transisi elemen */
+/* Animasi fadeIn */
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: scale(0.9);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
     }
 }
 
 /* Gaya untuk judul */
 h1 {
-    color: #333;
-    font-size: 32px;
+    color: #1e2a47; /* Biru gelap yang lebih elegan */
+    font-size: 30px;
     margin-bottom: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
     letter-spacing: 1px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    font-weight: 700;
+    animation: bounceIn 1.2s ease-out;
+}
+
+/* Animasi untuk judul */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(15px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* Gaya untuk timer */
 #timer {
     font-size: 22px;
-    color: #ff6347; /* Warna merah cerah */
-    margin-bottom: 20px;
+    color: #d9534f; /* Merah gelap untuk timer */
+    margin-bottom: 25px;
     font-weight: bold;
-    text-transform: uppercase;
+    background: #f8d7da;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animasi untuk timer */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 /* Gaya untuk pilihan */
 .option {
-    margin: 20px 0;
+    margin: 15px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-}
-
-/* Animasi hover pada pilihan */
-.option:hover {
-    transform: scale(1.1);
-    background-color: #ffe4e1;
+    padding: 10px 20px;
+    background: #f5f5f5; /* Abu-abu muda untuk pilihan */
     border-radius: 10px;
-    padding: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
 }
 
-/* Efek animasi partikel pada pilihan */
-.option::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    background: #ff80bf;
-    border-radius: 50%;
-    animation: bubble 1s infinite;
-    opacity: 0.5;
-    pointer-events: none;
+.option:hover {
+    transform: translateY(-5px);
+    background: #e9ecef; /* Abu-abu lebih terang saat hover */
+    border-color: #a1b3c5; /* Border abu-abu yang lebih elegan */
 }
 
-@keyframes bubble {
-    0% { transform: scale(0) translate(-50%, -50%); opacity: 1; }
-    50% { transform: scale(1) translate(-50%, -50%); opacity: 0.3; }
-    100% { transform: scale(0) translate(-50%, -50%); opacity: 0; }
-}
-
-/* Gaya untuk label pilihan */
+/* Label pilihan */
 .option label {
-    margin-left: 10px;
-    font-size: 20px;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-/* Efek hover pada label */
-.option:hover label {
-    color: #ff80bf;
+    font-size: 18px;
+    color: #1e2a47; /* Warna teks gelap */
 }
 
 /* Tombol */
 button {
-    padding: 14px 25px;
-    background-color: #4caf50;
+    padding: 15px 30px;
+    background-color: #007bff; /* Biru yang lebih elegan */
     color: white;
     border: none;
-    border-radius: 12px;
+    border-radius: 30px;
     cursor: pointer;
-    font-size: 22px;
-    transition: all 0.3s;
-    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    text-transform: uppercase;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0056b3; /* Biru lebih gelap saat hover */
     transform: scale(1.1);
 }
 
-/* Tombol Start yang berbeda */
+/* Tombol Mulai */
 #startButton {
-    background-color: #ffcc00;
-    color: #333;
-    font-weight: bold;
+    background: #28a745; /* Hijau lebih lembut */
+    color: #fff;
+    font-size: 22px;
 }
 
 #startButton:hover {
-    background-color: #ffb400;
+    transform: scale(1.15);
 }
 
-/* Gaya untuk hasil */
+/* Hasil */
 .result {
     margin-top: 20px;
-    font-size: 24px;
+    font-size: 22px;
     color: #333;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    animation: fadeIn 1s ease-out;
+    animation: fadeIn 0.8s ease-out;
+    background: #eafaf1;
+    padding: 15px;
+    border-radius: 20px;
 }
 
 /* Tombol Disabled */
@@ -165,38 +158,4 @@ button[disabled] {
     background-color: #ddd;
     color: #999;
     cursor: not-allowed;
-}
-
-/* Menambahkan efek loading pada timer */
-#timer {
-    animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        color: #e63946;
-    }
-    50% {
-        color: #ff6200;
-    }
-    100% {
-        color: #e63946;
-    }
-}
-
-/* Tombol kecil animasi untuk 'Mulai Lagi' dan 'Kembali' */
-#restartButton, #homeButton {
-    padding: 12px 22px;
-    background-color: #ff80bf;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    transition: all 0.3s;
-    margin: 10px;
-}
-
-#restartButton:hover, #homeButton:hover {
-    background-color: #ff66b2;
-    transform: scale(1.1);
 }
