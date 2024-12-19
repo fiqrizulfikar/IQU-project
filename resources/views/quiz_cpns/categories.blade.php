@@ -204,11 +204,10 @@ body {
 <head>
     <nav class="navbar">
         <h1>
-            <img src="assets/img/logo.png" alt="Logo">
+            <img src="assets/img/logo.png" alt="logoiqu.com">
             Tes CPNS
         </h1>
         <ul>
-            <li><a href="/">Beranda</a></li>
             <li>
                 <a href="/pendidikan">Pendidikan</a>
                 
@@ -222,11 +221,11 @@ body {
                
             </li>
             <li>
-                <a href="/mediasosial">Media Sosial</a>
+                <a href="/contact">Media Sosial</a>
                
                 </div>
             </li>
-            <li><a href="/aboutus">About US</a></li>
+            <li><a href="/">About US</a></li>
         </ul>
     </nav>
 <div class="category-container">

@@ -718,7 +718,7 @@ body {
   border-radius: 15px;
   padding: 30px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 5% auto;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow lembut */
 }
 
@@ -832,13 +832,7 @@ body {
 /* Menambahkan efek hover pada link */
 .login-link:hover {
     background-color: #f
-<<<<<<< HEAD
-
 }
-=======
-}
-
->>>>>>> 930f6f23cee9128fdad866ebaf5c7e57d1f049ed
 </style>
 
 </head>
@@ -909,39 +903,35 @@ body {
     <div class="section-header">
       <h2>Kategori Pendidikan</h2>
     </div>
-    <!-- Kotak Utama untuk Menampung Kategori -->
     <div class="category-main-wrapper">
-      <!-- Sekolah Dasar -->
       <a href="/sd" class="category-link">
         <div class="category-wrapper">
           <div class="category-header">
+            <i class="icon sd-icon"></i>
             <h3>SD</h3>
           </div>
         </div>
       </a>
-
-      <!-- Sekolah Menengah Pertama -->
       <a href="/Smp" class="category-link">
         <div class="category-wrapper">
           <div class="category-header">
+            <i class="icon smp-icon"></i>
             <h3>SMP</h3>
           </div>
         </div>
       </a>
-
-      <!-- Sekolah Menengah Atas -->
       <a href="/SMA" class="category-link">
         <div class="category-wrapper">
           <div class="category-header">
+            <i class="icon sma-icon"></i>
             <h3>SMA</h3>
           </div>
         </div>
       </a>
-
-      <!-- CPNS -->
       <a href="/cpns-quiz/categories" class="category-link">
         <div class="category-wrapper">
           <div class="category-header">
+            <i class="icon cpns-icon"></i>
             <h3>CPNS</h3>
           </div>
         </div>
@@ -949,8 +939,6 @@ body {
     </div>
   </div>
 </section>
-
-
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {

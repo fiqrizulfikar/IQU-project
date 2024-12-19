@@ -145,7 +145,7 @@
         .card a {
             display: inline-block;
             text-align: center;
-            margin: 10px auto 15px;
+            margin: 10px 20px 15px 70px;
             padding: 10px 20px;
             font-size: 14px;
             font-weight: 600;
