@@ -21,7 +21,6 @@ Route::get('/Smp', [App\Http\Controllers\LandingControllers::class, 'Smp']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 Route::get('/aboutus', [App\Http\Controllers\LandingControllers::class, 'aboutus']);
 
-
 Route::get('/Smp', [LandingSMPcontroller::class, 'index']);
 Route::get('/smpips', [LandingSMPcontroller::class, 'showQuizSMPIPS'])->name('IPS.show');
 Route::get('/smpipa', [LandingSMPcontroller::class, 'showQuizSMPIPA'])->name('IPA.show');

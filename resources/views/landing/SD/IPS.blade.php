@@ -83,7 +83,7 @@
 
     // Event tombol kembali
     backButton.addEventListener('click', function () {
-        window.location.href = "/Sd"; // Redirect ke halaman pilih kuis
+        window.location.href = "/sd"; // Redirect ke halaman pilih kuis
     });
 
     // Fungsi untuk memulai timer

@@ -833,6 +833,46 @@ body {
 .login-link:hover {
     background-color: #f
 }
+
+#preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    overflow: hidden;
+    background: var(--background-color);
+    transition: all 0.6s ease-out;
+  }
+  
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #ffffff;
+    border-color: var(--accent-color) transparent var(--accent-color) transparent;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1.5s linear infinite;
+  }
+@keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+  
 </style>
 
 </head>
@@ -869,7 +909,7 @@ body {
                     <li><a href="{{ url('/politik') }}"><span>Tes IQ</span></a></li>
                     </li>
                   </ul>
-                <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
+                <li><a href="{{ url('/contact') }}">Media Sosial</a></li>
                 <li><a href="/">About US</a></li>
                 <a href="/login" class="login-link">
                   <img src="assets/img/login.png" alt="Login Icon" class="login-icon">
@@ -939,6 +979,9 @@ body {
     </div>
   </div>
 </section>
+  </div>
+</body>
+</section>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -959,11 +1002,6 @@ body {
     observer.observe(educationSection);
   });
 </script>
-
-
-
-
-
 <script>
   // Smooth Scroll Effect
 // Smooth Scroll Effect
@@ -980,3 +1018,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 </script>
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>

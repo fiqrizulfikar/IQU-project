@@ -707,7 +707,7 @@
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </div>
   </header>
-=======
+
   <link rel="stylesheet" href="assets/css/games.css">
   
   <title>Games</title>
@@ -826,7 +826,6 @@
 });
 
   </script>
->>>>>>> 930f6f23cee9128fdad866ebaf5c7e57d1f049ed
 </body>
 </head>
 </body>

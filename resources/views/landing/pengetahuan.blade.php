@@ -792,7 +792,7 @@ main {
                     <a href="{{ url('/sd') }}"><span>Ice Breaking</span> </i></a></li>
                   <li><a href="{{ url('/Smp') }}"><span>Tes IQ</span></a></li>
                 </ul>
-              <li><a href="{{ url('/mediasosial') }}">Contact</a></li>
+              <li><a href="{{ url('/contact') }}">Contact</a></li>
               <li><a href="/">About US</a></li>
               <a href="/login" class="login-link">
                 <img src="assets/img/login.png" alt="Login Icon" class="login-icon">
