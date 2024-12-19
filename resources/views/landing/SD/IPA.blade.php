@@ -1,66 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>IQU.com</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/www.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link rel="stylesheet" href="{{ asset('assets/css/Sdipa.css') }}">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/SD/IPASD.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis SMA IPA</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/SMA.css') }}">
 </head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="logoiqu.com">
-        <h1 class="sitename">sekolah dasar</i></h1>
-      </a>
-       
- <nav id="navmenu" class="navmenu">
-
-<ul>
-  <li><a href="/" class="active">Beranda</a></li>
-  
-   
-    <li class="dropdown"><a href="IPAsd"><span>IPA</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a></li>
-    <li class="dropdown"><a href="IPSsd"><span>IPS</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-    <li class="dropdown"><a href="MTKsd"><span>MTK</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-    <li class="dropdown"><a href="PKNsd"><span>PKN</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-    <li><a href="/aboutus">About US</a></li>
-  </li>
-<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-
-</nav> 
-</section><!-- /About Section -->
-</header>
-    <body>
+<body>
     <body>
         <div class="quiz-container">
             <!-- Judul Pertanyaan -->
-            <h1 id="quiz-ips-title">Selamat Datang di Kuis SD IPA</h1>
+            <h1 id="quiz-ips-title">Selamat Datang di Kuis SMA IPA</h1>
         
             <!-- Timer -->
             <div id="timer" class="timer"></div>
@@ -103,7 +53,7 @@
     let correctAnswersCount = 0;
     const timeLimit = 15; // Waktu maksimal per pertanyaan (detik)
     let timerInterval;
-    const questions = @json( $questions);
+    const questions = @json($questions);
 
     // Ambil elemen-elemen dari DOM
     const quizContainer = document.querySelector('.quiz-container');
@@ -133,7 +83,7 @@
 
     // Event tombol kembali
     backButton.addEventListener('click', function () {
-        window.location.href = "/sekolahdasar"; // Redirect ke halaman pilih kuis
+        window.location.href = "/SMA"; // Redirect ke halaman pilih kuis
     });
 
     // Fungsi untuk memulai timer
@@ -226,20 +176,3 @@
 
 
         </script>
-  
-
-
-
-    </body>
-
-
-
-     
- 
-
-
-</header>
-
-</body>
-</html>
-
