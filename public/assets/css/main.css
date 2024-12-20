@@ -32,7 +32,7 @@
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
   --nav-hover-color: #1acc8d; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-background-color: #040677; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #1acc8d; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
@@ -150,7 +150,6 @@ h6 {
   --background-color: rgba(255, 255, 255, 0);
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;
   transition: all 0.5s;
@@ -175,6 +174,7 @@ h6 {
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-color);
 }
 /* Global Header on Scroll
 ------------------------------*/
@@ -558,11 +558,18 @@ nav ul li a.login-icon:hover i {
 .footer .footer-contact p {
   margin-bottom: 5px;
 }
+.footer .footer-newsletter{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 8px 50px 110px;
+  position: relative;
+  border-radius: 4px;
+}
 
 .footer .footer-newsletter .newsletter-form {
   margin-top: 30px;
   margin-bottom: 15px;
-  padding: 6px 8px;
+  padding: 50px 8px;
   position: relative;
   border-radius: 4px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
@@ -1655,7 +1662,35 @@ section,
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background: #ccc;
+  background: #0c0c38;
+}
+.gravity-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.gravity-bg .circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-50px);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
 .mainv{
 	width: 350px;
@@ -1675,7 +1710,7 @@ section,
 	height: 100%;
 }
 label{
-	color: #230a7d;
+	color: #8a8ace;
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
@@ -1703,7 +1738,7 @@ button{
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: #240cac;
+	background: #2b179e;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 30px;
@@ -1718,13 +1753,13 @@ button:hover{
 }
 .login{
 	height: 460px;
-	background: #eee;
+	background: #2c384eb8;
 	border-radius: 60% / 10%;
 	transform: translateY(-180px);
 	transition: .8s ease-in-out;
 }
 .login label{
-	color: #2424c9;
+	color: #8a8ace;
 	transform: scale(.6);
 }
 
@@ -1736,4 +1771,9 @@ button:hover{
 }
 #chk:checked ~ .signup label{
 	transform: scale(.6);
+}
+.footer-logo {
+  width: 5px; /* Ukuran logo */
+  height: auto; /* Menjaga rasio aspek logo */
+
 }

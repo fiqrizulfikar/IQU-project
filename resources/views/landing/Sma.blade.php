@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar dan Cards</title>
+    <title>IQU SMA</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -145,7 +145,7 @@
         .card a {
             display: inline-block;
             text-align: center;
-            margin: 10px auto 15px;
+            margin: 10px 20px 15px 70px;
             padding: 10px 20px;
             font-size: 14px;
             font-weight: 600;
@@ -214,8 +214,11 @@
             Sekolah Menengah Atas
         </h1>
         <ul>
-            <li><a href="/">Beranda</a></li>
-            <li><a href="/login">Login</a></li>
+            <li><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span></i></a>
+            <li><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span></i></a>
+            <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
+            <li><a href="/">About US</a></li>
+            <li><a href="/login" class="login-icon"><i class="fas fa-user"></i></a></li>  </li>
         </ul>
     </nav>
 

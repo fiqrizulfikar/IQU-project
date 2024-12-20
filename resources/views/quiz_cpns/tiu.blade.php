@@ -37,7 +37,8 @@
     
         <!-- Hasil Nilai -->
         <div id="result-section" style="display:none;">
-            <p id="result-text"></p>
+            <h2>Hasil Nilai</h2>
+            <p id="result-score"></p>
         </div>
         <div class="progress-bar-container">
             <div class="progress-bar" id="progress-bar"></div>
@@ -46,115 +47,89 @@
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-    function setupQuiz(quizId, totalSlides, timerMinutes, quizType) {
+        const timerElement = document.querySelector('#timer');
+        const slides = document.querySelectorAll('.quiz-slide');
+        const nextButtons = document.querySelectorAll('.next-slide');
+        const finishButton = document.querySelector('#finish-quiz');
+        const startOverButton = document.querySelector('#start-over-quiz');
+        const backToCategoryButton = document.querySelector('#back-to-category');
+        const resultSection = document.querySelector('#result-section');
+        const resultText = document.querySelector('#result-score');
+        const progressBar = document.querySelector('#progress-bar');
+        const timerMinutes = 20; // Set timer duration in minutes
         let currentSlide = 0;
         let score = 0;
         let userAnswers = [];
-        let incorrectAnswers = []; // Menyimpan soal yang salah
-        const slides = document.querySelectorAll(`#${quizId} .quiz-slide`);
-        const nextButtons = document.querySelectorAll(`#${quizId} .next-slide`);
-        const finishButton = document.querySelector(`#${quizId} #finish-quiz`);
-        const startOverButton = document.querySelector(`#${quizId} #start-over-quiz`);
-        const backToCategoryButton = document.querySelector(`#${quizId} #back-to-category`);
-        const resultSection = document.querySelector(`#${quizId} #result-section`);
-        const resultText = document.querySelector(`#${quizId} #result-text`);
-        const resultIncorrect = document.querySelector(`#${quizId} #incorrect-answers`);
-        const timerElement = document.querySelector(`#${quizId} #timer`);
-        const progressBar = document.querySelector(`#${quizId} #progress-bar`);
-        let timer = timerMinutes * 60; // Set timer sesuai menit yang diberikan
-    
-        // Timer
+        let timer = timerMinutes * 60;
+
+        // Timer function
         function updateTimer() {
             const minutes = Math.floor(timer / 60);
             const seconds = timer % 60;
             timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
             if (timer <= 0) {
+                clearInterval(timerInterval); // Stop timer when it reaches 0
                 alert("Waktu habis! Jawaban Anda akan disimpan.");
                 finishButton.click();
             } else {
                 timer--;
             }
         }
-        setInterval(updateTimer, 1000); // Update timer setiap detik
-    
-        // Progress Bar Update
+
+        let timerInterval = setInterval(updateTimer, 1000);
+
+        // Progress bar function
         function updateProgressBar(currentSlide, totalSlides) {
             const progress = (currentSlide / totalSlides) * 100;
             progressBar.style.width = progress + '%';
         }
-    
-        // Navigasi Slide
+
+        // Show the next slide
         function showSlide(index) {
-            if (index >= totalSlides) return;
-            slides[currentSlide].classList.remove("active");
+            if (index >= slides.length) return; // Don't show slide beyond the last one
+            slides[currentSlide].classList.remove('active');
             currentSlide = index;
-            slides[currentSlide].classList.add("active");
-            updateProgressBar(currentSlide + 1, totalSlides); // Update progress bar
-            if (currentSlide === totalSlides - 1) {
-                finishButton.style.display = 'block'; // Menampilkan tombol selesai pada slide terakhir
+            slides[currentSlide].classList.add('active');
+            updateProgressBar(currentSlide + 1, slides.length);
+
+            if (currentSlide === slides.length - 1) {
+                nextButtons[currentSlide].style.display = 'none'; // Hide the next button
+                finishButton.style.display = 'block'; // Show finish button
+                backToCategoryButton.style.display = 'block'; // Show back to category button
             }
         }
-    
+
+        // Handle next slide button click
         nextButtons.forEach((button, index) => {
             button.addEventListener("click", function () {
-                // Simpan jawaban sebelum melanjutkan ke soal berikutnya
-                const selectedAnswer = document.querySelector(`input[name="answer${index + 1}"]:checked`);
+                const selectedAnswer = document.querySelector(`input[name="answer{{ $soal->id }}"]:checked`);
                 if (selectedAnswer) {
                     userAnswers[index] = selectedAnswer.value;
                 }
-                showSlide(index + 1);
+                showSlide(index + 1); // Move to the next slide
             });
         });
-    
-        // Tombol Selesai
+
+        // Finish quiz
         finishButton.addEventListener("click", function () {
-            // Hitung nilai dan tampilkan soal yang salah
             userAnswers.forEach((answer, index) => {
                 const correctAnswer = slides[index].querySelector('.correct-answer').value;
                 if (answer === correctAnswer) {
                     score++;
-                } else {
-                    // Jika salah, tambahkan soal tersebut ke daftar soal yang salah
-                    const soalText = slides[index].querySelector('.question').textContent;
-                    incorrectAnswers.push({
-                        soal: soalText,
-                        jawaban: correctAnswer,
-                        nomor: index + 1 // Menyimpan nomor soal untuk urutan yang benar
-                    });
                 }
             });
 
-            // Urutkan soal yang salah berdasarkan nomor soal
-            incorrectAnswers.sort((a, b) => a.nomor - b.nomor);
-
-            resultText.textContent = `Kuis selesai! Nilai Anda adalah ${score} dari ${totalSlides}`;
-            resultSection.style.display = 'block'; // Tampilkan hasil nilai
-            finishButton.style.display = 'none'; // Sembunyikan tombol selesai
-            startOverButton.style.display = 'block'; // Tampilkan tombol mulai ulang
-            backToCategoryButton.style.display = 'block'; // Tampilkan tombol kembali ke kategori
-    
-            // Tampilkan soal yang salah
-            if (incorrectAnswers.length > 0) {
-                resultIncorrect.innerHTML = '<h3>Soal yang Salah:</h3>';
-                incorrectAnswers.forEach(answer => {
-                    resultIncorrect.innerHTML += `
-                        <div class="incorrect-question">
-                            <p><strong>Soal Nomor ${answer.nomor}:</strong> ${answer.soal}</p>
-                            <p><strong>Jawaban yang Benar:</strong> ${answer.jawaban}</p>
-                        </div>
-                    `;
-                });
-            } else {
-                resultIncorrect.innerHTML = '<p>Semua jawaban Anda benar! Selamat!</p>';
-            }
+            resultText.textContent = `Kuis selesai! Nilai Anda adalah ${score} dari ${slides.length}`;
+            resultSection.style.display = 'block';
+            finishButton.style.display = 'none';
+            startOverButton.style.display = 'block';
+            backToCategoryButton.style.display = 'none'; // Hide back to category button after finish
         });
-    
-        // Tombol Mulai Ulang
+
+        // Start over button
         startOverButton.addEventListener("click", function () {
-            // Reset nilai dan soal
             score = 0;
             userAnswers = [];
-            incorrectAnswers = [];
             currentSlide = 0;
             slides.forEach(slide => slide.classList.remove("active"));
             slides[0].classList.add("active");
@@ -162,30 +137,17 @@
             startOverButton.style.display = 'none';
             backToCategoryButton.style.display = 'none';
             resultSection.style.display = 'none';
-            resultIncorrect.innerHTML = '';
-            timer = timerMinutes * 60; // Reset timer
-            updateProgressBar(currentSlide, totalSlides); // Reset progress bar
+            resultText.innerHTML = '';
+            timer = timerMinutes * 60;
+            clearInterval(timerInterval); // Clear previous timer
+            timerInterval = setInterval(updateTimer, 1000); // Restart timer
+            updateProgressBar(currentSlide, slides.length);
         });
-    
-        // Tombol Kembali ke Halaman Pilih Tes
+
+        // Back to category button
         backToCategoryButton.addEventListener("click", function () {
-            window.location.href = "//cpns-quiz/categories"; // Ganti dengan URL halaman pilih tes yang sesuai
+            window.location.href = "/cpns-quiz/categories"; // Adjust the URL to your category page
         });
-    }
-    
-    // Setup untuk TIU (20 menit)
-    if (document.querySelector("#tiu")) {
-        setupQuiz('tiu', 4, 20, 'TIU'); // TIU punya 20 soal, 4 slide (5 soal per slide)
-    }
-    
-    // Setup untuk TWK (20 menit)
-    if (document.querySelector("#twk")) {
-        setupQuiz('twk', 4, 20, 'TWK'); // TWK punya 20 soal, 4 slide (5 soal per slide)
-    }
-    
-    // Setup untuk TKP (20 menit)
-    if (document.querySelector("#tkp")) {
-        setupQuiz('tkp', 4, 20, 'TKP'); // TKP punya 20 soal, 4 slide (5 soal per slide)
-    }
-});
-    </script>
+    });
+</script>
+</html>

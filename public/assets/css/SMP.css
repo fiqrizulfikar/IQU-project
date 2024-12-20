@@ -1,7 +1,7 @@
 /* Mengatur gaya umum untuk body */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #c3f1f1; /* Warna latar belakang cerah */
+    background-color: #ffcccb; /* Warna latar belakang cerah */
     margin: 0;
     padding: 20px;
     display: flex;
@@ -9,20 +9,20 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    background-image: radial-gradient(circle, #c3f1f1, #0989f3); /* Gradien lembut dan cerah */
+    background-image: radial-gradient(circle, #ffcccb, #ff66b2); /* Gradien lembut dan cerah */
     overflow: hidden;
     animation: backgroundAnimation 10s ease-in-out infinite; /* Animasi latar belakang */
-  }
-  
-  /* Animasi latar belakang yang berubah-ubah */
-  @keyframes backgroundAnimation {
+}
+
+/* Animasi latar belakang yang berubah-ubah */
+@keyframes backgroundAnimation {
     0% { background-color: #ffcccb; }
-    50% { background-color: #0052b7; }
+    50% { background-color: #ff80bf; }
     100% { background-color: #ffcccb; }
-  }
-  
-  /* Gaya untuk quiz container */
-  .quiz-container {
+}
+
+/* Gaya untuk quiz container */
+.quiz-container {
     background: #fff;
     padding: 30px;
     border-radius: 15px;
@@ -33,15 +33,11 @@ body {
     text-align: center;
     transform: scale(1);
     animation: fadeIn 1s ease-out;
-    border: 2px solid #49359b; /* Border cerah */
-    position: relative;
-   
+    border: 2px solid #ff80bf; /* Border cerah */
+}
 
-   
-  }
-  
-  /* Animasi fadeIn untuk transisi elemen */
-  @keyframes fadeIn {
+/* Animasi fadeIn untuk transisi elemen */
+@keyframes fadeIn {
     0% {
         opacity: 0;
         transform: translateY(20px);
@@ -50,10 +46,10 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-  }
-  
-  /* Gaya untuk judul */
-  h1 {
+}
+
+/* Gaya untuk judul */
+h1 {
     color: #333;
     font-size: 32px;
     margin-bottom: 20px;
@@ -61,37 +57,37 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Gaya untuk timer */
-  #timer {
+}
+
+/* Gaya untuk timer */
+#timer {
     font-size: 22px;
     color: #ff6347; /* Warna merah cerah */
     margin-bottom: 20px;
     font-weight: bold;
     text-transform: uppercase;
-  }
-  
-  /* Gaya untuk pilihan */
-  .option {
+}
+
+/* Gaya untuk pilihan */
+.option {
     margin: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease-in-out;
     position: relative;
-  }
-  
-  /* Animasi hover pada pilihan */
-  .option:hover {
+}
+
+/* Animasi hover pada pilihan */
+.option:hover {
     transform: scale(1.1);
     background-color: #ffe4e1;
     border-radius: 10px;
     padding: 10px;
-  }
-  
-  /* Efek animasi partikel pada pilihan */
-  .option::after {
+}
+
+/* Efek animasi partikel pada pilihan */
+.option::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -103,29 +99,29 @@ body {
     animation: bubble 1s infinite;
     opacity: 0.5;
     pointer-events: none;
-  }
-  
-  @keyframes bubble {
+}
+
+@keyframes bubble {
     0% { transform: scale(0) translate(-50%, -50%); opacity: 1; }
     50% { transform: scale(1) translate(-50%, -50%); opacity: 0.3; }
     100% { transform: scale(0) translate(-50%, -50%); opacity: 0; }
-  }
-  
-  /* Gaya untuk label pilihan */
-  .option label {
+}
+
+/* Gaya untuk label pilihan */
+.option label {
     margin-left: 10px;
     font-size: 20px;
     color: #333;
     transition: color 0.3s ease;
-  }
-  
-  /* Efek hover pada label */
-  .option:hover label {
+}
+
+/* Efek hover pada label */
+.option:hover label {
     color: #ff80bf;
-  }
-  
-  /* Tombol */
-  button {
+}
+
+/* Tombol */
+button {
     padding: 14px 25px;
     background-color: #4caf50;
     color: white;
@@ -135,27 +131,26 @@ body {
     font-size: 22px;
     transition: all 0.3s;
     margin: 10px;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #45a049;
     transform: scale(1.1);
-  }
-  
-  /* Tombol Start yang berbeda */
-  #startButton {
+}
+
+/* Tombol Start yang berbeda */
+#startButton {
     background-color: #ffcc00;
     color: #333;
     font-weight: bold;
-    border-radius: 15px;
-  }
-  
-  #startButton:hover {
+}
+
+#startButton:hover {
     background-color: #ffb400;
-  }
-  
-  /* Gaya untuk hasil */
-  .result {
+}
+
+/* Gaya untuk hasil */
+.result {
     margin-top: 20px;
     font-size: 24px;
     color: #333;
@@ -163,21 +158,21 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     animation: fadeIn 1s ease-out;
-  }
-  
-  /* Tombol Disabled */
-  button[disabled] {
+}
+
+/* Tombol Disabled */
+button[disabled] {
     background-color: #ddd;
     color: #999;
     cursor: not-allowed;
-  }
-  
-  /* Menambahkan efek loading pada timer */
-  #timer {
+}
+
+/* Menambahkan efek loading pada timer */
+#timer {
     animation: pulse 1.5s infinite;
-  }
-  
-  @keyframes pulse {
+}
+
+@keyframes pulse {
     0% {
         color: #e63946;
     }
@@ -187,10 +182,10 @@ body {
     100% {
         color: #e63946;
     }
-  }
-  
-  /* Tombol kecil animasi untuk 'Mulai Lagi' dan 'Kembali' */
-  #restartButton, #homeButton {
+}
+
+/* Tombol kecil animasi untuk 'Mulai Lagi' dan 'Kembali' */
+#restartButton, #homeButton {
     padding: 12px 22px;
     background-color: #ff80bf;
     color: white;
@@ -199,15 +194,9 @@ body {
     font-size: 18px;
     transition: all 0.3s;
     margin: 10px;
-  }
-  
-  #restartButton:hover, #homeButton:hover {
+}
+
+#restartButton:hover, #homeButton:hover {
     background-color: #ff66b2;
     transform: scale(1.1);
-  }
-  
-
-
-
-  /*NAVBAR
-  
+}

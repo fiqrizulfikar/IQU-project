@@ -1,5 +1,28 @@
-
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+<<<<<<< HEAD
+ 
+  <title>Landing Page Full Screen</title>
+   <!-- Favicons -->
+   <link href="assets/img/www.png" rel="icon">
+   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+ 
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com" rel="preconnect">
+   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+ 
+   <!-- Vendor CSS Files -->
+   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+   <style>
     :root {
       --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
       --heading-font: "Raleway",  sans-serif;
@@ -41,121 +64,6 @@
       --contrast-color: #ffffff;
     }
     
-    /* Smooth scroll */
-    :root {
-      scroll-behavior: smooth;
-    }
-    
-    /*--------------------------------------------------------------
-    # General Styling & Shared Classes
-    --------------------------------------------------------------*/
-
-    a {
-      color: var(--accent-color);
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    
-    a:hover {
-      color: color-mix(in srgb, var(--accent-color), transparent 25%);
-      text-decoration: none;
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: var(--heading-color);
-      font-family: var(--heading-font);
-    }
-    body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('assets/img/gamesbkg.jpg');
-    background-size: cover; /* Mengisi seluruh latar belakang */
-    background-position: center; /* Memusatkan gambar latar */
-    background-attachment: fixed; /* Membuat gambar tetap di tempat saat di-scroll */
-    color: white;
-}
-
-    main {
-        padding-top: 200px; /* Atur sesuai kebutuhan */
-    }
-    
-    .container {
-        text-align: center;
-    }
-    
-    .options {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    
-    .option {
-        margin: 20px;
-        text-align: center;
-    }
-    
-    .option img {
-        width: 300px; /* Atur ukuran gambar sesuai kebutuhan */
-        height: auto;
-    }
-    .main-title {
-        font-family: 'Raleway', sans-serif; /* Ganti dengan font yang diinginkan */
-        font-size: 3rem; /* Ukuran font besar */
-        color: #ffcc00; /* Warna cerah untuk judul utama */
-        text-align: center; /* Rata tengah */
-        margin: 20px 0; /* Margin atas dan bawah */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan teks */
-        transition: transform 0.3s, color 0.3s; /* Transisi untuk efek hover */
-    }
-    
-    .main-title:hover {
-        transform: scale(1.05); /* Efek membesar saat hover */
-        color: #ff9900; /* Warna saat hover */
-    }
-    
-    .sub-title {
-        font-family: 'Poppins', sans-serif; /* Ganti dengan font yang diinginkan */
-        font-size: 2rem; /* Ukuran font sedang */
-        color: #ff6600; /* Warna cerah untuk subjudul */
-        text-align: center; /* Rata tengah */
-        margin: 10px 0; /* Margin atas dan bawah */
-        font-weight: 600; /* Bold */
-        transition: color 0.3s; /* Transisi untuk efek hover */
-    }
-    
-    .sub-title:hover {
-        color: #ff3300; /* Warna saat hover */
-    }
-    .read-more {
-        display: block;
-        margin-top: 10px; /* Jarak antara gambar dan teks */
-        text-decoration: none;
-        color: #000; /* Warna teks default */
-        transition: color 0.3s, background-color 0.3s; /* Transisi warna */
-        padding: 10px 15px; /* Tambahkan padding untuk kotak */
-        border: 2px solid #2f00ff; /* Tambahkan border */
-        border-radius: 5px; /* Buat sudut kotak membulat */
-        background-color: transparent; /* Warna latar belakang default */
-    }
-    
-    .read-more:hover {
-        color: #fff; /* Warna teks saat hover */
-        background-color: #2f00ff; /* Warna latar belakang saat hover */
-    }
-    
-    .read-more:active {
-        background-color: #1a00cc; /* Warna latar belakang saat diklik */
-    }
-    
-    .read-more span {
-        font-weight: bold; /* Membuat teks lebih tebal */
-    }
     .header {
       --background-color: rgba(255, 255, 255, 0);
       --default-color: #ffffff;
@@ -243,7 +151,7 @@
           height: 2px;
           bottom: -6px;
           left: 0;
-          background-color: var(--nav-hover-color);
+          background-color: #ffffff
           visibility: hidden;
           width: 0px;
           transition: all 0.3s ease-in-out 0s;
@@ -265,7 +173,7 @@
         .navmenu .dropdown ul {
           margin: 0;
           padding: 10px 0;
-          background: var(--nav-dropdown-background-color);
+          background: #ffffff;
           display: block;
           position: absolute;
           visibility: hidden;
@@ -287,6 +195,7 @@
           font-size: 15px;
           text-transform: none;
           color: var(--nav-dropdown-color);
+          color: #1acc8d;
         }
       
         .navmenu .dropdown ul a i {
@@ -296,7 +205,7 @@
         .navmenu .dropdown ul a:hover,
         .navmenu .dropdown ul .active:hover,
         .navmenu .dropdown ul li:hover>a {
-          color: var(--nav-dropdown-hover-color);
+          color: white;
         }
       
         .navmenu .dropdown:hover>ul {
@@ -405,7 +314,7 @@
           z-index: 99;
           padding: 10px 0;
           margin: 10px 20px;
-          background-color: var(--nav-dropdown-background-color);
+          background-color: white
           transition: all 0.5s ease-in-out;
         }
       
@@ -444,407 +353,523 @@
           display: block;
         }
       }
-  .footer {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    font-size: 14px;
+      :root {
+        --default-font: "Roboto", system-ui, sans-serif;
+        --nav-font: "Poppins", sans-serif;
+        --nav-color: #ffffff;
+        --nav-hover-color: #1a73e8;
+        --nav-background-color: #0a2a4e; /* Warna biru tua */
+        --nav-dropdown-background-color: #0e3b5f;
+        --nav-dropdown-hover-color: #1a90ff;
+    }
+    
+    .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-background-color);
+    padding: 15px 20px;
+    color: var(--nav-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 20px;
+    background-color: #ff5722; /* Warna kotak */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: -1; /* Pastikan kotak berada di belakang elemen lain */
+}
+
+.navmenu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px; /* Jarak antar item */
+}
+
+.navmenu li {
     position: relative;
-    margin-top: 180px;
+}
+
+.navmenu a,
+.navmenu a:focus {
+    color: var(--nav-color);
+    font-size: 15px;
+    padding: 10px 20px; /* Padding yang lebih baik */
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navmenu a:hover {
+    background-color: var(--nav-hover-color);
+    color: var(--contrast-color);
+    border-radius: 4px;
+}
+
+.navmenu .dropdown ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: white;
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.navmenu .dropdown:hover ul {
+    display: block; /* Tampilkan dropdown saat hover */
+}
+
+.navmenu .dropdown ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: #1acc8d; /* Warna teks dropdown */
+}
+
+.navmenu .dropdown ul li a:hover {
+    background-color: #1acc8d; /* Warna latar belakang saat hover */
+    color: white; /* Warna teks saat hover */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navmenu {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navmenu li {
+        width: 100%;
+    }
+    .navmenu a {
+        width: 100%;
+        text-align: left;
+    }
   }
-  
-  .footer .footer-top {
-    padding-top: 50px;
-    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  }
-  
-  .footer .footer-about .logo {
-    line-height: 1;
-    margin-bottom: 25px;
-  }
-  
-  .footer .footer-about .logo img {
-    max-height: 40px;
-    margin-right: 6px;
-  }
-  
-  .footer .footer-about .logo span {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: var(--heading-font);
-    color: var(--heading-color);
-  }
-  
-  .footer .footer-about p {
-    font-size: 14px;
-    font-family: var(--heading-font);
-    text-align: left;
-  }
-  
-  .footer .social-links a {
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    .landing {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #fffb10 0%, #1c1b07 100%);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 0 0 20px 20px;
+    }
+    .container {
+    max-width: 1200px; /* Atur lebar maksimum */
+    margin: 0 auto; /* Pusatkan konten */
+    padding: 20px; /* Tambahkan padding */
+}
+
+    .landing h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .landing p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .landing .btn-primary {
+      display: inline-block;
+      background: #f9c80e;
+      color: #333;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .landing .btn-primary:hover {
+      background: #f5a623;
+      transform: scale(1.1);
+    }
+
+    .container1 {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 40px;
+      padding: 10px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+   
+    .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 230px;
+  height: 330px;
+  background-color: var(--white, #ffffff);
+  border-radius: 10px;
+  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08), -4px -4px 12px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-image-container {
+    width: 100%;
+    height: 280px; /* Tinggi kontainer */
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari kontainer */
+    background-color: rgb(254, 254, 255);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-    font-size: 16px;
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    margin-right: 10px;
-    transition: 0.3s;
-  }
-  
-  .footer .social-links a:hover {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-  }
-  
-  .footer h4 {
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-    padding-bottom: 12px;
-  }
-  
-  .footer .footer-links {
-    margin-bottom: 30px;
-  }
-  
-  .footer .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer .footer-links ul i {
-    padding-right: 2px;
-    font-size: 18px;
-    line-height: 0;
-    
-  }
-  
-  .footer .footer-links ul li {
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
+}
 
-  }
-  
-  .footer .footer-links ul li:first-child {
-    padding-top: 0;
-  }
-  
-  .footer .footer-links ul a {
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    display: inline-block;
-    line-height: 1;
-  }
-  
-  .footer .footer-links ul a:hover {
-    color: var(--accent-color);
-  }
-  
-  .footer .footer-contact p {
-    margin-bottom: 5px;
-  }
-  
-  .footer .footer-newsletter .newsletter-form {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    padding: 6px 8px;
-    position: relative;
-    border-radius: 4px;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-    display: flex;
-    background-color: var(--background-color);
-    transition: 0.3s;
-  }
-  
-  .footer .footer-newsletter .newsletter-form:focus-within {
-    border-color: var(--accent-color);
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=email] {
-    border: 0;
-    padding: 4px;
-    width: 100%;
-    background-color: var(--background-color);
-    color: var(--default-color);
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
-    outline: none;
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=submit] {
-    border: 0;
-    font-size: 16px;
-    padding: 0 20px;
-    margin: -7px -8px -7px 0;
-    background: var(--accent-color);
-    color: var(--contrast-color);
-    transition: 0.3s;
-    border-radius: 0 4px 4px 0;
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-    background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  }
-  
-  .footer .copyright {
-    padding: 25px 0;
-    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  }
-  
-  .footer .copyright p {
-    margin-bottom: 0;
-  }
-  
-  .footer .credits {
-    margin-top: 6px;
-    font-size: 13px;
-  }
+.card-img {
+    width: 100%; /* Membuat gambar memenuhi lebar kontainer */
+    height: 200%; /* Mempertahankan rasio aspek gambar */
+    max-height: 100%; /* Membatasi tinggi gambar agar tidak melebihi kontainer */
+    object-fit: cover; /* Memastikan gambar mengisi kontainer dengan baik */
+    transition: transform 0.3s; /* Menambahkan efek transisi saat gambar diperbesar */
+}
 
-  /*--------------------------------------------------------------
-  # Scroll Top Button
-  --------------------------------------------------------------*/
-  .scroll-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 99999;
-    background-color: var(--accent-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    transition: all 0.4s;
-  }
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Menjaga proporsi gambar */
+  border-radius: 10px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 17px;
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  color: #1797b8;
+  text-align: center;
+}
+
+.card-des {
+  margin: 0 0 15px;
+  font-size: 13px;
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+  color: #1797b8;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.btn {
+  color: purple;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid purple;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+  text-align: center;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: purple;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.btn:hover::before {
+  width: 160%;
+}
+
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<!-- Navbar -->
+<body>
+  <head>
+  <body class="index-page"></body>
   
-  .scroll-top i {
-    font-size: 24px;
-    color: var(--contrast-color);
-    line-height: 0;
-  }
-  
-  .scroll-top:hover {
-    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-    color: var(--contrast-color);
-  }
-  
-  .scroll-top.active {
-    visibility: visible;
-    opacity: 1;
-  }
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <!-- Logo Section -->
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="logoiqu.com">
+        <h1 class="sitename">i</h1>
+        <h1 class="sitename">-QUIZ</h1>
+      </a>
       
-    </style>
-    <head>
-            <meta charset="utf-8">
-            <meta content="width=device-width, initial-scale=1.0" name="viewport">
-            <title>IQU.com</title>
-            <meta name="description" content="">
-            <meta name="keywords" content="">
-          
-            <!-- Favicons -->
-            <link href="assets/img/www.png" rel="icon">
-            <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-          
-            <!-- Fonts -->
-            <link href="https://fonts.googleapis.com" rel="preconnect">
-            <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-          
-            <!-- Vendor CSS Files -->
-            <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-            <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-            <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-            <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-            <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-          
-            <!-- Main CSS File -->
-          
-            <!-- =======================================================
-            * Template Name: Bootslander
-            * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
-            * Updated: Aug 07 2024 with Bootstrap v5.3.3
-            * Author: BootstrapMade.com
-            * License: https://bootstrapmade.com/license/
-            ======================================================== -->
-          </head>
-    <head>
-      <body class="index-page">
-    
-        <header id="header" class="header d-flex align-items-center fixed-top">
-          <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      
-            <a href="index.html" class="logo d-flex align-items-center">
-              <img src="assets/img/logo.png" alt="logoiqu.com">
-              <h1 class="sitename">i</i></h1>
-              <h1 class="sitename">-Learning</h1>
-            </a>
-             
-       <nav id="navmenu" class="navmenu">
-       <ul>
-        <li><a href="#hero" class="active">Beranda</a></li>
-        <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li class="dropdown"><a href="{{ url('/SekolahDasar') }}"><span>Sekolah Dasar</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">IPA</a></li>
-                <li><a href="#">IPS</a></li>
-                <li><a href="#">MTK</a></li>
-                <li><a href="#">PKN</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <!-- Navigation Menu -->
+      <nav id="navmenu" class="navmenu d-flex align-items-center">
+        <ul class="d-flex mb-0">
+          <li class="dropdown">
+            <a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">IPA</a></li>
-              <li><a href="#">IPS</a></li>
-              <li><a href="#">PKN</a></li>
-              <li><a href="#">Bahasa Inggris</a></li>
+              <li><a href="{{ url('/ekonomi') }}">Ekonomi</a></li>
+              <li><a href="{{ url('/politik') }}">Politik</a></li>
+              <li><a href="/teknologi" class="active">Teknologi</a></li>
+              <li><a href="{{ url('/umum') }}">Umum</a></li>
             </ul>
-            <li class="dropdown"><a href="{{ url('/Sma') }}"><span>Sekolah Menengah Atas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          </li>
+          <li class="dropdown">
+            <a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">IPA</a></li>
-              <li><a href="#">IPS</a></li>
-              <li><a href="#">PKN</a></li>
-              <li><a href="#">TIK</a></li>
+              <li><a href="{{ url('/ekonomi') }}">Ekonomi</a></li>
+              <li><a href="{{ url('/politik') }}">Politik</a></li>
             </ul>
-          </ul>
-        <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Umum </a></li>
-                <li><a href="#">Teknologi</a></li>
-                <li><a href="#">Ekonomi</a></li>
-                <li><a href="#">Politik</a></li>
-              </ul>
-        </li>
-          <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Ice Breaking</a></li>
-            <li><a href="#">Tes IQ</a></li>
-          </ul>
+          </li>
           <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
-          <li><a href={{ url('/aboutus') }}>About US</a></li>
-          <li><a href={{ url('/Login') }}>Login</a></li>
-        </li>
+          <li><a href="/">About Us</a></li>
+        </ul>
+        <!-- Login Link -->
+        <a href="/login" class="login-link">
+          <img src="assets/img/login.png" alt="Login Icon" class="login-icon">
+        </a>
+      </nav>
+      
+      <!-- Mobile Toggle Icon -->
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-      </div>
-    </header>
-    <body>
-        <main>
-            <div class="container">
-              <h1 class="main-title">MARI LATIH PENGETAHUAN KALIAN DENGAN GAMES IQ</h1>
-              <h2 class="sub-title">GAMES IQ MANA YANG KALIAN SUKAI:</h2>
-                <div class="options">
-                    <div class="option">
-                        <img src="assets/img/Icebreaking.png" alt="Gambar IceBreaking"> 
-                        <a href="{{ url('/icebreaking') }}" class="read-more"><span>Ice Breaking</span><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                    <div class="option">
-                        <img src="assets/img/TesIQ.jpg" alt="Globe">
-                        <a href="{{ url('/tesiq') }}"class="read-more"><span>tes IQ</span><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                    
-                </div>
-            </div>
-        </main>
-    </body>
+    </div>
+  </header>
 
+  <link rel="stylesheet" href="assets/css/games.css">
+  
+  <title>Games</title>
+</head>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-        <footer id="footer" class="footer dark-background">
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-          <div class="container footer-top">
-            <div class="row gy-4">
-              <div class="col-lg-4 col-md-6 footer-about">
-                <a href="index.html" class="logo d-flex align-items-center">
-                  <span class="sitename">IQU.com</span>
-                </a>
-                <div class="footer-contact pt-3">
-                  <p>Semarang</p>
-                  <p>Tembalang,Amposari</p>
-                  <p class="mt-3"><strong>Phone:</strong> <span>085601742751</span></p>
-                  <p><strong>Email:</strong> <span>iqu123@gmail.com</span></p>
-                </div>
-                <div class="social-links d-flex mt-4">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-      
-              <div class="col-lg-2 col-md-3 footer-links">
-                <h4>Tautan Berguna</h4>
-                <ul>
-                  <li><a href="#">Beranda</a></li>
-                  <li><a href="#">Pendidikan</a></li>
-                  <li><a href="#">Pengetahuan</a></li>
-                  <li><a href="#">Games</a></li>
-                  <li><a href="#">Media Sosial</a></li>
-                  <li><a href="#">About As</a></li>
-                </ul>
-              </div>
-      
-              <div class="col-lg-2 col-md-3 footer-links">
-                <h4>Layanan Kami</h4>
-                <ul>
-                  <li><a href="#">Pembelajaran Interaktif</a></li>
-                  <li><a href="#">Kuis & Tes Pemahaman</a></li>
-                  <li><a href="#">Bimbingan Belajar Online</a></li>
-                  <li><a href="#">Belajar Terstruktur</a></li>
-                  <li><a href="#">Fitur Ice Breaking & Tes IQ</a></li>
-                </ul>
-              </div>
-      
-              <div class="col-lg-4 col-md-12 footer-newsletter">
-                <h4></h4>
-                <p>Selamat menikmati</p>
-                <form action="forms/newsletter.php" method="post" class="php-email-form">
-                  <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-                </form>
-              </div>
-      
-            </div>
-          </div>
-      
-          <div class="container copyright text-center mt-4">
-            <link href="assets/img/www.png" rel="icon">
-            <p> <span></span> <strong class="px-1 sitename">IQU.com</strong> <span></span></p>
-            <div class="credits">
-              <!-- All the links in the footer should remain intact. -->
-              <!-- You can delete the links only if you've purchased the pro version. -->
-              <!-- Licensing information: https://bootstrapmade.com/license/ -->
-              <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-              
-            </div>
-          </div>
-      
-        </footer>
-      
-        <!-- Scroll Top -->
-        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-      
-        <!-- Preloader -->
-        <div id="preloader"></div>
-      
-        <!-- Vendor JS Files -->
-        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/vendor/php-email-form/validate.js"></script>
-        <script src="assets/vendor/aos/aos.js"></script>
-        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-      
-        <!-- Main JS File -->
-        <script src="assets/js/main.js"></script>
-      
-        
-      
+<!-- Main CSS File -->
+
+<!-- =======================================================
+* Template Name: Bootslander
+* Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+* Updated: Aug 07 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+======================================================== -->
+</head>
+<head>
+<body class="index-page">
+
+<header id="header" class="header d-flex align-items-center fixed-top">
+<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+<a href="index.html" class="logo d-flex align-items-center">
+  <img src="assets/img/logo.png" alt="logoiqu.com">
+  <h1 class="sitename">i-QUIZ</i></h1>
+  
+</a>     
     
+<nav id="navmenu" class="navmenu">
+  <ul>
+    <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li>
+          <a href="{{ url('/sekolahdasar') }}"><span>Sekolah Dasar</span> </i></a>    
+        </li>
+        <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
+        <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
+        <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
+        </li>
+      </ul>
+      <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <ul>
+          <li>
+            <a href="{{ url('/ekonomi') }}"><span>Ekonomi</span> </i></a>    
+          </li>
+          <li><a href="{{ url('/politik') }}"><span>Politik</span></a></li>
+          <li><a href="/teknologi" class="active"><span>Teknologi</span></a></li>
+          <li><a href="{{ url('/umum') }}"><span>Umum</span></i></a>
+          </li>
+        </ul>
+      <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
+      <li><a href="/">About US</a></li>
+      <a href="/login" class="login-link">
+        <img src="assets/img/login.png" alt="Login Icon" class="login-icon">
+    </a>
+    </li>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  </nav>
+</div>
+</header>
+<body>
+  <div class="fade-in"> 
+  <div class="container">
+    <div class="cards-container">
+      <div class="card">
+        <div class="info_card">
+          <span>ICE</span>
+          <h2>BREAKING</h2>
+          <img src="assets/img/TES IQ 1.png" alt="Icebreaking">
+        </div>
+        <button class="next-btn">Mulai</button>
+      </div>
+      <div class="card">
+        <div class="info_card">
+          <span>TES</span>
+          <h2>IQ</h2>
+          <img src="assets/img/breaking.png" alt="TesIQ">
+        </div>
+        <button class="next-btn">
+        <a href="{{ url('/tesiq') }}"> Mulai</a></button>
+        
+        
+      </div>
+    </div>
+  </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const fadeInElements = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Hentikan observasi setelah elemen muncul
+        }
+      });
+    },
+    {
+      threshold: 0.1, // Elemen akan terlihat saat 10% bagian dari elemen muncul
+    }
+  );
+
+  fadeInElements.forEach((el) => observer.observe(el));
+});
+
+  </script>
+</body>
+</head>
+</body>
+  
+  <!-- Hero Section -->
+  <header class="landing">
+    <div class="countainer">
+      <h1>Selamat Datang di <span>i-QUIZ</span></h1>
+        <p>
+      Temukan pengalaman belajar interaktif dan seru dengan i-QUIZ. Cobalah tes IQ, media pembelajaran, dan games menarik untuk semua tingkat pendidikan.
+        </p>
+        <a href="#features" class="btn-primary">Jelajahi Sekarang</a>
+    </div>
+  </header>
+
+  <!-- Content Section -->
+  <div class="container1">
+    <div class="card">
+      <div class="card-image-container">
+        <img class="card-img" src="assets/img/TES IQ.png" alt="Tes IQ">
+        
+      </div>
+      
+      <p> TES IQ</p>
+      <p class="card-des">
+        AYO COBA PENGETAHUAN IQ
+      </p>
+       <a href="/tesiq" class="btn">Mulai</a>
+    </div>
+
+    
+    
+<div class="card">
+  <div class="card-image-container">
+    <img class="card-img" src="assets/img/breaking.png" alt="icebreaking">
+  </div>
+  <p> ICE BREAKING</p>
+  <p class="card-des">
+   AYO LAKUKAN GAMES
+  </p>
+  <button class="btn">Mulai</button>
+</div>
+
+
+  </div>
+</body>
+</html>

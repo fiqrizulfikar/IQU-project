@@ -10,18 +10,16 @@ use App\Http\Controllers\LandingSMAcontroller;
 use App\Http\Controllers\Quizcontroller;
 use App\Http\Controllers\QuizCPNScontroller;
 use App\Http\Controllers\AuthController;
-
+use App\Http\Controllers\LandingGamesControllers;
+use App\Http\Controllers\PinController;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', [LandingControllers::class, 'index']);
+Route::get('/coba', [App\Http\Controllers\LandingControllers::class, 'coba']);
 
 Route::get('/Smp', [App\Http\Controllers\LandingControllers::class, 'Smp']);
-Route::get('/games', [App\Http\Controllers\LandingControllers::class, 'games']);
-Route::get('/mediasosial', [App\Http\Controllers\LandingControllers::class, 'mediasosial']);
+Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 Route::get('/aboutus', [App\Http\Controllers\LandingControllers::class, 'aboutus']);
-Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
-Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
-
-
 
 Route::get('/Smp', [LandingSMPcontroller::class, 'index']);
 Route::get('/smpips', [LandingSMPcontroller::class, 'showQuizSMPIPS'])->name('IPS.show');
@@ -30,11 +28,14 @@ Route::get('/smpmtk', [LandingSMPcontroller::class, 'showQuizSMPMTK'])->name('MT
 Route::get('/smppkn', [LandingSMPcontroller::class, 'showQuizSMPPKN'])->name('PKN.show');
 Route::get('/smpenglis', [LandingSMPcontroller::class, 'showQuizSMPENGLIS'])->name('ENGLIS.show');
 
-Route::get('/sekolahdasar', [LandingSDcontrollers::class, 'index']);
+Route::get('/sd', [LandingSDcontrollers::class, 'index']);
 Route::get('/IPAsd', [LandingSDcontrollers::class, 'showQuizSDIPA'])->name('IPA.show');
-Route::get('/MTKsd', [LandingSDcontrollers::class, 'MTKsd']);
-Route::get('/IPSsd', [LandingSDcontrollers::class, 'IPSsd']);
-Route::get('/PKNsd', [LandingSDcontrollers::class, 'PKNsd']);
+Route::get('/MTKsd', [LandingSDcontrollers::class, 'showQuizSDMTK'])->name('MTK.show');
+Route::get('/IPSsd', [LandingSDcontrollers::class, 'showQuizSDIPS'])->name('IPS.show');
+Route::get('/PKNsd',  [LandingSDcontrollers::class, 'showQuizSDPKN'])->name('PKN.show');
+
+Route::get('/games',  [LandingGamesControllers::class, 'index']);
+Route::get('/tesiq',  [LandingGamesControllers::class, 'showQuiztesiq'])->name('tesiq.show');
 
 
 
@@ -50,23 +51,29 @@ Route::get('/smaips', [LandingSMAcontroller::class, 'showQuizSMAIPS'])->name('IP
 Route::get('/smapkn', [LandingSMAcontroller::class, 'showQuizSMAPKN'])->name('PKN.show');
 Route::get('/smatik', [LandingSMAcontroller::class, 'showQuizSMATIK'])->name('TIK.show');
 
-Route::get('/admin/questions', [QuizController::class, 'index'])->name('admin.questions.index');
-
+// Route untuk halaman index admin
+Route::get('/admin/questions', [QuizController::class, 'index'])->name('admin.index');
 // Route untuk halaman tambah pertanyaan
 Route::get('/admin/questions/create', [QuizController::class, 'create'])->name('admin.questions.create');
 Route::post('/admin/questions/store', [QuizController::class, 'store'])->name('admin.questions.store');
-
 // Route untuk edit pertanyaan
-Route::get('/admin/questions/{table}/{id}/edit', [QuizController::class, 'edit'])->name('admin.questions.edit');
-Route::put('/admin/questions/{table}/{id}', [QuizController::class, 'update'])->name('admin.questions.update');
+Route::get('/admin/questions/{table}/{id}/edit', [QuizController::class, 'edit'])->name('admin.edit');
+Route::put('/admin/update/{table}/{id}', [QuizController::class, 'update'])->name('admin.update');
 
 // Route untuk hapus pertanyaan
-Route::delete('/admin/questions/{table}/{id}', [QuizController::class, 'destroy'])->name('admin.questions.destroy');
+Route::delete('/admin/questions/{table}/{id}', [QuizController::class, 'destroy'])->name('admin.destroy');
+
 
 //login
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
+
+Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.form');
+Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
+Route::get('/us', [ContactController::class, 'showUs'])->name('emails.us');
+
 
 Route::post('/login', [AuthController::class, 'login'])->name('login.post'); 
 Route::post('/register', [AuthController::class, 'register'])->name('register.post'); 
@@ -81,3 +88,4 @@ Route::get('/cpns-quiz/tkp', [QuizCPNSController::class, 'showTKP'])->name('cpns
 Route::get('/loginz', function () {
     return view('landing.loginz');
 });
+

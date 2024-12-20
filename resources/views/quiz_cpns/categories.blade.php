@@ -1,5 +1,6 @@
 
 <style>
+/* Global Styles */
 body {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@ body {
     padding: 20px;
 }
 
+/* Category Section */
 .category-container {
     text-align: center;
     padding: 20px;
@@ -53,6 +55,7 @@ body {
     background-color: #2980b9;
 }
 
+/* Rules Section */
 .rules-container {
     background: #f9f9f9;
     padding: 20px;
@@ -81,7 +84,77 @@ body {
     margin-bottom: 10px;
 }
 
-/* Responsif */
+/* Navbar */
+.navbar {
+    background-color: #002776;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Responsif untuk layar kecil */
+}
+
+.navbar h1 {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar h1 img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Navbar Links */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Agar link tetap rapi di layar kecil */
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    border-bottom: 2px solid #00ccff;
+}
+
+/* Dropdown */
+.navbar ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0033a0;
+    border-radius: 5px;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.navbar ul li .dropdown a {
+    padding: 10px 15px;
+    color: white;
+}
+
+.navbar ul li:hover .dropdown {
+    display: block;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .rules-container {
         width: 90%;
@@ -91,84 +164,38 @@ body {
         padding: 10px 20px;
         font-size: 1rem;
     }
-}
-    /* Navbar */
-    .navbar {
-        background-color: #002776;
-        color: white;
-        padding: 10px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 
     .navbar h1 {
-        font-size: 24px;
-        color: white;
-        margin: 0;
-        display: flex;
-        align-items: center;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-container h2 {
+        font-size: 1.5rem;
     }
 
-    .navbar h1 img {
-        height: 40px;
-        margin-right: 10px;
+    .categories a {
+        padding: 8px 15px;
+        font-size: 0.9rem;
     }
 
-    /* Navbar Links */
-    .navbar ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
+    .rules-container h3 {
+        font-size: 1.2rem;
     }
 
-    .navbar ul li {
-        position: relative;
+    .rules-container ul li {
+        font-size: 0.9rem;
     }
+}
 
-    .navbar ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 16px;
-        padding: 8px 12px;
-        display: block;
-    }
-
-    .navbar ul li a:hover {
-        border-bottom: 2px solid #00ccff;
-    }
-
-    /* Dropdown */
-    .navbar ul li .dropdown {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #0033a0;
-        border-radius: 5px;
-        min-width: 150px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-    }
-
-    .navbar ul li .dropdown a {
-        padding: 10px 15px;
-        color: white;
-    }
-
-    .navbar ul li:hover .dropdown {
-        display: block;
-    }
-
-    /* Responsif Navbar */
-    @media (max-width: 768px) {
-        .navbar ul {
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-    }
-/* Efek Transisi untuk Tombol */
+/* Button Effects */
 .btn {
     position: relative;
     display: inline-block;
@@ -186,7 +213,7 @@ body {
     opacity: 0.8;
 }
 
-/* Efek Fade-in untuk Halaman */
+/* Fade-in Effect */
 .fade-in {
     animation: fadeIn 1s ease-out;
 }
@@ -204,11 +231,10 @@ body {
 <head>
     <nav class="navbar">
         <h1>
-            <img src="assets/img/logo.png" alt="Logo">
+            <img src="assets/img/logo.png" alt="logoiqu.com">
             Tes CPNS
         </h1>
         <ul>
-            <li><a href="/">Beranda</a></li>
             <li>
                 <a href="/pendidikan">Pendidikan</a>
                 
@@ -222,11 +248,11 @@ body {
                
             </li>
             <li>
-                <a href="/mediasosial">Media Sosial</a>
+                <a href="/contact">Media Sosial</a>
                
                 </div>
             </li>
-            <li><a href="/aboutus">About US</a></li>
+            <li><a href="/">About US</a></li>
         </ul>
     </nav>
 <div class="category-container">

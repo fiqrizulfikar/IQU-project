@@ -26,101 +26,45 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <style>
-  :root {
-    --default-font: "Roboto", system-ui, sans-serif;
-    --nav-font: "Poppins", sans-serif;
-    --nav-color: #ffffff;
-    --nav-hover-color: #1a73e8;
-    --nav-background-color: #0a2a4e; /* Warna biru tua */
-    --nav-dropdown-background-color: #0e3b5f;
-    --nav-dropdown-hover-color: #1a90ff;
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--nav-background-color);
-    padding: 15px 20px;
-    color: var(--nav-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #040677; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #1acc8d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
-.navbar a {
-    color: var(--nav-color);
-    text-decoration: none;
-    padding: 8px 16px;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s, background-color 0.3s;
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #ffffff;  /* The default color of the main navmenu links */
+  --nav-hover-color: #1acc8d; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #1acc8d; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
-.navbar a:hover {
-    background-color: var(--nav-hover-color);
-    color: var(--contrast-color);
-    border-radius: 4px;
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #f4f5fe;
+  --surface-color: #ffffff;
 }
 
-.navmenu {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-.navmenu li {
-    position: relative;
-}
-
-.navmenu .dropdown ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    background-color: var(--nav-dropdown-background-color);
-    padding: 10px 0;
-    list-style: none;
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-}
-
-.navmenu .dropdown:hover ul {
-    display: block;
-}
-
-.navmenu .dropdown ul li a {
-    padding: 10px 20px;
-    display: block;
-    color: var(--nav-dropdown-hover-color);
-}
-
-.navmenu .dropdown ul li a:hover {
-    background-color: var(--nav-dropdown-hover-color);
-    color: var(--contrast-color);
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .navmenu {
-        flex-direction: column;
-        width: 100%;
-    }
-    .navmenu li {
-        width: 100%;
-    }
-    .navmenu a {
-        width: 100%;
-        text-align: left;
-    }
+.dark-background {
+  --background-color: #08005e;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #0c0091;
+  --contrast-color: #ffffff;
 }
 
 .header {
@@ -210,7 +154,7 @@
       height: 2px;
       bottom: -6px;
       left: 0;
-      background-color: var(--nav-hover-color);
+      background-color: #ffffff
       visibility: hidden;
       width: 0px;
       transition: all 0.3s ease-in-out 0s;
@@ -232,7 +176,7 @@
     .navmenu .dropdown ul {
       margin: 0;
       padding: 10px 0;
-      background: var(--nav-dropdown-background-color);
+      background: #ffffff;
       display: block;
       position: absolute;
       visibility: hidden;
@@ -254,6 +198,7 @@
       font-size: 15px;
       text-transform: none;
       color: var(--nav-dropdown-color);
+      color: #1acc8d;
     }
   
     .navmenu .dropdown ul a i {
@@ -263,7 +208,7 @@
     .navmenu .dropdown ul a:hover,
     .navmenu .dropdown ul .active:hover,
     .navmenu .dropdown ul li:hover>a {
-      color: var(--nav-dropdown-hover-color);
+      color: white;
     }
   
     .navmenu .dropdown:hover>ul {
@@ -372,7 +317,7 @@
       z-index: 99;
       padding: 10px 0;
       margin: 10px 20px;
-      background-color: var(--nav-dropdown-background-color);
+      background-color: white
       transition: all 0.5s ease-in-out;
     }
   
@@ -411,6 +356,104 @@
       display: block;
     }
   }
+  :root {
+    --default-font: "Roboto", system-ui, sans-serif;
+    --nav-font: "Poppins", sans-serif;
+    --nav-color: #ffffff;
+    --nav-hover-color: #1a73e8;
+    --nav-background-color: #0a2a4e; /* Warna biru tua */
+    --nav-dropdown-background-color: #0e3b5f;
+    --nav-dropdown-hover-color: #1a90ff;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-background-color);
+    padding: 15px 20px;
+    color: var(--nav-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: var(--nav-color);
+    text-decoration: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: var(--nav-hover-color);
+    color: var(--contrast-color);
+    border-radius: 4px;
+}
+
+.navmenu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navmenu li {
+    position: relative;
+}
+
+.navmenu .dropdown ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: white;
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.navmenu .dropdown:hover ul {
+    display: block;
+    
+}
+
+.navmenu .dropdown ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: #1acc8d;
+    
+}
+
+.navmenu .dropdown ul li a:hover {
+    background-color: #1acc8d;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navmenu {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navmenu li {
+        width: 100%;
+    }
+    .navmenu a {
+        width: 100%;
+        text-align: left;
+    }
+}
+
 :root {
     --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --heading-font: "Raleway",  sans-serif;
@@ -489,56 +532,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-/* General Body Styles */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Navbar Styles */
-.navbar {
-  background-color: #0a2a4e;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar .logo a {
-  color: #ecf0f1;
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-
-.navbar .logo span {
-  color: #e74c3c;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar ul li a {
-  color: #ecf0f1;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-  color: #e74c3c;
-}
-
 /* Resetting some basic styles */
 * {
   margin: 0;
@@ -560,9 +553,15 @@ h1, h2 {
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
-}
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    color: color-mix(in srgb, var(--accent-color), transparent 25%);
+    text-decoration: none;
+  }
 * {
   margin: 0;
   padding: 0;
@@ -579,11 +578,12 @@ body {
 /* Landing Section */
 .landing {
   padding: 80px 20px;
-  background-color: #0a2a4e;
+  background-color:  #040677;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  
 }
 
 .container {
@@ -687,131 +687,192 @@ body {
   }
 }
 
-
-/* Section Pendidikan */
-.education-section {
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #ffffff, white);
-  color: #fff;
-  text-align: center;
-}
-
+/* Section Header */
 .section-header {
-  margin-bottom: 40px;
-}
-
-.section-title {
-  font-size: 42px;
-  font-weight: 700;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  color: white;
-  text-transform: uppercase;
-  position: relative;
-  display: inline-block;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #000, #444);
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 4px;
-}
-
-.section-description {
-  font-size: 18px;
-  margin: 10px auto 0;
-  color: #555;
-  line-height: 1.8;
-  max-width: 600px;
-}
-.menu-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.menu-card {
-  background: #1e3a8a;
-  border-radius: 10px;
-  padding: 20px;
-  width: 250px;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-out;
+  margin-bottom: 30px;
 }
 
-.menu-card:hover {
+.section-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #34495e; /* Warna netral */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.section-header h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ff6f61; /* Warna aksen */
+  margin: 10px auto 0;
+}
+
+/* Kotak Utama */
+.main-container {
+  background: #f7f9fc; /* Warna latar belakang lembut */
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 5% auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow lembut */
+}
+
+/* Wrapper untuk kategori utama (SD, SMP, SMA, CPNS) */
+.category-main-wrapper {
+  display: flex; /* Mengatur menjadi horizontal */
+  justify-content: space-between; /* Mengatur jarak antar kategori */
+  gap: 8px; /* Menambahkan jarak antar kotak */
+  flex-wrap: wrap; /* Agar bisa membungkus jika tidak muat dalam satu baris */
+  animation: slideIn 0.5s ease-out;
+  margin-top: 30px; /* Memberikan jarak atas */
+}
+
+/* Kategori Wrapper */
+.category-wrapper {
+  background: linear-gradient(145deg, #92d9ff, #66c4ff); /* Warna gradien cerah */
+  border-radius: 15px;
+  padding: 50px; /* Perbesar padding untuk memperbesar ukuran kotak */
+  width: 200px; /* Ukuran kotak kategori lebih besar */
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow lembut */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 170px; /* Menjaga agar kotak tetap proporsional */
+}
+
+.category-wrapper:hover {
   transform: translateY(-10px);
-  background: #2563eb;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Efek hover */
 }
 
-.menu-card h3 {
+.category-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.category-header h3 {
   font-size: 24px;
+  font-weight: bold;
+  color: #34495e; /* Warna teks utama */
+  text-align: center;
   margin-bottom: 15px;
-  font-family: "Montserrat", sans-serif;
-  color: #dbeafe;
 }
 
-.menu-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-card ul li {
-  margin: 8px 0;
-}
-
-.menu-card ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-  transition: color 0.3s;
-}
-
-.menu-card ul li a:hover {
-  color: #dbeafe;
-}
-
-/* Animasi Urutan */
-.menu-card:nth-child(1) {
-  animation: fadeInUp 0.6s 0.1s forwards;
-}
-
-.menu-card:nth-child(2) {
-  animation: fadeInUp 0.6s 0.3s forwards;
-}
-
-.menu-card:nth-child(3) {
-  animation: fadeInUp 0.6s 0.5s forwards;
-}
-
-.menu-card:nth-child(4) {
-  animation: fadeInUp 0.6s 0.7s forwards;
-}
-
-@keyframes fadeInUp {
-  0% {
+/* Animasi untuk Kotak */
+@keyframes slideIn {
+  from {
     opacity: 0;
     transform: translateY(50px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-.anjay{
-  color: black;
+
+/* Menambahkan link pada kategori */
+.category-link {
+  text-decoration: none;
+  color: inherit; /* Warna teks mengikuti warna kategori */
 }
+
+/* Responsif: Mengatur tata letak ketika lebar layar lebih kecil */
+@media (max-width: 768px) {
+  .category-main-wrapper {
+    justify-content: center; /* Pusatkan kategori */
+    gap: 15px; /* Mengurangi jarak antar kotak */
+  }
+
+  .category-wrapper {
+    width: 220px; /* Ukuran kotak lebih kecil pada perangkat mobile */
+    padding: 30px; /* Mengurangi padding */
+  }
+}
+
+
+
+/* Menata link */
+.login-link {
+    display: inline-block;
+    text-decoration: none; /* Menghilangkan garis bawah di link */
+    cursor: pointer;
+    padding: 10px; /* Jarak di sekitar icon */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
+}
+
+/* Menata icon login */
+.login-icon {
+    width: 30px; /* Ukuran lebar icon */
+    height: 30px; /* Ukuran tinggi icon */
+    border-radius: 50%; /* Membuat icon berbentuk lingkaran */
+}
+
+/* Efek hover pada link dan icon */
+.login-link:hover .login-icon {
+    transform: scale(1.1); /* Memperbesar icon sedikit saat hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Memberikan bayangan saat hover */
+}
+
+/* Menambahkan efek hover pada link */
+.login-link:hover {
+    background-color: #f
+}
+
+#preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    overflow: hidden;
+    background: var(--background-color);
+    transition: all 0.6s ease-out;
+  }
+  
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #ffffff;
+    border-color: var(--accent-color) transparent var(--accent-color) transparent;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1.5s linear infinite;
+  }
+@keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+  
 </style>
 
 </head>
@@ -827,23 +888,34 @@ body {
             <h1 class="sitename">i</i></h1>
             <h1 class="sitename">-QUIZ</h1>
           </a>         
-          <nav id="navmenu" class="navmenu">
+
+          <nav id="navmenu" class="navmenu d-flex align-items-center">
             <ul>
-              <li><a href="/" class="active">Beranda</a></li>
-              <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li>
-                    <a href="{{ url('/sekolahdasar') }}"><span>Sekolah Dasar</span> </i></a>    
+              <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul class="d-flex mb-0">
+                  <li class="dropdown">
+                    <a href="{{ url('/ekonomi') }}"><span>Ekonomi</span> </i></a>    
                   </li>
-                  <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
-                  <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
-                  <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
+                  <li><a href="{{ url('/politik') }}"><span>Politik</span></a></li>
+                  <li><a href="/teknologi" class="active"><span>Teknologi</span></a></li>
+                  <li><a href="{{ url('/umum') }}"><span>Umum</span></i></a>
                   </li>
                 </ul>
-                <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
-                <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
-                <li><a href="/aboutus">About US</a></li>
+                <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li>
+                      <a href="{{ url('/ekonomi') }}"><span>Ice Breaking</span> </i></a>    
+                    </li>
+                    <li><a href="{{ url('/politik') }}"><span>Tes IQ</span></a></li>
+                    </li>
+                  </ul>
+                <li><a href="{{ url('/contact') }}">Media Sosial</a></li>
+                <li><a href="/">About US</a></li>
+                <a href="/login" class="login-link">
+                  <img src="assets/img/login.png" alt="Login Icon" class="login-icon">
+              </a>
               </li>
+            </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
     </div>
@@ -858,7 +930,6 @@ body {
         Jelajahi metode belajar interaktif yang dirancang untuk siswa berbagai jenjang. Tingkatkan kepercayaan diri dan hasil belajar dengan materi berkualitas!
       </p>
       <button class="cta-btn">
-        <a href="#education-section">Ayo Mulai</a>
       </button>
     </div>
     <div class="image-content">
@@ -867,50 +938,70 @@ body {
   </div>
 </header>
 
-
-  <section id="education-section" class="education-section">
+<section id="education-section" class="education-section">
+  <div class="main-container">
     <div class="section-header">
-      <h2 class="anjay">Kategori Pendidikan</h2>
+      <h2>Kategori Pendidikan</h2>
     </div>
-    <div class="menu-container">
-      <div class="menu-card">
-        <h3>SD</h3>
-        <ul>
-          <li><a href="#sd-ipa">IPA</a></li>
-          <li><a href="#sd-ips">IPS</a></li>
-          <li><a href="#sd-mtk">Matematika</a></li>
-          <li><a href="#sd-pkn">PKN</a></li>
-        </ul>
-      </div>
-      <div class="menu-card">
-        <h3>SMP</h3>
-        <ul>
-          <li><a href="#smp-ipa">IPA</a></li>
-          <li><a href="#smp-ips">IPS</a></li>
-          <li><a href="#smp-mtk">Matematika</a></li>
-          <li><a href="#smp-pkn">PKN</a></li>
-        </ul>
-      </div>
-      <div class="menu-card">
-        <h3>SMA</h3>
-        <ul>
-          <li><a href="#sma-ipa">IPA</a></li>
-          <li><a href="#sma-ips">IPS</a></li>
-          <li><a href="#sma-pkn">PKN</a></li>
-          <li><a href="#sma-tik">TIK</a></li>
-        </ul>
-      </div>
-      <div class="menu-card">
-        <h3>CPNS</h3>
-        <ul>
-          <li><a href="#cpns-tiu">TIU</a></li>
-          <li><a href="#cpns-twk">TWK</a></li>
-          <li><a href="#cpns-tkp">TKP</a></li>
-        </ul>
-      </div>
+    <div class="category-main-wrapper">
+      <a href="/sd" class="category-link">
+        <div class="category-wrapper">
+          <div class="category-header">
+            <i class="icon sd-icon"></i>
+            <h3>SD</h3>
+          </div>
+        </div>
+      </a>
+      <a href="/Smp" class="category-link">
+        <div class="category-wrapper">
+          <div class="category-header">
+            <i class="icon smp-icon"></i>
+            <h3>SMP</h3>
+          </div>
+        </div>
+      </a>
+      <a href="/SMA" class="category-link">
+        <div class="category-wrapper">
+          <div class="category-header">
+            <i class="icon sma-icon"></i>
+            <h3>SMA</h3>
+          </div>
+        </div>
+      </a>
+      <a href="/cpns-quiz/categories" class="category-link">
+        <div class="category-wrapper">
+          <div class="category-header">
+            <i class="icon cpns-icon"></i>
+            <h3>CPNS</h3>
+          </div>
+        </div>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+  </div>
+</body>
+</section>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const educationSection = document.querySelector('.education-section');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target); // Stop observing once visible
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(educationSection);
+  });
+</script>
 <script>
   // Smooth Scroll Effect
 // Smooth Scroll Effect
@@ -927,3 +1018,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 </script>
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>

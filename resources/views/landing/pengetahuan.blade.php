@@ -49,11 +49,6 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
-body {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-family: var(--default-font);
-}
 
 a {
   color: var(--accent-color);
@@ -77,14 +72,15 @@ h6 {
 }
 body {
   font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('assets/img/UMUM.png');
-    background-size: cover; /* Mengisi seluruh latar belakang */
-    background-position: center; /* Memusatkan gambar latar */
-    background-attachment: fixed; /* Membuat gambar tetap di tempat saat di-scroll */
-    color: white;
+  margin: 0;
+  padding: auto;
+  background-image: url('assets/img/UMUM.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
 }
+
 main {
     padding-top: 200px; /* Atur sesuai kebutuhan */
 }
@@ -127,7 +123,7 @@ main {
 .main-title {
     font-family: 'Raleway', sans-serif; /* Ganti dengan font yang diinginkan */
     font-size: 3rem; /* Ukuran font besar */
-    color: #ffcc00; /* Warna cerah untuk judul utama */
+    color: #08005e; /* Warna cerah untuk judul utama */
     text-align: center; /* Rata tengah */
     margin: 20px 0; /* Margin atas dan bawah */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan teks */
@@ -136,13 +132,13 @@ main {
 
 .main-title:hover {
     transform: scale(1.05); /* Efek membesar saat hover */
-    color: #ff9900; /* Warna saat hover */
+    color:  #ffcc00; /* Warna saat hover */
 }
 
 .sub-title {
     font-family: 'Poppins', sans-serif; /* Ganti dengan font yang diinginkan */
     font-size: 2rem; /* Ukuran font sedang */
-    color: #ff6600; /* Warna cerah untuk subjudul */
+    color:  #08005e; /* Warna cerah untuk subjudul */
     text-align: center; /* Rata tengah */
     margin: 10px 0; /* Margin atas dan bawah */
     font-weight: 600; /* Bold */
@@ -150,7 +146,7 @@ main {
 }
 
 .sub-title:hover {
-    color: #ff3300; /* Warna saat hover */
+    color:  #08005e /* Warna saat hover */
 }
 .read-more {
     display: block;
@@ -175,13 +171,6 @@ main {
 
 .read-more span {
     font-weight: bold; /* Membuat teks lebih tebal */
-}
-
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
 }
 
 :root {
@@ -282,12 +271,11 @@ body {
 }
 
 .header {
-  --background-color: rgba(255, 255, 255, 0);
+  background-color: #0a2a4e; /* Warna biru tua */
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -421,7 +409,7 @@ body {
     .navmenu .dropdown ul a:hover,
     .navmenu .dropdown ul .active:hover,
     .navmenu .dropdown ul li:hover>a {
-      color: var(--nav-dropdown-hover-color);
+      color: white;
     }
   
     .navmenu .dropdown:hover>ul {
@@ -618,12 +606,7 @@ body {
   /*--------------------------------------------------------------
   # General Styling & Shared Classes
   --------------------------------------------------------------*/
-  body {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    font-family: var(--default-font);
-  }
-  
+
   a {
     color: var(--accent-color);
     text-decoration: none;
@@ -642,174 +625,8 @@ body {
   h5,
   h6 {
     color: var(--heading-color);
-    font-family: var(--heading-font);
+    font: "Raleway",  sans-serif;
   }
-  .footer {
-    color: var(--default-color);
-    background-color: var(--background-color);
-    font-size: 14px;
-    position: relative;
-    margin-top: 180px;
-  }
-  
-  .footer .footer-top {
-    padding-top: 50px;
-    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  }
-  
-  .footer .footer-about .logo {
-    line-height: 1;
-    margin-bottom: 25px;
-  }
-  
-  .footer .footer-about .logo img {
-    max-height: 40px;
-    margin-right: 6px;
-  }
-  
-  .footer .footer-about .logo span {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: var(--heading-font);
-    color: var(--heading-color);
-  }
-  
-  .footer .footer-about p {
-    font-size: 14px;
-    font-family: var(--heading-font);
-    text-align: left;
-  }
-  
-  .footer .social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-    font-size: 16px;
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    margin-right: 10px;
-    transition: 0.3s;
-    
-  }
-  
-  .footer .social-links a:hover {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-  }
-  
-  .footer h4 {
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-    padding-bottom: 12px;
-  }
-  
-  .footer .footer-links {
-    margin-bottom: 30px;
-    
-  }
-  
-  .footer .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  
-  }
-  
-  .footer .footer-links ul i {
-    padding-right: 2px;
-    font-size: 12px;
-    line-height: 0;
-    
-  }
-  
-  .footer .footer-links ul li {
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    
-  }
-  
-  .footer .footer-links ul li:first-child {
-    padding-top: 0;
-   
-  }
-  
-  .footer .footer-links ul a {
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    display: inline-block;
-    line-height: 1;
-  }
-  
-  .footer .footer-links ul a:hover {
-    color: var(--accent-color);
-  }
-  
-  .footer .footer-contact p {
-    margin-bottom: 5px;
-  }
-  
-  .footer .footer-newsletter .newsletter-form {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    padding: 6px 8px;
-    position: relative;
-    border-radius: 4px;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-    display: flex;
-    background-color: var(--background-color);
-    transition: 0.3s;
-  }
-  
-  .footer .footer-newsletter .newsletter-form:focus-within {
-    border-color: var(--accent-color);
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=email] {
-    border: 0;
-    padding: 4px;
-    width: 100%;
-    background-color: var(--background-color);
-    color: var(--default-color);
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
-    outline: none;
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=submit] {
-    border: 0;
-    font-size: 16px;
-    padding: 0 20px;
-    margin: -7px -8px -7px 0;
-    background: var(--accent-color);
-    color: var(--contrast-color);
-    transition: 0.3s;
-    border-radius: 0 4px 4px 0;
-  }
-  
-  .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-    background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  }
-  
-  .footer .copyright {
-    padding: 25px 0;
-    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  }
-  
-  .footer .copyright p {
-    margin-bottom: 0;
-  }
-  
-  .footer .credits {
-    margin-top: 6px;
-    font-size: 13px;
-  }
-  
   /*--------------------------------------------------------------
   # Preloader
   --------------------------------------------------------------*/
@@ -885,9 +702,32 @@ body {
     visibility: visible;
     opacity: 1;
   }
-    
+/* Menata link */
+.login-link {
+    display: inline-block;
+    text-decoration: none; /* Menghilangkan garis bawah di link */
+    cursor: pointer;
+    padding: 10px; /* Jarak di sekitar icon */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
+}
 
+/* Menata icon login */
+.login-icon {
+    width: 30px; /* Ukuran lebar icon */
+    height: 30px; /* Ukuran tinggi icon */
+    border-radius: 50%; /* Membuat icon berbentuk lingkaran */
+}
 
+/* Efek hover pada link dan icon */
+.login-link:hover .login-icon {
+    transform: scale(1.1); /* Memperbesar icon sedikit saat hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Memberikan bayangan saat hover */
+}
+
+/* Menambahkan efek hover pada link */
+.login-link:hover {
+    background-color: #f
+}
   
 </style>
 <head>
@@ -912,6 +752,7 @@ body {
         <link href="assets/vendor/aos/aos.css" rel="stylesheet">
         <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
         <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
       
         <!-- Main CSS File -->
       
@@ -936,21 +777,29 @@ body {
         </a>         
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="/" class="active">Beranda</a></li>
             <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li>
-                  <a href="{{ url('/sekolahdasar') }}"><span>Sekolah Dasar</span> </i></a>    
+                  <a href="{{ url('/sd') }}"><span>Sekolah Dasar</span> </i></a>    
                 </li>
                 <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
                 <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
                 <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
                 </li>
               </ul>
-              <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
-              <li><a href="{{ url('/mediasosial') }}">Media Sosial</a></li>
-              <li><a href="/aboutus">About US</a></li>
+              <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li>
+                    <a href="{{ url('/sd') }}"><span>Ice Breaking</span> </i></a></li>
+                  <li><a href="{{ url('/Smp') }}"><span>Tes IQ</span></a></li>
+                </ul>
+              <li><a href="{{ url('/contact') }}">Contact</a></li>
+              <li><a href="/">About US</a></li>
+              <a href="/login" class="login-link">
+                <img src="assets/img/login.png" alt="Login Icon" class="login-icon">
+            </a>
             </li>
+              
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
   </div>
@@ -981,80 +830,6 @@ body {
         </div>
 
     </main>
-
-
-    <footer id="footer" class="footer dark-background">
-
-      <div class="container footer-top">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">IQU.com</span>
-            </a>
-            <div class="footer-contact pt-3">
-              <p>Semarang</p>
-              <p>Tembalang,Amposari</p>
-              <p class="mt-3"><strong>Phone:</strong> <span>085601742751</span></p>
-              <p><strong>Email:</strong> <span>iqu123@gmail.com</span></p>
-            </div>
-            <div class="social-links d-flex mt-4">
-              <a href=""><i class="bi bi-twitter-x"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-  
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Tautan Berguna</h4>
-            <ul>
-              <li><a href="#">Beranda</a></li>
-              <li><a href="#">Pendidikan</a></li>
-              <li><a href="#">Pengetahuan</a></li>
-              <li><a href="#">Games</a></li>
-              <li><a href="#">Media Sosial</a></li>
-              <li><a href="#">About As</a></li>
-            </ul>
-          </div>
-  
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Layanan Kami</h4>
-            <ul>
-              <li><a href="#">Pembelajaran Interaktif</a></li>
-              <li><a href="#">Kuis & Tes Pemahaman</a></li>
-              <li><a href="#">Bimbingan Belajar Online</a></li>
-              <li><a href="#">Belajar Terstruktur</a></li>
-              <li><a href="#">Fitur Ice Breaking & Tes IQ</a></li>
-            </ul>
-          </div>
-  
-          <div class="col-lg-4 col-md-12 footer-newsletter">
-            <h4></h4>
-            <p>Selamat menikmati</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
-  
-        </div>
-      </div>
-  
-      <div class="container copyright text-center mt-4">
-        <link href="assets/img/www.png" rel="icon">
-        <p> <span></span> <strong class="px-1 sitename">IQU.com</strong> <span></span></p>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          
-        </div>
-      </div>
-  
-    </footer>
   
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

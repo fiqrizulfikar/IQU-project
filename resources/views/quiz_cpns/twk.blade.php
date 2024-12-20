@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/cpns.css') }}">
 </head>
 <body>
-    <div class="quiz-container" id="tiu">
+    <div class="quiz-container" id="twk">
         <h2>Soal TWK (Tes Kewarganegaraan)</h2>
         <div id="timer">20:00</div>
     
@@ -170,20 +170,7 @@
             window.location.href = "//cpns-quiz/categories"; // Ganti dengan URL halaman pilih tes yang sesuai
         });
     }
-
-    // Setup untuk TIU (20 menit)
-    if (document.querySelector("#tiu")) {
-        setupQuiz('tiu', 4, 20, 'TIU'); // TIU punya 20 soal, 4 slide (5 soal per slide)
-    }
-
-    // Setup untuk TWK (20 menit)
-    if (document.querySelector("#twk")) {
-        setupQuiz('twk', 4, 20, 'TWK'); // TWK punya 20 soal, 4 slide (5 soal per slide)
-    }
-
-    // Setup untuk TKP (20 menit)
-    if (document.querySelector("#tkp")) {
-        setupQuiz('tkp', 4, 20, 'TKP'); // TKP punya 20 soal, 4 slide (5 soal per slide)
-    }
+    setupQuiz('twk', {{ count($soal_twk) }} / 5, 20, 'twk');
 });
 </script>
+</html>

@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Kuis SMA IPA</title>
     <link rel="stylesheet" href="{{ asset('assets/css/SMA.css') }}">
+=======
+    <title>Kuis SD IPA</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/SD.css') }}">
+>>>>>>> f7b130102549784d74751c049e6f539e5a8fa1d5
 </head>
 <body>
     <body>
@@ -83,7 +88,11 @@
 
     // Event tombol kembali
     backButton.addEventListener('click', function () {
+<<<<<<< HEAD
         window.location.href = "/SMA"; // Redirect ke halaman pilih kuis
+=======
+        window.location.href = "/sd"; // Redirect ke halaman pilih kuis
+>>>>>>> f7b130102549784d74751c049e6f539e5a8fa1d5
     });
 
     // Fungsi untuk memulai timer
@@ -172,6 +181,32 @@
     quizForm.style.display = 'none';
     restartButton.style.display = 'none';
     backButton.style.display = 'none';
+});
+let currentQuestion = 0;
+const questions = document.querySelectorAll('.question');
+const options = document.querySelectorAll('.option');
+
+function nextQuestion() {
+    // Sembunyikan soal lama dengan efek fade-out
+    questions[currentQuestion].classList.remove('zoom-in');
+    questions[currentQuestion].classList.add('zoom-out');
+    
+    // Increment soal
+    currentQuestion++;
+    
+    if (currentQuestion < questions.length) {
+        // Menampilkan soal baru dengan efek fade-in
+        questions[currentQuestion].classList.remove('zoom-out');
+        questions[currentQuestion].classList.add('zoom-in');
+    }
+}
+
+// Menambahkan event untuk pilihan
+options.forEach(option => {
+    option.addEventListener('click', () => {
+        option.classList.add('selected'); // Efek animasi pilihan
+        nextQuestion();
+    });
 });
 
 

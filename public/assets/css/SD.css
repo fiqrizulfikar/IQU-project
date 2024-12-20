@@ -1,0 +1,154 @@
+/* Mengatur gaya umum untuk body */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC, #FFFCB5, #C6B5FF);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+    overflow: hidden;
+}
+
+/* Animasi latar belakang gradien */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Gaya untuk quiz container */
+.quiz-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+    border: 5px solid #FFC0CB; /* Pink pastel */
+}
+
+/* Animasi fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gaya untuk judul */
+h1 {
+    color: #7B68EE; /* Ungu pastel */
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(123, 104, 238, 0.3);
+}
+
+/* Gaya untuk timer */
+#timer {
+    font-size: 22px;
+    color: #FF6347; /* Merah lembut */
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+}
+
+/* Gaya untuk pilihan */
+.option {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E6FFFA; /* Hijau mint pastel */
+    border-radius: 15px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.option:nth-child(odd) {
+    background: #FFF8DC; /* Kuning pastel */
+}
+
+.option:nth-child(even) {
+    background: #B5DFFB; /* Biru pastel */
+}
+
+.option:hover {
+    transform: scale(1.1);
+    background: #FFDAB9; /* Peach pastel */
+}
+
+/* Label pilihan */
+.option label {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Tombol */
+button {
+    padding: 14px 25px;
+    background-color: #FFEBB7; /* Kuning pastel */
+    color: #333;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    margin: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #FFDAB9; /* Peach pastel */
+    transform: scale(1.1);
+}
+
+/* Tombol kecil */
+#restartButton, #homeButton {
+    padding: 12px 22px;
+    background-color: #D5BFFB; /* Ungu pastel */
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    margin: 10px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#restartButton:hover, #homeButton:hover {
+    background-color: #BFA0FF; /* Ungu lebih terang */
+    transform: scale(1.1);
+}
+
+/* Gaya untuk hasil */
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #7B68EE; /* Ungu pastel */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Animasi timer */
+@keyframes pulse {
+    0% { color: #FF6347; }
+    50% { color: #FFA07A; }
+    100% { color: #FF6347; }
+}

@@ -24,10 +24,7 @@ class LandingControllers extends Controller
     {
         return view ('landing.games');
     }
-    public function mediasosial()
-    {
-        return view ('landing.mediasosial');
-    }
+   
     public function pendidikan()
     {
         return view ('landing.pendidikan');
@@ -35,6 +32,10 @@ class LandingControllers extends Controller
     public function aboutus()
     {
         return view ('landing.aboutus');
+    }
+    public function coba()
+    {
+        return view ('landing.coba');
     }
 
 

@@ -47,37 +47,23 @@
         <h1 class="sitename">i'm Quiz</i></h1>
       </a>
        
-<nav id="navmenu" class="navmenu">
-<ul>
-  <li><a href="#hero" class="active">Beranda</a></li>
-  <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-    <ul>
-      <li>
-        <a href="{{ url('/sekolahdasar') }}"><span>Sekolah Dasar</span> </i></a>    
-      </li>
-      <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
-      <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
-      <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
-      </li>
-    </ul>
-    <li><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span></i></a>
-    </li>
-  </li>
-    <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-    <ul>
-      <li><a href="#">Ice Breaking</a></li>
-      <li><a href="#">Tes IQ</a></li>
-    </ul>
-    <li><a href="{{ url('/mediasosial') }}">Contact</a></li>
-    <li><a href="/aboutus">About US</a></li>
-    <div>
-    <li><a href="/login" class="login-icon"><i class="fas fa-user"></i></a></li>  </li>
-    </div>
-    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-</nav>
+        <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/" class="active">About US</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <div>
+            <li><a href="/login" class="login-icon"><i class="fas fa-user"></i></a></li>  </li>
+            </div>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </ul>
+         </body>
+         </header>
+       </nav>
+
+
 
 </div>
-</header>
+
   <main class="main">
 
     <!-- Hero Section -->
@@ -119,204 +105,7 @@
 
     </section><!-- /Hero Section -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row align-items-xl-center gy-5">
-
-          <div class="col-xl-5 content">
-            <h3>Pendidikan</h3>
-            <h2>Solusi Cerdas Untuk Pembelajaran Modern</h2>
-            <p>Kami menghadirkan metode belajar yang mudah, interaktif, dan disesuaikan dengan kebutuhan Anda. Dari pelajaran sekolah hingga keterampilan profesional, semua bisa Anda temukan di sini. Mulai perjalanan belajar Anda sekarang dan temukan cara baru untuk mencapai kesuksesan! Klik di sini untuk eksplorasi lebih lanjut!</p>
-            <a href="#" class="read-more"><span>Mari Belajar</span><i class="bi bi-arrow-right"></i></a>
-          </div>
-
-          <div class="col-xl-7">
-            <div class="row gy-4 icon-boxes">
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon-box">
-                  <i class="bi bi-buildings"></i>
-                  <h3>SD </h3>
-                  <p>Ajak anak-anak berlatih dengan soal-soal yang seru dan interaktif, membantu mereka memahami pelajaran dengan lebih mudah</p>
-                </div>
-              </div> <!-- End Icon Box -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon-box">
-                  <i class="bi bi-clipboard-pulse"></i>
-                  <h3>SMP</h3>
-                  <p>Dengan kumpulan soal yang menantang dan bervariasi, siswa kami selalu siap menghadapi ujian dengan percaya diri dan meraih prestasi terbaik</p>
-                </div>
-              </div> <!-- End Icon Box -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon-box">
-                  <i class="bi bi-command"></i>
-                  <h3>SMA</h3>
-                  <p>Kumpulan soal berkualitas untuk membantu siswa menguasai materi dan bersiap menghadapi ujian akhir serta seleksi masuk perguruan tinggi.</p>
-                </div>
-              </div> 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="icon-box">
-                  <i class="bi bi-command"></i>
-                  <h3>Tes CPNS</h3>
-                  <p>Kumpulan soal berkualitas untuk membantu siswa menguasai materi dan bersiap menghadapi ujian akhir serta seleksi masuk perguruan tinggi.</p>
-                </div>
-              </div><!-- End Icon Box -->
-              </div> <!-- End Icon Box -->
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Features Section -->
-    <section id="features" class="features section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-        <h3 class="sitename">SD</h3>
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="features-item">
-              <i class="bi bi-eye" style="color: #ffbb2c;"></i>
-              <h3><a href="" class="stretched-link">IPA</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="features-item">
-              <i class="bi bi-infinity" style="color: #5578ff;"></i>
-              <h3><a href="" class="stretched-link">PKN</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="features-item">
-              <i class="bi bi-mortarboard" style="color: #e80368;"></i>
-              <h3><a href="" class="stretched-link">MTK</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="features-item">
-              <i class="bi bi-nut" style="color: #e361ff;"></i>
-              <h3><a href="" class="stretched-link">IPS</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-          <h3 class="sitename">SMP</h3>
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="features-item">
-              <i class="bi bi-shuffle" style="color: #47aeff;"></i>
-              <h3><a href="" class="stretched-link">MTK</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="features-item">
-              <i class="bi bi-star" style="color: #ffa76e;"></i>
-              <h3><a href="" class="stretched-link">Bahasa Inggris</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
-            <div class="features-item">
-              <i class="bi bi-x-diamond" style="color: #11dbcf;"></i>
-              <h3><a href="" class="stretched-link">IPA</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
-            <div class="features-item">
-              <i class="bi bi-camera-video" style="color: #4233ff;"></i>
-              <h3><a href="" class="stretched-link">PKN</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-          <h3 class="sitename">SMA</h2>
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
-            <div class="features-item">
-              <i class="bi bi-command" style="color: #b2904f;"></i>
-              <h3><a href="/smaipa" class="stretched-link">Ilmu Pengetahuan Alam</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
-            <div class="features-item">
-              <i class="bi bi-dribbble" style="color: #b20969;"></i>
-              <h3><a href="/smaips" class="stretched-link">Ilmu Pengetahuan Sosial</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
-            <div class="features-item">
-              <i class="bi bi-activity" style="color: #ff5828;"></i>
-              <h3><a href="/smapkn" class="stretched-link">Pendidikan Kewarganegaraan</a></h3>
-            </div>
-
-            <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
-              <div class="features-item">
-                <i class="bi bi-TIK" style="color: #ff5828;"></i>
-                <h3><a href="/smatik" class="stretched-link">Ilmu Teknologi Informasi</a></h3>
-              </div>
-          </div><!-- End Feature Item -->
-
-          
-
-        </div>
-
-      </div>
-
-    </section><!-- /Features Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section light-background">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-emoji-smile"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Point</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-journal-richtext"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>IQ</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-headset"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Ice Breaking</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-people"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Pengetahuan</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
+   
 
     <!-- Details Section -->
     <section id="details" class="details section">
@@ -686,38 +475,30 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Tautan Berguna</h4>
           <ul>
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#">Pendidikan</a></li>
-            <li><a href="#">Pengetahuan</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Media Sosial</a></li>
-            <li><a href="#">About As</a></li>
+            <li><a href="/pendidikan">Pendidikan</a></li>
+            <li><a href="/pengetahuan">Pengetahuan</a></li>
+            <li><a href="/games">Games</a></li>
+            <li><a href="/mediasosial">Contact</a></li>
+            <li><a href="/">About As</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Layanan Kami</h4>
           <ul>
-            <li><a href="#">Pembelajaran Interaktif</a></li>
-            <li><a href="#">Kuis & Tes Pemahaman</a></li>
-            <li><a href="#">Bimbingan Belajar Online</a></li>
-            <li><a href="#">Belajar Terstruktur</a></li>
-            <li><a href="#">Fitur Ice Breaking & Tes IQ</a></li>
+            <li><a href="pendidikan">Pembelajaran Interaktif</a></li>
+            <li><a href="/pengetahuan">Kuis & Tes Pemahaman</a></li>
+            <li><a href="/pendidikan">Belajar Terstruktur</a></li>
+            <li><a href="/games">Fitur Ice Breaking & Tes IQ</a></li>
           </ul>
         </div>
-
         <div class="col-lg-4 col-md-12 footer-newsletter">
           <h4></h4>
           <p>Selamat menikmati</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
+            <div class="footer-logo ">
+            <img src="assets/img/logo.png" alt="logoiqu.com" width="170px" >
+            </div>
         </div>
-
-      </div>
     </div>
 
     <div class="container copyright text-center mt-4">
@@ -760,3 +541,9 @@
 </body>
 
 </html>
+
+
+
+
+
+

@@ -8,6 +8,13 @@
 
 </head>
 <body class="bodyv">
+<div class="gravity-bg">
+        <div class="circle" style="width: 100px; height: 100px; top: 20%; left: 10%;"></div>
+        <div class="circle" style="width: 150px; height: 150px; top: 40%; left: 50%;"></div>
+        <div class="circle" style="width: 80px; height: 80px; top: 70%; left: 30%;"></div>
+        <div class="circle" style="width: 100px; height: 100px; top: 90%; left: 80%;"></div>
+		<div class="circle" style="width: 130px; height: 130px; top: 30%; left: 100%;"></div>
+    </div>
 	<div class="mainv">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
 
@@ -62,26 +69,3 @@
 </body>
 </body>
 </html>
-<<<<<<< HEAD
-
-<div class="category-container">
-    <h2>Pilih Kategori Soal CPNS</h2>
-    <p>Silakan pilih kategori soal yang ingin Anda kerjakan. Baca aturan di bawah sebelum memulai!</p>
-    
-    <div class="categories">
-        <a href="{{ route('cpns.tiu') }}" class="btn btn-primary">TIU (Tes Intelegensia Umum)</a>
-        <a href="{{ route('cpns.twk') }}" class="btn btn-primary">TWK (Tes Wawasan Kebangsaan)</a>
-        <a href="{{ route('cpns.tkp') }}" class="btn btn-primary">TKP (Tes Karakteristik Pribadi)</a>
-    </div>
-
-    <div class="rules-container">
-        <h3>Aturan Mengerjakan Soal</h3>
-        <ul>
-            <li>Waktu pengerjaan maksimal adalah <strong>20 menit</strong> per kategori.</li>
-            <li>Tidak diperbolehkan meninggalkan halaman selama mengerjakan soal.</li>
-            <li>Setiap soal wajib dijawab sebelum melanjutkan ke soal berikutnya.</li>
-            <li>Anda dapat melihat hasil jawaban Anda di akhir sesi, termasuk soal yang salah dan pembahasannya.</li>
-            <li>Gunakan tombol <strong>"Selesai"</strong> jika Anda telah menyelesaikan semua soal.</li>
-        </ul>
-    </div>
-</div>
