@@ -20,7 +20,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             
             // Jika berhasil login
-            return redirect('mediasosial')->with('success', 'Selamat datang di halaman dashboard!');
+            return redirect('contact')->with('success', 'Selamat datang di halaman dashboard!');
         } else {
            
             $user = \App\Models\User::where('email', $request->input('email'))->first();
@@ -64,10 +64,10 @@ class AuthController extends Controller
    
 
     // Fungsi untuk menampilkan dashboard
-    public function mediasosial()
+    public function contact()
     {
         if (Auth::check()) {
-            return view('mediasosial');
+            return view('landing.contact');
         } else {
             return redirect()->route('login');
         }

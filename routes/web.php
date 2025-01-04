@@ -70,14 +70,14 @@ Route::get('/login', function () {
 })->name('login');
 
 
-Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.form');
+Route::get('/contact', [ContactController::class, 'showForm'])->name('landing.contact');
 Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
 Route::get('/us', [ContactController::class, 'showUs'])->name('emails.us');
 
 
 Route::post('/login', [AuthController::class, 'login'])->name('login.post'); 
 Route::post('/register', [AuthController::class, 'register'])->name('register.post'); 
-Route::get('/mediasosial', [LandingControllers::class, 'mediasosial'])->name('mediasosial'); 
+Route::get('/contact', [ContactController::class, 'showForm'])->name('landing.contact'); 
 Route::post('/logout', [AuthController::class, 'login'])->name('logout'); 
 
 Route::get('/cpns-quiz/categories', [QuizCPNSController::class, 'showCategories'])->name('cpns.categories');

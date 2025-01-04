@@ -45,8 +45,9 @@ class ContactController extends Controller
 
         public function showUs()
     {
-        $us = ContactMessage::all();
-        return view('emails.us', compact('us'));
+        $us = ContactMessage::all(); // Ambil semua data pesan
+        dd($us); 
+        return view('emails.us')->with('messages', $us);
     }
 
 }

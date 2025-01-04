@@ -48,7 +48,7 @@
             <button id="homeButton" style="display: none;">Kembali ke Pilih Kuis</button>
         </div>
         <script>
-            document.addEventListener('DOMContentLoaded', function () { 
+    document.addEventListener('DOMContentLoaded', function () { 
     let currentQuestionIndex = 0;
     let correctAnswersCount = 0;
     const timeLimit = 15; // Waktu maksimal per pertanyaan (detik)
