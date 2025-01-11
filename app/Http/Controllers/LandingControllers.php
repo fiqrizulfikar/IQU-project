@@ -38,6 +38,12 @@ class LandingControllers extends Controller
         return view ('landing.coba');
     }
 
+      public function icebreaking()
+        {
+            return view('landing.icebreaking');
+        }
+    
+
 
 
 

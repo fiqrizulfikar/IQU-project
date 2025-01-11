@@ -672,7 +672,8 @@
           <h2>BREAKING</h2>
           <img src="assets/img/TES IQ 1.png" alt="Icebreaking">
         </div>
-        <button class="next-btn">Mulai</button>
+        <button class="next-btn" >
+        <a href="{{ url('/icebreaking') }}">  Mulai</button>
       </div>
       <div class="card">
         <div class="info_card">

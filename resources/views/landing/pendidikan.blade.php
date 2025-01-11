@@ -904,7 +904,7 @@ body {
                 <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li>
-                      <a href="{{ url('/ekonomi') }}"><span>Ice Breaking</span> </i></a>    
+                      <a href="{{ url('/icebreaking') }}"><span>Ice Breaking</span> </i></a>    
                     </li>
                     <li><a href="{{ url('/politik') }}"><span>Tes IQ</span></a></li>
                     </li>
