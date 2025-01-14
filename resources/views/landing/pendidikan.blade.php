@@ -892,7 +892,7 @@ body {
           <nav id="navmenu" class="navmenu d-flex align-items-center">
             <ul>
               <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul class="d-flex mb-0">
+                <ul>
                   <li class="dropdown">
                     <a href="{{ url('/ekonomi') }}"><span>Ekonomi</span> </i></a>    
                   </li>
