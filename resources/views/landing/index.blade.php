@@ -80,7 +80,7 @@
             <h1>Langkah Kecil Menuju Masa Depan Cerah <span>IQU.com</span></h1>
            
             <div class="d-flex">
-              <a href="/pendidikan" class="btn-get-started">Ayo Mulai</a>
+              <a href="/login" class="btn-get-started">Ayo Mulai</a>
               <a href="https://youtu.be/H0gqYMTFos0?si=oM92-VaZBCGRxAmJ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Tonton Video</span></a>
             </div>
           </div>

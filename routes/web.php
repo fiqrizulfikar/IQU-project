@@ -13,6 +13,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LandingGamesControllers;
 use App\Http\Controllers\PinController;
 use App\Http\Controllers\ContactController;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\TestMail;
 
 Route::get('/', [LandingControllers::class, 'index']);
 Route::get('/coba', [App\Http\Controllers\LandingControllers::class, 'coba']);
@@ -76,11 +78,11 @@ Route::get('/login', function () {
 Route::get('/contact', [ContactController::class, 'showForm'])->name('landing.contact');
 Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
 Route::get('/us', [ContactController::class, 'showUs'])->name('emails.us');
-
+Route::get('/plain', [ContactController::class, 'showUp'])->name('emails.plain');
 
 Route::post('/login', [AuthController::class, 'login'])->name('login.post'); 
 Route::post('/register', [AuthController::class, 'register'])->name('register.post'); 
-Route::get('/contact', [ContactController::class, 'showForm'])->name('landing.contact'); 
+Route::get('/pendidikan', [LandingControllers::class, 'pendidikan']);
 Route::post('/logout', [AuthController::class, 'login'])->name('logout'); 
 
 Route::get('/cpns-quiz/categories', [QuizCPNSController::class, 'showCategories'])->name('cpns.categories');

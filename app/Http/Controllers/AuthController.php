@@ -20,7 +20,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             
             // Jika berhasil login
-            return redirect('contact')->with('success', 'Selamat datang di halaman dashboard!');
+            return redirect('pendidikan')->with('success', 'Selamat datang di halaman dashboard!');
         } else {
            
             $user = \App\Models\User::where('email', $request->input('email'))->first();
@@ -67,9 +67,9 @@ class AuthController extends Controller
     public function contact()
     {
         if (Auth::check()) {
-            return view('landing.contact');
+            return view('pendidikan');
         } else {
-            return redirect()->route('login');
+            return redirect()->route('pendidikan');
         }
         
     }

@@ -5,117 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesan Kontak</title>
     <style>
-        /* Animasi latar belakang dengan efek gravitasi */
-        @keyframes gradientBackground {
-            0% {
-                background: #1a237e;
-            }
-            50% {
-                background: #0d47a1;
-            }
-            100% {
-                background: #1565c0;
-            }
-        }
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+    margin: 0;
+}
 
-        /* Style untuk body */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #1a237e;
-            animation: gradientBackground 10s ease infinite;
-            color: white;
-            line-height: 1.6;
-        }
+.messages-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        /* Email Container */
-        .email-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
 
-        /* Header */
-        .email-header {
-            background-color: #4caf50;
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-        }
+.message-card {
+    background-color: #1c2b4b; /* Biru dongker gelap */
+    border: 1px solid #1a2037; /* Biru lebih gelap untuk border */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px 15px;
+}
 
-        /* Body */
-        .email-body {
-            padding: 30px;
-            background: linear-gradient(135deg, #f0f4c3, #c8e6c9);
-            border-radius: 10px;
-            color: #333;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-            margin-top: 20px;
-        }
+.message-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
 
-        .email-body p {
-            margin-bottom: 15px;
-            font-size: 16px;
-            line-height: 1.8;
-        }
+.message-header {
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.1em;
+}
 
-        .email-body strong {
-            color: #0d47a1;
-            font-weight: bold;
-        }
+.message-header span {
+    font-size: 0.85em;
+    color: #bbb; /* Teks abu-abu muda untuk email */
+}
 
-        /* Footer */
-        .email-footer {
-            text-align: center;
-            font-size: 14px;
-            color: #888;
-            margin-top: 20px;
-        }
+.message-content {
+    padding: 10px 0;
+    color: #d3d3d3; /* Putih samar */
+    line-height: 1.5;
+}
 
-        .email-footer p {
-            margin: 10px 0;
-        }
+.message-content p {
+    font-size: 1em;
+    margin-top: 10px;
+}
 
-        /* Hover effect untuk link */
-        .email-footer a {
-            color: #0d47a1;
-            text-decoration: none;
-            font-weight: bold;
-        }
+@media (max-width: 600px) {
+    .messages-container {
+        padding: 10px;
+    }
 
-        .email-footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .message-header h3 {
+        font-size: 1.2em;
+    }
+
+    .message-header span {
+        font-size: 0.8em;
+    }
+
+    .message-content p {
+        font-size: 0.9em;
+    }
+}
+
+</style>
 </head>
 <body>
-
-    <div class="email-container">
-        <div class="email-header">
-            <h2>Pesan Kontak Baru</h2>
-        </div>
+    <div class="messages-container">
+        <h2>Pesan iqu project</h2>
         
-        <div class="email-body">
-            <!-- Misalnya ini menggunakan Blade Template Laravel untuk menampilkan pesan -->
-            @foreach ($message as $message)
-                <p><strong>Nama:</strong> {{ $message->name }}</p>
-                <p><strong>Email:</strong> {{ $message->email }}</p>
+        @foreach ($message as $message)
+        <div class="message-card">
+            <div class="message-header">
+                <h3>{{ $message->name }}</h3>
+                <span>{{ $message->email }}</span>
+            </div>
+            <div class="message-content">
                 <p><strong>Pesan:</strong></p>
                 <p>{{ $message->message }}</p>
-            @endforeach
+            </div>
         </div>
-
-        <div class="email-footer">
-            <p>Terima kasih telah menghubungi kami!</p>
-            <p><a href="#">Kunjungi website kami</a></p>
-        </div>
+        @endforeach
     </div>
-
 </body>
+
 </html>

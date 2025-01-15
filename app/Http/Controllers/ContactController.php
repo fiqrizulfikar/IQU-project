@@ -38,7 +38,7 @@ class ContactController extends Controller
         ));
         
         // Redirect dengan pesan sukses
-        return redirect()->route('contact.form')->with('success', 'Pesan Anda berhasil dikirim!');
+        return redirect()->route('contact.submit')->with('success', 'Pesan Anda berhasil dikirim!');
     }
 
  
@@ -46,8 +46,12 @@ class ContactController extends Controller
         public function showUs()
     {
         $us = ContactMessage::all(); // Ambil semua data pesan
-        dd($us); 
-        return view('emails.us')->with('messages', $us);
+        return view('emails.us')->with('message', $us);
     }
 
+    public function showUp()
+    {
+        $us = ContactMessage::all(); // Ambil semua data pesan
+        return view('emails.plain')->with('message', $us);
+    }
 }

@@ -39,11 +39,12 @@ class ContactMail extends Mailable
         return $this->from($this->email)  // Pengirim email (email yang diisi dalam form)
                     ->to('aemanel74@gmail.com')  // Penerima email
                     ->subject('Contact Us Form Submission')
-                    ->view('emails.us')  // Nama view untuk isi email
+                    ->view('emails.us') 
                     ->with([
                         'name' => $this->name,
                         'email' => $this->email,
-                        'messageContent' => $this->message
+                        'message' => $this->message
                     ]);
     }
+    
 }
