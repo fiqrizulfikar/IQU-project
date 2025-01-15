@@ -797,7 +797,7 @@ main {
                   <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
                   </li>
                 </ul>
-              <li><a href="{{ url('/contact') }}">Media Sosial</a></li>
+              <li><a href="{{ url('/contact') }}">contact</a></li>
               <li><a href="/">About US</a></li>
               <a href="/login" class="login-link">
                 <img src="assets/img/login.png" alt="Login Icon" class="login-icon">

@@ -909,7 +909,7 @@ body {
                     <li><a href="{{ url('/politik') }}"><span>Tes IQ</span></a></li>
                     </li>
                   </ul>
-                <li><a href="{{ url('/contact') }}">Media Sosial</a></li>
+                <li><a href="{{ url('/contact') }}">Contact</a></li>
                 <li><a href="/">About US</a></li>
                 <a href="/login" class="login-link">
                   <img src="assets/img/login.png" alt="Login Icon" class="login-icon">
