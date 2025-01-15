@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>quiz tes iq</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/ekonomi.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/tesiq.css') }}">
 </head>
 <body>
     <body>

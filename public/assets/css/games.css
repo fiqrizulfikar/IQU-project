@@ -99,6 +99,9 @@ body {
   :root {
     scroll-behavior: smooth;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 
 
 :root {
@@ -123,8 +126,7 @@ body {
   }
 }
 
-<<<<<<< HEAD
-=======
+
 img {
   width: 100%; /* Gambar memenuhi lebar elemen induknya */
   height: auto; /* Pertahankan rasio aspek */
@@ -288,4 +290,4 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
->>>>>>> 930f6f23cee9128fdad866ebaf5c7e57d1f049ed
+

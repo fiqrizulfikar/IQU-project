@@ -27,10 +27,8 @@
     </div>
         </div>
         <div class="menu">
-            <a href="#">About</a>
-            <a href="#">J. Ventures</a>
-            <a href="#">Longevity Intelligence</a>
-            <a href="#">Explore</a>
+            <a href="/">About US</a>
+            <a href="/login" class="login-icon"><i class="fas fa-user"></i></a>
         </div>
     </nav>
 
@@ -42,7 +40,7 @@
                 <a href="https://www.facebook.com" target="_blank" title="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                <a href="https://www.instagram.com/iqu.quiz?igsh=MWl1em80cm9xMjlpYw==" target="_blank" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a href="https://x.com" target="_blank" title="X">

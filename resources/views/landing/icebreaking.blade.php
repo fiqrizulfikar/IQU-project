@@ -777,23 +777,27 @@ main {
         </a>         
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li>
-                  <a href="{{ url('/sd') }}"><span>Sekolah Dasar</span> </i></a>    
+            <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul class="d-flex mb-0">
+                <li class="dropdown">
+                  <a href="{{ url('/ekonomi') }}"><span>Ekonomi</span> </i></a>    
                 </li>
-                <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
-                <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
-                <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
+                <li><a href="{{ url('/politik') }}"><span>Politik</span></a></li>
+                <li><a href="/teknologi" class="active"><span>Teknologi</span></a></li>
+                <li><a href="{{ url('/umum') }}"><span>Umum</span></i></a>
                 </li>
               </ul>
-              <li class="dropdown"><a href="{{ url('/games') }}"><span>Games</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li>
-                    <a href="{{ url('/icebreaking') }}"><span>Ice Breaking</span> </i></a></li>
-                  <li><a href="{{ url('/tesiq') }}"><span>Tes IQ</span></a></li>
+                    <a href="{{ url('/sd') }}"><span>Sekolah Dasar</span> </i></a>    
+                  </li>
+                  <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
+                  <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
+                  <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
+                  </li>
                 </ul>
-              <li><a href="{{ url('/contact') }}">Contact</a></li>
+              <li><a href="{{ url('/contact') }}">Media Sosial</a></li>
               <li><a href="/">About US</a></li>
               <a href="/login" class="login-link">
                 <img src="assets/img/login.png" alt="Login Icon" class="login-icon">

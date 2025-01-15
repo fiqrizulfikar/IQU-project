@@ -76,3 +76,188 @@ button[disabled] {
     color: #999;
     cursor: not-allowed;
 }
+/* Reset dasar */
+/* Reset Dasar */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #f4f6fb;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Kontainer Utama */
+.quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #1cffbf;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(12, 170, 255, 0.15);
+    text-align: center;
+    border-top: 5px solid #000000;
+    animation: slideIn 1s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animasi Slide-In */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Heading */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4A90E2;
+    font-family: 'Playfair Display', serif;
+    animation: fadeIn 1.2s ease-out;
+}
+
+/* Timer */
+.timer {
+    font-size: 1rem;
+    color: #ff4d4d;
+    margin-bottom: 15px;
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Formulir */
+form {
+    margin-top: 20px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: #f9fafc;
+    animation: slideInLeft 1s ease-out;
+}
+
+.option:hover {
+    background-color: #eef5ff;
+    border-color: #4A90E2;
+    transform: translateY(-3px);
+}
+
+/* Animasi Slide-In-Left */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.option input {
+    margin-right: 10px;
+    transform: scale(1.2);
+    accent-color: #2b00d9;
+}
+
+label {
+    flex: 1;
+    font-size: 1rem;
+    text-align: left;
+    color: #555;
+}
+
+/* Tombol */
+button {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #efff11, #ffcc23);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1.5s ease-out;
+}
+
+/* Animasi Bounce */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button:hover {
+    background: linear-gradient(135deg, #87ff0f, #20ffd6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+button:disabled {
+    background: #d3d7de;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Hasil */
+.result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animasi Fade-In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsif untuk Perangkat Kecil */
+@media (max-width: 768px) {
+    .quiz-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
