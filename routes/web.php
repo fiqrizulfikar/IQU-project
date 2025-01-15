@@ -69,7 +69,7 @@ Route::delete('/admin/questions/{table}/{id}', [QuizController::class, 'destroy'
 
 //login
 Route::get('/login', function () {
-    return view('login');
+    return view ('login');
 })->name('login');
 
 

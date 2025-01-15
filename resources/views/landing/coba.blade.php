@@ -3,602 +3,656 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="assets/css/mediasosial7.css" rel="stylesheet">
-    <title>Contact Page</title>
+    <title>About Us</title>
     <style>
-        
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #555;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .slider {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .slide h2 {
+            margin: 1rem 0;
+        }
+
+        .slide p {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        .slide button {
+            padding: 0.7rem 1.5rem;
+            border: none;
+            background: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .slide button:hover {
+            background: #555;
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .control {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: background 0.3s;
+        }
+
+        .control:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Styles for the new About Us section with scroll */
+.about-us-scroll {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #0c0c38;
-    color: #ffffff;
-    overflow: hidden;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.navbar {
-    width: 100%;
-    padding: 20px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar .logo {
-    font-size: 1.5em;
-    font-family:skrip, sans serif;
-    margin-right:10px;
-    color: #ffffff;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.navbar .logo::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-    transition: left 0.6s ease;
-}
-
-.navbar .logo:hover::after {
-    left: 100%;
-}
-
-
-.navbar a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1em;
-    margin: 0 15px;
-    transition: color 0.3s;
-}
-
-.navbar a:hover {
-    color: #00bcd4;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    width: 100%;
-    padding: 40px;
-    margin-top: 18px;
-    gap: 20px;
-}
-
-.text-section {
-    flex: 1;
-    padding-right: 20px;
-    
-}
-
-.text-section h1 {
-    font-size: 4em;
-    font-family:'Playfair Display', serif;;
-    margin-bottom: 40px;
-}
-
-.text-section p {
-    font-family:'robo', sans-serif;
-    font-size: 0.9em;
+.about-us-scroll h2 {
+    font-size: 36px;
+    color: #34495e;
     margin-bottom: 30px;
+    animation: fadeIn 2s ease-out;
 }
 
-.form-section {
-    flex: 1;
+.about-us-scroll p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.scroll-section {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.scroll-box {
+    background: linear-gradient(135deg, #ff6f61, #ff9e80);
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-box h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.scroll-box p {
+    font-size: 16px;
+}
+
+.scroll-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll Box Hover Effect */
+.scroll-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the additional section */
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #f7f7f7;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeInSection 1s ease-out;
+}
+
+.testimonials-header h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s ease-out;
+}
+
+.testimonials-header p {
+    font-size: 18px;
+    color: #7f8c8d;
+    opacity: 0.7;
+    animation: fadeInUp 1s ease-out;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    animation: fadeInSection 1s ease-out;
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 25px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInBox 1s ease-out forwards;
+}
+
+.testimonial-card img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    color: #34495e;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.testimonial-card h4 {
+    font-size: 18px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.testimonial-card p:last-of-type {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+/* Button Styles */
+.testimonial-btn {
+    background-color: #2980b9;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-btn:hover {
+    transform: scale(1.1);
+    background-color: #1f6d91;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInBox {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Achievements Section */
+.achievements-section {
+    background-color: #ecf0f1;
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeInSection 1s ease-out;
+}
+
+.achievements-header h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.achievements-header p {
+    font-size: 18px;
+    color: #7f8c8d;
+    opacity: 0.7;
+}
+
+.achievements-timeline {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
+    margin-top: 40px;
+    animation: fadeInUp 1s ease-out;
 }
 
-.form-section input, .form-section textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    outline: none;
-    background: transparent;
-    color: #ffffff;
-    transition: border-color 0.3s, color 0.3s;
+.timeline-item {
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-.form-section input:focus, .form-section textarea:focus {
-    border-color: #00bcd4;
-    color: #00bcd4;
-}
-
-.form-section button {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ffffff;
-    background: transparent;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.form-section button:hover {
-    background-color: #00bcd4;
-    color: #ffffff;
-}
-.social-icons {
-    margin-top: 20px;
-    gap: 15px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    color: #ffffff;
-    font-size: 1.5em;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #00bcd4;
-}
-
-.wave-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-    background: linear-gradient(45deg, #ff6a00, #ee0979, #ff007f);
-    background-size: 400% 400%;
-    animation: wave 15s ease infinite;
-}
-
-/* Animasi Gelombang */
-@keyframes wave {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.wave-bg .circle {
-    position: absolute;
+.timeline-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #2980b9;
+    color: white;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    animation: float 10s infinite ease-in-out, colorChange 3s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
 }
 
-/* Animasi gerakan float */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-50px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+.timeline-icon span {
+    font-size: 18px;
+    font-weight: bold;
 }
 
-/* Animasi perubahan warna */
-@keyframes colorChange {
-    0% {
-        background: rgba(255, 255, 255, 0.2);
-    }
-    50% {
-        background: rgba(0, 255, 255, 0.5);
-    }
-    100% {
-        background: rgba(255, 255, 255, 0.2);
-    }
+.timeline-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    position: relative;
 }
 
-
-/* Footer Styling */
-.footer {
-width: 100%;
-color: #3C3D37;
-display: flex; /* Mengaktifkan Flexbox */
-justify-content: center; /* Pusatkan elemen secara horizontal */
-
-padding: 20px 10px;
-font-size: 0.9em;
-margin-top: auto; /* Menempel di bawah */
+.timeline-content h4 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
 }
 
-.footer-content {
-display: flex; /* Membuat elemen anak sejajar horizontal */
-gap: 15px; /* Jarak antar elemen */
-align-items: center;
+.timeline-content p {
+    font-size: 16px;
+    color: #34495e;
+    margin-top: 10px;
 }
 
-.footer-content p {
-margin: 0;
+/* Button Styles */
+.achievements-btn {
+    background-color: #2980b9;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: transform 0.3s ease;
 }
 
-.footer-content a {
-color: #00bcd4; /* Warna biru cerah */
-text-decoration: none;
-transition: color 0.3s ease;
+.achievements-btn:hover {
+    transform: scale(1.1);
+    background-color: #1f6d91;
 }
 
-.footer-content a:hover {
-color: #ffffff; /* Warna hover */
-}
-
-/* Efek Animasi Muncul */
-@keyframes fadeIn {
-    0% {
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+    from {
         opacity: 0;
-        transform: translateY(20px); /* Mulai dari bawah */
+        transform: translateY(20px);
     }
-    100% {
+    to {
         opacity: 1;
-        transform: translateY(0); /* Posisi normal */
+        transform: translateY(0);
     }
 }
 
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-.fade-in-delay {
-    animation-delay: 0.5s; /* Memberikan sedikit delay agar elemen muncul satu per satu */
-}
-
-.form-section input, .form-section textarea, .text-section h1, .text-section p {
-    opacity: 0; /* Mulai dengan opacity 0, sehingga elemen tidak terlihat */
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
 
     </style>
-   
 </head>
 <body>
-<div class="wave-bg">
-    <div class="circle" style="width: 100px; height: 100px; top: 20%; left: 10%;"></div>
-    <div class="circle" style="width: 150px; height: 150px; top: 40%; left: 50%;"></div>
-    <div class="circle" style="width: 80px; height: 80px; top: 70%; left: 30%;"></div>
-    <div class="circle" style="width: 100px; height: 100px; top: 90%; left: 80%;"></div>
-</div>
+    <header>
+        <h1>About Us</h1>
+    </header>
 
-    <nav class="navbar">
-    <div class="logo ">
-        
-          1QU 
-   
-    </div>
-        </div>
-        <div class="menu">
-            <a href="#">About</a>
-            <a href="#">J. Ventures</a>
-            <a href="#">Longevity Intelligence</a>
-            <a href="#">Explore</a>
-        </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <div class="container">
-        <div class="text-section">
-          <h1 class="fade-in">WANNA GET IN TOUCH?</h1>
-             <p class="fade-in">Have a question or want to collaborate? Reach out to us directly. Whether you’re looking to discuss partnerships, media inquiries, or simply connect, we’re here to help you take the next step.</p>
-             <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com" target="_blank" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://x.com" target="_blank" title="X">
-                    <i class="fab fa-x"></i> 
-                </a>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://via.placeholder.com/1100x500" alt="Slide 1">
+                    <h2>Who We Are</h2>
+                    <p>We are committed to delivering the best experiences for our customers.</p>
+                    <button>Learn More</button>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/1100x500" alt="Slide 2">
+                    <h2>Our Mission</h2>
+                    <p>Driving innovation to create impactful solutions.</p>
+                    <button>Discover More</button>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/1100x500" alt="Slide 3">
+                    <h2>Our Vision</h2>
+                    <p>Shaping a better future through collaboration and creativity.</p>
+                    <button>Explore Vision</button>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/1100x500" alt="Slide 4">
+                    <h2>Our Team</h2>
+                    <p>Meet the passionate individuals behind our success.</p>
+                    <button>Meet Team</button>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/1100x500" alt="Slide 5">
+                    <h2>Join Us</h2>
+                    <p>Be part of our journey and make an impact.</p>
+                    <button>Get Started</button>
+                </div>
             </div>
+            <div class="controls">
+                <button class="control prev">&#10094;</button>
+                <button class="control next">&#10095;</button>
+            </div>
+        </div>
+    </div>
 
+    <section class="about-us-scroll">
+        <div class="content">
+            <h2>Our Core Values</h2>
+            <p>We believe in the power of innovation, teamwork, and commitment to excellence. Our core values guide us towards making a meaningful impact.</p>
+            <p>We strive to build a positive work environment, drive results through collaboration, and maintain the highest standards of service and quality.</p>
+        </div>
+        <div class="scroll-section">
+            <div class="scroll-box">
+                <h3>Innovation</h3>
+                <p>We focus on creative solutions to tackle challenges and foster growth.</p>
+            </div>
+            <div class="scroll-box">
+                <h3>Collaboration</h3>
+                <p>We believe in working together to achieve our goals and deliver success.</p>
+            </div>
+            <div class="scroll-box">
+                <h3>Excellence</h3>
+                <p>We are committed to delivering the best in every aspect of our work.</p>
+            </div>
+            <div class="scroll-box">
+                <h3>Customer Focus</h3>
+                <p>Our customers' satisfaction is at the heart of everything we do.</p>
+            </div>
         </div>
 
-        <form class="form-section">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </div>
 
-    <footer class="footer">
-    <div class="footer-content">
-        <p>© 2024 All Rights Reserved</p>
-        <p>Created by <a href="https://www.iqu.com" target="_blank">1QU Project</a></p>
-    </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="testimonials-header">
+            <h2>What Our Clients Say</h2>
+            <p>We value feedback from our clients, and we're proud of the lasting relationships we've built.</p>
+        </div>
+        
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <img src="https://via.placeholder.com/100" alt="Client 1">
+                <p>"Their service was impeccable. They understood our needs and delivered beyond expectations."</p>
+                <h4>John Doe</h4>
+                <p>CEO, Tech Solutions</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="https://via.placeholder.com/100" alt="Client 2">
+                <p>"We have seen a remarkable improvement in our processes thanks to their innovative solutions."</p>
+                <h4>Jane Smith</h4>
+                <p>Marketing Director, Creatify</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="https://via.placeholder.com/100" alt="Client 3">
+                <p>"The team went above and beyond to ensure that we achieved our goals efficiently and on time."</p>
+                <h4>Mike Johnson</h4>
+                <p>Operations Manager, Innovators Inc.</p>
+            </div>
+        </div>
+    
+        <button class="testimonial-btn">Read More Testimonials</button>
+    </section>
+    
+    <section class="achievements-section">
+        <div class="achievements-header">
+            <h2>Our Achievements & Milestones</h2>
+            <p>We are proud of the milestones we’ve achieved and the impact we’ve made. Here’s a glimpse into our journey.</p>
+        </div>
+        
+        <div class="achievements-timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon"><span>2015</span></div>
+                <div class="timeline-content">
+                    <h4>Founded</h4>
+                    <p>We started our journey with a simple idea: to create innovative solutions for businesses.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon"><span>2017</span></div>
+                <div class="timeline-content">
+                    <h4>First Major Partnership</h4>
+                    <p>Our first major partnership with a global brand, opening doors to new opportunities.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon"><span>2019</span></div>
+                <div class="timeline-content">
+                    <h4>Global Expansion</h4>
+                    <p>Expanded our presence to international markets, bringing our solutions worldwide.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon"><span>2021</span></div>
+                <div class="timeline-content">
+                    <h4>Award Winning</h4>
+                    <p>Received multiple awards for innovation and excellence in our industry.</p>
+                </div>
+            </div>
+        </div>
+    
+        <button class="achievements-btn">Explore More Milestones</button>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 About Us Company. All Rights Reserved.</p>
     </footer>
 
-    
-</body>
+    <script>
+        const slides = document.querySelector('.slides');
+        const slideCount = document.querySelectorAll('.slide').length;
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        let currentIndex = 0;
 
-<script>
-    // Menunggu hingga halaman dimuat
-    window.addEventListener("load", function() {
-        // Pilih elemen yang ingin di-animasikan
-        const elements = document.querySelectorAll('.fade-in');
-        
-        // Tambahkan kelas 'fade-in' untuk memulai animasi
-        elements.forEach((element, index) => {
-            // Berikan delay agar elemen muncul satu per satu
-            element.classList.add('fade-in-delay');
-            setTimeout(() => {
-                element.classList.add('fade-in');
-            }, index * 300); // Delay tambahan untuk setiap elemen
-        });
-    });
-</script>
+        function showSlide(index) {
+            if (index < 0) {
+                currentIndex = slideCount - 1;
+            } else if (index >= slideCount) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
 
-</html>
+        prevButton.addEventListener('click', () => showSlide(currentIndex - 1));
+        nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
 
-
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-  }
-
-  .landing {
-    height: 70vh;
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #fffb10 0%, #1c1b07 100%);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 0 0 20px 20px;
-  }
-
-  .landing h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
-  }
-
-  .landing p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    animation: fadeIn 1.5s ease-in-out;
-  }
-
-  .landing .btn-primary {
-    display: inline-block;
-    background: #f9c80e;
-    color: #333;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .landing .btn-primary:hover {
-    background: #f5a623;
-    transform: scale(1.1);
-  }
-
-  .container1 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 40px;
-    padding: 10px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
- 
-  .card {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
-width: 230px;
-height: 330px;
-background-color: var(--white, #ffffff);
-border-radius: 10px;
-box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08), -4px -4px 12px rgba(0, 0, 0, 0.08);
-padding: 15px;
-box-sizing: border-box;
-overflow: hidden;
-transition: all 0.3s;
-cursor: pointer;
-}
-
-.card:hover {
-transform: translateY(-10px);
-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.card-image-container {
-  width: 100%;
-  height: 280px; /* Tinggi kontainer */
-  border-radius: 10px;
-  margin-bottom: 12px;
-  overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari kontainer */
-  background-color: rgb(254, 254, 255);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-img {
-  width: 100%; /* Membuat gambar memenuhi lebar kontainer */
-  height: 200%; /* Mempertahankan rasio aspek gambar */
-  max-height: 100%; /* Membatasi tinggi gambar agar tidak melebihi kontainer */
-  object-fit: cover; /* Memastikan gambar mengisi kontainer dengan baik */
-  transition: transform 0.3s; /* Menambahkan efek transisi saat gambar diperbesar */
-}
-
-.card-img img {
-width: 100%;
-height: 100%;
-object-fit: cover; /* Menjaga proporsi gambar */
-border-radius: 10px;
-}
-
-.card-title {
-margin: 0;
-font-size: 17px;
-font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
-font-weight: 600;
-color: #1797b8;
-text-align: center;
-}
-
-.card-des {
-margin: 0 0 15px;
-font-size: 13px;
-font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
-color: #1797b8;
-text-align: center;
-line-height: 1.5;
-}
-
-.btn {
-color: purple;
-text-transform: uppercase;
-text-decoration: none;
-border: 2px solid purple;
-padding: 10px 20px;
-font-size: 17px;
-font-weight: bold;
-background: transparent;
-position: relative;
-transition: all 1s;
-overflow: hidden;
-text-align: center;
-}
-
-.btn:hover {
-color: white;
-}
-
-.btn::before {
-content: "";
-position: absolute;
-height: 100%;
-width: 0%;
-top: 0;
-left: -40px;
-transform: skewX(45deg);
-background-color: purple;
-z-index: -1;
-transition: all 1s;
-}
-
-.btn:hover::before {
-width: 160%;
-}
-
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
-</head>
-<!-- Navbar -->
-<nav class="navbar">
-<h1>
-    <img src="assets/img/logo.png" alt="Logo">
-    Sekolah Dasar
-</h1>
-<ul>
-    <li><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span></i></a>
-    <li><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span></i></a>
-    <li><a href="{{ url('/games') }}"><span>Games</span></i></a>
-    <li><a href="/">About US</a></li>
-    <li><a href="/login" class="login-icon"><i class="fas fa-user"></i></a></li>  </li>
-</ul>
-</nav>
-</head>
-</body>
-
-<!-- Hero Section -->
-<header class="landing">
-  <h1>Selamat Datang di <span>i-QUIZ</span></h1>
-  <p>
-    Temukan pengalaman belajar interaktif dan seru dengan i-QUIZ. Cobalah tes IQ, media pembelajaran, dan games menarik untuk semua tingkat pendidikan.
-  </p>
-  <a href="#features" class="btn-primary">Jelajahi Sekarang</a>
-</header>
-
-<!-- Content Section -->
-<div class="container1">
-  <div class="card">
-    <div class="card-image-container">
-      <img class="card-img" src="assets/img/TES IQ.png" alt="Tes IQ">
-      
-    </div>
-    
-    <p> TES IQ</p>
-    <p class="card-des">
-      AYO COBA PENGETAHUAN IQ
-    </p>
-     <a href="/tesiq" class="btn">Mulai</a>
-  </div>
-
-  
-  
-<div class="card">
-<div class="card-image-container">
-  <img class="card-img" src="assets/img/breaking.png" alt="icebreaking">
-</div>
-<p> ICE BREAKING</p>
-<p class="card-des">
- AYO LAKUKAN GAMES
-</p>
-<button class="btn">Mulai</button>
-</div>
-
-
-</div>
+        // Auto-slide every 5 seconds
+        setInterval(() => showSlide(currentIndex + 1), 5000);
+    </script>
 </body>
 </html>
+
