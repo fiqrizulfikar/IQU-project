@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
-<<<<<<< HEAD
+
  
   <title>Landing Page Full Screen</title>
    <!-- Favicons -->
@@ -31,7 +31,7 @@
     
     /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
     :root { 
-      --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+      --background-color: #ededed; /* Background color for the entire website, including individual sections */
       --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
       --heading-color: #040677; /* Color for headings, subheadings and title throughout the website */
       --accent-color: #1acc8d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -52,7 +52,7 @@
     /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
     
     .light-background {
-      --background-color: #f4f5fe;
+      --background-color: #ececec;
       --surface-color: #ffffff;
     }
     
@@ -471,6 +471,75 @@
         text-align: left;
     }
   }
+  .login-link {
+    display: inline-block;
+    text-decoration: none; /* Menghilangkan garis bawah di link */
+    cursor: pointer;
+    padding: 10px; /* Jarak di sekitar icon */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
+}
+
+/* Menata icon login */
+.login-icon {
+    width: 30px; /* Ukuran lebar icon */
+    height: 30px; /* Ukuran tinggi icon */
+    border-radius: 50%; /* Membuat icon berbentuk lingkaran */
+}
+
+/* Efek hover pada link dan icon */
+.login-link:hover .login-icon {
+    transform: scale(1.1); /* Memperbesar icon sedikit saat hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Memberikan bayangan saat hover */
+}
+
+/* Menambahkan efek hover pada link */
+.login-link:hover {
+    background-color: #f
+}
+
+#preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    overflow: hidden;
+    background: var(--background-color);
+    transition: all 0.6s ease-out;
+  }
+  
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #ffffff;
+    border-color: var(--accent-color) transparent var(--accent-color) transparent;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1.5s linear infinite;
+  }
+@keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+  
+
+
+
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -481,17 +550,21 @@
     }
 
     .landing {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #fffb10 0%, #1c1b07 100%);
-      color: white;
-      text-align: center;
-      padding: 20px;
-      border-radius: 0 0 20px 20px;
-    }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('assets/img/gambar games.jpg'); /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
+  background-size: cover; /* Menjadikan gambar menutupi seluruh elemen */
+  background-position: center; /* Menempatkan gambar di tengah */
+  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
+}
+
     .container {
     max-width: 1200px; /* Atur lebar maksimum */
     margin: 0 auto; /* Pusatkan konten */
@@ -535,9 +608,9 @@
       gap: 20px;
       margin-top: 40px;
       padding: 10px;
-      background: #ffffff;
+      background: #2108ff;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
       width: 90%;
       max-width: 1200px;
       margin-left: auto;
@@ -545,90 +618,93 @@
     }
 
    
-    .card {
+   /* Container Styling */
+.container1 {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  width: 230px;
-  height: 330px;
-  background-color: var(--white, #ffffff);
-  border-radius: 10px;
-  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08), -4px -4px 12px rgba(0, 0, 0, 0.08);
-  padding: 15px;
-  box-sizing: border-box;
+  padding: 20px;
+  background-color: #f3f3f3;
+}
+
+/* Card Styling */
+.card {
+  width: 300px;
+  background: #e8e8e8;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: all 0.3s;
-  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Card Image Styling */
 .card-image-container {
-    width: 100%;
-    height: 280px; /* Tinggi kontainer */
-    border-radius: 10px;
-    margin-bottom: 12px;
-    overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari kontainer */
-    background-color: rgb(254, 254, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .card-img {
-    width: 100%; /* Membuat gambar memenuhi lebar kontainer */
-    height: 200%; /* Mempertahankan rasio aspek gambar */
-    max-height: 100%; /* Membatasi tinggi gambar agar tidak melebihi kontainer */
-    object-fit: cover; /* Memastikan gambar mengisi kontainer dengan baik */
-    transition: transform 0.3s; /* Menambahkan efek transisi saat gambar diperbesar */
-}
-
-.card-img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Menjaga proporsi gambar */
-  border-radius: 10px;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
+.card:hover .card-img {
+  transform: scale(1.1);
+}
+
+/* Card Title Styling */
 .card-title {
-  margin: 0;
-  font-size: 17px;
-  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
-  font-weight: 600;
-  color: #1797b8;
-  text-align: center;
-}
-
-.card-des {
-  margin: 0 0 15px;
-  font-size: 13px;
-  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
-  color: #1797b8;
-  text-align: center;
-  line-height: 1.5;
-}
-
-.btn {
-  color: purple;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 2px solid purple;
-  padding: 10px 20px;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: bold;
-  background: transparent;
-  position: relative;
-  transition: all 1s;
-  overflow: hidden;
-  text-align: center;
+  color: #333;
+  margin: 15px 0;
 }
 
-.btn:hover {
+/* Card Description Styling */
+.card-des {
+  font-size: 16px;
+  color: #666;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1acc8d;
   color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
 .btn::before {
@@ -638,10 +714,9 @@
   width: 0%;
   top: 0;
   left: -40px;
-  transform: skewX(45deg);
-  background-color: purple;
-  z-index: -1;
-  transition: all 1s;
+  
+ 
+  
 }
 
 .btn:hover::before {
@@ -661,44 +736,63 @@
     }
   </style>
 </head>
-
 <body>
-  <div class="fade-in"> 
-  <div class="container">
-    <div class="cards-container">
-      <div class="card">
-        <div class="info_card">
-          <span>ICE</span>
-          <h2>BREAKING</h2>
-          <img src="assets/img/TES IQ 1.png" alt="Icebreaking">
-        </div>
-        <button class="next-btn" >
-        <a href="{{ url('/icebreaking') }}">  Mulai</button>
-      </div>
-      <div class="card">
-        <div class="info_card">
-          <span>TES</span>
-          <h2>IQ</h2>
-          <img src="assets/img/breaking.png" alt="TesIQ">
-        </div>
-        <button class="next-btn">
-        <a href="{{ url('/tesiq') }}"> Mulai</a></button>
-        
-        
-      </div>
+  <head>
+    <body class="index-page">
+  
+      <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="logoiqu.com">
+            <h1 class="sitename">i</i></h1>
+            <h1 class="sitename">-QUIZ</h1>
+          </a>         
+
+          <nav id="navmenu" class="navmenu d-flex align-items-center">
+            <ul>
+              <li class="dropdown"><a href="{{ url('/pengetahuan') }}"><span>Pengetahuan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul class="d-flex mb-0">
+                  <li class="dropdown">
+                    <a href="{{ url('/ekonomi') }}"><span>Ekonomi</span> </i></a>    
+                  </li>
+                  <li><a href="{{ url('/politik') }}"><span>Politik</span></a></li>
+                  <li><a href="/teknologi" class="active"><span>Teknologi</span></a></li>
+                  <li><a href="{{ url('/umum') }}"><span>Umum</span></i></a>
+                  </li>
+                </ul>
+                <li class="dropdown"><a href="{{ url('/pendidikan') }}"><span>Pendidikan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li>
+                      <a href="{{ url('/sd') }}"><span>Sekolah Dasar</span> </i></a>    
+                    </li>
+                    <li><a href="{{ url('/Smp') }}"><span>Sekolah Menengah Pertama</span></a></li>
+                    <li><a href="/SMA" class="active"><span>Sekolah Menengah Atas</span></a></li>
+                    <li><a href="{{ url('/cpns-quiz/categories') }}"><span>Tes CPNS</span></i></a>
+                    </li>
+                  </ul>
+                <li><a href="{{ url('/contact') }}">Media Sosial</a></li>
+                <li><a href="/">About US</a></li>
+                <a href="/login" class="login-link">
+                  <img src="assets/img/login.png" alt="Login Icon" class="login-icon">
+              </a>
+              </li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
     </div>
-  </div>
-  </div>
-</body>
+  </header>
+<body>
+
   
   <!-- Hero Section -->
   <header class="landing">
     <div class="countainer">
       <h1>Selamat Datang di <span>i-QUIZ</span></h1>
         <p>
-      Temukan pengalaman belajar interaktif dan seru dengan i-QUIZ. Cobalah tes IQ, media pembelajaran, dan games menarik untuk semua tingkat pendidikan.
+           Selamat datang di landing Games , disini meyediakan  kuis seru yang terdiri dari dua bagian. Bagian pertama adalah tes IQ, di mana kalian bisa menguji seberapa tajam kemampuan berpikir kalian. Lalu, untuk mencairkan suasana, kita akan lanjut ke sesi ice breaking yang dijamin seru dan menyenangkan. Jadi, siapkan pikiran kalian, tetap santai, dan mari kita mulai dengan penuh semangat!
         </p>
-        <a href="#features" class="btn-primary">Jelajahi Sekarang</a>
+        <a href="#cards-section" class="btn-primary">Jelajahi Sekarang</a>
     </div>
   </header>
 
@@ -707,12 +801,10 @@
     <div class="card">
       <div class="card-image-container">
         <img class="card-img" src="assets/img/TES IQ.png" alt="Tes IQ">
-        
       </div>
-      
       <p> TES IQ</p>
       <p class="card-des">
-        AYO COBA PENGETAHUAN IQ
+        "Selamat datang di tantangan Tes IQ! Siapkan diri Anda untuk menghadapi pertanyaan-pertanyaan menarik. Klik tombol 'Mulai' untuk memulai!"
       </p>
        <a href="/tesiq" class="btn">Mulai</a>
     </div>
@@ -725,10 +817,11 @@
   </div>
   <p> ICE BREAKING</p>
   <p class="card-des">
-   AYO LAKUKAN GAMES
+    "Yuk, tingkatkan suasana dengan menonton video ice breaking yang seru di YouTube. Temukan ide-ide menarik untuk mencairkan suasana!"
   </p>
-  <button class="btn">Mulai</button>
+  <a href="/icebreaking" class="btn">Mulai</a>
 </div>
+
 
 
   </div>
