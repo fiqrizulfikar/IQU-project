@@ -74,7 +74,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: auto;
-  background-image: url('assets/img/UMUM.png');
+  background-color: #007BFF;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -791,7 +791,7 @@ main {
                 <ul>
                   <li>
                     <a href="{{ url('/icebreaking') }}"><span>Ice Breaking</span> </i></a></li>
-                  <li><a href="{{ url('/Smp') }}"><span>Tes IQ</span></a></li>
+                  <li><a href="{{ url('/tesiq') }}"><span>Tes IQ</span></a></li>
                 </ul>
               <li><a href="{{ url('/contact') }}">Contact</a></li>
               <li><a href="/">About US</a></li>
@@ -804,49 +804,90 @@ main {
           </nav>
   </div>
 </header>
-<body>
-    <main>
-        <div class="container">
-          <h1 class="main-title">AYO PERBANYAK PENGETAHUANMU!</h1>
-          <h2 class="sub-title">MANA YANG INGIN KAMU KUASAI:</h2>
-            <div class="options">
-                <div class="option">
-                    <img src="assets/img/buku.png" alt="Buku"> 
-                    <a href="{{ url('/umum') }}" class="read-more"><span>Belajar Umum</span><i class="bi bi-arrow-right"></i></a>
-                </div>
-                <div class="option">
-                    <img src="assets/img/ekonomi.png" alt="Globe">
-                    <a href="{{ url('/ekonomi') }}" class="read-more"><span>Belajar Ekonomi</span><i class="bi bi-arrow-right"></i></a>
-                </div>
-                <div class="option">
-                    <img src="assets/img/teknologi.png"alt="teknologi">
-                    <a href="{{ url('/teknologi') }}" class="read-more"><span>Belajar Teknologi</span><i class="bi bi-arrow-right"></i></a>
-                </div>
-                <div class="option">
-                    <img src="assets/img/court.png"alt="Politik">
-                    <a href="{{ url('/politik') }}" class="read-more"><span>Belajar Politik</span><i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
 
-    </main>
-  
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  
-    <!-- Preloader -->
-    <div id="preloader"></div>
-  
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
-  
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Video</title>
+    <style>
+        /* Reset margin dan padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gaya untuk navbar */
+       
+
+
+        /* Gaya untuk konten utama */
+        .content {
+            padding: 2rem;
+            margin-top: 5rem; 
+        }
+        .text {
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+            font-weight: bold; 
+            color: #007BFF;
+        }
+
+        /* Grid responsif untuk video */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 5rem;
+        }
+
+        .video-grid iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        /* Gaya responsif untuk perangkat kecil */
+        @media (max-width: 600px) {
+            nav a {
+                font-size: 1.2rem;
+            }
+
+            .video-grid iframe {
+                height: 150px;
+            }
+        }
+        
+    </style>
     
-  
+</head>
+
+
+<body>
+    
+    <div class="content">
+    <h1 class="text">
+        PANASS!!!! ICE BREAKING DULU YUKKKK
+    </h1>
+        <div class="video-grid">
+            <!-- Ganti "VIDEO_ID" dengan ID video YouTube yang ingin ditampilkan -->
+            
+            <iframe src="https://www.youtube.com/embed/fod6GIfLWwk?si=TvcACsKHfkFkfm5h" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/G93ujVPpSEk?si=azoZs8C1YYgcYIBS" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/Ldt09v4zxoY?si=2v4efz1ne9hLIkBp" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/kGnSUR0CyNk?si=ZR9pTx_8EonBEx-9" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/jmNCtTgvR5c?si=14jBjknRMkuPlzHE" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/Zs4VYWIRxZo?si=WUzAStENTKhhiIvK" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/xP_hnmhW58U?si=43HssZt5-Tm_38iv" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/RC6tsI1AByQ?si=bGjiCoQIZwyRBep4" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/XqZsoesa55w?si=_NXs318uFi0BCkdT" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/2wdoaWAhwhs?si=Qj8Y50GY_fX2W0B4" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/GEuLj9jBcuE?si=tG8SyFS3PYi30MId" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/5gckoJP9HZ4?si=QvC5H3abVuNX6PAQ" allowfullscreen></iframe>
+                <!-- Tambahkan lebih banyak iframe sesuai kebutuhan -->
+        </div>
+    </div>
+</body>
+</html>

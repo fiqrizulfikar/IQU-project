@@ -16,7 +16,7 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', [LandingControllers::class, 'index']);
 Route::get('/coba', [App\Http\Controllers\LandingControllers::class, 'coba']);
-
+Route::get('/icebreaking', [App\Http\Controllers\LandingControllers::class, 'icebreaking']);
 Route::get('/Smp', [App\Http\Controllers\LandingControllers::class, 'Smp']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 Route::get('/aboutus', [App\Http\Controllers\LandingControllers::class, 'aboutus']);
@@ -50,6 +50,9 @@ Route::get('/smaipa', [LandingSMAcontroller::class, 'showQuizSMAIPA'])->name('IP
 Route::get('/smaips', [LandingSMAcontroller::class, 'showQuizSMAIPS'])->name('IPS.show');
 Route::get('/smapkn', [LandingSMAcontroller::class, 'showQuizSMAPKN'])->name('PKN.show');
 Route::get('/smatik', [LandingSMAcontroller::class, 'showQuizSMATIK'])->name('TIK.show');
+
+
+
 
 // Route untuk halaman index admin
 Route::get('/admin/questions', [QuizController::class, 'index'])->name('admin.index');
