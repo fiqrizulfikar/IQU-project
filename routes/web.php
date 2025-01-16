@@ -19,7 +19,6 @@ use App\Mail\TestMail;
 Route::get('/', [LandingControllers::class, 'index']);
 Route::get('/coba', [App\Http\Controllers\LandingControllers::class, 'coba']);
 Route::get('/icebreaking', [App\Http\Controllers\LandingControllers::class, 'icebreaking']);
-Route::get('/Smp', [App\Http\Controllers\LandingControllers::class, 'Smp']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 Route::get('/aboutus', [App\Http\Controllers\LandingControllers::class, 'aboutus']);
 
@@ -63,8 +62,9 @@ Route::get('/admin/questions/create', [QuizController::class, 'create'])->name('
 Route::post('/admin/questions/store', [QuizController::class, 'store'])->name('admin.questions.store');
 // Route untuk edit pertanyaan
 Route::get('/admin/questions/{table}/{id}/edit', [QuizController::class, 'edit'])->name('admin.edit');
-Route::put('/admin/update/{table}/{id}', [QuizController::class, 'update'])->name('admin.update');
 
+// Update pertanyaan
+Route::put('/admin/questions/{table}/{id}', [QuizController::class, 'update'])->name('admin.update');
 // Route untuk hapus pertanyaan
 Route::delete('/admin/questions/{table}/{id}', [QuizController::class, 'destroy'])->name('admin.destroy');
 

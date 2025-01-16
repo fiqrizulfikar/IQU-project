@@ -83,7 +83,7 @@ public function update(Request $request, $table, $id)
     ]);
 
     // Cari kategori dan nama tabel
-    $category = Category::findOrFail($request->category_id); // Kategori ini bisa dipakai jika perlu
+    $category = Category::where('table_name', $table)->first();
     $tableName = $category->table_name;
 
     // Temukan pertanyaan berdasarkan ID
@@ -97,7 +97,6 @@ public function update(Request $request, $table, $id)
     return redirect()->route('admin.index', ['table' => $table])
                      ->with('success', 'Pertanyaan berhasil diperbarui di tabel ' . $table);
 }
-
 public function destroy($table, $id)
 {
     // Cari kategori dan nama tabel
