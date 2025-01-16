@@ -78,7 +78,10 @@ Route::get('/login', function () {
 Route::get('/contact', [ContactController::class, 'showForm'])->name('landing.contact');
 Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
 Route::get('/us', [ContactController::class, 'showUs'])->name('emails.us');
-Route::get('/plain', [ContactController::class, 'showUp'])->name('emails.plain');
+Route::post('/delete-messages', [ContactController::class, 'deleteByTime']);
+Route::delete('/delete-message/{id}', [ContactController::class, 'deleteMessage'])->name('deleteMessage');
+
+
 
 Route::post('/login', [AuthController::class, 'login'])->name('login.post'); 
 Route::post('/register', [AuthController::class, 'register'])->name('register.post'); 

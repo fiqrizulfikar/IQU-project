@@ -7,50 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 	<style>
 
-/* Navbar */
-header {
-    background-color: #1a1a1a;
-    padding: 20px 50px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-links {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #f1c40f;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #fff;
-}/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f7fa;
-    margin: 0;
-    padding: 0;
-    color: #4a4a4a;
-}
-
 /* Container */
 .container {
     width: 90%;
@@ -58,228 +14,193 @@ body {
     margin: 0 auto;
 }
 
-/* Section Title */
-.w-md-80,
-.w-lg-60 {
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.text-center {
+/* Styling untuk setiap team member (blog) */
+.our-team {
     text-align: center;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+    /* Menambahkan padding dan margin untuk jarak antar item */
+    padding: 10px;
 }
 
-.mb-5,
-.mb-md-9 {
-    margin-bottom: 60px;
-}
-
-span.d-block.small {
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #007bff;
-}
-
-h2 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #333;
-    margin-top: 10px;
-    letter-spacing: 1px;
-}
-
-/* Team Cards */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-/* Column Sizes */
-.col-sm-6 {
-    width: 45%;
-}
-
-.col-lg-3 {
-    width: 23%;
-}
-
-/* Card Style */
-.card {
-    background-color: #fff;
-    border: 1px solid #e4e7ea;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* Avatar (Profile Image) */
-.avatar-lg {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
+.our-team .pic {
     border-radius: 50%;
-    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
 }
 
-.avatar-img {
+.our-team .pic:after {
+    content: "";
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-
-/* Text Styles */
-.text-lh-sm {
-    line-height: 1.5;
-}
-
-.font-size-1 {
-    font-size: 13px;
-    color: #777;
-}
-
-.d-block.small.font-weight-bold.text-cap.mb-1 {
-    font-size: 12px;
-    font-weight: 600;
-    color: #007bff;
-}
-
-h4 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    margin: 10px 0;
-}
-
-/* Social Network Icons */
-.card-footer ul {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 10px 0;
-}
-
-.card-footer .btn {
-    width: 35px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 50%;
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
 }
 
-.card-footer .btn:hover {
-    background-color: #007bff;
+.our-team:hover .pic:after {
+    opacity: 1;
 }
 
-.card-footer .fab {
-    font-size: 16px;
-    color: #333;
+.our-team .pic img {
+    width: 100%;
+    height: auto;
 }
 
-.card-footer .btn:hover .fab {
-    color: #fff;
+.our-team .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease;
 }
 
-/* Job Info Section */
-.d-inline-block {
+.our-team:hover .social {
+    opacity: 1;
+}
+
+.our-team .social li {
     display: inline-block;
-    padding: 12px 18px;
-    border: 1px solid #e4e7ea;
-    border-radius: 30px;
-    background-color: #fff;
-    font-size: 14px;
+}
+
+.our-team .social li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size: 15px;
+    color: #fff;
+    margin-right: 10px;
+    transition: all 0.5s ease;
+}
+
+.our-team .social li a:hover {
+    background: #fff;
+    color: #000;
+}
+
+.our-team .team-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px dotted #ddd;
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    z-index: -1;
+    transition: border-color 0.5s ease;
+}
+
+.our-team:hover .team-content {
+    border-color: #00adae;
+}
+
+.our-team .team-info {
+    width: 100%;
+    color: #464646;
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+}
+
+.our-team .title {
+    font-size: 20px;
     font-weight: 600;
-    color: #333;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
+    color: #464646;
+    margin: 0 0 5px 0;
+    transition: color 0.5s ease;
 }
 
-.d-inline-block a {
-    font-weight: 700;
-    color: #007bff;
-    text-decoration: none;
+.our-team:hover .title {
+    color: #00adae;
 }
 
-.d-inline-block a:hover {
-    color: #333;
+.our-team .post {
+    display: block;
+    font-size: 14px;
+    color: #464646;
 }
 
-/* Hover Effects for All Cards */
-.card-body {
-    padding: 30px;
+/* Layout: Flexbox untuk membuat 4 item dalam satu baris */
+.our-team-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Menambahkan jarak antar item */
 }
 
-/* Footer Links */
-.card-footer .btn-xs {
-    padding: 6px 12px;
-    font-size: 13px;
-    color: #007bff;
-    border-radius: 30px;
-    border: 1px solid #007bff;
-}
-
-.card-footer .btn-soft-secondary {
-    color: #6c757d;
-}
-
-.card-footer .btn-soft-secondary:hover {
-    color: #007bff;
-}
-
-/* Responsiveness */
+/* Responsiveness: Membuat tampilan lebih responsif */
 @media (max-width: 768px) {
-    .col-sm-6 {
-        width: 48%;
+    .our-team-wrapper {
+        justify-content: center; /* Mengatur posisi item ke tengah di layar kecil */
     }
 
-    .col-lg-3 {
-        width: 48%;
+    .our-team {
+        width: 48%; /* Menampilkan 2 item dalam satu baris di layar tablet */
     }
 
-    h2 {
-        font-size: 28px;
+    .our-team .team-content {
+        bottom: -50px;
     }
 
-    h4 {
-        font-size: 16px;
+    .our-team .title {
+        font-size: 18px;
     }
 
-    .avatar-lg {
-        width: 90px;
-        height: 90px;
+    .our-team .post {
+        font-size: 12px;
     }
 
-    .font-size-1 {
+    .our-team .social li a {
+        width: 25px;
+        height: 25px;
         font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .col-sm-6 {
-        width: 100%;
+    .our-team-wrapper {
+        justify-content: center;
     }
 
-    .avatar-lg {
+    .our-team {
+        width: 100%; /* Menampilkan 1 item dalam satu baris di layar ponsel */
+    }
+
+    .our-team .pic {
         width: 80px;
         height: 80px;
+    }
+
+    .our-team .team-content {
+        bottom: -40px;
+    }
+
+    .our-team .title {
+        font-size: 16px;
+    }
+
+    .our-team .post {
+        font-size: 12px;
+    }
+
+    .our-team .social li a {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
     }
 }
 
@@ -300,157 +221,48 @@ h4 {
     </header>
 
 <!-- Team Section -->
-<div class="container space-2">
-  <!-- Title -->
-  <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-5 mb-md-9">
-    <span class="d-block small font-weight-bold text-cap mb-2">Our team</span>
-    <h2>Creative mind by people like you</h2>
-  </div>
-  <!-- End Title -->
-
-  <div class="row mx-n2 mb-5">
-    <div class="col-sm-6 col-lg-3 px-2 mb-3">
-      <!-- Team -->
-      <div class="card h-100 transition-3d-hover">
-        <div class="card-body">
-          <div class="avatar avatar-lg avatar-circle mb-4">
-            <img class="avatar-img" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
-          </div>
-
-          <span class="d-block small font-weight-bold text-cap mb-1">Founder / CEO</span>
-          <h4 class="text-lh-sm">Christina Kray</h4>
-          <p class="font-size-1">I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="our-team">
+                <div class="pic">
+                    <img src="images/img-1.jpg">
+                    <ul class="social">
+                        <li><a href="#" class="fab fa-facebook"></a></li>
+                        <li><a href="#" class="fab fa-twitter"></a></li>
+                        <li><a href="#" class="fab fa-google-plus"></a></li>
+                        <li><a href="#" class="fab fa-linkedin"></a></li>
+                    </ul>
+                </div>
+                <div class="team-content">
+                    <div class="team-info">
+                        <h3 class="title">Williamson</h3>
+                        <span class="post">Web Developer</span>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="card-footer border-0 pt-0">
-          <!-- Social Networks -->
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item">
-              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
-                <i class="fab fa-google"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-          </ul>
-          <!-- End Social Networks -->
+ 
+        <div class="col-md-3 col-sm-6">
+            <div class="our-team">
+                <div class="pic">
+                    <img src="images/img-2.jpg">
+                    <ul class="social">
+                        <li><a href="#" class="fab fa-facebook"></a></li>
+                        <li><a href="#" class="fab fa-twitter"></a></li>
+                        <li><a href="#" class="fab fa-google-plus"></a></li>
+                        <li><a href="#" class="fab fa-linkedin"></a></li>
+                    </ul>
+                </div>
+                <div class="team-content">
+                    <div class="team-info">
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- End Team -->
     </div>
-
-    <div class="col-sm-6 col-lg-3 px-2 mb-3">
-      <!-- Team -->
-      <div class="card h-100 transition-3d-hover">
-        <div class="card-body">
-          <div class="avatar avatar-lg avatar-circle mb-4">
-            <img class="avatar-img" src="../../assets/img/100x100/img3.jpg" alt="Image Description">
-          </div>
-
-          <span class="d-block small font-weight-bold text-cap mb-1">Project Manager</span>
-          <h4 class="text-lh-sm">Jeff Fisher</h4>
-          <p class="font-size-1">I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-        </div>
-
-        <div class="card-footer border-0 pt-0">
-          <!-- Social Networks -->
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item">
-              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
-                <i class="fab fa-google"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-          </ul>
-          <!-- End Social Networks -->
-        </div>
-      </div>
-      <!-- End Team -->
-    </div>
-
-    <div class="col-sm-6 col-lg-3 px-2 mb-3">
-      <!-- Team -->
-      <div class="card h-100 transition-3d-hover">
-        <div class="card-body">
-          <div class="avatar avatar-lg avatar-circle mb-4">
-            <img class="avatar-img" src="../../assets/img/100x100/img11.jpg" alt="Image Description">
-          </div>
-
-          <span class="d-block small font-weight-bold text-cap mb-1">Product Designer</span>
-          <h4 class="text-lh-sm">Amy Forren</h4>
-          <p class="font-size-1">I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-        </div>
-
-        <div class="card-footer border-0 pt-0">
-          <!-- Social Networks -->
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item">
-              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
-                <i class="fab fa-google"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn btn-xs btn-icon btn-soft-secondary rounded" href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-          </ul>
-          <!-- End Social Networks -->
-        </div>
-      </div>
-      <!-- End Team -->
-    </div>
-
-    <div class="col-sm-6 col-lg-3 px-2 mb-3">
-      <!-- Team -->
-      <div class="card h-100 transition-3d-hover">
-        <div class="card-body">
-          <div class="avatar avatar-lg avatar-circle mb-4">
-            <img class="avatar-img" src="../../assets/img/100x100/img12.jpg" alt="Image Description">
-          </div>
-
-          <span class="d-block small font-weight-bold text-cap mb-1">Want a new challenge?</span>
-          <h4 class="text-lh-sm">Join us</h4>
-          <p class="font-size-1">Browse through our job opportunities and become a member of the family!</p>
-        </div>
-
-        <div class="card-footer border-0 pt-0">
-          <a class="btn btn-xs btn-soft-secondary" href="#">View Open Jobs</a>
-        </div>
-      </div>
-      <!-- End Team -->
-    </div>
-  </div>
-
-  <!-- Info -->
-  <div class="text-center">
-    <div class="d-inline-block font-size-1 border bg-white text-center rounded-pill py-3 px-4">
-      Wanna work with us? <a class="font-weight-bold ml-3" href="hire-us.html">We are hiring <span class="fas fa-angle-right fa-sm ml-1"></span></a>
-    </div>
-  </div>
-  <!-- End Info -->
 </div>
 <!-- End Team Section -->
 
