@@ -190,7 +190,7 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section dark-background">
 
-      <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
+      <img src="https://i1.wp.com/madrasahdigital.co/wp-content/uploads/2021/02/WhatsApp-Image-2021-02-09-at-16.41.14.jpeg?resize=706%2C375&ssl=1" class="testimonials-bg" alt="">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -214,9 +214,9 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Josh</h3>
-                <h4>orangtua murid</h4>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq9C6MLZl9lmjD5qFXgnlVbfUQZyaaKWr5yA&s" class="testimonial-img" alt="">
+                <h3>Ferdi</h3>
+                <h4>Wali Murid</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
@@ -230,9 +230,9 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sherly</h3>
-                <h4>Orang Tua</h4>
+                <img src="https://cdn.idntimes.com/content-images/community/2020/06/photo575079-1e744cdef17cdb5bd28beb6ff50541f7.jpg" class="testimonial-img" alt="">
+                <h3>Persila</h3>
+                <h4>Wali Murid</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
@@ -246,9 +246,9 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Aurora</h3>
-                <h4>orangtu murid</h4>
+                <img src="https://cdn.idntimes.com/content-images/community/2020/06/download-b87c9f944d84535f0dd80956fb56ba8c.jpeg" class="testimonial-img" alt="">
+                <h3>Arsita</h3>
+                <h4>Guru SDN 007 SEI Beduk</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
@@ -262,9 +262,9 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Justin</h3>
-                <h4>orangtua murid</h4>
+                <img src="https://cdn.idntimes.com/content-images/community/2021/02/ch35663035-w666-h968-3d3b1161b8bdd83d3f3f0f53e36cc88a-9cb575fcef1cbc2c7635927d3ce65f49.jpg" class="testimonial-img" alt="">
+                <h3>Kusuma</h3>
+                <h4>Guru SDN 007 SEI Beduk</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
@@ -278,9 +278,9 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>Kai</h3>
-                <h4>orangtua murid</h4>
+                <img src="https://cdn.idntimes.com/content-images/community/2021/02/moon-sung-geun-05-13-2017-3d3b1161b8bdd83d3f3f0f53e36cc88a-37e3b9501afafe3bdb7b13a967d0abf0.jpg" class="testimonial-img" alt="">
+                <h3>HARTONO</h3>
+                <h4>Wali Murid</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>

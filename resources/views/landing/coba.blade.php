@@ -486,19 +486,19 @@
         <div class="slider">
             <div class="slides">
                 <div class="slide">
-                    <img src="https://via.placeholder.com/1100x500" alt="Slide 1">
+                    <img src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p2/65/2024/02/25/889d5f18-ad24-4adb-8ab4-e297d1fa3feb-930441761.jpg" alt="Slide 1">
                     <h2>Who We Are</h2>
                     <p>We are committed to delivering the best experiences for our customers.</p>
                     <button>Learn More</button>
                 </div>
                 <div class="slide">
-                    <img src="https://via.placeholder.com/1100x500" alt="Slide 2">
+                    <img src="https://cdns.klimg.com/merdeka.com/i/w/photonews/2023/04/24/1544745/540x270/20230430120251-5-aktris-cantik-korea-yang-tampak-lebih-tua-dari-usianya-dan-5-yang-tampak-lebih-muda-007-tantri-setyorini.jpg" alt="Slide 2">
                     <h2>Our Mission</h2>
                     <p>Driving innovation to create impactful solutions.</p>
                     <button>Discover More</button>
                 </div>
                 <div class="slide">
-                    <img src="https://via.placeholder.com/1100x500" alt="Slide 3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Gl6eP8Ygrdd90c9hC9CWUz8ASWl6x7ggYA&s" alt="Slide 3">
                     <h2>Our Vision</h2>
                     <p>Shaping a better future through collaboration and creativity.</p>
                     <button>Explore Vision</button>
