@@ -306,7 +306,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Team IQU</h2>
-        <div><span>Cek Tim</span> <span class="description-title">Team</span></div>
+        <div><span>Cek </span> <span class="description-title">Team</span></div>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -466,8 +466,8 @@
           </div>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61572190856527&mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/iqu.quiz?igsh=MWl1em80cm9xMjlpYw=="><i class="bi bi-instagram"></i></a>
             <a href=""><i class="bi bi-linkedin"></i></a>
           </div>
         </div>

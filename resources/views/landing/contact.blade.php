@@ -37,7 +37,7 @@
             <h1>WANNA GET IN TOUCH?</h1>
             <p>Have a question or want to collaborate? Reach out to us directly. Whether you’re looking to discuss partnerships, media inquiries, or simply connect, we’re here to help you take the next step.</p>
             <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=61572190856527&mibextid=ZbWKwL" target="_blank" title="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
                 <a href="https://www.instagram.com/iqu.quiz?igsh=MWl1em80cm9xMjlpYw==" target="_blank" title="Instagram">
