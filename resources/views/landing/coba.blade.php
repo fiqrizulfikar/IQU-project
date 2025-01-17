@@ -134,7 +134,7 @@ body {
 <body>
 <<<<<<< Updated upstream
     <header>
-        <h1>About Us</h1>
+        Tebak Gambar Lucu
     </header>
 
     <nav>

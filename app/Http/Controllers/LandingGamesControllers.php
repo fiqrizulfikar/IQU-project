@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Quiztesiq;
 
+
 class LandingGamesControllers extends Controller
 {
      public function index()
@@ -16,5 +17,7 @@ class LandingGamesControllers extends Controller
         $questions = Quiztesiq::all(); // Ambil semua data pertanyaan dari database
         return view('landing.landing_games.tesiq', compact('questions'));
     }
+
+   
    
 }

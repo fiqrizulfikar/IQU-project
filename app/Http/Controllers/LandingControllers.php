@@ -33,7 +33,7 @@ class LandingControllers extends Controller
     {
         return view ('landing.aboutus');
     }
-    public function coba()
+    public function icebreakinggames()
     {
         return view ('landing.coba');
     }
