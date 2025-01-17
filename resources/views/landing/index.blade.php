@@ -361,7 +361,7 @@
             </div>
           </div><!-- End Team Member -->
 
-
+ </section>
   
     <div class="outer-container">
     <div class="inner-container">
