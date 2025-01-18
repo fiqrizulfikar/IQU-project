@@ -21,6 +21,8 @@ Route::get('/icebreakinggames', [App\Http\Controllers\LandingControllers::class,
 Route::get('/icebreaking', [App\Http\Controllers\LandingControllers::class, 'icebreaking']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 Route::get('/aboutus', [App\Http\Controllers\LandingControllers::class, 'aboutus']);
+Route::get('/coba', [App\Http\Controllers\LandingControllers::class, 'coba']);
+Route::get('/team', [App\Http\Controllers\LandingControllers::class, 'team']);
 
 Route::get('/Smp', [LandingSMPcontroller::class, 'index']);
 Route::get('/smpips', [LandingSMPcontroller::class, 'showQuizSMPIPS'])->name('IPS.show');

@@ -51,6 +51,7 @@
         <ul>
           <li><a href="/" class="active">About US</a></li>
             <li><a href="/contact">Contact</a></li>
+            <li><a href="/team">Team IQU</a></li>
             <div>
             <li><a href="/login" class="login-icon"><i class="fas fa-user"></i></a></li>  </li>
             </div>
@@ -360,125 +361,11 @@
               </div>
             </div>
           </div><!-- End Team Member -->
-
- </section>
+  </section>
   
-    <div class="outer-container">
-    <div class="inner-container">
-      <p class="heading-text">Our Team</p>
-      <p class="sub-heading-text"></p>
-      <div class="cards-container">
-        <div class="card-container">
-          <p class="name">M. Faris Chacim</p>
-          <p class="position"></p>
-          <img class="team-member-image" src="https://i.im.ge/2025/01/16/zGPzIq.WhatsApp-Image-2025-01-16-at-21-05-31-339972b5.jpeg" alt="Instructor Maxwell Doe">
-          <a href="https://www.twitter.com" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" alt="Twitter">
-          </a>
-          <a href="https://www.facebook.com/fariz.hakim.1420?locale=id_ID" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" alt="Facebook">
-          </a>
-          <a href="farizhakimz7@gmail.com" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" alt="Email">
-          </a>
-          <a href="https://www.instagram.com/frzhkmm_/" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" alt="Instagram">
-          </a>
-        </div>
+    
 
-        <div class="card-container">
-          <p class="name">M. Fqri Zulfikar</p>
-          <p class="position"></p>
-          <img class="team-member-image" src="https://i.im.ge/2025/01/16/zGPZrY.WhatsApp-Image-2025-01-16-at-20-38-07-919a8673.jpeg" alt="Instructor Maxwell Doe">
-          <a href="https://www.twitter.com" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" alt="Twitter">
-          </a>
-          <a href="https://www.facebook.com/zulfikar.fikri.395/" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" alt="Facebook">
-          </a>
-          <a href="fikrizulfikar588@gmail.com" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" alt="Email">
-          </a>
-          <a href="https://www.instagram.com/frzulfiikar/" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" alt="Instagram">
-          </a>
-        </div>
-
-        <div class="card-container">
-          <p class="name">Fahri</p>
-          <p class="position"></p>
-          <img class="team-member-image" src="https://i.im.ge/2025/01/16/zGPxMF.WhatsApp-Image-2025-01-16-at-21-08-56-e6bc2d6d.jpeg" alt="Instructor Maxwell Doe">
-          <a href="https://x.com/Fgryn97?t=bSvV1SIJwggHwvkS1CK6bg&s=09" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" alt="Twitter">
-          </a>
-          <a href="https://www.facebook.com/share/19hByBKL2o/" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" alt="Facebook">
-          </a>
-          <a href="fahrigryn97@gmail.com" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" alt="Email">
-          </a>
-          <a href="https://www.instagram.com/fahry.onli?igsh=a3Ntam9pNmpndmdp" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" alt="Instagram">
-          </a>
-        </div>
-
-        <div class="card-container">
-          <p class="name">Syahrul Ibnu Ramadan</p>
-          <p class="position"></p>
-          <img class="team-member-image" src="https://i.im.ge/2025/01/16/zGtoIc.WhatsApp-Image-2025-01-16-at-21-26-13-aa7b1039.jpeg" alt="Instructor Maxwell Doe">
-          <a href="https://x.com/Syahrul56_?t=vy6tBK_6T2S8JwbLlqs9Fg&s=09" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" alt="Twitter">
-          </a>
-          <a href="" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" alt="Facebook">
-          </a>
-          <a href="syahrulramdhan8a@gmail.com" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" alt="Email">
-          </a>
-          <a href="https://www.instagram.com/_syahrul56?igsh=MTh2cjM2ZG5teWhjZw==" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" alt="Instagram">
-          </a>
-        </div>
-
-        <div class="card-container">
-          <p class="name">Irba Ilzami Alhaq</p>
-          <p class="position"></p>
-          <img class="team-member-image" src="https://i.im.ge/2025/01/16/zGtFPa.WhatsApp-Image-2025-01-16-at-21-30-49-a2ab49bb.jpeg" alt="Instructor Maxwell Doe">
-          <a href="https://www.twitter.com" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" alt="Twitter">
-          </a>
-          <a href="https://www.facebook.com/irba.ilzami?mibextid=ZbWKwL" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" alt="Facebook">
-          </a>
-          <a href="irbailzami1@gmail.com" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" alt="Email">
-          </a>
-          <a href="https://www.instagram.com/irbailzami03/" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" alt="Instagram">
-          </a>
-        </div>
-
-        <div class="card-container">
-          <p class="name">Aqib Ainun Najib</p>
-          <p class="position"></p>
-          <img class="team-member-image" src="https://media-cgk2-1.cdn.whatsapp.net/v/t61.24694-24/457520302_483518451130567_1885489352583746006_n.jpg?ccb=11-4&oh=01_Q5AaIH-5NRN73bNs5kDeHxm_fuzEcgQZX1JQMiQXFCOvGePc&oe=67964418&_nc_sid=5e03e0&_nc_cat=108" alt="Instructor Maxwell Doe">
-          <a href="https://www.twitter.com" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" alt="Twitter">
-          </a>
-          <a href="https://www.facebook.com" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" alt="Facebook">
-          </a>
-          <a href="armaniv641@gmail.com" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" alt="Email">
-          </a>
-          <a href="https://www.instagram.com/aree3_?igsh=YXBtdXBxdGtkcHlm" target="_blank">
-            <img class="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" alt="Instagram">
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <!--batas-->
 
   <footer id="footer" class="footer dark-background">
 
@@ -561,13 +448,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  
-
-
-
-
-
 </body>
 
 </html>

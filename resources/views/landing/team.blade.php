@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,20 +15,20 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: rgb(5, 3, 103);
-}
+
+  
+
 
 .outer-container {
   padding: 10px 30px;
-  background-color: rgb(67, 65, 236);
+
 }
 
 .heading-text {
   font-weight: 700;
   font-size: 48px;
   line-height: 35px;
-  color: rgb(255, 255, 255);
+  color: rgb(12, 1, 1);
   text-align: center;
   margin-bottom: 32px;
 }
