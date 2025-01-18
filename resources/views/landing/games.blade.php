@@ -41,7 +41,7 @@
     
     /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
     :root {
-      --nav-color: #ffffff;  /* The default color of the main navmenu links */
+      --nav-color: #1407c2;  /* The default color of the main navmenu links */
       --nav-hover-color: #1acc8d; /* Applied to main navmenu links when they are hovered over or active */
       --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
       --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -52,48 +52,89 @@
     /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
     
     .light-background {
-      --background-color: #ececec;
-      --surface-color: #ffffff;
+      --background-color: #4b00d6;
+      --surface-color: #160bb5;
     }
     
     .dark-background {
-      --background-color: #08005e;
-      --default-color: #ffffff;
-      --heading-color: #ffffff;
+      --background-color: #0e00a7;
+      --default-color: #1904d5;
+      --heading-color: #0000b1;
       --surface-color: #0c0091;
-      --contrast-color: #ffffff;
+      --contrast-color: #3803c0;
     }
     
     .header {
-      --background-color: rgba(255, 255, 255, 0);
-      --default-color: #ffffff;
-      --heading-color: #ffffff;
-      color: var(--default-color);
-      background-color: var(--background-color);
-      padding: 20px 0;
-      transition: all 0.5s;
-      z-index: 997;
-    }
+  --background-color: #040677;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+
+  color: var(--default-color);
+  background-color: var(--background-color);
+
+  width: 100%; /* Lebar penuh */
+  height: 80px; /* Tinggi default */
+  padding: 10px 20px; /* Padding untuk ruang internal */
+
+  display: flex; /* Menggunakan Flexbox untuk mengatur konten di dalam header */
+  align-items: center; /* Memposisikan konten di tengah secara vertikal */
+  justify-content: space-between; /* Memisahkan konten di kiri dan kanan */
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan sedikit bayangan */
+  position: fixed; /* Tetap di atas saat di-scroll */
+  top: 0;
+  z-index: 997; /* Tetap di atas elemen lain */
+
+  transition: all 0.5s ease; /* Animasi untuk transisi warna atau ukuran */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .header {
+    height: 60px; /* Menyesuaikan tinggi */
+    padding: 5px 15px; /* Mengurangi padding */
+  }
+
+  .header h1 {
+    font-size: 1.2rem; /* Ukuran font lebih kecil */
+  }
+}
+
+/* Responsif untuk layar sangat besar */
+@media (min-width: 1200px) {
+  .header {
+    height: 100px; /* Tinggi lebih besar untuk layar besar */
+    padding: 15px 30px; /* Padding lebih besar */
+  }
+
+  .header h1 {
+    font-size: 2rem; /* Ukuran font lebih besar */
+  }
+}
+
+
+
+.header .logo {
+    line-height: 1;
     
-    .header .logo {
-      line-height: 1;
-    }
-    
-    .header .logo img {
-      max-height: 90px;
-      margin-right: 8px;
-    }
-    
-    .header .logo h1 {
-      font-size: 30px;
-      margin: 0;
-      font-weight: 700;
-      color: var(--heading-color);
-    }
-    
-    .scrolled .header {
-      box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-    }
+}
+
+.header .logo img {
+    max-height: 90px;
+    margin-right: 8px;
+}
+
+.header .logo h1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+.scrolled .header {
+    box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
     
     @media (min-width: 1200px) {
         .navmenu {
@@ -545,7 +586,7 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f9;
+      background-color: #0606a8;
       color: #333;
     }
 
@@ -555,15 +596,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('assets/img/gambar games.jpg'); /* Ganti 'path/to/your/image.jpg' dengan path gambar Anda */
-  background-size: cover; /* Menjadikan gambar menutupi seluruh elemen */
-  background-position: center; /* Menempatkan gambar di tengah */
-  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
-  color: white;
+  position: relative; /* Agar video dan konten di atasnya terstruktur dengan baik */
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 20px;
   border-radius: 0 0 20px 20px;
+  overflow: hidden; /* Untuk memastikan konten tidak keluar dari batas */
 }
+
+.landing video {
+  position: absolute; /* Menempatkan video di belakang konten */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Menutupi seluruh elemen */
+  z-index: -1; /* Menempatkan video di bawah konten */
+}
+
 
     .container {
     max-width: 1200px; /* Atur lebar maksimum */
@@ -578,10 +628,34 @@
     }
 
     .landing p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      animation: fadeIn 1.5s ease-in-out;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+    
+    /* Menambahkan font yang lebih menarik */
+    font-family: 'Lobster', cursive; /* Ganti dengan font yang Anda inginkan */
+    font-weight: 400; /* Berat font normal, bisa disesuaikan */
+    
+    /* Menambahkan jarak antar huruf agar lebih modern */
+    letter-spacing: 0.5px;
+    
+    /* Mengatur jarak antar baris agar teks lebih mudah dibaca */
+    line-height: 1.6;
+    
+    /* Menambahkan sedikit bayangan untuk teks agar lebih menonjol */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
     }
+    100% {
+        opacity: 1;
+    }
+}
+
 
     .landing .btn-primary {
       display: inline-block;
@@ -610,7 +684,7 @@
       padding: 10px;
       background: #2108ff;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 10px rgb(61, 87, 255);
       width: 90%;
       max-width: 1200px;
       margin-left: auto;
@@ -623,8 +697,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  background-color: #f3f3f3;
+  padding: 70px;
+  background-color: #42434a00;
 }
 
 /* Card Styling */
@@ -681,7 +755,7 @@
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #1acc8d;
+  background-color: #3018e9;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -702,6 +776,7 @@
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
+
 
 .btn-primary:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 25%);
@@ -788,19 +863,32 @@
   <!-- Hero Section -->
   <header class="landing">
     <div class="countainer">
+      <video autoplay loop muted>
+        <source src="assets/img/vidiooo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
       <h1>Selamat Datang di <span>i-QUIZ</span></h1>
         <p>
-           Selamat datang di landing Games , disini meyediakan  kuis seru yang terdiri dari dua bagian. Bagian pertama adalah tes IQ, di mana kalian bisa menguji seberapa tajam kemampuan berpikir kalian. Lalu, untuk mencairkan suasana, kita akan lanjut ke sesi ice breaking yang dijamin seru dan menyenangkan. Jadi, siapkan pikiran kalian, tetap santai, dan mari kita mulai dengan penuh semangat!
+           Selamat datang di Halaman Games , disini menyediakan  kuis seru yang terdiri dari dua bagian. Bagian pertama adalah tes IQ, di mana kalian bisa menguji seberapa tajam kemampuan berpikir kalian. Lalu, untuk mencairkan suasana, kita akan lanjut ke sesi ice breaking yang dijamin seru dan menyenangkan. Jadi, siapkan pikiran kalian, tetap santai, dan mari kita mulai dengan penuh semangat!
         </p>
         <a href="#cards-section" class="btn-primary">Jelajahi Sekarang</a>
+        <script>
+          document.querySelector('.btn-primary').addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah perilaku default dari anchor link
+            document.querySelector('#cards-section').scrollIntoView({
+              behavior: 'smooth'  // Mengatur scroll menjadi halus
+            });
+          });
+        </script>
+        
     </div>
   </header>
 
   <!-- Content Section -->
-  <div class="container1">
+  <div id="cards-section" class="container1">
     <div class="card">
       <div class="card-image-container">
-        <img class="card-img" src="assets/img/TES IQ.png" alt="Tes IQ">
+        <img class="card-img" src="assets/img/testes.jpg" alt="Tes IQ">
       </div>
       <p> TES IQ</p>
       <p class="card-des">
@@ -813,7 +901,7 @@
     
 <div class="card">
   <div class="card-image-container">
-    <img class="card-img" src="assets/img/breaking.png" alt="icebreaking">
+    <img class="card-img" src="assets/img/breking.jpg" alt="icebreaking">
   </div>
   <p> ICE BREAKING</p>
   <p class="card-des">
@@ -822,7 +910,16 @@
   <a href="/icebreaking" class="btn">Mulai</a>
 </div>
 
-
+<div class="card">
+  <div class="card-image-container">
+    <img class="card-img" src="assets/img/pppu.jpg" alt="icebreaking">
+  </div>
+  <p> ICE BREAKING QUIZ</p>
+  <p class="card-des">
+    "Yuk, tingkatkan suasana dengan memainkan kuis lucu dan kocak tentang gambar hewan . ayo coba sekarang!"
+  </p>
+  <a href="/icebreakinggames" class="btn">Mulai</a>
+</div>
 
   </div>
 </body>

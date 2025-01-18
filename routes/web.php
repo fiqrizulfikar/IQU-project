@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\TestMail;
 
 Route::get('/', [LandingControllers::class, 'index']);
-Route::get('/coba', [App\Http\Controllers\LandingControllers::class, 'coba']);
+Route::get('/icebreakinggames', [App\Http\Controllers\LandingControllers::class, 'icebreakinggames']);
 Route::get('/icebreaking', [App\Http\Controllers\LandingControllers::class, 'icebreaking']);
 Route::get('/pendidikan', [App\Http\Controllers\LandingControllers::class, 'pendidikan']);
 Route::get('/aboutus', [App\Http\Controllers\LandingControllers::class, 'aboutus']);
@@ -37,6 +37,7 @@ Route::get('/PKNsd',  [LandingSDcontrollers::class, 'showQuizSDPKN'])->name('PKN
 
 Route::get('/games',  [LandingGamesControllers::class, 'index']);
 Route::get('/tesiq',  [LandingGamesControllers::class, 'showQuiztesiq'])->name('tesiq.show');
+
 
 
 
