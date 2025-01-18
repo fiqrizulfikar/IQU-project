@@ -132,16 +132,16 @@
                 correctImage: "assets/img/tebak gambar/2..jpeg",
             },
             {
-                image: "assets/img/tebak gambar/3.jpeg",
+                image: "assets/img/tebak gambar/3.jpg",
                 options: ["zebra", "Kucing", "gorilla", "Bebek"],
                 correctAnswer: "gorilla",
-                correctImage: "assets/img/tebak gambar/3..jpeg",
+                correctImage: "assets/img/tebak gambar/3..jpg",
             },
             {
-                image: "assets/img/tebak gambar/4.jpeg",
+                image: "assets/img/tebak gambar/4.jpg",
                 options: ["marmut", "singa", "Zebra", "Koala"],
                 correctAnswer: "marmut",
-                correctImage: "assets/img/tebak gambar/4..jpeg",
+                correctImage: "assets/img/tebak gambar/4..jpg",
             },
             {
                 image: "assets/img/tebak gambar/5.jpeg",
@@ -150,22 +150,22 @@
                 correctImage: "assets/img/tebak gambar/5..jpeg",
             },
             {
-                image: "assets/img/tebak gambar/6.jpeg",
+                image: "assets/img/tebak gambar/6.jpg",
                 options: ["Tikus", "Kuda", "anjing", "unta"],
                 correctAnswer: "anjing",
-                correctImage: "assets/img/tebak gambar/6..jpeg",
+                correctImage: "assets/img/tebak gambar/6..jpg",
             },
             {
-                image: "assets/img/tebak gambar/7.jpeg",
+                image: "assets/img/tebak gambar/7.jpg",
                 options: ["kuda", "sigung", "Serigala", "Macan"],
                 correctAnswer: "kuda",
-                correctImage: "assets/img/tebak gambar/7..jpeg",
+                correctImage: "assets/img/tebak gambar/7..jpg",
             },
             {
-                image: "assets/img/tebak gambar/8.jpeg",
+                image: "assets/img/tebak gambar/8.jpg",
                 options: ["Ular", "Bebek", "Hiu", "unta"],
                 correctAnswer: "Ular",
-                correctImage: "assets/img/tebak gambar/8..jpeg",
+                correctImage: "assets/img/tebak gambar/8..jpg",
             },
         ];
 
@@ -216,7 +216,7 @@
             if (currentQuestionIndex < questions.length) {
                 loadQuestion();
             } else {
-                alert("Game selesai! Terima kasih sudah bermain.");
+                alert("Game selesai! Terima kasih sudah bermain.Ini hanya sekedar game seru-seruan supaya dalam pembelajaran tidak terlalu tegang");
                 location.reload();
             }
         }

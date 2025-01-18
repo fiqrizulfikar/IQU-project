@@ -35,7 +35,7 @@ class LandingControllers extends Controller
     }
     public function icebreakinggames()
     {
-        return view ('landing.coba');
+        return view ('landing.icebreakinggames');
     }
 
       public function icebreaking()
